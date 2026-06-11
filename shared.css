@@ -13,7 +13,7 @@
   --webull-blue:#0063F7;--webull-dark:#0a1628;
 }
 html{scroll-behavior:smooth;}
-body{font-family:var(--sans);color:var(--text);background:#fff;line-height:1.65;font-size:16px;}
+body{font-family:var(--sans);color:var(--text);line-height:1.65;font-size:16px;}
 /* HERO SECTION BACKGROUND - guaranteed override */
 section#hero{background-color:#0a1628 !important;background-image:radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255,107,0,.13), transparent) !important;}
 

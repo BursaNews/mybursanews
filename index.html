@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
 <style id="critical-hero-bg">
-/* Force only the hero section dark — nothing else */
-#hero { background-color: #0a1628 !important; }
+#hero{background-color:#0a1628;background-image:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(255,107,0,.13),transparent);}
 </style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -13,7 +12,7 @@
 <meta name="keywords" content="bursa malaysia beginner, how to invest Malaysia, bursa starter kit, moomoo malaysia, stock market Malaysia beginner, invest Malaysia easy">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="shared.css?v=10h">
 <style>
 /* ─────────────────────────────────────────
    RESET + BASE
@@ -912,13 +911,14 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 .hero-sub { font-size: 1.15rem !important; }
 .proof-lbl { font-size: 13.5px !important; }
 </style>
+<!-- BursaNews v10h-FINAL -->
 </head>
 <body>
-<script src="shared.js"></script>
+<script src="shared.js?v=10h"></script>
 
 <!-- ══════════════════════════════════════
      SECTION 1: HERO
-══<section id="hero" style="background-color:#0a1628 !important;background:#0a1628 !important;background-image:radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255,107,0,.13), transparent) !important;position:relative;overflow:hidden;width:100%;">
+══<section id="hero">
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;"></div>
 
   <div style="position:relative;z-index:2;max-width:780px;margin:0 auto;padding:6.5rem 2rem 5rem;text-align:center;">
@@ -1365,18 +1365,6 @@ function countUp(el, target, prefix, suffix, duration){
 })();
 
 </script>
-
-<!-- HERO BACKGROUND OVERRIDE: loads after shared.css, always wins -->
-<style>
-section#hero,
-section#hero *::before {
-  background-color: #0a1628 !important;
-}
-section#hero {
-  background-color: #0a1628 !important;
-  background-image: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255,107,0,.13), transparent) !important;
-}
-</style>
 
 </body>
 </html>
