@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="root" content="">
+<title>Social Media | BursaNews 马股报报看</title>
+<meta name="description" content="Follow BursaNews 马股报报看 on YouTube, Instagram, TikTok, Facebook and 小红书 for free daily Malaysia stock insights.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.social-hero{background:#0a1628;padding:4.5rem 2rem 3.5rem;text-align:center;}
+.social-hero h1{font-family:'Noto Serif SC',serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:900;color:#fff;margin-bottom:.65rem;letter-spacing:-.02em;}
+.social-hero h1 em{color:#FF6B00;font-style:normal;}
+.social-hero p{color:rgba(255,255,255,.65);font-size:1.05rem;max-width:520px;margin:0 auto;}
+.social-joke{color:#FF8533;font-style:italic;font-size:.95rem;margin-top:.5rem;}
+
+.platform-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:2.5rem;}
+.platform-card{border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;display:block;border:1px solid var(--border);background:#fff;transition:transform .2s,box-shadow .2s;}
+.platform-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.1);}
+.pc-banner{height:100px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;position:relative;overflow:hidden;}
+.pc-banner::before{content:'';position:absolute;inset:0;opacity:.15;}
+.pc-yt .pc-banner{background:#FF0000;}
+.pc-ig .pc-banner{background:linear-gradient(135deg,#833AB4,#FD1D1D,#F77737);}
+.pc-tk .pc-banner{background:#010101;}
+.pc-fb .pc-banner{background:#1877F2;}
+.pc-xhs .pc-banner{background:#FF2442;}
+.pc-body{padding:1.4rem 1.5rem;}
+.pc-name{font-size:1.1rem;font-weight:800;color:#0a1628;margin-bottom:.25rem;}
+.pc-handle{font-size:13px;color:#FF6B00;font-weight:600;margin-bottom:.5rem;}
+.pc-desc{font-size:13.5px;color:#6b6760;line-height:1.6;margin-bottom:1.1rem;}
+.pc-btn{display:inline-flex;align-items:center;gap:.4rem;background:#0a1628;color:#fff;border:none;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .15s;}
+.pc-btn:hover{opacity:.85;}
+.pc-btn.orange{background:#FF6B00;}
+.pc-btn.purple{background:#833AB4;}
+.pc-btn.tiktok{background:#010101;}
+.pc-btn.blue{background:#1877F2;}
+.pc-btn.red{background:#FF2442;}
+
+.ig-embed-section{padding:4rem 2rem;background:var(--off);}
+.ig-embed-section h2{font-family:'Noto Serif SC',serif;font-size:1.7rem;font-weight:700;color:#0a1628;text-align:center;margin-bottom:.4rem;}
+.ig-joke{text-align:center;font-size:.95rem;color:#FF6B00;font-style:italic;margin-bottom:.4rem;}
+.ig-sub{text-align:center;font-size:14px;color:#6b6760;margin-bottom:2.5rem;}
+.ig-embed-wrap{max-width:800px;margin:0 auto;background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--border);padding:2rem;text-align:center;}
+.ig-profile-link{display:inline-flex;align-items:center;gap:.75rem;background:linear-gradient(135deg,#833AB4,#FD1D1D,#F77737);color:#fff;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;text-decoration:none;transition:opacity .2s;margin-bottom:1.5rem;}
+.ig-profile-link:hover{opacity:.9;}
+.ig-note{font-size:13.5px;color:#6b6760;line-height:1.7;max-width:500px;margin:0 auto;}
+.ig-note strong{color:#0a1628;font-weight:600;}
+
+.manual-posts{padding:4rem 2rem;background:#fff;}
+.mp-header{text-align:center;margin-bottom:2.5rem;}
+.mp-header h2{font-family:'Noto Serif SC',serif;font-size:1.7rem;font-weight:700;color:#0a1628;margin-bottom:.3rem;}
+.mp-header p{font-size:14px;color:#6b6760;}
+.mp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;max-width:1100px;margin:0 auto;}
+.mp-card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s;}
+.mp-card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.08);}
+.mp-img{height:200px;background:var(--off);display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;}
+.mp-img .mp-platform{position:absolute;top:10px;right:10px;background:#fff;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 2px 8px rgba(0,0,0,.12);}
+.mp-body{padding:1.1rem 1.25rem;}
+.mp-body .mp-platform-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#FF6B00;margin-bottom:.3rem;}
+.mp-body h3{font-size:.97rem;font-weight:700;color:#0a1628;margin-bottom:.3rem;line-height:1.35;}
+.mp-body p{font-size:13px;color:#6b6760;line-height:1.55;}
+.mp-add-note{background:var(--off);border:2px dashed #d0cec8;border-radius:14px;padding:2rem;text-align:center;color:#999;}
+.mp-add-note p{font-size:14px;margin-bottom:.3rem;color:#6b6760;}
+.mp-add-note code{background:#e8e6e2;padding:2px 6px;border-radius:4px;font-size:12px;}
+
+@media(max-width:600px){.platform-grid{grid-template-columns:1fr;}}
+
+/* ── TICKER ── */
+.ticker-outer{background:#0a1628;overflow:hidden;position:relative;height:40px;}
+.ticker-outer::before,.ticker-outer::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none;}
+.ticker-outer::before{left:0;background:linear-gradient(to right,#0a1628,transparent);}
+.ticker-outer::after{right:0;background:linear-gradient(to left,#0a1628,transparent);}
+.ticker-track{display:flex;gap:2.5rem;white-space:nowrap;animation:ticker 24s linear infinite;height:40px;align-items:center;padding:0 1rem;}
+.ticker-track:hover{animation-play-state:paused;}
+@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.ti-item{display:inline-flex;align-items:center;gap:.5rem;font-size:13px;font-weight:700;}
+.ti-name{color:rgba(255,255,255,.5);}.ti-price{color:#fff;}.ti-up{color:#1adb5e;}.ti-dn{color:#ff4d4d;}.ti-special{color:#FF6B00;font-weight:800;}
+/* ── PULSE ── */
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.5;}100%{transform:scale(1.4);opacity:0;}}
+@keyframes shimmer{0%{transform:translateX(-100%);}100%{transform:translateX(250%);}}
+.pulse-btn{position:relative;background:#FF6B00;color:#fff;border:none;padding:14px 32px;border-radius:10px;font-size:15px;font-weight:800;cursor:pointer;font-family:'DM Sans',sans-serif;box-shadow:0 6px 20px rgba(255,107,0,.3);}
+.pulse-btn::after{content:'';position:absolute;inset:-4px;border-radius:14px;border:2px solid #FF6B00;animation:pulse-ring 1.8s ease-out infinite;pointer-events:none;}
+.pulse-btn:hover::after{animation-play-state:paused;}
+.shimmer-btn{position:relative;background:#0a1628;color:#fff;border:1.5px solid rgba(255,255,255,.2);padding:14px 32px;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;overflow:hidden;}
+.shimmer-btn::after{content:'';position:absolute;top:0;left:0;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);transform:translateX(-100%);animation:shimmer 2.6s ease-in-out infinite;pointer-events:none;}
+</style>
+</head>
+<body>
+<script src="shared.js"></script>
+
+<section class="social-hero">
+  <div class="wrap">
+    <span class="lbl" data-en="Follow Us" data-zh="关注我们">Follow Us</span>
+    <h1 data-en="We're everywhere.<br><em>Why haven't you followed us yet?</em>" data-zh="我们无处不在。<br><em>为什么你没 follow 我们？</em>">We're everywhere.<br><em>Why haven't you followed us yet?</em></h1>
+    <p data-en="Daily stock insights, Bursa breakdowns, and the occasional financial joke that hits too close to home." data-zh="每日股票洞察、Bursa解析，以及偶尔让你感同身受的财经笑话。">Daily stock insights, Bursa breakdowns, and the occasional financial joke that hits too close to home.</p>
+    <p class="social-joke" data-en="(We promise our content is better than your uncle's WhatsApp stock tips 😂)" data-zh="（我们保证内容比你叔叔WhatsApp群里的股票贴士好多了 😂）">(We promise our content is better than your uncle's WhatsApp stock tips 😂)</p>
+  </div>
+</section>
+
+<!-- PLATFORM CARDS -->
+<section style="padding:4rem 2rem;background:#fff;">
+  <div class="wrap">
+    <span class="lbl tc" data-en="Our Platforms" data-zh="我们的平台">Our Platforms</span>
+    <h2 class="ttl tc" data-en="Find us on" data-zh="在这里找到我们">Find us on</h2>
+    <div class="platform-grid">
+
+      <a href="https://youtube.com/@bursa-news?si=e3_hLvL3iAulMiA9" target="_blank" rel="noopener" class="platform-card pc-yt">
+        <div class="pc-banner">▶</div>
+        <div class="pc-body">
+          <div class="pc-name">YouTube</div>
+          <div class="pc-handle">@bursa-news</div>
+          <p class="pc-desc" data-en="Full-length videos, market breakdowns, and stock education — when you have 10 minutes and want to actually learn something." data-zh="完整视频、市场解析、股票教育——当你有10分钟，真的想学点东西的时候。">Full-length videos, market breakdowns, and stock education — when you have 10 minutes and want to actually learn something.</p>
+          <span class="pc-btn orange" data-en="Watch Now →" data-zh="立即观看 →">Watch Now →</span>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/bursa_news_" target="_blank" rel="noopener" class="platform-card pc-ig">
+        <div class="pc-banner">📸</div>
+        <div class="pc-body">
+          <div class="pc-name">Instagram</div>
+          <div class="pc-handle">@bursa_news_</div>
+          <p class="pc-desc" data-en="Quick market updates, infographics, and our daily 马股报报看 report previews. Perfect for scrolling at lunch." data-zh="快速市场更新、信息图表，以及每日马股报报看报告预览。午餐时刷的不二之选。">Quick market updates, infographics, and daily report previews. Perfect for scrolling at lunch.</p>
+          <span class="pc-btn purple" data-en="Follow →" data-zh="关注 →">Follow →</span>
+        </div>
+      </a>
+
+      <a href="https://www.tiktok.com/@bursa_news_" target="_blank" rel="noopener" class="platform-card pc-tk">
+        <div class="pc-banner">🎵</div>
+        <div class="pc-body">
+          <div class="pc-name">TikTok</div>
+          <div class="pc-handle">@bursa_news_</div>
+          <p class="pc-desc" data-en="60-second stock explainers, corporate exercise breakdowns, and financial content that doesn't put you to sleep." data-zh="60秒股票解说、企业行动拆解，以及不让你打瞌睡的财经内容。">60-second stock explainers and corporate exercise breakdowns that don't put you to sleep.</p>
+          <span class="pc-btn tiktok" data-en="Follow →" data-zh="关注 →">Follow →</span>
+        </div>
+      </a>
+
+      <a href="https://www.facebook.com/share/1CsRJJJLku/" target="_blank" rel="noopener" class="platform-card pc-fb">
+        <div class="pc-banner">👥</div>
+        <div class="pc-body">
+          <div class="pc-name">Facebook</div>
+          <div class="pc-handle">BursaNews</div>
+          <p class="pc-desc" data-en="For the Malaysian aunties and uncles who prefer Facebook. (We don't judge — we just want everyone to learn investing.)" data-zh="给偏爱Facebook的马来西亚叔叔阿姨们。（我们不评判——我们只是希望每个人都能学会投资。）">For the Malaysian aunties and uncles who prefer Facebook. We don't judge.</p>
+          <span class="pc-btn blue" data-en="Like Page →" data-zh="点赞主页 →">Like Page →</span>
+        </div>
+      </a>
+
+      <a href="https://xhslink.com/m/8TsW6O4Y3u" target="_blank" rel="noopener" class="platform-card pc-xhs">
+        <div class="pc-banner">📕</div>
+        <div class="pc-body">
+          <div class="pc-name">小红书 (XHS)</div>
+          <div class="pc-handle">马股报报看</div>
+          <p class="pc-desc" data-en="Chinese-language investment content for our Malaysian Chinese community. Bursa analysis, tips, and financial education in Mandarin." data-zh="面向马来西亚华人社群的中文投资内容。马股分析、小贴士和中文财经教育。">Chinese-language investment content for our Malaysian Chinese community. Bursa analysis in Mandarin.</p>
+          <span class="pc-btn red" data-en="Follow →" data-zh="关注 →">Follow →</span>
+        </div>
+      </a>
+
+      <a href="javascript:openWA()" class="platform-card" style="background:var(--off);">
+        <div class="pc-banner" style="background:#25D366;font-size:2.5rem;">💬</div>
+        <div class="pc-body">
+          <div class="pc-name">WhatsApp</div>
+          <div class="pc-handle">+60 11-5648 2183</div>
+          <p class="pc-desc" data-en="Ask us anything. Seriously, anything. We don't bite. (We might reply with a meme though.)" data-zh="什么都可以问我们。真的，什么都行。我们不咬人。（不过我们可能会用表情包回复你。）">Ask us anything. We don't bite. (We might reply with a meme though.)</p>
+          <span class="pc-btn" style="background:#25D366;" data-en="Chat Now →" data-zh="立即聊天 →">Chat Now →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM FEED SECTION -->
+<section class="ig-embed-section">
+  <div class="wrap">
+    <h2 data-en="Latest from Instagram" data-zh="Instagram最新动态">Latest from Instagram</h2>
+    <p class="ig-joke" data-en="(Where our charts look better than our cooking 📊)" data-zh="（在这里我们的图表比我们的厨艺好看多了 📊）">(Where our charts look better than our cooking 📊)</p>
+    <p class="ig-sub" data-en="Follow @bursa_news_ for daily market updates and Bursa analysis" data-zh="关注 @bursa_news_ 获取每日市场更新和Bursa分析">Follow @bursa_news_ for daily market updates and Bursa analysis</p>
+    <div class="ig-embed-wrap">
+      <a href="https://www.instagram.com/bursa_news_" target="_blank" rel="noopener" class="ig-profile-link">
+        📸 <span data-en="View @bursa_news_ on Instagram" data-zh="在Instagram查看 @bursa_news_">View @bursa_news_ on Instagram</span>
+      </a>
+      <p class="ig-note">
+        <strong data-en="Want your Instagram posts to show automatically here?" data-zh="想让你的Instagram帖子自动显示在这里吗？">Want your Instagram posts to show automatically here?</strong><br>
+        <span data-en="You can enable automatic Instagram feed syncing by connecting your account via Meta's Embedded Posts feature — just paste any public post URL and it will display here. Alternatively, add posts manually in the section below." data-zh="你可以通过Meta的嵌入帖子功能连接账户，启用Instagram帖子自动同步——只需粘贴任意公开帖子URL即可在此显示。或者，在下方部分手动添加帖子。">You can enable automatic Instagram feed syncing by connecting your account via Meta's Embedded Posts feature — just paste any public post URL and it will display here. Alternatively, add posts manually in the section below.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section style="background:#0a1628;text-align:center;padding:4.5rem 2rem;">
+  <div class="wrap">
+    <h2 style="font-family:'Noto Serif SC',serif;font-size:1.9rem;color:#fff;font-weight:900;margin-bottom:.5rem;" data-en="Follow. Learn. Invest smarter." data-zh="关注。学习。更聪明地投资。">Follow. Learn. Invest smarter.</h2>
+    <p style="color:rgba(255,255,255,.6);margin-bottom:2rem;font-size:1rem;" data-en="(In that order. Don't skip to investing without the learning part, please 🙏)" data-zh="（按这个顺序。请不要跳过学习直接去投资 🙏）">(In that order. Don't skip to investing without the learning part, please 🙏)</p>
+    <div style="display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap;">
+      <button class="hb-p" onclick="location.href='subscription.html'" style="background:#FF6B00;color:#fff;border:none;padding:14px 28px;border-radius:10px;font-size:15px;font-weight:800;cursor:pointer;font-family:'DM Sans',sans-serif;" data-en="Subscribe RM49 →" data-zh="订阅 RM49 →">Subscribe RM49 →</button>
+      <button onclick="location.href='affiliates.html'" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3);padding:14px 28px;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;" data-en="Sign Up Moomoo (BURSA88)" data-zh="注册Moomoo (BURSA88)">Sign Up Moomoo (BURSA88)</button>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var tk=document.querySelector('.ticker-track');
+  if(tk) tk.innerHTML+=tk.innerHTML;
+})();
+</script>
+</body>
+</html>

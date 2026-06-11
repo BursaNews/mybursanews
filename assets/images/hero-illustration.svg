@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 580" width="520" height="580">
+<defs>
+
+  <!-- 3D perspective transforms -->
+  <!-- Phone is rotated ~15deg on Y axis and ~5deg on X for 3D slant effect -->
+
+  <!-- Gradients -->
+  <linearGradient id="phone-body" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#2a2a3e"/>
+    <stop offset="100%" stop-color="#0d0d1a"/>
+  </linearGradient>
+  <linearGradient id="phone-side" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#1a1a2e"/>
+    <stop offset="100%" stop-color="#0a0a15"/>
+  </linearGradient>
+  <linearGradient id="screen-bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0f1b2d"/>
+    <stop offset="100%" stop-color="#060e18"/>
+  </linearGradient>
+  <linearGradient id="green-glow" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#00e676"/>
+    <stop offset="100%" stop-color="#00b248"/>
+  </linearGradient>
+  <linearGradient id="chart-fill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#00e676" stop-opacity="0.35"/>
+    <stop offset="100%" stop-color="#00e676" stop-opacity="0.02"/>
+  </linearGradient>
+  <linearGradient id="orange-grad" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#FF6B00"/>
+    <stop offset="100%" stop-color="#ff9c53"/>
+  </linearGradient>
+  <linearGradient id="card-bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#141e2f"/>
+    <stop offset="100%" stop-color="#0d1520"/>
+  </linearGradient>
+  <linearGradient id="reflection" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="white" stop-opacity="0.08"/>
+    <stop offset="60%" stop-color="white" stop-opacity="0.02"/>
+    <stop offset="100%" stop-color="white" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="bg-glow" cx="60%" cy="50%" r="55%">
+    <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.10"/>
+    <stop offset="50%" stop-color="#00e676" stop-opacity="0.05"/>
+    <stop offset="100%" stop-color="#0f1b2d" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="screen-glow" cx="50%" cy="30%" r="50%">
+    <stop offset="0%" stop-color="#00e676" stop-opacity="0.15"/>
+    <stop offset="100%" stop-color="#00e676" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Filters -->
+  <filter id="phone-shadow" x="-30%" y="-15%" width="160%" height="140%">
+    <feDropShadow dx="-8" dy="20" stdDeviation="20" flood-color="#000" flood-opacity="0.6"/>
+  </filter>
+  <filter id="glow-green" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="card-shadow">
+    <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+  </filter>
+
+  <!-- Clip for screen content -->
+  <clipPath id="screen-clip">
+    <rect x="0" y="0" width="222" height="420" rx="6"/>
+  </clipPath>
+
+</defs>
+
+<!-- ═══ BACKGROUND ═══ -->
+<rect width="520" height="580" fill="#070d18"/>
+<ellipse cx="310" cy="290" rx="280" ry="260" fill="url(#bg-glow)"/>
+
+<!-- Subtle dot grid -->
+<pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+  <circle cx="1" cy="1" r="0.8" fill="rgba(255,255,255,0.04)"/>
+</pattern>
+<rect width="520" height="580" fill="url(#dots)"/>
+
+<!-- ═══ 3D PHONE — slanted perspective ═══ -->
+<!-- 
+  Phone face: parallelogram-ish shape created via polygon/transform
+  We simulate 3D by:
+  - Drawing the phone face at ~15deg Y rotation
+  - Adding left side edge (visible because of rotation)
+  - Adding bottom edge
+  - Adding specular highlight on left edge
+-->
+
+<!-- PHONE GROUP: translate to center-right and apply 3D skew transform -->
+<g transform="translate(148, 48)" filter="url(#phone-shadow)">
+
+  <!-- LEFT/SIDE FACE of phone (dark, gives 3D depth) -->
+  <!-- This is the left-side thin strip visible due to Y rotation -->
+  <polygon points="0,30 22,10 22,478 0,498" fill="url(#phone-side)"/>
+
+  <!-- BOTTOM FACE (thin bottom edge for 3D) -->
+  <polygon points="0,498 22,478 262,478 240,498" fill="#1a1a28"/>
+
+  <!-- PHONE MAIN FACE — skewed right to create perspective -->
+  <g transform="skewY(-3) translate(22, 10)">
+
+    <!-- Phone body frame -->
+    <rect x="0" y="0" width="240" height="468" rx="26" fill="url(#phone-body)" stroke="#2a2a42" stroke-width="1.5"/>
+
+    <!-- Screen -->
+    <rect x="9" y="9" width="222" height="450" rx="20" fill="url(#screen-bg)"/>
+
+    <!-- Screen glow overlay -->
+    <rect x="9" y="9" width="222" height="450" rx="20" fill="url(#screen-glow)" opacity="0.6"/>
+
+    <!-- Notch / pill -->
+    <rect x="86" y="9" width="68" height="18" rx="9" fill="#0d0d1a"/>
+
+    <!-- STATUS BAR -->
+    <text x="24" y="37" font-family="DM Sans,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.55)">9:41</text>
+    <text x="210" y="37" text-anchor="end" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">●●●● ▮</text>
+
+    <!-- ═══ SCREEN CONTENT ═══ -->
+    <g clip-path="url(#screen-clip)" transform="translate(9,9)">
+
+      <!-- APP HEADER -->
+      <rect x="0" y="0" width="222" height="48" fill="rgba(10,22,40,0.95)"/>
+      <!-- BN logo -->
+      <rect x="12" y="10" width="28" height="28" rx="8" fill="rgba(255,107,0,0.2)"/>
+      <text x="26" y="29" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="900" fill="#FF6B00">BN</text>
+      <text x="48" y="25" font-family="DM Sans,sans-serif" font-size="11.5" font-weight="800" fill="#fff">马股报报看</text>
+      <text x="48" y="39" font-family="DM Sans,sans-serif" font-size="8.5" fill="rgba(255,255,255,0.4)">Portfolio Tracker</text>
+
+      <!-- ═══ DIVIDEND CARD (main highlight) ═══ -->
+      <rect x="10" y="58" width="202" height="84" rx="14" fill="url(#card-bg)" stroke="rgba(0,230,118,0.2)" stroke-width="1" filter="url(#card-shadow)"/>
+      <!-- Top label -->
+      <text x="24" y="76" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.4)" letter-spacing="0.08em">JUNE DIVIDEND INCOME</text>
+      <!-- Amount — big green number -->
+      <text x="24" y="105" font-family="DM Sans,sans-serif" font-size="28" font-weight="900" fill="url(#green-glow)" filter="url(#soft-glow)" letter-spacing="-0.02em">RM 840</text>
+      <!-- Small badge -->
+      <rect x="24" y="112" width="68" height="18" rx="6" fill="rgba(0,230,118,0.12)"/>
+      <text x="58" y="125" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#00e676">▲ +12.4% MoM</text>
+      <!-- Date label -->
+      <text x="200" y="76" text-anchor="end" font-family="DM Sans,sans-serif" font-size="8.5" fill="rgba(255,255,255,0.3)">Jun 2026</text>
+      <!-- From 4 stocks -->
+      <text x="200" y="125" text-anchor="end" font-family="DM Sans,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)">4 stocks</text>
+
+      <!-- ═══ UPTREND CHART ═══ -->
+      <rect x="10" y="152" width="202" height="120" rx="12" fill="rgba(14,24,42,0.9)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <!-- Y axis labels -->
+      <text x="18" y="168" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.25)">1,200</text>
+      <text x="18" y="195" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.25)">900</text>
+      <text x="18" y="222" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.25)">600</text>
+      <text x="18" y="249" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.25)">300</text>
+
+      <!-- Chart grid lines (subtle) -->
+      <g stroke="rgba(255,255,255,0.05)" stroke-width="0.5">
+        <line x1="46" y1="162" x2="204" y2="162"/>
+        <line x1="46" y1="181" x2="204" y2="181"/>
+        <line x1="46" y1="200" x2="204" y2="200"/>
+        <line x1="46" y1="219" x2="204" y2="219"/>
+        <line x1="46" y1="238" x2="204" y2="238"/>
+        <line x1="46" y1="257" x2="204" y2="257"/>
+      </g>
+
+      <!-- CHART FILL (area under curve) -->
+      <path d="M 46,244 
+               L 62,238 L 78,233 L 94,228 
+               L 110,220 L 120,212 
+               L 132,200 L 144,190 
+               L 156,178 L 168,168 
+               L 180,160 L 192,153 L 203,148
+               L 203,257 L 46,257 Z" 
+            fill="url(#chart-fill)"/>
+
+      <!-- CHART LINE (smooth uptrend) -->
+      <polyline 
+        points="46,244 62,238 78,233 94,228 110,220 120,212 132,200 144,190 156,178 168,168 180,160 192,153 203,148"
+        fill="none" 
+        stroke="#00e676" 
+        stroke-width="2.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#glow-green)"/>
+
+      <!-- Chart endpoint glow dot -->
+      <circle cx="203" cy="148" r="5" fill="#00e676" filter="url(#glow-green)"/>
+      <circle cx="203" cy="148" r="3" fill="#fff"/>
+
+      <!-- X axis labels -->
+      <text x="46" y="268" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.3)">Jan</text>
+      <text x="82" y="268" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.3)">Feb</text>
+      <text x="118" y="268" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.3)">Mar</text>
+      <text x="154" y="268" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.3)">Apr</text>
+      <text x="190" y="268" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.3)">Jun</text>
+
+      <!-- Chart label -->
+      <text x="24" y="168" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.5)">Portfolio</text>
+
+      <!-- ═══ DIVIDEND BREAKDOWN CARDS ═══ -->
+      <!-- Row 1 -->
+      <rect x="10" y="282" width="96" height="52" rx="10" fill="rgba(255,107,0,0.08)" stroke="rgba(255,107,0,0.15)" stroke-width="1"/>
+      <text x="22" y="299" font-family="DM Sans,sans-serif" font-size="8.5" fill="rgba(255,255,255,0.45)" font-weight="700">MAYBANK</text>
+      <text x="22" y="316" font-family="DM Sans,sans-serif" font-size="14" font-weight="900" fill="#FF6B00">RM280</text>
+      <text x="22" y="328" font-family="DM Sans,sans-serif" font-size="8" fill="rgba(255,255,255,0.3)">ex-date 12 Jun</text>
+
+      <rect x="116" y="282" width="96" height="52" rx="10" fill="rgba(0,230,118,0.06)" stroke="rgba(0,230,118,0.15)" stroke-width="1"/>
+      <text x="128" y="299" font-family="DM Sans,sans-serif" font-size="8.5" fill="rgba(255,255,255,0.45)" font-weight="700">PUBLIC BANK</text>
+      <text x="128" y="316" font-family="DM Sans,sans-serif" font-size="14" font-weight="900" fill="#00e676">RM210</text>
+      <text x="128" y="328" font-family="DM Sans,sans-serif" font-size="8" fill="rgba(255,255,255,0.3)">ex-date 18 Jun</text>
+
+      <!-- Row 2 -->
+      <rect x="10" y="342" width="96" height="52" rx="10" fill="rgba(139,92,246,0.08)" stroke="rgba(139,92,246,0.15)" stroke-width="1"/>
+      <text x="22" y="359" font-family="DM Sans,sans-serif" font-size="8.5" fill="rgba(255,255,255,0.45)" font-weight="700">TENAGA</text>
+      <text x="22" y="376" font-family="DM Sans,sans-serif" font-size="14" font-weight="900" fill="#c4b5fd">RM220</text>
+      <text x="22" y="388" font-family="DM Sans,sans-serif" font-size="8" fill="rgba(255,255,255,0.3)">ex-date 25 Jun</text>
+
+      <rect x="116" y="342" width="96" height="52" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      <text x="128" y="359" font-family="DM Sans,sans-serif" font-size="8.5" fill="rgba(255,255,255,0.45)" font-weight="700">CIMB</text>
+      <text x="128" y="376" font-family="DM Sans,sans-serif" font-size="14" font-weight="900" fill="#fff">RM130</text>
+      <text x="128" y="388" font-family="DM Sans,sans-serif" font-size="8" fill="rgba(255,255,255,0.3)">ex-date 28 Jun</text>
+
+      <!-- ═══ BOTTOM NAV BAR ═══ -->
+      <rect x="0" y="406" width="222" height="44" fill="rgba(5,10,20,0.98)"/>
+      <line x1="0" y1="406" x2="222" y2="406" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+      <!-- Nav icons placeholder dots -->
+      <circle cx="28" cy="428" r="4" fill="#FF6B00"/>
+      <circle cx="74" cy="428" r="4" fill="rgba(255,255,255,0.2)"/>
+      <circle cx="120" cy="428" r="4" fill="rgba(255,255,255,0.2)"/>
+      <circle cx="166" cy="428" r="4" fill="rgba(255,255,255,0.2)"/>
+      <!-- Home indicator -->
+      <rect x="78" y="440" width="66" height="3" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+
+    </g><!-- /clip -->
+
+    <!-- Reflection overlay (glass effect on screen) -->
+    <rect x="9" y="9" width="222" height="450" rx="20" fill="url(#reflection)"/>
+
+    <!-- Phone frame edge highlight (top left specular) -->
+    <path d="M 20 9 Q 9 9 9 20 L 9 80" stroke="rgba(255,255,255,0.12)" stroke-width="1" fill="none"/>
+
+  </g><!-- /skewY -->
+
+  <!-- LEFT EDGE SPECULAR (rim light on left side) -->
+  <line x1="0" y1="30" x2="22" y2="10" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <line x1="0" y1="498" x2="22" y2="478" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+
+</g><!-- /phone group -->
+
+<!-- ═══ FLOATING ELEMENTS ═══ -->
+
+<!-- Floating badge: Total portfolio value (top left) -->
+<g transform="translate(18, 92)" filter="url(#card-shadow)">
+  <rect width="158" height="62" rx="14" fill="rgba(10,18,32,0.92)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <!-- Pulsing green dot -->
+  <circle cx="18" cy="18" r="5" fill="#00e676" filter="url(#soft-glow)"/>
+  <circle cx="18" cy="18" r="3" fill="#fff"/>
+  <text x="32" y="22" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.4)" letter-spacing="0.07em">PORTFOLIO VALUE</text>
+  <text x="14" y="46" font-family="DM Sans,sans-serif" font-size="20" font-weight="900" fill="#fff" letter-spacing="-0.02em">RM 48,200</text>
+  <text x="14" y="58" font-family="DM Sans,sans-serif" font-size="9" fill="#00e676" font-weight="700">▲ +18.4% YTD</text>
+</g>
+
+<!-- Floating badge: Monthly passive (bottom left) -->
+<g transform="translate(14, 350)" filter="url(#card-shadow)">
+  <rect width="150" height="58" rx="14" fill="rgba(10,18,32,0.92)" stroke="rgba(255,107,0,0.2)" stroke-width="1"/>
+  <text x="14" y="22" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.4)" letter-spacing="0.07em">MONTHLY PASSIVE</text>
+  <text x="14" y="44" font-family="DM Sans,sans-serif" font-size="20" font-weight="900" fill="#FF6B00" letter-spacing="-0.02em">RM 840</text>
+  <text x="14" y="56" font-family="DM Sans,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">While you sleep 💤</text>
+</g>
+
+<!-- Floating notification: Dividend received -->
+<g transform="translate(340, 72)" filter="url(#card-shadow)">
+  <rect width="168" height="62" rx="14" fill="rgba(0,230,118,0.1)" stroke="rgba(0,230,118,0.25)" stroke-width="1"/>
+  <circle cx="18" cy="20" r="6" fill="#00e676" filter="url(#glow-green)"/>
+  <text x="32" y="16" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.5)">DIVIDEND RECEIVED</text>
+  <text x="32" y="30" font-family="DM Sans,sans-serif" font-size="13" font-weight="900" fill="#fff">+RM 280.00</text>
+  <text x="32" y="44" font-family="DM Sans,sans-serif" font-size="9" fill="rgba(255,255,255,0.45)">MAYBANK · 12 Jun 2026</text>
+  <text x="32" y="56" font-family="DM Sans,sans-serif" font-size="8.5" fill="rgba(0,230,118,0.7)" font-weight="600">Credited to account ✓</text>
+</g>
+
+<!-- Floating: uptrend arrow label -->
+<g transform="translate(354, 210)">
+  <rect width="148" height="46" rx="12" fill="rgba(10,18,32,0.88)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="14" y="18" font-family="DM Sans,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)" font-weight="700">6-MONTH RETURN</text>
+  <text x="14" y="36" font-family="DM Sans,sans-serif" font-size="18" font-weight="900" fill="#00e676" filter="url(#soft-glow)">+RM 7,420</text>
+</g>
+
+<!-- Decorative sparkles -->
+<g fill="#00e676" filter="url(#soft-glow)" opacity="0.7">
+  <circle cx="32" cy="56" r="2.5"/>
+  <circle cx="478" cy="156" r="2"/>
+  <circle cx="468" cy="340" r="2.5"/>
+  <circle cx="96" cy="480" r="2"/>
+</g>
+<g fill="#FF6B00" opacity="0.5">
+  <circle cx="52" cy="480" r="2.5"/>
+  <circle cx="490" cy="420" r="2"/>
+  <circle cx="22" cy="310" r="1.5"/>
+</g>
+<g fill="#c4b5fd" opacity="0.4">
+  <circle cx="490" cy="260" r="2"/>
+  <circle cx="74" cy="168" r="1.5"/>
+</g>
+
+<!-- Subtle connecting line from portfolio badge to phone -->
+<path d="M 176 123 Q 220 130 240 180" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="4,4" fill="none"/>
+
+</svg>

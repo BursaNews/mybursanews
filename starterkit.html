@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="root" content="">
+<title>Bursa Malaysia Starter Kit – 5 Missions to Buy Your First Stock | BursaNews</title>
+<meta name="description" content="Free interactive checklist: 5 missions to buy your first Malaysian stock. Understand stocks, learn 5 key words, set up your account, and make your first trade.">
+<meta name="keywords" content="Bursa Malaysia beginner guide, how to start investing Malaysia, CDS account, moomoo Malaysia, first stock Malaysia, investing beginner checklist">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+body{font-size:16px;}
+
+/* ── HERO ── */
+.sk-hero{background:#0a1628;padding:4.5rem 2rem 3.5rem;text-align:center;position:relative;overflow:hidden;}
+.sk-hero::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(255,107,0,.08),transparent 65%);pointer-events:none;}
+.sk-hero-inner{position:relative;z-index:2;}
+.sk-free-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(26,219,94,.15);border:1px solid rgba(26,219,94,.3);border-radius:30px;padding:6px 18px;font-size:12px;font-weight:800;color:#1adb5e;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.25rem;}
+.sk-hero h1{font-family:'Noto Serif SC',serif;font-size:clamp(1.9rem,4.5vw,3rem);font-weight:900;color:#fff;line-height:1.15;letter-spacing:-.025em;margin-bottom:.75rem;}
+.sk-hero h1 em{color:#FF6B00;font-style:normal;}
+.sk-hero p{font-size:1.05rem;color:rgba(255,255,255,.65);max-width:560px;margin:0 auto 1rem;line-height:1.75;}
+.sk-hero .joke{font-size:.9rem;color:#FF8533;font-style:italic;}
+
+/* ── PROGRESS OVERVIEW ── */
+.progress-bar-section{background:#fff;padding:2rem;border-bottom:1px solid #e8e6e2;position:sticky;top:64px;z-index:99;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+.pb-inner{max-width:800px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.pb-label{font-size:13px;font-weight:800;color:#0a1628;white-space:nowrap;}
+.pb-label span{color:#FF6B00;}
+.pb-track{flex:1;height:14px;background:#f0eeea;border-radius:10px;overflow:hidden;min-width:120px;}
+.pb-fill{height:100%;background:linear-gradient(90deg,#FF6B00,#ff9c53);border-radius:10px;transition:width .6s cubic-bezier(.4,0,.2,1);width:0%;}
+.pb-pct{font-size:14px;font-weight:900;color:#FF6B00;white-space:nowrap;}
+.pb-celebrate{font-size:1.1rem;display:none;}
+
+/* ── MISSIONS LAYOUT ── */
+.missions-wrap{max-width:860px;margin:0 auto;padding:3rem 2rem 5rem;}
+
+/* ── MISSION CARD ── */
+.mission{border-radius:20px;overflow:hidden;margin-bottom:1.75rem;border:2px solid #e8e6e2;background:#fff;transition:border-color .3s,box-shadow .3s;}
+.mission.completed{border-color:#1adb5e;box-shadow:0 4px 20px rgba(26,219,94,.12);}
+.mission.completed .mission-head{background:linear-gradient(135deg,#0d2b14,#0a2010);}
+
+/* mission header */
+.mission-head{background:#0a1628;padding:1.5rem 2rem;display:flex;align-items:center;gap:1.25rem;cursor:pointer;user-select:none;transition:background .3s;}
+.mission-head:hover{background:#1a2d4f;}
+.mission.completed .mission-head:hover{background:linear-gradient(135deg,#0d3018,#0a2814);}
+.m-num{width:48px;height:48px;border-radius:50%;background:rgba(255,107,0,.2);border:2px solid rgba(255,107,0,.4);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:#FF6B00;flex-shrink:0;transition:all .3s;}
+.mission.completed .m-num{background:rgba(26,219,94,.2);border-color:rgba(26,219,94,.4);color:#1adb5e;}
+.m-head-text{flex:1;}
+.m-title{font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:#fff;line-height:1.3;}
+.m-subtitle{font-size:12.5px;color:rgba(255,255,255,.5);margin-top:.2rem;font-weight:500;}
+.m-status{flex-shrink:0;}
+.m-tick{width:36px;height:36px;border-radius:50%;border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:all .3s;background:transparent;}
+.mission.completed .m-tick{background:#1adb5e;border-color:#1adb5e;}
+.m-chevron{font-size:1rem;color:rgba(255,255,255,.4);margin-left:.5rem;transition:transform .3s;}
+.mission.open .m-chevron{transform:rotate(180deg);}
+
+/* mission body */
+.mission-body{display:none;padding:2rem;border-top:1px solid #f0eeea;}
+.mission.open .mission-body{display:block;}
+.mission.completed .mission-body{border-top-color:rgba(26,219,94,.15);}
+
+/* checklist items */
+.checklist{list-style:none;margin:1rem 0 1.5rem;}
+.cl-item{display:flex;align-items:flex-start;gap:.85rem;padding:.75rem .85rem;border-radius:10px;margin-bottom:.5rem;cursor:pointer;transition:background .15s;-webkit-tap-highlight-color:transparent;}
+.cl-item:hover{background:#f8f7f4;}
+.cl-item.checked{background:#f0fdf4;}
+.cl-box{width:24px;height:24px;border-radius:6px;border:2px solid #d0cec8;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s;margin-top:1px;font-size:.85rem;}
+.cl-item.checked .cl-box{background:#1adb5e;border-color:#1adb5e;color:#fff;}
+.cl-text{flex:1;}
+.cl-text strong{font-size:14.5px;font-weight:700;color:#0a1628;display:block;margin-bottom:.15rem;transition:color .2s;}
+.cl-item.checked .cl-text strong{color:#6b6760;text-decoration:line-through;}
+.cl-text p{font-size:13px;color:#6b6760;line-height:1.55;margin:0;}
+.cl-text a{color:#FF6B00;font-weight:600;font-size:12.5px;}
+.cl-badge{font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:8px;flex-shrink:0;margin-top:3px;}
+.cl-badge.free{background:#e8f5e9;color:#1a5e27;}
+.cl-badge.moomoo{background:#fff4ec;color:#FF6B00;}
+
+/* mission content blocks */
+.m-highlight{background:#fff4ec;border-left:3px solid #FF6B00;border-radius:0 10px 10px 0;padding:1rem 1.25rem;margin:1rem 0;font-size:14px;color:#7a5c2e;line-height:1.7;}
+.m-highlight strong{font-weight:700;color:#5a3c0a;}
+.m-words-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.75rem;margin:1rem 0;}
+.m-word{background:#f8f7f4;border:1px solid #e8e6e2;border-radius:12px;padding:1rem;transition:all .2s;}
+.m-word:hover{border-color:#FF6B00;background:#fff4ec;}
+.m-word .w-term{font-size:.95rem;font-weight:800;color:#0a1628;margin-bottom:.25rem;}
+.m-word .w-def{font-size:12.5px;color:#6b6760;line-height:1.45;}
+.m-stocks{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1rem 0;}
+.m-stock{background:#0a1628;border-radius:12px;padding:1rem;text-align:center;}
+.m-stock .s-name{font-size:.9rem;font-weight:800;color:#fff;margin-bottom:.2rem;}
+.m-stock .s-code{font-size:11px;color:rgba(255,255,255,.4);font-weight:600;}
+.m-stock .s-hint{font-size:11.5px;color:#FF8533;margin-top:.4rem;}
+
+/* CTA inside mission */
+.m-cta{background:#0a1628;border-radius:14px;padding:1.5rem;margin-top:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.m-cta p{font-size:14px;color:rgba(255,255,255,.72);margin:0;line-height:1.5;flex:1;}
+.m-cta a{background:#FF6B00;color:#fff;padding:10px 20px;border-radius:8px;font-size:13.5px;font-weight:800;white-space:nowrap;transition:background .2s;}
+.m-cta a:hover{background:#e55f00;}
+
+/* complete mission button */
+.complete-btn{display:flex;align-items:center;justify-content:center;gap:.65rem;width:100%;padding:14px;border-radius:12px;border:none;cursor:pointer;font-size:15px;font-weight:800;font-family:'DM Sans',sans-serif;transition:all .25s;margin-top:1.5rem;}
+.complete-btn.done{background:#1adb5e;color:#fff;box-shadow:0 4px 16px rgba(26,219,94,.25);}
+.complete-btn.done:hover{background:#16c254;}
+.complete-btn.undo{background:#f8f7f4;color:#999;border:1.5px solid #e8e6e2;}
+.complete-btn.undo:hover{background:#f0eeea;}
+
+/* ── COMPLETION SCREEN ── */
+.completion-card{background:linear-gradient(135deg,#0a1628,#1a3a5e);border-radius:20px;padding:3rem 2rem;text-align:center;margin-top:2rem;display:none;}
+.completion-card.visible{display:block;}
+.cc-emoji{font-size:4rem;margin-bottom:1rem;animation:bounce .6s ease infinite alternate;}
+@keyframes bounce{0%{transform:translateY(0);}100%{transform:translateY(-12px);}}
+.cc-title{font-family:'Noto Serif SC',serif;font-size:1.8rem;font-weight:900;color:#fff;margin-bottom:.65rem;}
+.cc-title em{color:#1adb5e;font-style:normal;}
+.cc-list{list-style:none;text-align:left;max-width:380px;margin:1.5rem auto;display:flex;flex-direction:column;gap:.6rem;}
+.cc-list li{display:flex;align-items:center;gap:.65rem;font-size:14.5px;color:rgba(255,255,255,.85);}
+.cc-list li::before{content:"✓";color:#1adb5e;font-weight:900;flex-shrink:0;}
+.cc-sub{font-size:14px;color:rgba(255,255,255,.55);margin-bottom:2rem;font-style:italic;}
+.cc-btns{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap;}
+
+/* ── STICKY CTA BAR ── */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:#0a1628;border-top:1px solid rgba(255,255,255,.1);padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:98;transform:translateY(100%);transition:transform .35s ease;}
+.sticky-cta.visible{transform:translateY(0);}
+.sc-text{font-size:13px;color:rgba(255,255,255,.7);}
+.sc-text strong{color:#fff;font-weight:700;}
+.sc-btns{display:flex;gap:.65rem;flex-shrink:0;}
+.sc-btn-p{background:#FF6B00;color:#fff;border:none;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;}
+.sc-btn-s{background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.25);padding:9px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;}
+
+/* ── TICKER ── */
+.ticker-outer{background:#0a1628;overflow:hidden;position:relative;height:40px;}
+.ticker-outer::before,.ticker-outer::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none;}
+.ticker-outer::before{left:0;background:linear-gradient(to right,#0a1628,transparent);}
+.ticker-outer::after{right:0;background:linear-gradient(to left,#0a1628,transparent);}
+.ticker-track{display:flex;gap:2.5rem;white-space:nowrap;animation:ticker 24s linear infinite;height:40px;align-items:center;padding:0 1rem;}
+.ticker-track:hover{animation-play-state:paused;}
+@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.ti-item{display:inline-flex;align-items:center;gap:.5rem;font-size:13px;font-weight:700;}
+.ti-name{color:rgba(255,255,255,.5);}.ti-price{color:#fff;}.ti-up{color:#1adb5e;}.ti-dn{color:#ff4d4d;}.ti-special{color:#FF6B00;font-weight:800;}
+
+@media(max-width:600px){
+  .progress-bar-section{top:64px;}
+  .pb-inner{gap:1rem;}
+  .mission-head{padding:1.25rem;}
+  .mission-body{padding:1.25rem;}
+  .m-words-grid{grid-template-columns:1fr 1fr;}
+  .m-stocks{grid-template-columns:1fr 1fr 1fr;}
+  .sticky-cta{flex-direction:column;padding:.85rem 1.25rem;}
+  .sc-btns{width:100%;}.sc-btn-p,.sc-btn-s{flex:1;text-align:center;}
+}
+</style>
+</head>
+<body>
+<script src="shared.js"></script>
+
+<!-- TICKER -->
+<div class="ticker-outer">
+  <div class="ticker-track" id="sk-ticker">
+    <span class="ti-item"><span class="ti-name">KLCI</span><span class="ti-price">1,612.4</span><span class="ti-up">▲ +0.51%</span></span>
+    <span class="ti-item"><span class="ti-name">MAYBANK</span><span class="ti-price">RM 9.20</span><span class="ti-dn">▼ -0.22%</span></span>
+    <span class="ti-item"><span class="ti-name">CIMB</span><span class="ti-price">RM 7.85</span><span class="ti-up">▲ +1.03%</span></span>
+    <span class="ti-item"><span class="ti-name">TENAGA</span><span class="ti-price">RM 11.40</span><span class="ti-up">▲ +0.88%</span></span>
+    <span class="ti-item"><span class="ti-name">PUBLIC BANK</span><span class="ti-price">RM 4.52</span><span class="ti-up">▲ +0.44%</span></span>
+    <span class="ti-item"><span class="ti-special">moomoo BURSA88</span><span class="ti-up">🎁 RM1,800+ rewards</span></span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="sk-hero">
+  <div class="sk-hero-inner">
+    <div class="sk-free-badge">🎁 100% Free · No sign-up required</div>
+    <h1 data-en="🧭 Bursa Malaysia<br><em>Starter Kit</em>" data-zh="🧭 马股入门<br><em>闯关包</em>">🧭 Bursa Malaysia<br><em>Starter Kit</em></h1>
+    <p data-en="5 missions to go from zero to making your first real investment in Malaysian stocks. Tick each box as you complete it — your progress is saved automatically." data-zh="5个任务，带你从零开始到完成第一笔马股投资。完成每一步就打勾——进度自动保存，下次回来还在。">5 missions to go from zero to making your first real investment in Malaysian stocks. Tick each box as you complete it — your progress is saved automatically.</p>
+    <p class="joke" data-en="(Yes, even your uncle who still uses a cheque book can do this 😄)" data-zh="（是的，就连你那位还在用存折的叔叔也能做到 😄）">(Yes, even your uncle who still uses a cheque book can do this 😄)</p>
+  </div>
+</section>
+
+<!-- PROGRESS BAR (sticky) -->
+<div class="progress-bar-section">
+  <div class="pb-inner">
+    <div class="pb-label" data-en="Your Progress: <span id='pb-done'>0</span>/5 missions complete" data-zh="你的进度：<span id='pb-done'>0</span>/5 个任务完成">Your Progress: <span id="pb-done">0</span>/5 missions complete</div>
+    <div class="pb-track"><div class="pb-fill" id="pb-fill"></div></div>
+    <div class="pb-pct" id="pb-pct">0%</div>
+    <div class="pb-celebrate" id="pb-celebrate">🎉</div>
+  </div>
+</div>
+
+<!-- MISSIONS -->
+<div class="missions-wrap">
+
+  <!-- MISSION 1 -->
+  <div class="mission" id="m1" data-mission="1">
+    <div class="mission-head" onclick="toggleMission('m1')">
+      <div class="m-num">🎯</div>
+      <div class="m-head-text">
+        <div class="m-title" data-en="Mission 1: Understand This in 30 Seconds" data-zh="任务1：30秒搞懂这件事">Mission 1: Understand This in 30 Seconds</div>
+        <div class="m-subtitle" data-en="What is a stock? The only explanation you'll ever need." data-zh="什么是股票？你唯一需要的解释。">What is a stock? The only explanation you'll ever need.</div>
+      </div>
+      <div class="m-status">
+        <div class="m-tick" id="tick-m1">✓</div>
+      </div>
+      <span class="m-chevron">▼</span>
+    </div>
+    <div class="mission-body">
+      <div class="m-highlight">
+        <strong data-en="A stock = owning a tiny piece of a company." data-zh="股票 = 拥有一家公司的一小部分。">A stock = owning a tiny piece of a company.</strong><br>
+        <span data-en="If the company grows → your money grows. If the company struggles → your value drops." data-zh="公司成长 → 你的钱增加。公司挣扎 → 你的价值下跌。">If the company grows → your money grows. If the company struggles → your value drops.</span>
+      </div>
+      <p style="font-size:14.5px;color:#6b6760;line-height:1.75;margin:.75rem 0;" data-en="That's it. You now understand stocks better than 80% of beginners. Seriously." data-zh="就这样。你现在对股票的理解已经超过80%的新手了。真的。">That's it. You now understand stocks better than 80% of beginners. Seriously.</p>
+      <ul class="checklist">
+        <li class="cl-item" id="c1-1" onclick="toggleCheck('c1-1')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text">
+            <strong data-en="I understand what a stock is" data-zh="我明白股票是什么了">I understand what a stock is</strong>
+            <p data-en="A piece of ownership in a real company listed on Bursa Malaysia." data-zh="在Bursa Malaysia上市的真实公司的一份所有权。">A piece of ownership in a real company listed on Bursa Malaysia.</p>
+          </div>
+        </li>
+        <li class="cl-item" id="c1-2" onclick="toggleCheck('c1-2')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text">
+            <strong data-en="I understand how stocks make (or lose) money" data-zh="我明白股票如何赚钱（或亏钱）">I understand how stocks make (or lose) money</strong>
+            <p data-en="Price goes up = profit when you sell. Price goes down = loss if you sell. Dividends = bonus cash from the company." data-zh="价格上涨 = 卖出时盈利。价格下跌 = 卖出时亏损。股息 = 公司给你的额外现金。">Price up = profit when you sell. Price down = loss if you sell. Dividends = bonus cash from company.</p>
+          </div>
+        </li>
+        <li class="cl-item" id="c1-3" onclick="toggleCheck('c1-3')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text">
+            <strong data-en="I'm ready to learn more" data-zh="我准备好了解更多了">I'm ready to learn more</strong>
+            <p data-en="You've already cleared the biggest mental block. The rest is just steps." data-zh="你已经清除了最大的心理障碍。剩下的只是步骤而已。">You've already cleared the biggest mental block. The rest is just steps.</p>
+          </div>
+        </li>
+      </ul>
+      <button class="complete-btn done" id="btn-m1" onclick="completeMission('m1')" data-en="✓ Mark Mission 1 Complete" data-zh="✓ 标记任务1完成">✓ Mark Mission 1 Complete</button>
+    </div>
+  </div>
+
+  <!-- MISSION 2 -->
+  <div class="mission" id="m2" data-mission="2">
+    <div class="mission-head" onclick="toggleMission('m2')">
+      <div class="m-num">🎯</div>
+      <div class="m-head-text">
+        <div class="m-title" data-en="Mission 2: Learn 5 Words Only" data-zh="任务2：只需学会5个词">Mission 2: Learn 5 Words Only</div>
+        <div class="m-subtitle" data-en="Forget everything else. Just these 5. That's enough." data-zh="忘掉其他一切。只需这5个。就够了。">Forget everything else. Just these 5. That's enough.</div>
+      </div>
+      <div class="m-status"><div class="m-tick" id="tick-m2">✓</div></div>
+      <span class="m-chevron">▼</span>
+    </div>
+    <div class="mission-body">
+      <p style="font-size:14.5px;color:#6b6760;margin-bottom:1rem;" data-en="If you remember nothing else from investing school, just know these 5 words. You'll sound smarter than 90% of people at the next family dinner." data-zh="如果你从投资学习中只记住一件事，就记住这5个词。在下次家庭聚餐时你会听起来比90%的人聪明。">If you remember nothing else from investing school, just know these 5 words. You'll sound smarter than 90% of people at the next family dinner.</p>
+      <div class="m-words-grid">
+        <div class="m-word"><div class="w-term" data-en="Profit" data-zh="利润">Profit</div><div class="w-def" data-en="Money left after all costs. The real number that matters." data-zh="扣除所有成本后剩下的钱。真正重要的数字。">Money left after all costs. The real number that matters.</div></div>
+        <div class="m-word"><div class="w-term" data-en="Dividend" data-zh="股息">Dividend</div><div class="w-def" data-en="Cash paid to you just for holding the stock. Like rental income." data-zh="仅因持有股票就付给你的现金。就像租金收入。">Cash paid to you just for holding the stock. Like rental income.</div></div>
+        <div class="m-word"><div class="w-term" data-en="PE Ratio" data-zh="市盈率 PE">PE Ratio</div><div class="w-def" data-en="Is this stock expensive? Low PE = cheaper. High PE = pricier." data-zh="这只股票贵不贵？低PE = 便宜。高PE = 较贵。">Is this stock expensive? Low PE = cheaper. High PE = pricier.</div></div>
+        <div class="m-word"><div class="w-term" data-en="Revenue" data-zh="营业额">Revenue</div><div class="w-def" data-en="Total sales money coming in — before any costs." data-zh="进来的总销售额——扣除任何成本之前。">Total sales money coming in — before any costs.</div></div>
+        <div class="m-word"><div class="w-term" data-en="Portfolio" data-zh="投资组合">Portfolio</div><div class="w-def" data-en="All your stocks combined. Your total investment collection." data-zh="你所有股票的集合。你的总投资收藏。">All your stocks combined. Your total investment collection.</div></div>
+      </div>
+      <ul class="checklist">
+        <li class="cl-item" id="c2-1" onclick="toggleCheck('c2-1')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text"><strong data-en="I know what Profit and Revenue mean" data-zh="我知道利润和营业额的意思">I know what Profit and Revenue mean</strong><p data-en="Revenue = money in. Profit = money in minus costs. Simple." data-zh="营业额 = 进来的钱。利润 = 进来的钱减去成本。简单。">Revenue = money in. Profit = money in minus costs. Simple.</p></div>
+        </li>
+        <li class="cl-item" id="c2-2" onclick="toggleCheck('c2-2')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text"><strong data-en="I understand Dividend and PE Ratio" data-zh="我理解股息和市盈率">I understand Dividend and PE Ratio</strong><p data-en="Dividend = cash bonus for holding. PE = rough guide to valuation." data-zh="股息 = 持有股票的现金奖励。PE = 估值的粗略指南。">Dividend = cash bonus for holding. PE = rough guide to valuation.</p></div>
+        </li>
+        <li class="cl-item" id="c2-3" onclick="toggleCheck('c2-3')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text"><strong data-en="I've memorised all 5 words" data-zh="我已经记住所有5个词了">I've memorised all 5 words</strong><p data-en="Test yourself: Profit, Dividend, PE Ratio, Revenue, Portfolio. Say them out loud." data-zh="测试自己：利润、股息、市盈率、营业额、投资组合。大声说出来。">Test yourself: say all 5 out loud without looking. Go on.</p></div>
+        </li>
+      </ul>
+      <button class="complete-btn done" id="btn-m2" onclick="completeMission('m2')" data-en="✓ Mark Mission 2 Complete" data-zh="✓ 标记任务2完成">✓ Mark Mission 2 Complete</button>
+    </div>
+  </div>
+
+  <!-- MISSION 3 -->
+  <div class="mission" id="m3" data-mission="3">
+    <div class="mission-head" onclick="toggleMission('m3')">
+      <div class="m-num">🎯</div>
+      <div class="m-head-text">
+        <div class="m-title" data-en="Mission 3: Set Up Your Stock Wallet" data-zh="任务3：开设你的股票钱包">Mission 3: Set Up Your Stock Wallet</div>
+        <div class="m-subtitle" data-en="You need 2 things. Takes 15 minutes total." data-zh="你需要2样东西。总共只需15分钟。">You need 2 things. Takes 15 minutes total.</div>
+      </div>
+      <div class="m-status"><div class="m-tick" id="tick-m3">✓</div></div>
+      <span class="m-chevron">▼</span>
+    </div>
+    <div class="mission-body">
+      <div class="m-highlight">
+        <strong data-en="To buy stocks in Malaysia you need:" data-zh="在马来西亚购买股票你需要：">To buy stocks in Malaysia you need:</strong><br>
+        <span data-en="① A brokerage account (where you buy/sell) &nbsp;+&nbsp; ② A CDS account (where shares are stored)" data-zh="① 券商账户（用来买卖）&nbsp;+&nbsp; ② CDS账户（用来存放股票）">① A brokerage account (where you buy/sell) &nbsp;+&nbsp; ② A CDS account (where shares are stored)</span><br><br>
+        <span data-en="Good news: Moomoo opens BOTH for you automatically. One app, done." data-zh="好消息：Moomoo会自动帮你开设两个账户。一个应用，搞定。">Good news: Moomoo opens BOTH for you automatically. One app, done.</span>
+      </div>
+      <ul class="checklist">
+        <li class="cl-item" id="c3-1" onclick="toggleCheck('c3-1')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text">
+            <strong data-en="I understand what a CDS account is" data-zh="我了解CDS账户是什么">I understand what a CDS account is</strong>
+            <p data-en="CDS = Central Depository System. It's where your shares are stored. Like a bank account but for stocks." data-zh="CDS = 中央存托系统。这是存放你股票的地方。就像银行账户，但用于股票。">CDS = Central Depository System. Where your shares are stored, like a bank for stocks.</p>
+          </div>
+          <span class="cl-badge free" data-en="Free" data-zh="免费">Free</span>
+        </li>
+        <li class="cl-item" id="c3-2" onclick="toggleCheck('c3-2')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text">
+            <strong data-en="I've downloaded the Moomoo app" data-zh="我已经下载了Moomoo应用">I've downloaded the Moomoo app</strong>
+            <p data-en="iOS or Android. Free download. Takes 1 minute." data-zh="iOS或Android。免费下载。1分钟搞定。">iOS or Android. Free download. 1 minute.</p>
+          </div>
+          <span class="cl-badge moomoo">Moomoo</span>
+        </li>
+        <li class="cl-item" id="c3-3" onclick="toggleCheck('c3-3')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text">
+            <strong data-en="I've signed up and completed KYC" data-zh="我已经注册并完成了身份验证">I've signed up and completed KYC</strong>
+            <p data-en="MyKad + selfie. Approved within 1 business day." data-zh="MyKad + 自拍。1个工作日内审批通过。">MyKad + selfie. Approved within 1 business day.</p>
+          </div>
+          <span class="cl-badge moomoo">Moomoo</span>
+        </li>
+        <li class="cl-item" id="c3-4" onclick="toggleCheck('c3-4')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text">
+            <strong data-en="I've entered code BURSA88 for extra Apple shares" data-zh="我已经输入优惠码BURSA88获取额外Apple股票">I've entered code BURSA88 for extra Apple shares 🍎</strong>
+            <p data-en="BursaNews exclusive — enter during your first deposit for extra rewards." data-zh="BursaNews专属——在第一次存款时输入可获额外奖励。">BursaNews exclusive — enter during first deposit for extra rewards on top of RM1,800+ welcome pack.</p>
+          </div>
+          <span class="cl-badge moomoo">BURSA88</span>
+        </li>
+      </ul>
+      <div class="m-cta">
+        <p data-en="Sign up via BursaNews for up to <strong>RM1,800+ welcome rewards</strong> + extra Apple shares with code BURSA88." data-zh="通过BursaNews注册可获高达<strong>RM1,800+欢迎奖励</strong> + 使用优惠码BURSA88额外获得Apple股票。">Sign up via BursaNews for up to <strong>RM1,800+ welcome rewards</strong> + extra Apple shares with code BURSA88.</p>
+        <a href="https://start.moomoo.com/0Bpp3E" target="_blank" rel="noopener" data-en="Open Moomoo →" data-zh="开户Moomoo →">Open Moomoo →</a>
+      </div>
+      <button class="complete-btn done" id="btn-m3" onclick="completeMission('m3')" data-en="✓ Mark Mission 3 Complete" data-zh="✓ 标记任务3完成">✓ Mark Mission 3 Complete</button>
+    </div>
+  </div>
+
+  <!-- MISSION 4 -->
+  <div class="mission" id="m4" data-mission="4">
+    <div class="mission-head" onclick="toggleMission('m4')">
+      <div class="m-num">🎯</div>
+      <div class="m-head-text">
+        <div class="m-title" data-en="Mission 4: Watch 3 Companies for 3 Days" data-zh="任务4：观察3家公司3天">Mission 4: Watch 3 Companies for 3 Days</div>
+        <div class="m-subtitle" data-en="Don't buy anything yet. Just train your eyes." data-zh="还不要买任何东西。只是训练你的眼力。">Don't buy anything yet. Just train your eyes.</div>
+      </div>
+      <div class="m-status"><div class="m-tick" id="tick-m4">✓</div></div>
+      <span class="m-chevron">▼</span>
+    </div>
+    <div class="mission-body">
+      <p style="font-size:14.5px;color:#6b6760;line-height:1.75;margin-bottom:1rem;" data-en="Before spending any money, spend 3 days just watching these 3 blue-chip companies. Notice how prices move, how news affects sentiment, how the market is actually quite emotional." data-zh="在花任何钱之前，花3天时间观察这3家蓝筹公司。注意价格如何波动，新闻如何影响情绪，市场其实很感性。">Before spending any money, spend 3 days just watching. Notice how prices move, how news affects sentiment, how the market is actually quite emotional.</p>
+      <div class="m-stocks">
+        <div class="m-stock"><div class="s-name">Maybank</div><div class="s-code">1155.KL</div><div class="s-hint" data-en="Malaysia's biggest bank" data-zh="马来西亚最大银行">Malaysia's biggest bank</div></div>
+        <div class="m-stock"><div class="s-name">Tenaga</div><div class="s-code">5347.KL</div><div class="s-hint" data-en="The electric company" data-zh="电力公司">The electric company</div></div>
+        <div class="m-stock"><div class="s-name">Public Bank</div><div class="s-code">1295.KL</div><div class="s-hint" data-en="Reliable dividend stock" data-zh="可靠的股息股">Reliable dividend stock</div></div>
+      </div>
+      <div class="m-highlight" data-en="You are training your eyes — not trying to predict. The goal is to feel comfortable seeing prices move without panicking." data-zh="你是在训练眼力——不是在试图预测。目标是在看到价格波动时感到自在，而不是恐慌。">You are training your eyes — not trying to predict. The goal is to feel comfortable seeing prices move without panicking.</div>
+      <ul class="checklist">
+        <li class="cl-item" id="c4-1" onclick="toggleCheck('c4-1')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text"><strong data-en="Day 1: I found all 3 companies on Moomoo" data-zh="第1天：我在Moomoo上找到了所有3家公司">Day 1: I found all 3 companies on Moomoo</strong><p data-en="Search Maybank, Tenaga, Public Bank on the app. Add them to your watchlist." data-zh="在应用上搜索Maybank、Tenaga、Public Bank。将它们加入观察名单。">Search all 3 on the app. Add them to your watchlist.</p></div>
+        </li>
+        <li class="cl-item" id="c4-2" onclick="toggleCheck('c4-2')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text"><strong data-en="Day 2: I noticed how news affects their prices" data-zh="第2天：我注意到新闻如何影响它们的价格">Day 2: I noticed how news affects their prices</strong><p data-en="Look at recent news for each company. Can you see how good/bad news moved the price?" data-zh="查看每家公司的最新新闻。你能看出好/坏消息如何影响价格吗？">Look at recent news for each. Can you see how good/bad news moved the price?</p></div>
+        </li>
+        <li class="cl-item" id="c4-3" onclick="toggleCheck('c4-3')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text"><strong data-en="Day 3: I'm comfortable watching without buying" data-zh="第3天：我能安心观察而不冲动购买">Day 3: I'm comfortable watching without buying</strong><p data-en="Patience is a superpower in investing. You just practised it." data-zh="耐心是投资中的超能力。你刚刚练习了它。">Patience is a superpower in investing. You just practised it.</p></div>
+        </li>
+      </ul>
+      <button class="complete-btn done" id="btn-m4" onclick="completeMission('m4')" data-en="✓ Mark Mission 4 Complete" data-zh="✓ 标记任务4完成">✓ Mark Mission 4 Complete</button>
+    </div>
+  </div>
+
+  <!-- MISSION 5 -->
+  <div class="mission" id="m5" data-mission="5">
+    <div class="mission-head" onclick="toggleMission('m5')">
+      <div class="m-num">🎯</div>
+      <div class="m-head-text">
+        <div class="m-title" data-en="Mission 5: Make Your First Trade" data-zh="任务5：完成你的第一笔交易">Mission 5: Make Your First Trade</div>
+        <div class="m-subtitle" data-en="Small only. One company you understand. This is the real one." data-zh="只买小量。一家你了解的公司。这是真正的一步。">Small only. One company you understand. This is the real one.</div>
+      </div>
+      <div class="m-status"><div class="m-tick" id="tick-m5">✓</div></div>
+      <span class="m-chevron">▼</span>
+    </div>
+    <div class="mission-body">
+      <div class="m-highlight">
+        <strong data-en="Pick ONE company you understand." data-zh="选一家你了解的公司。">Pick ONE company you understand.</strong><br>
+        <span data-en='"I use this company / I see this brand everywhere / I believe in it."' data-zh='"我用这家公司的产品 / 我到处看到这个品牌 / 我相信它。"'>"I use this company / I see this brand everywhere / I believe in it."</span><br><br>
+        <strong data-en="Start small: RM100–RM500 only." data-zh="从小开始：只用RM100–RM500。">Start small: RM100–RM500 only.</strong><span data-en=" You are learning, not gambling." data-zh=" 你是在学习，不是在赌博。"> You are learning, not gambling.</span>
+      </div>
+      <ul class="checklist">
+        <li class="cl-item" id="c5-1" onclick="toggleCheck('c5-1')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text"><strong data-en="I've picked one company I actually understand" data-zh="我已经选了一家我真正了解的公司">I've picked one company I actually understand</strong><p data-en="Not a hot tip from a WhatsApp group. A company YOU know and understand." data-zh="不是WhatsApp群里的热门贴士。一家你自己认识和了解的公司。">Not a hot tip from a WhatsApp group. A company YOU know.</p></div>
+        </li>
+        <li class="cl-item" id="c5-2" onclick="toggleCheck('c5-2')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text"><strong data-en="I've deposited a small amount (RM100–RM500)" data-zh="我已经存入少量资金（RM100–RM500）">I've deposited a small amount (RM100–RM500)</strong><p data-en="Only money you can afford to leave invested for a while. This is not your emergency fund." data-zh="只用你能承受暂时不动的钱。这不是你的紧急备用金。">Only money you can afford to leave invested. Not your emergency fund.</p></div>
+        </li>
+        <li class="cl-item" id="c5-3" onclick="toggleCheck('c5-3')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text"><strong data-en="I clicked Buy. I made my first trade. ✅" data-zh="我点击了买入。我完成了第一笔交易。✅">I clicked Buy. I made my first trade. ✅</strong><p data-en="You are now an investor. Not someone who 'wants to invest'. An actual investor." data-zh="你现在是一位投资者了。不是一个'想要投资'的人。而是一位真正的投资者。">You are now an investor. Not someone who "wants to invest". An actual investor.</p></div>
+        </li>
+        <li class="cl-item" id="c5-4" onclick="toggleCheck('c5-4')">
+          <div class="cl-box">✓</div>
+          <div class="cl-text"><strong data-en="I haven't panicked and sold immediately 😅" data-zh="我没有惊慌失措立刻卖掉 😅">I haven't panicked and sold immediately 😅</strong><p data-en="Normal beginner feeling. Just breathe. You're in it for the journey, not the hour." data-zh="新手的正常感受。深呼吸。你是为了旅程，不是为了这一个小时。">Normal beginner feeling. Just breathe. You're in it for the journey, not the hour.</p></div>
+        </li>
+      </ul>
+      <button class="complete-btn done" id="btn-m5" onclick="completeMission('m5')" data-en="✓ Mark Mission 5 Complete — I AM an Investor! 🎉" data-zh="✓ 标记任务5完成——我是投资者了！🎉">✓ Mark Mission 5 Complete — I AM an Investor! 🎉</button>
+    </div>
+  </div>
+
+  <!-- COMPLETION CARD -->
+  <div class="completion-card" id="completion-card">
+    <div class="cc-emoji">🎉</div>
+    <div class="cc-title" data-en="You did it.<br><em>You ARE investing.</em>" data-zh="你做到了。<br><em>你已经在投资了。</em>">You did it.<br><em>You ARE investing.</em></div>
+    <ul class="cc-list">
+      <li data-en="You understand what stocks are" data-zh="你明白股票是什么">You understand what stocks are</li>
+      <li data-en="You know the 5 key finance words" data-zh="你知道5个关键财经词汇">You know the 5 key finance words</li>
+      <li data-en="You have a brokerage account ready" data-zh="你已经准备好券商账户">You have a brokerage account ready</li>
+      <li data-en="You've observed the market like a pro" data-zh="你已经像专业人士一样观察了市场">You've observed the market like a pro</li>
+      <li data-en="You've made your first real trade" data-zh="你已经完成了第一笔真实交易">You've made your first real trade</li>
+    </ul>
+    <p class="cc-sub" data-en="You are no longer a beginner who 'wants to invest'. You ARE investing. 🚀" data-zh="你不再是那个'想要投资'的新手了。你已经在投资了。🚀">You are no longer a beginner who "wants to invest". You ARE investing. 🚀</p>
+    <div class="cc-btns">
+      <button onclick="location.href='subscription.html'" style="background:#FF6B00;color:#fff;border:none;padding:13px 26px;border-radius:10px;font-size:14.5px;font-weight:800;cursor:pointer;font-family:'DM Sans',sans-serif;" data-en="📊 Subscribe for Daily Reports" data-zh="📊 订阅每日报告">📊 Subscribe for Daily Reports</button>
+      <button onclick="openWA('Hi, I just completed the BursaNews Starter Kit! I want to know what\\'s next 🎉')" style="background:#25D366;color:#fff;border:none;padding:13px 26px;border-radius:10px;font-size:14.5px;font-weight:800;cursor:pointer;font-family:'DM Sans',sans-serif;">💬 Tell us you finished!</button>
+    </div>
+  </div>
+
+</div><!-- /missions-wrap -->
+
+<!-- STICKY CTA BAR -->
+<div class="sticky-cta" id="sticky-cta">
+  <div class="sc-text" data-en="Ready to go deeper? <strong>Subscribe to 马股早知道</strong> for daily Bursa analysis." data-zh="准备好深入了吗？<strong>订阅马股早知道</strong>获取每日Bursa分析。">Ready to go deeper? <strong>Subscribe to 马股早知道</strong> for daily Bursa analysis.</div>
+  <div class="sc-btns">
+    <button class="sc-btn-p" onclick="location.href='subscription.html'" data-en="Subscribe RM49 →" data-zh="订阅 RM49 →">Subscribe RM49 →</button>
+    <button class="sc-btn-s" onclick="location.href='affiliates.html'" data-en="Open Moomoo (BURSA88)" data-zh="开户Moomoo (BURSA88)">Open Moomoo (BURSA88)</button>
+  </div>
+</div>
+
+<script>
+/* ─── STORAGE KEY ─── */
+var SK = 'bn_starterkit_v1';
+
+/* ─── LOAD STATE ─── */
+function loadState(){
+  try{ return JSON.parse(localStorage.getItem(SK)) || {}; }
+  catch(e){ return {}; }
+}
+function saveState(s){ localStorage.setItem(SK, JSON.stringify(s)); }
+
+/* ─── TOGGLE INDIVIDUAL CHECKBOX ─── */
+function toggleCheck(id){
+  var el = document.getElementById(id);
+  if(!el) return;
+  var state = loadState();
+  var checked = !el.classList.contains('checked');
+  el.classList.toggle('checked', checked);
+  state[id] = checked;
+  saveState(state);
+}
+
+/* ─── TOGGLE MISSION OPEN/CLOSE ─── */
+function toggleMission(id){
+  var m = document.getElementById(id);
+  if(!m) return;
+  var isOpen = m.classList.contains('open');
+  document.querySelectorAll('.mission').forEach(function(x){ x.classList.remove('open'); });
+  if(!isOpen) m.classList.add('open');
+}
+
+/* ─── COMPLETE MISSION ─── */
+function completeMission(id){
+  var m = document.getElementById(id);
+  if(!m) return;
+  var state = loadState();
+  var alreadyDone = m.classList.contains('completed');
+  if(alreadyDone){
+    // undo
+    m.classList.remove('completed');
+    state['mission_'+id] = false;
+    var btn = document.getElementById('btn-'+id);
+    if(btn){
+      btn.className = 'complete-btn done';
+      var lang = localStorage.getItem('bn_lang')||'en';
+      var num = id.replace('m','');
+      btn.textContent = (lang==='zh' ? '✓ 标记任务'+num+'完成' : '✓ Mark Mission '+num+' Complete');
+      if(id==='m5') btn.setAttribute('data-en','✓ Mark Mission 5 Complete — I AM an Investor! 🎉');
+    }
+  } else {
+    m.classList.add('completed');
+    state['mission_'+id] = true;
+    var btn = document.getElementById('btn-'+id);
+    if(btn){
+      btn.className = 'complete-btn undo';
+      var lang = localStorage.getItem('bn_lang')||'en';
+      btn.textContent = (lang==='zh' ? '↩ 撤销完成' : '↩ Undo');
+    }
+    // auto close after brief delay
+    setTimeout(function(){
+      m.classList.remove('open');
+      // auto-open next mission
+      var num = parseInt(id.replace('m',''));
+      var next = document.getElementById('m'+(num+1));
+      if(next && !next.classList.contains('completed')) next.classList.add('open');
+    }, 600);
+  }
+  saveState(state);
+  updateProgress();
+}
+
+/* ─── UPDATE PROGRESS BAR ─── */
+function updateProgress(){
+  var done = document.querySelectorAll('.mission.completed').length;
+  var pct = Math.round(done/5*100);
+  var fill = document.getElementById('pb-fill');
+  var pctEl = document.getElementById('pb-pct');
+  var doneEl = document.getElementById('pb-done');
+  var cel = document.getElementById('pb-celebrate');
+  var comp = document.getElementById('completion-card');
+  if(fill) fill.style.width = pct+'%';
+  if(pctEl) pctEl.textContent = pct+'%';
+  if(doneEl) doneEl.textContent = done;
+  if(cel) cel.style.display = pct===100 ? 'inline' : 'none';
+  if(comp) comp.classList.toggle('visible', done===5);
+  // color fill when complete
+  if(fill) fill.style.background = done===5 ? 'linear-gradient(90deg,#1adb5e,#22c55e)' : 'linear-gradient(90deg,#FF6B00,#ff9c53)';
+}
+
+/* ─── RESTORE STATE ON LOAD ─── */
+document.addEventListener('DOMContentLoaded', function(){
+  var state = loadState();
+  // restore checkboxes
+  Object.keys(state).forEach(function(key){
+    if(key.startsWith('c') && state[key]){
+      var el = document.getElementById(key);
+      if(el) el.classList.add('checked');
+    }
+  });
+  // restore completed missions
+  ['m1','m2','m3','m4','m5'].forEach(function(id){
+    if(state['mission_'+id]){
+      var m = document.getElementById(id);
+      if(m){
+        m.classList.add('completed');
+        var num = id.replace('m','');
+        var btn = document.getElementById('btn-'+id);
+        if(btn){
+          btn.className = 'complete-btn undo';
+          btn.textContent = '↩ Undo';
+        }
+      }
+    }
+  });
+  // open first incomplete mission
+  var opened = false;
+  ['m1','m2','m3','m4','m5'].forEach(function(id){
+    var m = document.getElementById(id);
+    if(m && !m.classList.contains('completed') && !opened){
+      m.classList.add('open');
+      opened = true;
+    }
+  });
+  updateProgress();
+  // ticker duplicate
+  var tk = document.getElementById('sk-ticker');
+  if(tk) tk.innerHTML += tk.innerHTML;
+  // sticky cta after scroll
+  var shown = false;
+  window.addEventListener('scroll', function(){
+    if(!shown && window.scrollY > 400){
+      shown = true;
+      document.getElementById('sticky-cta').classList.add('visible');
+    }
+  });
+  // apply lang to new elements
+  if(typeof setLang === 'function') setLang(localStorage.getItem('bn_lang')||'en');
+});
+</script>
+</body>
+</html>

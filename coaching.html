@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="root" content="">
+<title>Stock Coaching Malaysia | BursaNews 马股报报看</title>
+<meta name="description" content="1-on-1 stock trading coaching by BursaNews — capital markets professionals with 10+ years experience. Beginner track and corporate exercises masterclass.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+body{font-size:17px;}
+.coach-hero{background:#0a1628;padding:5rem 4rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;overflow:hidden;}
+.coach-hero::before{content:"";position:absolute;left:-80px;bottom:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,107,0,.07),transparent 70%);}
+.ch-left{position:relative;z-index:2;}
+.ch-left .lbl2{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FF8533;margin-bottom:1rem;display:block;}
+.ch-left h1{font-family:"Noto Serif SC",serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1.15;letter-spacing:-.03em;margin-bottom:.75rem;}
+.ch-left h1 em{color:#FF6B00;font-style:normal;}
+.ch-left p{font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:.5rem;}
+.ch-left .joke{color:#FF8533;font-style:italic;font-size:.95rem;}
+.ch-right{position:relative;z-index:2;display:flex;justify-content:center;align-items:center;}
+
+.roadmap-section{padding:5rem 4rem;background:#fff;}
+.roadmap-steps{display:flex;flex-direction:column;gap:0;max-width:680px;margin:2rem auto 0;}
+.rs{display:flex;gap:1.75rem;padding-bottom:2.25rem;position:relative;}
+.rs::after{content:"";position:absolute;left:22px;top:46px;bottom:0;width:2px;background:#e8e6e2;}
+.rs:last-child::after{display:none;}
+.rs-num{width:46px;height:46px;border-radius:50%;background:#0a1628;color:#fff;font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;box-shadow:0 4px 12px rgba(10,22,40,.2);}
+.rs-body h4{font-size:1rem;font-weight:800;color:#0a1628;margin-bottom:.3rem;}
+.rs-body p{font-size:14.5px;color:#6b6760;line-height:1.65;}
+.rs-body a{font-size:14px;color:#FF6B00;font-weight:700;margin-top:.4rem;display:inline-block;cursor:pointer;}
+
+.tracks-section{padding:5rem 4rem;background:#f8f7f4;}
+.tracks-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem;}
+.track{border-radius:20px;overflow:hidden;border:1px solid #e8e6e2;}
+.track-head{padding:2.5rem;}.th-dark{background:#0a1628;}.th-mid{background:#1a3a5e;}
+.track-lbl{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,255,255,.45);font-weight:700;margin-bottom:.5rem;}
+.track-head h3{font-family:"Noto Serif SC",serif;font-size:1.4rem;color:#fff;font-weight:900;margin-bottom:.65rem;}
+.track-for{font-size:13.5px;color:rgba(255,255,255,.65);line-height:1.6;}
+.track-body{padding:2rem 2.5rem;background:#fff;}
+.topic-list{list-style:none;margin-bottom:1.5rem;}
+.topic-list li{font-size:14.5px;padding:7px 0;border-bottom:1px solid #f0eeea;display:flex;gap:10px;}
+.topic-list li:last-child{border:none;}
+.topic-list li::before{content:"→";color:#FF6B00;font-weight:800;flex-shrink:0;}
+.track-price{font-size:1.8rem;font-weight:900;color:#0a1628;margin-bottom:.3rem;}
+.track-price span{font-size:14px;font-weight:400;color:#999;}
+.track-note{font-size:13px;color:#999;margin-bottom:1.5rem;}
+.track-btn{display:block;width:100%;padding:13px;text-align:center;border-radius:10px;font-size:15px;font-weight:800;cursor:pointer;border:none;font-family:"DM Sans",sans-serif;}
+.track-btn.navy{background:#0a1628;color:#fff;}
+.track-btn.orange{background:#FF6B00;color:#fff;}
+
+.why-section{padding:5rem 4rem;background:#fff;}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:2rem;}
+.why-item{background:#f8f7f4;border-radius:16px;padding:1.75rem;}
+.why-icon{font-size:1.8rem;margin-bottom:.75rem;}
+.why-item h4{font-size:1rem;font-weight:800;color:#0a1628;margin-bottom:.35rem;}
+.why-item p{font-size:13.5px;color:#6b6760;line-height:1.6;}
+
+@media(max-width:900px){.coach-hero{grid-template-columns:1fr;padding:4rem 2rem;}.ch-right{display:none;}.tracks-grid{grid-template-columns:1fr;}.roadmap-section,.tracks-section,.why-section{padding:3.5rem 1.5rem;}}
+
+/* ── TICKER ── */
+.ticker-outer{background:#0a1628;overflow:hidden;position:relative;height:40px;}
+.ticker-outer::before,.ticker-outer::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none;}
+.ticker-outer::before{left:0;background:linear-gradient(to right,#0a1628,transparent);}
+.ticker-outer::after{right:0;background:linear-gradient(to left,#0a1628,transparent);}
+.ticker-track{display:flex;gap:2.5rem;white-space:nowrap;animation:ticker 24s linear infinite;height:40px;align-items:center;padding:0 1rem;}
+.ticker-track:hover{animation-play-state:paused;}
+@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.ti-item{display:inline-flex;align-items:center;gap:.5rem;font-size:13px;font-weight:700;}
+.ti-name{color:rgba(255,255,255,.5);}.ti-price{color:#fff;}.ti-up{color:#1adb5e;}.ti-dn{color:#ff4d4d;}.ti-special{color:#FF6B00;font-weight:800;}
+/* ── PULSE ── */
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.5;}100%{transform:scale(1.4);opacity:0;}}
+@keyframes shimmer{0%{transform:translateX(-100%);}100%{transform:translateX(250%);}}
+.pulse-btn{position:relative;background:#FF6B00;color:#fff;border:none;padding:14px 32px;border-radius:10px;font-size:15px;font-weight:800;cursor:pointer;font-family:'DM Sans',sans-serif;box-shadow:0 6px 20px rgba(255,107,0,.3);}
+.pulse-btn::after{content:'';position:absolute;inset:-4px;border-radius:14px;border:2px solid #FF6B00;animation:pulse-ring 1.8s ease-out infinite;pointer-events:none;}
+.pulse-btn:hover::after{animation-play-state:paused;}
+.shimmer-btn{position:relative;background:#0a1628;color:#fff;border:1.5px solid rgba(255,255,255,.2);padding:14px 32px;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;overflow:hidden;}
+.shimmer-btn::after{content:'';position:absolute;top:0;left:0;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);transform:translateX(-100%);animation:shimmer 2.6s ease-in-out infinite;pointer-events:none;}
+</style>
+</head>
+<body>
+<script src="shared.js"></script>
+
+<div class="disc-bar" data-en="⚠️ Educational content only · Not investment advice" data-zh="⚠️ 内容仅供教育参考 · 不构成投资建议">⚠️ Educational content only · Not investment advice</div>
+
+<section class="coach-hero">
+  <div class="ch-left">
+    <span class="lbl2" data-en="🎓 Personal Coaching" data-zh="🎓 个人辅导">🎓 Personal Coaching</span>
+    <h1 data-en="From zero to<br><em>actually knowing<br>what you're doing.</em>" data-zh="从零基础到<br><em>真正知道<br>自己在做什么。</em>">From zero to<br><em>actually knowing<br>what you're doing.</em></h1>
+    <p data-en="1-on-1 coaching from two ex-capital markets professionals. We don't teach theory. We teach what we actually did at work." data-zh="来自两位前资本市场专业人士的一对一辅导。我们不教理论，我们教实际工作中真正用到的东西。">1-on-1 coaching from two ex-capital markets professionals. We don't teach theory. We teach what we actually did at work.</p>
+    <p class="joke" data-en="(No recycled YouTube content. Just real knowledge from real experience.)" data-zh="（不是回收的YouTube内容，而是来自真实经验的真实知识。）">(No recycled YouTube content. Just real knowledge from real experience.)</p>
+  </div>
+  <div class="ch-right">
+    <svg width="400" height="480" viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,.45));width:100%;max-width:400px;">
+  <defs>
+    <linearGradient id="cph-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c1c2e"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="cph-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#ff9c53"/>
+    </linearGradient>
+  </defs>
+  <!-- Phone outer frame -->
+  <rect x="40" y="20" width="320" height="440" rx="32" fill="url(#cph-bg)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+  <!-- Screen -->
+  <rect x="50" y="30" width="300" height="420" rx="24" fill="#0f1923"/>
+  <!-- Notch -->
+  <rect x="145" y="30" width="110" height="20" rx="10" fill="#1c1c2e"/>
+
+  <!-- App header -->
+  <rect x="50" y="48" width="300" height="44" fill="#0a1628"/>
+  <text x="200" y="75" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="900" fill="#fff">BursaNews 课程辅导</text>
+
+  <!-- Course track cards -->
+  <!-- Track 1 -->
+  <rect x="60" y="102" width="280" height="82" rx="14" fill="rgba(255,107,0,0.1)" stroke="rgba(255,107,0,0.25)" stroke-width="1"/>
+  <rect x="60" y="102" width="280" height="28" fill="#FF6B00" rx="14"/>
+  <rect x="60" y="116" width="280" height="14" fill="#FF6B00"/>
+  <text x="78" y="121" font-family="DM Sans,sans-serif" font-size="11" font-weight="900" fill="#fff">🟢 Track 1: Beginner Stock Trading</text>
+  <text x="72" y="146" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">开户 · 图表基础 · 第一只股票</text>
+  <text x="72" y="162" font-family="DM Sans,sans-serif" font-size="10" fill="#FF8533" font-weight="700">2 × 60-min sessions · RM299</text>
+  <text x="290" y="162" text-anchor="end" font-family="DM Sans,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">→</text>
+
+  <!-- Track 2 -->
+  <rect x="60" y="194" width="280" height="82" rx="14" fill="rgba(26,58,143,0.15)" stroke="rgba(26,58,143,0.3)" stroke-width="1"/>
+  <rect x="60" y="194" width="280" height="28" fill="#1a3a8f" rx="14"/>
+  <rect x="60" y="208" width="280" height="14" fill="#1a3a8f"/>
+  <text x="78" y="213" font-family="DM Sans,sans-serif" font-size="11" font-weight="900" fill="#fff">🔵 Track 2: Corporate Exercises</text>
+  <text x="72" y="238" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">供股 · 认股权证 · 私人配售</text>
+  <text x="72" y="254" font-family="DM Sans,sans-serif" font-size="10" fill="#7fa8ff" font-weight="700">3 × 60-min sessions · RM399</text>
+
+  <!-- Qualification badges -->
+  <rect x="60" y="286" width="280" height="56" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="78" y="307" font-family="DM Sans,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.5)" font-weight="700" letter-spacing="0.07em">INSTRUCTOR CREDENTIALS</text>
+  <text x="78" y="326" font-family="DM Sans,sans-serif" font-size="10.5" fill="#FF6B00" font-weight="800">SC Module 12 · Module 19 · MR</text>
+  <text x="78" y="340" font-family="DM Sans,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.5)">前投资银行家 · 10+ years capital markets</text>
+
+  <!-- Zoom badge -->
+  <rect x="60" y="352" width="136" height="40" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="78" y="369" font-family="DM Sans,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.5)">Platform</text>
+  <text x="78" y="384" font-family="DM Sans,sans-serif" font-size="11" fill="#fff" font-weight="800">Zoom 1-on-1</text>
+  <!-- Language badge -->
+  <rect x="204" y="352" width="136" height="40" rx="10" fill="rgba(255,107,0,0.08)" stroke="rgba(255,107,0,0.15)" stroke-width="1"/>
+  <text x="222" y="369" font-family="DM Sans,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.5)">Language</text>
+  <text x="222" y="384" font-family="DM Sans,sans-serif" font-size="11" fill="#FF6B00" font-weight="800">华语 Mandarin</text>
+
+  <!-- Progress bar -->
+  <rect x="60" y="406" width="280" height="10" rx="5" fill="rgba(255,255,255,0.08)"/>
+  <rect x="60" y="406" width="168" height="10" rx="5" fill="url(#cph-bar)"/>
+  <text x="200" y="430" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(255,255,255,0.35)">60% of beginners finish in 2 weeks</text>
+
+  <!-- Bottom button -->
+  <rect x="60" y="438" width="280" height="34" rx="10" fill="#FF6B00"/>
+  <text x="200" y="459" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="900" fill="#fff">Book Free 15-min Consult →</text>
+</svg>
+  </div>
+</section>
+
+<!-- FREE ROADMAP -->
+<section class="roadmap-section">
+  <div class="wrap">
+    <span style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FF6B00;margin-bottom:.65rem;display:block;" data-en="Start Here (Free)" data-zh="从这里开始（免费）">Start Here (Free)</span>
+    <h2 style="font-family:'Noto Serif SC',serif;font-size:2rem;font-weight:900;color:#0a1628;margin-bottom:.3rem;" data-en="Free Beginner Roadmap" data-zh="免费新手路线图">Free Beginner Roadmap</h2>
+    <p style="font-size:.95rem;color:#FF6B00;font-style:italic;margin-bottom:.3rem;" data-en="(Do this before you throw money at any stock 🙏)" data-zh="（在你把钱投入任何股票之前先做这些 🙏）">(Do this before you throw money at any stock 🙏)</p>
+    <div class="roadmap-steps">
+      <div class="rs"><div class="rs-num">1</div><div class="rs-body"><h4 data-en="Open a CDS account + broker" data-zh="开设CDS账户和券商账户">Open a CDS account + broker</h4><p data-en="You need both before you can buy any Malaysian stock. 15 minutes." data-zh="购买任何马股之前，两者都需要。15分钟搞定。">You need both before you can buy any Malaysian stock. 15 minutes.</p><a href="posts/what-is-cds-account.html" data-en="CDS Account Guide →" data-zh="CDS账户指南 →">CDS Account Guide →</a></div></div>
+      <div class="rs"><div class="rs-num">2</div><div class="rs-body"><h4 data-en="Choose the right broker" data-zh="选择合适的券商">Choose the right broker</h4><p data-en="For most beginners: Moomoo. Best UX + biggest welcome bonus via BursaNews." data-zh="大多数新手：Moomoo。最佳使用体验 + 通过BursaNews获得最大开户奖励。">For most beginners: Moomoo. Best UX + biggest welcome bonus via BursaNews.</p><a href="affiliates.html" data-en="Compare Brokers →" data-zh="比较券商 →">Compare Brokers →</a></div></div>
+      <div class="rs"><div class="rs-num">3</div><div class="rs-body"><h4 data-en="Learn to read Bursa announcements" data-zh="学会解读Bursa公告">Learn to read Bursa announcements</h4><p data-en="The single most powerful skill for a Malaysian investor. Free guide." data-zh="马来西亚投资者最重要的技能。免费指南。">The single most powerful skill for a Malaysian investor. Free guide.</p><a href="posts/what-is-bursa-announcement.html" data-en="Read Free Guide →" data-zh="阅读免费指南 →">Read Free Guide →</a></div></div>
+      <div class="rs"><div class="rs-num">4</div><div class="rs-body"><h4 data-en="Subscribe to 马股早知道" data-zh="订阅马股早知道">Subscribe to 马股早知道</h4><p data-en="Daily reports put your new knowledge to work, every single morning." data-zh="每日报告让你的新知识每天早晨付诸实践。">Daily reports put your new knowledge to work, every single morning.</p><a href="subscription.html" data-en="View Plans →" data-zh="查看计划 →">View Plans →</a></div></div>
+      <div class="rs"><div class="rs-num">5</div><div class="rs-body"><h4 data-en="Book coaching (optional but powerful)" data-zh="预约辅导（可选但效果强大）">Book coaching (optional but powerful)</h4><p data-en="When you're ready to go deeper — 1-on-1 with real capital markets professionals." data-zh="当你准备好深入学习时——与真正的资本市场专业人士一对一。">When you're ready to go deeper — 1-on-1 with real capital markets professionals.</p><a href="javascript:openWA('Hi, I am interested in booking a coaching session')" data-en="Book Free Consult →" data-zh="预约免费咨询 →">Book Free Consult →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKS -->
+<section class="tracks-section">
+  <div class="wrap">
+    <span style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FF6B00;margin-bottom:.65rem;display:block;" data-en="Paid Coaching Tracks" data-zh="付费辅导课程">Paid Coaching Tracks</span>
+    <h2 style="font-family:'Noto Serif SC',serif;font-size:2rem;font-weight:900;color:#0a1628;margin-bottom:.3rem;" data-en="1-on-1 with ex-bankers." data-zh="与前银行人一对一辅导。">1-on-1 with ex-bankers.</h2>
+    <p style="font-size:.95rem;color:#FF6B00;font-style:italic;margin-bottom:.3rem;" data-en="(We literally used to get paid to do this for a living 💼)" data-zh="（我们字面意义上曾经以做这些为生 💼）">(We literally used to get paid to do this for a living 💼)</p>
+    <div class="tracks-grid">
+      <div class="track">
+        <div class="track-head th-dark">
+          <div class="track-lbl">🟢 Track 1</div>
+          <h3 data-en="Beginner Stock Trading" data-zh="新手股票交易">Beginner Stock Trading</h3>
+          <p class="track-for" data-en="For: Complete beginners — zero experience, never bought a stock before. We start from scratch, no judgment." data-zh="适合：完全零经验的新手——从未买过股票。我们从零开始，无需担心被评判。">For: Complete beginners — zero experience, never bought a stock before.</p>
+        </div>
+        <div class="track-body">
+          <ul class="topic-list">
+            <li data-en="What is a stock? How does the market actually work?" data-zh="什么是股票？市场实际上是如何运作的？">What is a stock? How does the market actually work?</li>
+            <li data-en="How to buy and sell on Bursa Malaysia" data-zh="如何在Bursa Malaysia买卖股票">How to buy and sell on Bursa Malaysia</li>
+            <li data-en="Reading basic charts and technical analysis" data-zh="解读基本图表和技术分析">Reading basic charts and technical analysis</li>
+            <li data-en="Hands-on: using Moomoo and Webull live" data-zh="实操：实时使用Moomoo和Webull">Hands-on: using Moomoo and Webull live</li>
+            <li data-en="Risk management — stop-loss, position sizing" data-zh="风险管理——止损、仓位控制">Risk management — stop-loss, position sizing</li>
+            <li data-en="How to find and evaluate your first stock" data-zh="如何寻找和评估你的第一只股票">How to find and evaluate your first stock</li>
+          </ul>
+          <div class="track-price">RM 299 <span data-en="/ course" data-zh="/ 课程">/ course</span></div>
+          <div class="track-note" data-en="2 × 60-min 1-on-1 sessions + materials. Online via Zoom." data-zh="2次60分钟一对一辅导 + 学习资料。通过Zoom在线进行。">2 × 60-min 1-on-1 sessions + materials. Zoom.</div>
+          <button class="track-btn navy" onclick="openWA('Hi, I am interested in the Beginner Stock Trading coaching (RM299)')" data-en="Book via WhatsApp" data-zh="通过WhatsApp预约">Book via WhatsApp</button>
+        </div>
+      </div>
+      <div class="track">
+        <div class="track-head th-mid">
+          <div class="track-lbl">🔵 Track 2</div>
+          <h3 data-en="Corporate Exercises Masterclass" data-zh="企业行动大师班">Corporate Exercises Masterclass</h3>
+          <p class="track-for" data-en="For: Investors with basic experience who want to understand rights issues, warrants, bonus issues — the stuff most people just scroll past." data-zh="适合：拥有基本经验的投资者，想了解供股、认股权证、红股——大多数人只是刷过去的那些东西。">For: Investors who want to understand rights issues, warrants, bonus issues — the stuff most people scroll past.</p>
+        </div>
+        <div class="track-body">
+          <ul class="topic-list">
+            <li data-en="Rights Issue: what it means, how to calculate, subscribe or sell?" data-zh="供股：含义、计算方式，认购还是出售？">Rights Issue: what it means, subscribe or sell?</li>
+            <li data-en="Bonus Issue: how it affects price and value" data-zh="红股：如何影响股价和价值">Bonus Issue: how it affects price and value</li>
+            <li data-en="Warrants: how to evaluate and trade them" data-zh="认股权证：如何评估和交易">Warrants: how to evaluate and trade them</li>
+            <li data-en="Private Placement: impact on existing shareholders" data-zh="私人配售：对现有股东的影响">Private Placement: impact on shareholders</li>
+            <li data-en="ESOS: employee share options decoded" data-zh="ESOS：员工认股计划解析">ESOS: employee share options decoded</li>
+            <li data-en="Real Bursa case studies — past corporate exercises" data-zh="真实Bursa案例研究——过去的企业行动">Real Bursa case studies — past actions</li>
+          </ul>
+          <div class="track-price">RM 399 <span data-en="/ course" data-zh="/ 课程">/ course</span></div>
+          <div class="track-note" data-en="3 × 60-min 1-on-1 sessions + case study materials. Online via Zoom." data-zh="3次60分钟一对一辅导 + 案例资料。通过Zoom在线进行。">3 × 60-min 1-on-1 sessions + case study materials. Zoom.</div>
+          <button class="track-btn orange" onclick="openWA('Hi, I am interested in the Corporate Exercises Masterclass coaching (RM399)')" data-en="Book via WhatsApp" data-zh="通过WhatsApp预约">Book via WhatsApp</button>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:13.5px;color:#999;margin-top:1.5rem;" data-en="Not sure which track? WhatsApp us for a free 15-minute chat." data-zh="不确定选哪个？WhatsApp我们进行免费15分钟聊天。">Not sure which track? WhatsApp us for a free 15-minute chat.</p>
+  </div>
+</section>
+
+<!-- WHY SECTION -->
+<section class="why-section">
+  <div class="wrap">
+    <span style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FF6B00;margin-bottom:.65rem;display:block;text-align:center;" data-en="Why Us" data-zh="为什么选我们">Why Us</span>
+    <h2 style="font-family:'Noto Serif SC',serif;font-size:2rem;font-weight:900;color:#0a1628;margin-bottom:1rem;text-align:center;" data-en="Not your typical 'sifu'." data-zh="不是你那种典型的'师父'。">Not your typical 'sifu'.</h2>
+    <div class="why-grid">
+      <div class="why-item"><div class="why-icon">🏦</div><h4 data-en="Actual capital markets background" data-zh="真实资本市场背景">Actual capital markets background</h4><p data-en="Investment banking, audit, and valuation. We don't just read about it — we did it for 10+ years." data-zh="投行、审计和估值。我们不只是读过——我们实际做了10多年。">Investment banking, audit, and valuation. We did it for 10+ years.</p></div>
+      <div class="why-item"><div class="why-icon">🗣️</div><h4 data-en="Fully in Chinese, no problem" data-zh="全程中文，没问题">Fully in Chinese, no problem</h4><p data-en="All coaching in Mandarin. Because finance is hard enough without a language barrier." data-zh="所有辅导均以华文进行。因为金融本身就够难了，不需要再加上语言障碍。">All coaching in Mandarin. Because finance is hard enough without a language barrier.</p></div>
+      <div class="why-item"><div class="why-icon">📱</div><h4 data-en="Hands-on, not textbook" data-zh="实操导向，不是教科书">Hands-on, not textbook</h4><p data-en="We screen-share on the real Moomoo/Webull apps. You see exactly what to do." data-zh="我们在真实的Moomoo/Webull应用上共享屏幕。你能准确看到该怎么做。">We screen-share on real Moomoo/Webull apps. You see exactly what to do.</p></div>
+      <div class="why-item"><div class="why-icon">💬</div><h4 data-en="Post-session WhatsApp support" data-zh="课后WhatsApp支持">Post-session WhatsApp support</h4><p data-en="Got questions after the session? WhatsApp us. We don't disappear after you pay." data-zh="课后有问题？WhatsApp我们。我们不会在你付款后就消失。">Got questions after the session? WhatsApp us. We don't disappear after you pay.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:#0a1628;text-align:center;padding:5rem 2rem;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(255,107,0,.08),transparent 70%);"></div>
+  <div class="wrap" style="position:relative;">
+    <h2 style="font-family:'Noto Serif SC',serif;font-size:2.2rem;font-weight:900;color:#fff;margin-bottom:.5rem;" data-en="Free consultation first." data-zh="先免费咨询。">Free consultation first.</h2>
+    <p style="color:#FF8533;font-style:italic;margin-bottom:.65rem;font-size:1rem;" data-en="(Zero pressure. Just a chat. We won't hard-sell you anything.)" data-zh="（零压力。只是聊聊。我们不会强行推销任何东西。）">(Zero pressure. Just a chat. We won't hard-sell you anything.)</p>
+    <p style="color:rgba(255,255,255,.6);margin-bottom:2.5rem;font-size:1rem;" data-en="Tell us your background, your goals, and we'll tell you honestly what's the best path for you." data-zh="告诉我们你的背景和目标，我们会诚实地告诉你什么是最适合你的路径。">Tell us your background and goals — we'll tell you honestly what's the best path for you.</p>
+    <button onclick="openWA('Hi, I would like a free consultation about BursaNews coaching')" style="background:#FF6B00;color:#fff;border:none;padding:16px 36px;border-radius:12px;font-size:16px;font-weight:900;cursor:pointer;font-family:'DM Sans',sans-serif;box-shadow:0 6px 20px rgba(255,107,0,.3);" data-en="📲 Free Consult via WhatsApp →" data-zh="📲 WhatsApp免费咨询 →">📲 Free Consult via WhatsApp →</button>
+  </div>
+</section>
+
+<script>
+(function(){
+  var tk=document.querySelector('.ticker-track');
+  if(tk) tk.innerHTML+=tk.innerHTML;
+})();
+</script>
+</body>
+</html>
