@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
 <style id="shared-inline">
+
+/* Attribute selector for hero dark bg - highest specificity short of inline */
+div[data-bg="dark"] {
+  background-color: #0a1628 !important;
+  background: #0a1628 !important;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -1153,11 +1160,11 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 <!-- BursaNews v10h-FINAL -->
 </head>
 <body>
-<script src="shared.js?v=10h"></script>
+<script src="shared.js?v=11a"></script>
 
 <!-- ══════════════════════════════════════
      SECTION 1: HERO
-══<div id="hero" style="background-color:#cc0000;color:#fff;text-align:center;padding:6.5rem 2rem 5rem;position:relative;overflow:hidden;width:100%;display:block;">
+══<div id="hero" data-bg="dark" style="background-color:#0a1628;background:#0a1628;color:#fff;text-align:center;padding:6.5rem 2rem 5rem;position:relative;overflow:hidden;width:100%;display:block;min-height:600px;">
   <!-- dot grid -->
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;"></div>
   <!-- orange top glow -->
