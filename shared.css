@@ -237,3 +237,9 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:4rem 2rem 2.5r
 @media(max-width:960px){.ft-grid{grid-template-columns:1fr 1fr;}.ft-brand{grid-column:1/-1;}.broker-card-body{grid-template-columns:1fr;}}
 @media(max-width:768px){nav{padding:0 1.25rem;}.nav-links{display:none;}.hbg{display:flex;}section{padding:4rem 1.25rem;}h2.ttl{font-size:1.6rem;}}
 @media(max-width:480px){.ft-grid{grid-template-columns:1fr;}.hero-stats{gap:1.5rem;}.hero-btns{flex-direction:column;align-items:center;}}
+
+/* ═══ HERO SECTION - DO NOT REMOVE ═══ */
+div#hero.hero-section {
+  background-color: #0a1628 !important;
+  color: #fff !important;
+}
