@@ -1,56 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <url>
-    <loc>https://bursanews.github.io/mybursanews/index.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="zh-MY" href="https://bursanews.github.io/mybursanews/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bursanews.github.io/mybursanews/index.html"/>
-  </url>
-
-  <url>
-    <loc>https://bursanews.github.io/mybursanews/starterkit.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://bursanews.github.io/mybursanews/subscription.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://bursanews.github.io/mybursanews/affiliates.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://bursanews.github.io/mybursanews/coaching.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://bursanews.github.io/mybursanews/about.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://bursanews.github.io/mybursanews/social.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://bursanews.github.io/mybursanews/index.html</loc><lastmod>2026-06-15</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/starterkit.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/insights.html</loc><lastmod>2026-06-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/resources.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/affiliates.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/subscription.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/coaching.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/community.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/about.html</loc><lastmod>2026-06-15</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/posts/how-to-start-investing-malaysia.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/posts/dividend-stocks-malaysia.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/posts/ipo-guide-malaysia.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/posts/reit-guide-malaysia.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/posts/rights-issue-explained.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/posts/beginner-mistakes.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/posts/what-is-cds-account.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bursanews.github.io/mybursanews/posts/what-is-bursa-announcement.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 </urlset>

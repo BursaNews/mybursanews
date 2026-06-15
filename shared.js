@@ -43,39 +43,42 @@ document.addEventListener('DOMContentLoaded', function() {
   const pg = location.pathname.split('/').pop() || 'index.html';
 
   document.body.insertAdjacentHTML('afterbegin', `
-<nav>
-  <a href="${ROOT}index.html" style="display:flex;align-items:center;text-decoration:none;">
-    <img class="nav-logo-img" src="${ROOT}assets/images/logo-en.png" alt="BursaNews"
-      style="height:44px;width:44px;border-radius:10px;object-fit:cover;transition:opacity .2s;">
+<nav id="main-nav" role="navigation" aria-label="Main navigation">
+  <a href="${ROOT}index.html" class="nav-logo" aria-label="BursaNews Home">
+    <img src="${ROOT}assets/images/logo-cn.png" class="logo-zh" alt="马股报报看 BursaNews Logo" height="44" loading="eager">
+    <img src="${ROOT}assets/images/logo-en.png" class="logo-en" alt="BursaNews Malaysia Bursa Investing Logo" height="44" loading="eager" style="display:none;">
   </a>
-  <ul class="nav-links">
-    <li><a href="${ROOT}index.html" data-en="Home" data-zh="首页">Home</a></li>
-    <li><a href="${ROOT}starterkit.html" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包" style="color:#1adb5e;font-weight:700;">🎁 Free Starter Kit</a></li>
-    <li><a href="${ROOT}social.html" data-en="Social" data-zh="社交媒体">Social</a></li>
-    <li><a href="${ROOT}affiliates.html" data-en="Brokers" data-zh="开户指南">Brokers</a></li>
-    <li><a href="${ROOT}subscription.html" data-en="Subscribe" data-zh="订阅计划">Subscribe</a></li>
-    <li><a href="${ROOT}coaching.html" data-en="Coaching" data-zh="课程辅导">Coaching</a></li>
-    <li><a href="${ROOT}about.html" data-en="About" data-zh="关于我们">About</a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="lang-switch">
-      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" data-lang="zh" onclick="setLang('zh')">中文</button>
-    </div>
-    <button class="hbg" onclick="document.querySelector('.mob').classList.toggle('open')">
-      <span></span><span></span><span></span>
+  <div class="nav-links" role="menubar">
+    <a href="${ROOT}index.html" class="nav-link" data-en="Home" data-zh="首页" role="menuitem">首页</a>
+    <a href="${ROOT}starterkit.html" class="nav-link nav-highlight" data-en="🎁 Starter Kit" data-zh="🎁 免费入门包" role="menuitem">🎁 免费入门包</a>
+    <a href="${ROOT}insights.html" class="nav-link" data-en="Market Insights" data-zh="市场分析" role="menuitem">市场分析</a>
+    <a href="${ROOT}resources.html" class="nav-link" data-en="Resources" data-zh="学习资源" role="menuitem">学习资源</a>
+    <a href="${ROOT}affiliates.html" class="nav-link" data-en="Brokers" data-zh="开户指南" role="menuitem">开户指南</a>
+    <a href="${ROOT}subscription.html" class="nav-link" data-en="Subscribe" data-zh="订阅计划" role="menuitem">订阅计划</a>
+    <a href="${ROOT}coaching.html" class="nav-link" data-en="Coaching" data-zh="课程辅导" role="menuitem">课程辅导</a>
+    <a href="${ROOT}community.html" class="nav-link" data-en="Community" data-zh="社群" role="menuitem">社群</a>
+    <a href="${ROOT}about.html" class="nav-link" data-en="About" data-zh="关于我们" role="menuitem">关于我们</a>
+  </div>
+  <div class="nav-actions">
+    <button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+      <span class="lang-btn" data-lang="en" onclick="setLang('en')">EN</span>
+      <span class="lang-btn active" data-lang="zh" onclick="setLang('zh')">中文</span>
     </button>
+    <button class="nav-mob-toggle" onclick="toggleMob()" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>
 </nav>
-<div class="mob">
-  <a href="${ROOT}index.html" data-en="Home" data-zh="首页">Home</a>
-  <a href="${ROOT}starterkit.html" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包" style="color:#1adb5e;font-weight:700;">🎁 Free Starter Kit</a>
-  <a href="${ROOT}social.html" data-en="Social" data-zh="社交媒体">Social</a>
-  <a href="${ROOT}affiliates.html" data-en="Brokers" data-zh="开户指南">Brokers</a>
-  <a href="${ROOT}subscription.html" data-en="Subscribe" data-zh="订阅计划">Subscribe</a>
-  <a href="${ROOT}coaching.html" data-en="Coaching" data-zh="课程辅导">Coaching</a>
-  <a href="${ROOT}about.html" data-en="About" data-zh="关于我们">About</a>
-</div>`);
+<div class="mob" id="mob-menu" role="dialog" aria-label="Mobile navigation">
+  <a href="${ROOT}index.html" data-en="Home" data-zh="首页">首页</a>
+  <a href="${ROOT}starterkit.html" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包">🎁 免费入门包</a>
+  <a href="${ROOT}insights.html" data-en="Market Insights" data-zh="市场分析">市场分析</a>
+  <a href="${ROOT}resources.html" data-en="Resources" data-zh="学习资源">学习资源</a>
+  <a href="${ROOT}affiliates.html" data-en="Brokers" data-zh="开户指南">开户指南</a>
+  <a href="${ROOT}subscription.html" data-en="Subscribe" data-zh="订阅计划">订阅计划</a>
+  <a href="${ROOT}coaching.html" data-en="Coaching" data-zh="课程辅导">课程辅导</a>
+  <a href="${ROOT}community.html" data-en="Community" data-zh="社群">社群</a>
+  <a href="${ROOT}about.html" data-en="About" data-zh="关于我们">关于我们</a>
+</div>
+`);
 
 document.body.insertAdjacentHTML('beforeend', `
 <footer>
