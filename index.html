@@ -1274,7 +1274,6 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 
 </head>
 <body>
-<body>
 <script src="shared.js"></script>
 
 <!-- ══════════════════════════════════════
@@ -1635,6 +1634,107 @@ function toggleFaq(el) {
   const ans = el.nextElementSibling;
   ans.style.maxHeight = el.classList.contains('open') ? ans.scrollHeight + 'px' : '0';
 }
+
+/* ─────────────────────────────────────────
+   HERO TYPEWRITER
+───────────────────────────────────────── */
+(function () {
+  const words = {
+    zh: ['好玩又容易上手！', '不再雾里看花！', '原来这么简单！', '人人都听得懂！'],
+    en: ['fun and easy to understand!', 'finally making sense!', 'simpler than you think!', 'something everyone gets!']
+  };
+  const twSpan = document.getElementById('tw-span');
+  if (!twSpan) return;
+
+  let lang = (window.lang || document.documentElement.dataset.defaultLang || 'zh');
+  let wordIdx = 0, charIdx = 0, deleting = false;
+  const TYPE_SPEED = 65, DELETE_SPEED = 35, HOLD_TIME = 1800, GAP_TIME = 400;
+
+  function currentLang() {
+    return (typeof window.lang !== 'undefined') ? window.lang : lang;
+  }
+
+  function tick() {
+    const list = words[currentLang()] || words.zh;
+    const word = list[wordIdx % list.length];
+
+    if (!deleting) {
+      charIdx++;
+      twSpan.textContent = word.slice(0, charIdx);
+      if (charIdx === word.length) {
+        deleting = true;
+        return setTimeout(tick, HOLD_TIME);
+      }
+      return setTimeout(tick, TYPE_SPEED);
+    } else {
+      charIdx--;
+      twSpan.textContent = word.slice(0, charIdx);
+      if (charIdx === 0) {
+        deleting = false;
+        wordIdx++;
+        return setTimeout(tick, GAP_TIME);
+      }
+      return setTimeout(tick, DELETE_SPEED);
+    }
+  }
+
+  setTimeout(tick, 1200);
+})();
+
+/* ─────────────────────────────────────────
+   HERO STAT COUNT-UP (on scroll into view)
+───────────────────────────────────────── */
+(function () {
+  const targets = [
+    { id: 'c-years', end: 10, suffix: '+' },
+    { id: 'c-cos',   end: 50, suffix: '+' },
+    { id: 'c-views', end: 10, suffix: 'mil+' }
+  ];
+  const els = targets.map(t => ({ ...t, el: document.getElementById(t.id) })).filter(t => t.el);
+  if (!els.length) return;
+
+  let animated = false;
+
+  function countUp(t) {
+    const duration = 1400;
+    const start = performance.now();
+    function frame(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const val = Math.floor(eased * t.end);
+      t.el.textContent = val + t.suffix;
+      if (progress < 1) requestAnimationFrame(frame);
+      else t.el.textContent = t.end + t.suffix;
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function runAll() {
+    if (animated) return;
+    animated = true;
+    els.forEach(countUp);
+  }
+
+  const statsBlock = document.getElementById('hero-stats');
+  if ('IntersectionObserver' in window && statsBlock) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { runAll(); obs.disconnect(); } });
+    }, { threshold: 0.4 });
+    obs.observe(statsBlock);
+  } else {
+    runAll();
+  }
+})();
+
+/* ─────────────────────────────────────────
+   HERO ILLUSTRATION FADE-IN
+───────────────────────────────────────── */
+(function () {
+  document.querySelectorAll('.hero-fade-in, [data-fade-in]').forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.animation = `heroFadeIn .8s ease forwards ${0.15 * i}s`;
+  });
+})();
 </script>
 </body>
 </html>
