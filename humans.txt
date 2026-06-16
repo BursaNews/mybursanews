@@ -1,0 +1,20 @@
+/* BursaNews 马股报报看 */
+/* Malaysia's Bursa Malaysia Investing Education Platform */
+
+/* TEAM */
+    Founders: Former Investment Bankers, Malaysia
+    SC Licences: Module 12, Module 19, MR
+    Experience: 10+ years capital markets
+    Location: Kuala Lumpur, Malaysia
+
+/* SITE */
+    URL: https://bursanews.github.io/mybursanews/
+    Language: Chinese (zh-MY), English (en-MY)
+    Purpose: Bursa Malaysia investing education for beginners and retail investors
+
+/* PLATFORM */
+    Host: GitHub Pages
+    Languages: HTML5, CSS3, JavaScript
+    
+/* CONTACT */
+    WhatsApp: +601156482183

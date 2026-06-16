@@ -1,12 +1,20 @@
+# BursaNews 马股报报看
+# https://bursanews.github.io/mybursanews/
+# Malaysia Bursa investing education — Cara beli saham, REIT, dividend, IPO, broker guide
+
 User-agent: *
 Allow: /
+Disallow: /test-hero.html
+Disallow: /test2.html
 
-# Sitemap
 Sitemap: https://bursanews.github.io/mybursanews/sitemap.xml
 
-# Allow all major search engines
+# ═══ SEARCH ENGINES ═══
 User-agent: Googlebot
 Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/
 
 User-agent: Bingbot
 Allow: /
@@ -14,22 +22,59 @@ Allow: /
 User-agent: Slurp
 Allow: /
 
-# Allow AI crawlers (for AI search visibility)
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# ═══ AI ASSISTANTS — ALL ALLOWED ═══
+# Allow all AI crawlers for AI discovery (ChatGPT, Claude, Gemini, Perplexity etc)
+
 User-agent: GPTBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: anthropic-ai
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-# Block test/temp files
-Disallow: /test-hero.html
-Disallow: /test2.html
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: PetalBot
+Allow: /
