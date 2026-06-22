@@ -991,7 +991,7 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 /* Journey chooser */
 .journey-section { background: var(--off); padding: 5rem 2rem; }
 .journey-inner { max-width: 1000px; margin: 0 auto; }
-.section-label { font-size: 14px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: .75rem; }
+.section-label { font-size: 14px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: .75rem; }
 .section-h { font-family: var(--serif); font-size: clamp(1.7rem,3.5vw,2.4rem); font-weight: 900; color: var(--navy); margin-bottom: .5rem; line-height: 1.2; }
 .section-h em { color: var(--gold); font-style: normal; }
 .section-sub { font-size: 1.05rem; color: var(--gray); margin-bottom: 3rem; line-height: 1.75; }
@@ -1583,20 +1583,41 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-brand" style="text-align:center;">
-        <img src="assets/images/logo-cn.png" alt="BursaNews 马股报报看" height="44" class="logo-zh" style="display:block;margin:0 auto .5rem;">
-        <img src="assets/images/logo-en.png" alt="BursaNews Malaysia" height="44" class="logo-en" style="display:none;">
-        <p data-en="Founded by 2 investment bankers who have seen how the capital markets really work. We know what the public wants to know, and we want to bridge the gap between uncle and aunty on the street and institutional investors." data-zh="由2位投资银行家创办，我们见过资本市场真正的运作方式，也知道大众想了解什么。我们希望拉近街上的Uncle Aunty与机构投资者之间的差距，提升大家的财务知识和敏感度。">由2位投资银行家创办，我们见过资本市场真正的运作方式，也知道大众想了解什么。我们希望拉近街上的Uncle Aunty与机构投资者之间的差距，提升大家的财务知识和敏感度。</p>
-        <div style="display:flex;gap:.75rem;margin-top:1.25rem;justify-content:center;">
-          <a href="https://www.youtube.com/@bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="BursaNews YouTube">YT</a>
-          <a href="https://www.instagram.com/bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="BursaNews Instagram">IG</a>
-          <a href="https://www.facebook.com/bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="BursaNews Facebook">FB</a>
-          <a href="https://t.me/bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="BursaNews Telegram">TG</a>
+      <div class="footer-brand">
+        <img src="assets/images/logo-cn.png" alt="BursaNews 马股报报看" height="44" class="logo-zh" style="margin-bottom:.75rem;display:block;">
+        <img src="assets/images/logo-en.png" alt="BursaNews Malaysia" height="44" class="logo-en" style="display:none;margin-bottom:.75rem;">
+        <p data-en="Real talk about real money. Built by ex-investment banking professionals with 10+ years experience advising 50+ listed companies." data-zh="认真聊钱这件事。由前投资银行顾问打造，拥有逾10年资本市场经验，曾为50+家上市公司提供顾问服务。">认真聊钱这件事。由前投资银行顾问打造，拥有逾10年资本市场经验，曾为50+家上市公司提供顾问服务。</p>
+        <div style="display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap;">
+          <a href="https://www.youtube.com/@bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="YouTube">YT</a>
+          <a href="https://www.instagram.com/bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="Facebook">FB</a>
+          <a href="https://t.me/bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="Telegram">TG</a>
         </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Learn" data-zh="学习">学习</h4>
+        <a href="posts/how-to-start-investing-malaysia.html" data-en="How to Start Investing" data-zh="如何开始投资">如何开始投资</a>
+        <a href="posts/what-is-cds-account.html" data-en="CDS Account Guide" data-zh="CDS账户指南">CDS账户指南</a>
+        <a href="posts/dividend-stocks-malaysia.html" data-en="Dividend Investing" data-zh="股息投资">股息投资</a>
+        <a href="posts/rights-issue-explained.html" data-en="Rights Issue Explained" data-zh="供股详解">供股详解</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Services" data-zh="服务">服务</h4>
+        <a href="subscription.html" data-en="Daily Reports (订阅)" data-zh="每日报告（订阅）">每日报告（订阅）</a>
+        <a href="affiliates.html" data-en="Moomoo Sign Up Rewards" data-zh="Moomoo开户奖励">Moomoo开户奖励</a>
+        <a href="affiliates.html" data-en="Webull Sign Up Rewards" data-zh="Webull开户奖励">Webull开户奖励</a>
+        <a href="coaching.html" data-en="1-on-1 Coaching" data-zh="一对一辅导">一对一辅导</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Company" data-zh="关于">关于</h4>
+        <a href="about.html" data-en="About Us" data-zh="关于我们">关于我们</a>
+        <a href="community.html" data-en="Community" data-zh="社群">社群</a>
+        <a href="about.html#disclaimer" data-en="Disclaimer" data-zh="免责声明">免责声明</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p data-en="© 2026 BursaNews 马股报报看. All rights reserved." data-zh="© 2026 BursaNews 马股报报看. 版权所有。">© 2026 BursaNews 马股报报看. 版权所有。</p>
+      <p data-en="© 2026 BursaNews | 马股报报看. All rights reserved." data-zh="© 2026 马股报报看 | BursaNews. 版权所有。">© 2026 马股报报看 | BursaNews. 版权所有。</p>
+      <p style="font-size:12px;color:rgba(255,255,255,.25);margin-top:.35rem;" data-en="BursaNews is not a licensed financial advisor. All content is for educational purposes only." data-zh="马股报报看不是持牌财务顾问。所有内容仅供教育参考，不构成投资建议。">马股报报看不是持牌财务顾问。所有内容仅供教育参考，不构成投资建议。</p>
     </div>
   </div>
 </footer>
@@ -1604,14 +1625,13 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 <script>
 function toggleFaq(el) {
   const isOpen = el.classList.contains('open');
-  // close all others first
   document.querySelectorAll('.faq-q.open').forEach(function(q) {
     q.classList.remove('open');
     q.nextElementSibling.style.maxHeight = '0';
   });
   if (!isOpen) {
     el.classList.add('open');
-    el.nextElementSibling.style.maxHeight = el.nextElementSibling.scrollHeight + 'px';
+    el.nextElementSibling.style.maxHeight = 'none';
   }
 }
 </script>

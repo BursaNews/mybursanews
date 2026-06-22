@@ -53,12 +53,6 @@
 </script>
 <style>
 body{font-size:17px;}
-.ticker-outer{background:#0a1628;overflow:hidden;position:relative;height:40px;}
-.ticker-outer::before,.ticker-outer::after{content:"";position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none;}
-.ticker-outer::before{left:0;background:linear-gradient(to right,#0a1628,transparent);}
-.ticker-outer::after{right:0;background:linear-gradient(to left,#0a1628,transparent);}
-.ticker-track{display:flex;gap:2.5rem;white-space:nowrap;animation:ticker 24s linear infinite;height:40px;align-items:center;padding:0 1rem;}
-@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 .ti-item{display:inline-flex;align-items:center;gap:.5rem;font-size:13px;font-weight:700;}
 .ti-name{color:rgba(255,255,255,.5);}.ti-price{color:#fff;}.ti-up{color:#1adb5e;}.ti-dn{color:#ff4d4d;}.ti-special{color:#FF6B00;font-weight:800;}
 /* helpers */
@@ -135,35 +129,6 @@ body{font-size:17px;}
 .barrow{font-size:1.5rem;color:rgba(255,255,255,.25);text-align:center;}
 .bnote{background:rgba(26,219,94,.1);border:1px solid rgba(26,219,94,.2);border-radius:12px;padding:1rem 1.5rem;margin-top:1.5rem;font-size:14px;color:rgba(255,255,255,.75);line-height:1.65;text-align:center;}
 .bnote strong{color:#1adb5e;}
-/* COMPARE TABLE */
-.compare-section{padding:5.5rem 2rem;background:#fff;}
-.cmp-wrap{max-width:900px;margin:2.5rem auto 0;}
-.cmp-table{width:100%;border-collapse:separate;border-spacing:0;font-size:13.5px;background:#fff;border-radius:18px;overflow:hidden;border:1.5px solid #e8e6e2;}
-.cmp-table th,.cmp-table td{padding:14px 14px;text-align:center;vertical-align:middle;}
-.cmp-table thead th{background:#f8f7f4;border-bottom:1.5px solid #e8e6e2;}
-.cmp-table thead th:first-child{text-align:left;}
-.cmp-col-head{display:flex;flex-direction:column;align-items:center;gap:4px;}
-.cmp-col-head .cico{font-size:1.4rem;line-height:1;}
-.cmp-col-head .cname{font-family:"Noto Serif SC",serif;font-weight:800;font-size:14.5px;color:#0a1628;}
-.cmp-table thead th.hl{background:#0a1628;padding-top:20px;}
-.cmp-table thead th.hl .cname{color:#fff;}
-.cmp-badge{display:inline-block;background:#FF6B00;color:#fff;font-size:10.5px;font-weight:800;padding:4px 14px;border-radius:20px;white-space:nowrap;letter-spacing:.02em;margin-bottom:8px;}
-.cmp-table tbody th{text-align:left;font-weight:600;color:#1a1917;font-size:13.5px;background:#fff;border-bottom:1px solid #f0eeea;line-height:1.5;}
-.cmp-table tbody td{border-bottom:1px solid #f0eeea;color:#6b6760;line-height:1.5;}
-.cmp-table tbody tr:last-child th,.cmp-table tbody tr:last-child td{border-bottom:none;}
-.cmp-table td.hl,.cmp-table tbody tr:last-child td.hl{background:rgba(255,107,0,.04);}
-.cmp-check{color:#1adb5e;font-size:1.1rem;font-weight:900;}
-.cmp-dash{color:#ccc;font-weight:700;}
-.cmp-price-row th,.cmp-price-row td{padding-top:18px;padding-bottom:18px;}
-.cmp-price{font-size:1.05rem;font-weight:900;color:#0a1628;}
-.cmp-price.hl{color:#FF6B00;}
-.cmp-price-sub{display:block;font-size:11px;font-weight:500;color:#999;margin-top:2px;}
-@media(max-width:680px){
-  .cmp-table{font-size:12px;}
-  .cmp-table th,.cmp-table td{padding:10px 6px;}
-  .cmp-col-head .cname{font-size:12px;}
-  .cmp-col-head .cico{font-size:1.1rem;}
-}
 /* PRICING */
 .pricing-section{padding:5.5rem 2rem;background:#f8f7f4;}
 .phdr{text-align:center;margin-bottom:.5rem;}
@@ -215,20 +180,14 @@ body{font-size:17px;}
 <body>
 <script src="shared.js"></script>
 
-<div class="ticker-outer"><div class="ticker-track" id="sub-tk">
-  <span class="ti-item"><span class="ti-name">KLCI</span><span class="ti-price">1,612.4</span><span class="ti-up">&#9650; +0.51%</span></span>
-  <span class="ti-item"><span class="ti-name">MAYBANK</span><span class="ti-price">RM 9.20</span><span class="ti-dn">&#9660; -0.22%</span></span>
-  <span class="ti-item"><span class="ti-name">CIMB</span><span class="ti-price">RM 7.85</span><span class="ti-up">&#9650; +1.03%</span></span>
-  <span class="ti-item"><span class="ti-name">TENAGA</span><span class="ti-price">RM 11.40</span><span class="ti-up">&#9650; +0.88%</span></span>
-  <span class="ti-item"><span class="ti-special">moomoo BURSA88</span><span class="ti-up">&#127881; RM1,800+ rewards</span></span>
-</div></div>
+
 
 <section class="hero">
 <div class="hi">
 <span class="slbl" data-en="Bursa Investing Explained (Beginner-Friendly Reports)" data-zh="马股投资解析（新手友好报告）">Bursa Investing Explained (Beginner-Friendly Reports)</span>
-<h1 data-en="Understand what&#8217;s happening<br>in Malaysian stocks,<br><em>without finance jargon.</em>" data-zh="读懂马股市场正在发生什么，<br><em>不需要任何金融行话。</em>">Understand what&#8217;s happening<br>in Malaysian stocks,<br><em>without finance jargon.</em></h1>
+<h1 data-en="Understand what's happening<br>in Malaysian stocks,<br><em>without finance jargon.</em>" data-zh="读懂马股市场正在发生什么，<br><em>不需要任何金融行话。</em>">Understand what's happening<br>in Malaysian stocks,<br><em>without finance jargon.</em></h1>
 <p data-en="Every trading day, 2&#8211;6 company analyses delivered to your WhatsApp before the market opens. Written by ex-investment bankers. Understood by everyone." data-zh="每个交易日，2&#8211;6家公司分析报告在开盘前送达WhatsApp。由前投行人撰写，人人都能看懂。">Every trading day, 2&#8211;6 company analyses delivered to your WhatsApp before the market opens. Written by ex-investment bankers. Understood by everyone.</p>
-<p class="joke" data-en="(If your mum can understand it, we&#8217;ve done our job &#128516;)" data-zh="(如果你妈妈都能看懂，我们就算成功了 &#128516;)">(If your mum can understand it, we&#8217;ve done our job &#128516;)</p>
+<p class="joke" data-en="(If your mum can understand it, we've done our job &#128516;)" data-zh="(如果你妈妈都能看懂，我们就算成功了 &#128516;)">(If your mum can understand it, we've done our job &#128516;)</p>
 </div></section>
 
 <!-- FIX 1: WHO THIS IS FOR -->
@@ -238,17 +197,17 @@ body{font-size:17px;}
 <div class="wgrid">
 <div class="wyes">
 <h3 data-en="&#10003; This IS for you if&#8230;" data-zh="&#10003; 这适合你，如果&#8230;">&#10003; This IS for you if&#8230;</h3>
-<div class="wi"><span class="wi-ic">&#128240;</span><span class="wi-tx" data-en="You see Bursa headlines but don&#8217;t know what they mean" data-zh="你看到Bursa新闻标题但不知道含义">You see Bursa headlines but don&#8217;t know what they mean</span></div>
+<div class="wi"><span class="wi-ic">&#128240;</span><span class="wi-tx" data-en="You see Bursa headlines but don't know what they mean" data-zh="你看到Bursa新闻标题但不知道含义">You see Bursa headlines but don't know what they mean</span></div>
 <div class="wi"><span class="wi-ic">&#129327;</span><span class="wi-tx" data-en="You want to start investing but feel overwhelmed" data-zh="你想开始投资但感到不知所措">You want to start investing but feel overwhelmed</span></div>
-<div class="wi"><span class="wi-ic">&#129300;</span><span class="wi-tx" data-en="You don&#8217;t know which stocks to watch or why" data-zh="你不知道该关注哪些股票以及为什么">You don&#8217;t know which stocks to watch or why</span></div>
-<div class="wi"><span class="wi-ic">&#128564;</span><span class="wi-tx" data-en="You&#8217;ve tried reading financial reports and fell asleep" data-zh="你试过阅读财务报告，然后睡着了">You&#8217;ve tried reading financial reports and fell asleep</span></div>
+<div class="wi"><span class="wi-ic">&#129300;</span><span class="wi-tx" data-en="You don't know which stocks to watch or why" data-zh="你不知道该关注哪些股票以及为什么">You don't know which stocks to watch or why</span></div>
+<div class="wi"><span class="wi-ic">&#128564;</span><span class="wi-tx" data-en="You've tried reading financial reports and fell asleep" data-zh="你试过阅读财务报告，然后睡着了">You've tried reading financial reports and fell asleep</span></div>
 <div class="wi"><span class="wi-ic">&#128172;</span><span class="wi-tx" data-en="You want simple, honest explanations &#8212; not jargon" data-zh="你想要简单、诚实的解释&#8212;不要行话">You want simple, honest explanations &#8212; not jargon</span></div>
 <div class="wi"><span class="wi-ic">&#9200;</span><span class="wi-tx" data-en="You have no time to research Bursa announcements yourself" data-zh="你没有时间自己研究Bursa公告">You have no time to research Bursa announcements yourself</span></div>
 </div>
 <div class="wnot">
 <h3 data-en="&#10007; This is NOT for you if&#8230;" data-zh="&#10007; 这不适合你，如果&#8230;">&#10007; This is NOT for you if&#8230;</h3>
 <div class="wi"><span class="wi-ic">&#128200;</span><span class="wi-tx" data-en="You want someone to tell you exactly what to buy" data-zh="你想要别人告诉你确切该买什么">You want someone to tell you exactly what to buy</span></div>
-<div class="wi"><span class="wi-ic">&#128640;</span><span class="wi-tx" data-en="You&#8217;re looking for &#8216;hot tips&#8217; or guaranteed returns" data-zh="你在寻找热门贴士或保证回报">You&#8217;re looking for &#8216;hot tips&#8217; or guaranteed returns</span></div>
+<div class="wi"><span class="wi-ic">&#128640;</span><span class="wi-tx" data-en="You're looking for &#8216;hot tips' or guaranteed returns" data-zh="你在寻找热门贴士或保证回报">You're looking for &#8216;hot tips' or guaranteed returns</span></div>
 <div class="wi"><span class="wi-ic">&#127922;</span><span class="wi-tx" data-en="You want to get rich quickly without learning" data-zh="你想不学习就快速致富">You want to get rich quickly without learning</span></div>
 
 </div>
@@ -256,7 +215,7 @@ body{font-size:17px;}
 <div class="wbridge">
 <span class="wb-ic">&#129517;</span>
 <div class="wb-tx">
-<h4 data-en="Complete beginner? Start here first &#8212; it&#8217;s free." data-zh="完全零基础？先从这里开始&#8212;完全免费。">Complete beginner? Start here first &#8212; it&#8217;s free.</h4>
+<h4 data-en="Complete beginner? Start here first &#8212; it's free." data-zh="完全零基础？先从这里开始&#8212;完全免费。">Complete beginner? Start here first &#8212; it's free.</h4>
 <p data-en="Our free Starter Kit walks you through 5 missions before you spend a single ringgit. Complete it first, then come back here when ready." data-zh="免费入门包带你完成5个任务，不需要花一分钱。先完成它，准备好了再回来。">Our free Starter Kit walks you through 5 missions before you spend a single ringgit. Complete it first, then come back here.</p>
 </div>
 <button class="wb-btn" onclick="location.href='starterkit.html'" data-en="&#127873; Try Free Starter Kit" data-zh="&#127873; 尝试免费入门包">&#127873; Try Free Starter Kit</button>
@@ -266,8 +225,8 @@ body{font-size:17px;}
 <!-- FIX 2: SAMPLE CONTENT FIRST -->
 <section class="sample-section"><div class="wrap">
 <span class="slbl tc" data-en="See a Real Example" data-zh="看一个真实例子">See a Real Example</span>
-<h2 class="stitle tc" data-en="示例：你每天早上<em>会收到什么</em>" data-zh="示例：你每天早上<em>会收到什么</em>">示例：你每天早上<em>会收到什么</em></h2>
-<p class="sjoke tc" data-en="(This is a real BursaNews daily report, reproduced with permission)" data-zh="（这是一份真实的马股早知道每日报告样本）">(Real BursaNews daily report sample)</p>
+<h2 class="stitle tc" data-en="Example: What you <em>receive every morning</em>" data-zh="示例：你每天早上<em>会收到什么</em>">示例：你每天早上<em>会收到什么</em></h2>
+<p class="sjoke tc" data-en="(This is a real BursaNews daily report, reproduced with permission)" data-zh="（这是一份真实的马股早知道每日分析样本）">(Real BursaNews daily report sample)</p>
 
 <!-- Sample report card -->
 <div style="max-width:860px;margin:2rem auto 0;background:#0a1628;border-radius:18px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.3);">
@@ -276,10 +235,10 @@ body{font-size:17px;}
   <div style="background:#0a1628;padding:1.25rem 1.75rem;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:.85rem;">
     <div style="width:38px;height:38px;border-radius:10px;background:rgba(255,107,0,.2);display:flex;align-items:center;justify-content:center;font-size:.95rem;font-weight:900;color:#FF6B00;flex-shrink:0;">BN</div>
     <div>
-      <div style="font-size:13px;font-weight:800;color:#fff;">马股早知道 · Daily Report</div>
-      <div style="font-size:11.5px;color:rgba(255,255,255,.4);">每个交易日 · 开盘前送达</div>
+      <div style="font-size:13px;font-weight:800;color:#fff;" data-en="Daily Morning Analysis" data-zh="马股早知道 · 每日早间分析">马股早知道 · 每日早间分析</div>
+      <div style="font-size:11.5px;color:rgba(255,255,255,.4);" data-en="Every trading day · Delivered before market open" data-zh="每个交易日 · 开盘前送达">每个交易日 · 开盘前送达</div>
     </div>
-    <div style="margin-left:auto;font-size:11.5px;color:rgba(255,255,255,.35);">样本 · Sample</div>
+    <div style="margin-left:auto;font-size:11.5px;color:rgba(255,255,255,.35);" data-en="Sample" data-zh="样本">样本 · Sample</div>
   </div>
 
   <!-- Company name + question -->
@@ -326,14 +285,185 @@ body{font-size:17px;}
 </div>
 </div></section>
 
+<!-- MONTHLY REPORT SAMPLE -->
+<section style="padding:4rem 2rem;background:#f4f3f0;"><div class="wrap-sm">
+<span class="slbl tc" data-en="Monthly Report Sample" data-zh="月报样本">月报样本</span>
+<h2 class="stitle tc" style="margin-bottom:.5rem;" data-en="What a <em>Monthly Deep-Dive</em> looks like" data-zh="<em>月度深度报告</em>是什么样的">什么是<em>月度深度报告</em></h2>
+<p class="psub" style="margin-bottom:2rem;" data-en="Included in the Daily Morning Analysis and FB Subscription. One featured company, fully researched, every month." data-zh="马股早知道及FB订阅专区专属。每月精选一间公司，深度分析公告背后的真正含义。">马股早知道及FB订阅专区专属。每月精选一间公司，深度分析公告背后的真正含义。</p>
+
+<div style="background:#fff;border-radius:12px;border:1px solid #ddd;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.09);max-width:740px;margin:0 auto;font-family:'DM Sans',sans-serif;">
+
+  <!-- PAGE HEADER -->
+  <div style="padding:.9rem 1.4rem;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:.75rem;">
+    <div style="font-size:15px;font-weight:600;color:#1a1917;">【马股 早知道】-月报 <span style="color:#888;font-weight:400;">(2026 年 4 月)</span></div>
+    <div style="display:grid;grid-template-columns:auto auto auto;gap:4px 12px;align-items:center;">
+      <div style="display:flex;align-items:center;gap:5px;">
+        <svg width="15" height="15" viewBox="0 0 36 36"><circle cx="18" cy="18" r="18" fill="#1877F2"/><path fill="#fff" d="M25 18.05C25 13.6 21.42 10 17 10s-8 3.6-8 8.05c0 4.02 2.92 7.35 6.75 7.95v-5.62h-2.03v-2.33h2.03v-1.78c0-2 1.2-3.1 3-3.1.87 0 1.78.16 1.78.16v2.2h-1c-1 0-1.31.62-1.31 1.27v1.25h2.23l-.36 2.33h-1.87v5.62C22.08 25.4 25 22.07 25 18.05z"/></svg>
+        <span style="font-size:11px;color:#555;">马股-报报看</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:5px;">
+        <svg width="15" height="15" viewBox="0 0 36 36"><rect width="36" height="36" rx="6" fill="#FF0000"/><path fill="#fff" d="M27.5 14.5s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C21 10.3 18 10.3 18 10.3s-3 0-5.3.1c-.6.1-1.9.1-3 1.3-.9.8-1.2 2.8-1.2 2.8S8.2 16.7 8.2 19v2.1c0 2.3.3 4.5.3 4.5s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.3 1.2 2.4.2 10 .3 10 .3s3 0 5.3-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.3-2.3.3-4.5V19c0-2.3-.3-4.5-.3-4.5zM15.7 22.5v-7.8l8.1 3.9-8.1 3.9z"/></svg>
+        <span style="font-size:11px;color:#555;">@bursa-news</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:5px;">
+        <svg width="15" height="15" viewBox="0 0 36 36"><rect width="36" height="36" rx="6" fill="#FF2442"/><text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">小红书</text></svg>
+        <span style="font-size:11px;color:#555;">数于</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:5px;">
+        <svg width="15" height="15" viewBox="0 0 36 36"><rect width="36" height="36" rx="8" fill="url(#igG)"/><defs><linearGradient id="igG" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#f09433"/><stop offset="50%" stop-color="#dc2743"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><circle cx="18" cy="18" r="7" stroke="#fff" stroke-width="2" fill="none"/><circle cx="25" cy="11" r="1.5" fill="#fff"/></svg>
+        <span style="font-size:11px;color:#555;">马股-报报看</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:5px;">
+        <svg width="15" height="15" viewBox="0 0 36 36"><rect width="36" height="36" rx="6" fill="#000"/><path fill="#fff" d="M23 8h-3v13.5a3.5 3.5 0 11-3.5-3.5c.3 0 .5 0 .8.1V14.5a7 7 0 00-.8 0A7 7 0 1023 21.5V13a9.5 9.5 0 005.5 1.7v-3A5.5 5.5 0 0123 8z"/></svg>
+        <span style="font-size:11px;color:#555;">@bursa_news_</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPORT BODY -->
+  <div style="padding:1.4rem 1.6rem;font-size:13.5px;color:#1a1917;line-height:1.85;">
+
+    <!-- Section heading -->
+    <div style="display:flex;align-items:center;gap:.5rem;border-bottom:1.5px solid #333;padding-bottom:.55rem;margin-bottom:1.1rem;">
+      <span style="font-size:14px;">🔔</span>
+      <span style="font-size:14px;color:#dc2626;">Gamuda 最近业绩平平？</span>
+    </div>
+
+    <!-- Para 1 -->
+    <p style="margin-bottom:.8rem;">
+      截至 2026 年 4 月 30 号，Gamuda 的订单（Orderbook）已来到约
+      <span style="display:inline-flex;align-items:center;justify-content:center;background:#e0e0e0;border-radius:3px;width:100px;height:16px;vertical-align:middle;font-size:11px;color:#888;letter-spacing:.05em;">…………….</span>
+      ，也已经达到管理层设下的
+      <span style="display:inline-flex;align-items:center;justify-content:center;background:#e0e0e0;border-radius:3px;width:36px;height:16px;vertical-align:middle;font-size:11px;color:#888;">…</span>
+      目标。
+    </p>
+
+    <p style="margin-bottom:.8rem;">这些订单有转换成盈利吗？答案是没有。</p>
+
+    <p style="margin-bottom:.8rem;">FY2026 1H（上半年）净利 PAT 是约 RM445mil，仅占市场全年预期约 35%-40%。</p>
+
+    <p style="margin-bottom:.5rem;">这并不是订单不够，而是因为：</p>
+    <ul style="margin:0 0 .9rem 1.4rem;padding:0;list-style:disc;">
+      <li style="margin-bottom:.45rem;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;background:#e0e0e0;border-radius:3px;width:270px;height:16px;vertical-align:middle;font-size:11px;color:#888;letter-spacing:.05em;">…………………………….</span>
+      </li>
+      <li style="margin-bottom:.45rem;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;background:#e0e0e0;border-radius:3px;width:230px;height:16px;vertical-align:middle;font-size:11px;color:#888;letter-spacing:.05em;">…………………….</span>
+      </li>
+    </ul>
+
+    <p style="margin-bottom:.7rem;">
+      建筑行业的利润释放通常遵循
+      <span style="display:inline-flex;align-items:center;justify-content:center;background:#e0e0e0;border-radius:3px;width:32px;height:16px;vertical-align:middle;font-size:11px;color:#888;">…</span>
+      曲线：
+    </p>
+
+    <!-- Large redacted image box -->
+    <div style="border:1px solid #e0e0e0;border-radius:6px;background:#f5f5f5;height:170px;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;">
+      <span style="background:#e0e0e0;border-radius:3px;padding:3px 16px;font-size:12px;color:#aaa;letter-spacing:.1em;">………………</span>
+    </div>
+
+    <p style="margin-bottom:.7rem;">（i）开始；和 （ii）结束 这 2 个阶段，工程的营收都会比较低。</p>
+    <p style="margin-bottom:.9rem;">一般的工程进度是：前期投入大、利润确认低；进入中后期时，工程进度加速，利润会明显跳升。</p>
+
+    <p style="margin-bottom:.9rem;">
+      所以，这说明了前几个季度公司的业绩普通并不是因为项目的 margin 或人手方面有问题，而是因为工程本身有周期。这边有截至
+      <span style="display:inline-flex;align-items:center;justify-content:center;background:#e0e0e0;border-radius:3px;width:56px;height:16px;vertical-align:middle;font-size:11px;color:#888;letter-spacing:.05em;">…….</span>
+      Gamuda 工程的进度表：
+    </p>
+
+    <!-- Two-column project table -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid #ccc;border-radius:6px;overflow:hidden;margin-bottom:.9rem;font-size:12px;">
+      <!-- LEFT -->
+      <div style="border-right:1px solid #ccc;">
+        <div style="display:grid;grid-template-columns:1fr 38px 52px;background:#f5f5f5;border-bottom:1px solid #ccc;padding:.35rem .6rem;font-size:10.5px;color:#555;">
+          <span>Projects</span><span style="text-align:center;">Value<br>(RMb)</span><span style="text-align:center;">Progress<br>(%)</span>
+        </div>
+        <div style="padding:.5rem .6rem;color:#333;line-height:1.7;">
+          <div style="text-decoration:underline;margin-bottom:.2rem;">Malaysia:</div>
+          <div style="padding-left:.5rem;">Penang Mutiara Line (60% share)</div>
+          <div style="padding-left:.5rem;">Silicon Island Phase 1</div>
+          <div style="padding-left:.5rem;">Rasau WTP Phase 1</div>
+          <div style="padding-left:.5rem;">Data Center Projects</div>
+          <div style="padding-left:.5rem;">Upper Padas Hydro Dam (75% share)</div>
+          <div style="padding-left:.5rem;">Enabling Work for DC Campus</div>
+          <div style="padding-left:.5rem;margin-bottom:.5rem;">Sarawak Coastal Highway (65% share)</div>
+          <div style="text-decoration:underline;margin-bottom:.2rem;">Australia:</div>
+          <div style="padding-left:.5rem;">SMW Stations</div>
+          <div style="padding-left:.5rem;">SMW-WTP</div>
+          <div style="padding-left:.5rem;">Richman Road (100% share)</div>
+          <div style="padding-left:.5rem;">Coffs Harbour Bypass (50% share)</div>
+          <div style="padding-left:.5rem;">M1 Motorway (40% share)</div>
+          <div style="padding-left:.5rem;">Sydney Water (50% share)</div>
+          <div style="padding-left:.5rem;">DTI Projects</div>
+        </div>
+        <div style="padding:.4rem .6rem;border-top:1px solid #eee;text-align:right;">
+          <span style="display:inline-flex;align-items:center;justify-content:center;background:#e0e0e0;border-radius:3px;width:48px;height:14px;font-size:10px;color:#aaa;letter-spacing:.05em;">…….</span>
+        </div>
+      </div>
+      <!-- RIGHT -->
+      <div>
+        <div style="display:grid;grid-template-columns:1fr 38px 52px;background:#f5f5f5;border-bottom:1px solid #ccc;padding:.35rem .6rem;font-size:10.5px;color:#555;">
+          <span>Projects</span><span style="text-align:center;">Value<br>(RMb)</span><span style="text-align:center;">Progress<br>(%)</span>
+        </div>
+        <div style="padding:.5rem .6rem;color:#333;line-height:1.7;">
+          <div style="text-decoration:underline;margin-bottom:.2rem;">Taiwan:</div>
+          <div style="padding-left:.5rem;">Tao Yuan Underground (60% share)</div>
+          <div style="padding-left:.5rem;">Kaoshiung MRT YC01 (88% share)</div>
+          <div style="padding-left:.5rem;">Xizhi Donghu MRT (75% share)</div>
+          <div style="padding-left:.5rem;">Marine Structure (70% share)</div>
+          <div style="padding-left:.5rem;margin-bottom:.5rem;">Others</div>
+          <div style="text-decoration:underline;margin-bottom:.2rem;">Singapore:</div>
+          <div style="padding-left:.5rem;">Defu Station (60% share)</div>
+          <div style="padding-left:.5rem;">West Coast Station</div>
+        </div>
+        <div style="padding:.4rem .6rem;border-top:1px solid #eee;text-align:right;">
+          <span style="display:inline-flex;align-items:center;justify-content:center;background:#e0e0e0;border-radius:3px;width:48px;height:14px;font-size:10px;color:#aaa;letter-spacing:.05em;">…….</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conclusion line -->
+    <p style="margin-bottom:.65rem;">
+      可以看到大多数工程的进度是少过
+      <span style="display:inline-flex;align-items:center;justify-content:center;background:#e0e0e0;border-radius:3px;width:32px;height:16px;vertical-align:middle;font-size:11px;color:#888;">…</span>
+      。公司还需要一段时间把这些工程的进度提高。
+    </p>
+
+    <!-- Red diamond key conclusion -->
+    <div style="border:1px solid #f0c0c0;border-radius:6px;padding:.65rem .9rem;margin-bottom:.45rem;display:flex;gap:.5rem;align-items:flex-start;">
+      <span style="color:#dc2626;font-size:13px;flex-shrink:0;margin-top:2px;">&#9670;</span>
+      <p style="margin:0;font-size:13.5px;color:#1a1917;">
+        因此，市场预期 Gamuda 盈利爆发期的开始是
+        <span style="display:inline-flex;align-items:center;justify-content:center;background:#e0e0e0;border-radius:3px;width:90px;height:16px;vertical-align:middle;font-size:11px;color:#888;letter-spacing:.05em;">……………</span>
+      </p>
+    </div>
+    <div style="padding:.2rem .9rem .5rem;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;background:#e0e0e0;border-radius:3px;width:56px;height:16px;vertical-align:middle;font-size:11px;color:#888;letter-spacing:.05em;">…….</span>
+    </div>
+
+    <!-- Page footer -->
+    <div style="text-align:right;color:#aaa;font-size:11.5px;border-top:1px solid #eee;padding-top:.65rem;margin-top:.5rem;">Page 2 of 4</div>
+
+  </div>
+
+  <!-- CTA bar -->
+  <div style="padding:1rem 1.5rem;border-top:1px solid #eee;background:#fafaf8;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;">
+    <div style="font-size:12.5px;color:#888;" data-en="Redacted sample — subscribers receive the full 4-page report monthly." data-zh="此为节录样本。订阅者每月收到完整4页报告。">此为节录样本。订阅者每月收到完整4页报告。</div>
+    <button onclick="openWA('Hi, I want to subscribe to 马股早知道!')" style="background:#FF6B00;color:#fff;border:none;padding:9px 20px;border-radius:8px;font-size:13.5px;font-weight:800;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;" data-en="Subscribe Now →" data-zh="立即订阅 →">立即订阅 →</button>
+  </div>
+
+</div>
+</div></section>
+
 <!-- WHY IT MATTERS -->
 <section class="why-section"><div class="wrap">
 <span class="slbl tc" data-en="Why It Matters" data-zh="为什么重要">Why It Matters</span>
 <h2 class="stitle tc" data-en="What changes when you actually <em>understand the market</em>" data-zh="当你真正<em>读懂市场</em>时，什么会改变">What changes when you actually <em>understand the market</em></h2>
 <div class="wygrid">
-<div class="wycard"><div class="ico">&#9200;</div><h4 data-en="Save 2+ hours per day" data-zh="每天节省2+小时">Save 2+ hours per day</h4><p data-en="We track every Bursa announcement so you don&#8217;t have to. You get the filtered, important stuff before the market opens." data-zh="我们追踪每一条Bursa公告，你不用自己做。开盘前就收到筛选过的重要内容。">We track every Bursa announcement so you don&#8217;t have to. You get the filtered, important stuff before the market opens.</p></div>
-<div class="wycard"><div class="ico">&#127919;</div><h4 data-en="Stop flying blind" data-zh="不再盲目投资">Stop flying blind</h4><p data-en="Most investors go on gut feeling or WhatsApp tips. You&#8217;ll have actual analysis &#8212; context, risk, valuation &#8212; to think with." data-zh="大多数投资者凭感觉或WhatsApp贴士做决定。你将有真正的分析&#8212;背景、风险、估值&#8212;来支撑思考。">Most investors go on gut feeling or tips. You&#8217;ll have actual analysis &#8212; context, risk, valuation &#8212; to think with.</p></div>
-<div class="wycard"><div class="ico">&#129504;</div><h4 data-en="Learn while you read" data-zh="边读边学习">Learn while you read</h4><p data-en="Every report teaches you something. After 3 months you&#8217;ll genuinely understand financial statements &#8212; without taking a single course." data-zh="每份报告都教你一些东西。读了3个月后，你会真正理解财务报表&#8212;不需要上任何课程。">Every report teaches you something. After 3 months you&#8217;ll genuinely understand financial statements &#8212; without taking a course.</p></div>
+<div class="wycard"><div class="ico">&#9200;</div><h4 data-en="Save 2+ hours per day" data-zh="每天节省2+小时">Save 2+ hours per day</h4><p data-en="We track every Bursa announcement so you don't have to. You get the filtered, important stuff before the market opens." data-zh="我们追踪每一条Bursa公告，你不用自己做。开盘前就收到筛选过的重要内容。">We track every Bursa announcement so you don't have to. You get the filtered, important stuff before the market opens.</p></div>
+<div class="wycard"><div class="ico">&#127919;</div><h4 data-en="Stop flying blind" data-zh="不再盲目投资">Stop flying blind</h4><p data-en="Most investors go on gut feeling or WhatsApp tips. You'll have actual analysis &#8212; context, risk, valuation &#8212; to think with." data-zh="大多数投资者凭感觉或WhatsApp贴士做决定。你将有真正的分析&#8212;背景、风险、估值&#8212;来支撑思考。">Most investors go on gut feeling or tips. You'll have actual analysis &#8212; context, risk, valuation &#8212; to think with.</p></div>
+<div class="wycard"><div class="ico">&#129504;</div><h4 data-en="Learn while you read" data-zh="边读边学习">Learn while you read</h4><p data-en="Every report teaches you something. After 3 months you'll genuinely understand financial statements &#8212; without taking a single course." data-zh="每份报告都教你一些东西。读了3个月后，你会真正理解财务报表&#8212;不需要上任何课程。">Every report teaches you something. After 3 months you'll genuinely understand financial statements &#8212; without taking a course.</p></div>
 <div class="wycard"><div class="ico">&#128161;</div><h4 data-en="See what professionals see" data-zh="看到专业人士看到的东西">See what professionals see</h4><p data-en="We highlight what beginners miss &#8212; concentration risk, currency exposure, management guidance. The stuff buried in the full report." data-zh="我们突出新手忽视的内容&#8212;客户集中风险、货币敞口、管理层指引。完整报告里埋藏的东西。">We highlight what beginners miss &#8212; concentration risk, currency exposure, management guidance. Buried in the full report.</p></div>
 </div>
 </div></section>
@@ -341,106 +471,16 @@ body{font-size:17px;}
 <!-- FIX 4: BRIDGE -->
 <section class="bridge-section"><div class="bridge-inner">
 <span class="slbl" style="color:#FF8533;" data-en="The Right Order" data-zh="正确的顺序">The Right Order</span>
-<h2 class="stitle w" data-en="Start free. Upgrade when you&#8217;re ready." data-zh="免费开始。准备好了再升级。">Start free. Upgrade when you&#8217;re ready.</h2>
-<p style="color:rgba(255,255,255,.6);font-size:1rem;line-height:1.75;margin-bottom:.5rem;" data-en="We don&#8217;t want you to subscribe before you understand what you&#8217;re getting. Here&#8217;s the right order:" data-zh="我们不希望你在还不了解内容的情况下就订阅。以下是正确的顺序：">We don&#8217;t want you to subscribe before you understand what you&#8217;re getting. Here&#8217;s the right order:</p>
-<div class="bsteps">
-<div class="bstep"><div class="bi">&#129517;</div><div class="bl" data-en="Step 1 &#8212; Free" data-zh="第1步 &#8212; 免费">Step 1 &#8212; Free</div><div class="bt" data-en="Starter Kit" data-zh="入门包">Starter Kit</div><div class="bs" data-en="5 missions. Open account. Make first trade. Zero cost." data-zh="5个任务。开设账户。首笔交易。零费用。">5 missions. Open account. Make first trade. Zero cost.</div></div>
+<h2 class="stitle w" data-en="Start free. Upgrade when you're ready." data-zh="免费开始。准备好了再升级。">Start free. Upgrade when you're ready.</h2>
+<p style="color:rgba(255,255,255,.6);font-size:1rem;line-height:1.75;margin-bottom:.5rem;" data-en="We don't want you to subscribe before you understand what you're getting. Here's the right order:" data-zh="我们不希望你在还不了解内容的情况下就订阅。以下是正确的顺序：">We don't want you to subscribe before you understand what you're getting. Here's the right order:</p>
+<div class="bsteps" style="grid-template-columns:1fr auto 1fr auto 1fr;">
+<div class="bstep"><div class="bi">&#129517;</div><div class="bl" data-en="Step 1 &#8212; Free" data-zh="第1步 &#8212; 免费">Step 1 &#8212; Free</div><div class="bt" data-en="Starter Kit" data-zh="入门包">Starter Kit</div><div class="bs" data-en="5 missions. Open a brokerage account. Make your first trade. Zero cost." data-zh="5个任务。开设券商账户。完成首笔交易。零费用。">5 missions. Open a brokerage account. Make your first trade. Zero cost.</div></div>
 <div class="barrow">&#8594;</div>
-<div class="bstep act"><div class="bi">&#128202;</div><div class="bl" data-en="Step 2 &#8212; RM50" data-zh="第2步 &#8212; RM50">Step 2 &#8212; RM50</div><div class="bt" data-en="Daily Reports" data-zh="每日报告">Daily Reports</div><div class="bs" data-en="Once you have an account and want to follow the market daily." data-zh="当你有了账户，想要每天追踪市场时。">Once you have an account and want to follow the market daily.</div></div>
+<div class="bstep"><div class="bi">&#127916;</div><div class="bl" data-en="Step 2 &#8212; Free" data-zh="第2步 &#8212; 免费">Step 2 &#8212; Free</div><div class="bt" data-en="Follow Daily Reel" data-zh="关注每日精华">Follow Daily Reel</div><div class="bs" data-en="Follow us for ~2-min daily market highlights. Get a feel for what matters before you subscribe." data-zh="关注我们约2分钟的每日市场精华短视频。在订阅前先感受一下什么才是重要的。">Follow us for ~2-min daily market highlights. Get a feel for what matters before you subscribe.</div></div>
 <div class="barrow">&#8594;</div>
-<div class="bstep"><div class="bi">&#127970;</div><div class="bl" data-en="Parallel &#8212; Free Bonus" data-zh="同步 &#8212; 免费奖励">Parallel &#8212; Free Bonus</div><div class="bt" data-en="Open Moomoo" data-zh="开设Moomoo">Open Moomoo</div><div class="bs" data-en="Via BursaNews for RM1,800+ rewards + code BURSA88." data-zh="通过BursaNews注册获RM1,800+奖励+BURSA88。">Via BursaNews for RM1,800+ rewards + code BURSA88.</div></div>
+<div class="bstep act"><div class="bi">&#128202;</div><div class="bl" data-en="Step 3 &#8212; RM50" data-zh="第3步 &#8212; RM50">Step 3 &#8212; RM50</div><div class="bt" data-en="Daily Morning Analysis" data-zh="每日早间分析">Daily Morning Analysis</div><div class="bs" data-en="Before 8:30am every trading day. What happened, what it means, what to watch." data-zh="每个交易日早上8:30前。发生了什么、意味着什么、该注意什么。">Before 8:30am every trading day. What happened, what it means, what to watch.</div></div>
 </div>
-<div class="bnote" data-en="<strong>You are on Step 2.</strong> Not done Step 1 yet? <a href='starterkit.html' style='color:#1adb5e;font-weight:700;'>Do the free Starter Kit first &#8594;</a> Less than a week. Makes the reports 10&#215; more useful." data-zh="<strong>你在第2步。</strong> 还没完成第1步？<a href='starterkit.html' style='color:#1adb5e;font-weight:700;'>先做免费入门包 &#8594;</a> 不到一周，让报告价值提升10倍。"><strong>You are on Step 2.</strong> Not done Step 1 yet? <a href="starterkit.html" style="color:#1adb5e;font-weight:700;">Do the free Starter Kit first &#8594;</a> Less than a week. Makes the reports 10&#215; more useful.</div>
-</div></section>
-
-<!-- COMPARE TABLE -->
-<section class="compare-section"><div class="wrap-sm">
-<span class="slbl tc" data-en="Compare Options" data-zh="服务比较">Compare Options</span>
-<h2 class="stitle tc" data-en="Which one is <em>right for you?</em>" data-zh="哪一个<em>适合你？</em>">Which one is <em>right for you?</em></h2>
-<p class="psub" data-en="From a free daily highlight to serious daily analysis &#8212; here&#8217;s what each one actually gives you." data-zh="从免费每日精华，到给认真投资者的每日分析，以下是每个服务实际提供的内容。">从免费每日精华，到给认真投资者的每日分析，以下是每个服务实际提供的内容。</p>
-
-<div class="cmp-wrap" style="overflow-x:auto;">
-<table class="cmp-table">
-<thead>
-<tr>
-<th></th>
-<th>
-<div class="cmp-col-head">
-<span class="cico">&#128249;</span>
-<span class="cname" data-en="Daily Reel" data-zh="每日精华">每日精华</span>
-</div>
-</th>
-<th>
-<div class="cmp-col-head">
-<svg class="cico" viewBox="0 0 36 36" width="22" height="22" aria-hidden="true"><circle cx="18" cy="18" r="18" fill="#1877F2"/><path fill="#fff" d="M25 18.05C25 13.6 21.42 10 17 10s-8 3.6-8 8.05c0 4.02 2.92 7.35 6.75 7.95v-5.62h-2.03v-2.33h2.03v-1.78c0-2 1.2-3.1 3-3.1.87 0 1.78.16 1.78.16v2.2h-1c-1 0-1.31.62-1.31 1.27v1.25h2.23l-.36 2.33h-1.87v5.62C22.08 25.4 25 22.07 25 18.05z"/></svg>
-<span class="cname" data-en="FB Subscription" data-zh="FB订阅专区">FB订阅专区</span>
-</div>
-</th>
-<th class="hl">
-<div class="cmp-col-head">
-<span class="cmp-badge" data-en="Most Complete" data-zh="最完整">最完整</span>
-<span class="cico">&#128241;</span>
-<span class="cname" data-en="Bursa Early Bird" data-zh="马股早知道">马股早知道</span>
-</div>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th style="font-weight:800;" data-en="Who it's for" data-zh="适合谁">适合谁</th>
-<td data-en="Anyone who wants a quick market update" data-zh="任何人，想快速跟上大盘动态">任何人，想快速跟上大盘动态</td>
-<td data-en="Anyone who wants deeper, curated analysis" data-zh="任何人，想要更深入的精选分析">任何人，想要更深入的精选分析</td>
-<td class="hl" data-en="Serious investors, busy people with no time to watch the market, and anyone who struggles to interpret company news" data-zh="认真投资者、忙碌没时间看盘的人、看不懂公司公告的人">认真投资者、忙碌没时间看盘的人、看不懂公司公告的人</td>
-</tr>
-<tr>
-<th data-en="Format" data-zh="形式">形式</th>
-<td data-en="Short video reel" data-zh="短视频">短视频</td>
-<td data-en="Written report (FB exclusive page)" data-zh="文字报告（FB专属页）">文字报告（FB专属页）</td>
-<td class="hl" data-en="WhatsApp text message" data-zh="WhatsApp文字讯息">WhatsApp文字讯息</td>
-</tr>
-<tr>
-<th data-en="When it arrives" data-zh="发布时间">发布时间</th>
-<td data-en="Most trading nights (we try our best, unless we genuinely can't)" data-zh="每个交易日晚上（尽量，除非不得空）">每个交易日晚上（尽量，除非不得空）</td>
-<td data-en="1 report monthly, plus occasional extras" data-zh="每月1篇，外加不定期内容">每月1篇，外加不定期内容</td>
-<td class="hl" data-en="Every trading day, before 8:30am" data-zh="每个交易日早上8:30前">每个交易日早上8:30前</td>
-</tr>
-<tr>
-<th data-en="Daily Reel (~2 min)" data-zh="每日精华短视频（约2分钟）">每日精华短视频（约2分钟）</th>
-<td><span class="cmp-check">&#10003;</span></td>
-<td><span class="cmp-dash">&#8212;</span></td>
-<td class="hl"><span class="cmp-dash">&#8212;</span></td>
-</tr>
-<tr>
-<th data-en="Monthly deep-dive company report" data-zh="月度精选公司深度发展公告">月度精选公司深度发展公告</th>
-<td><span class="cmp-dash">&#8212;</span></td>
-<td><span class="cmp-check">&#10003;</span></td>
-<td class="hl"><span class="cmp-check">&#10003;</span></td>
-</tr>
-<tr>
-<th data-en="Management guidance reports" data-zh="管理层指引报告（企业未来业务发展）">管理层指引报告（企业未来业务发展）</th>
-<td><span class="cmp-dash">&#8212;</span></td>
-<td><span class="cmp-check">&#10003;</span></td>
-<td class="hl"><span class="cmp-check">&#10003;</span></td>
-</tr>
-<tr>
-<th data-en="Daily WhatsApp briefing &#8212; what to watch out for, and what's behind the headline" data-zh="每日WhatsApp公告解读，注意事项与背后隐藏的细节">每日WhatsApp公告解读，注意事项与背后隐藏的细节</th>
-<td><span class="cmp-dash">&#8212;</span></td>
-<td><span class="cmp-dash">&#8212;</span></td>
-<td class="hl"><span class="cmp-check">&#10003;</span></td>
-</tr>
-<tr class="cmp-price-row">
-<th data-en="Price" data-zh="价格">价格</th>
-<td><span class="cmp-price" data-en="Free" data-zh="免费">免费</span></td>
-<td><span class="cmp-price">RM7.90<span class="cmp-price-sub" data-en="/ month" data-zh="/月">/月</span></span></td>
-<td class="hl">
-<span class="cmp-price hl">RM50<span class="cmp-price-sub" data-en="/ 3 months" data-zh="/3个月">/3个月</span></span><br>
-<span class="cmp-price hl" style="font-size:.95rem;">RM88<span class="cmp-price-sub" data-en="/ 6 months" data-zh="/6个月">/6个月</span></span>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p style="text-align:center;font-size:13px;color:#999;margin-top:1.25rem;" data-en="Subscribe to Bursa Early Bird and you already get everything in the FB Subscription." data-zh="订阅【马股早知道】，已包含【FB订阅专区】的所有内容。">订阅【马股早知道】，已包含【FB订阅专区】的所有内容。</p>
+<div class="bnote" data-en="<strong>You are on Step 3.</strong> Not done Steps 1 or 2 yet? <a href='starterkit.html' style='color:#1adb5e;font-weight:700;'>Start with the free Starter Kit &#8594;</a> Then follow our Daily Reel. Makes the analysis 10&#215; more meaningful." data-zh="<strong>你在第3步。</strong> 还没完成第1、2步？<a href='starterkit.html' style='color:#1adb5e;font-weight:700;'>先从入门包开始 &#8594;</a> 再关注每日精华，让分析更有意义。"><strong>You are on Step 2.</strong> Not done Step 1 yet? <a href="starterkit.html" style="color:#1adb5e;font-weight:700;">Do the free Starter Kit first &#8594;</a> Less than a week. Makes the analysis 10&#215; more useful.</div>
 </div></section>
 
 <!-- FIX 5: PRICING LAST -->
@@ -449,42 +489,24 @@ body{font-size:17px;}
 <span class="slbl tc" data-en="Pricing" data-zh="定价">Pricing</span>
 <h2 class="stitle tc" data-en="Simple. Honest. <em>No auto-debit.</em>" data-zh="简单。诚实。<em>不设自动扣款。</em>">Simple. Honest. <em>No auto-debit.</em></h2>
 </div>
-<p class="psub" data-en="You&#8217;ve seen what you get. You know it&#8217;s for you. Now here&#8217;s what it costs &#8212; less than a cup of Starbucks per week." data-zh="你已经看过你会得到什么。你知道这适合你。现在看费用&#8212;每周不到一杯星巴克的价格。">You&#8217;ve seen what you get. You know it&#8217;s for you. Now here&#8217;s what it costs &#8212; less than a cup of Starbucks per week.</p>
+<p class="psub" data-en="You've seen what you get. You know it's for you. Now here's what it costs &#8212; less than a cup of Starbucks per week." data-zh="你已经看过你会得到什么。你知道这适合你。现在看费用&#8212;每周不到一杯星巴克的价格。">You've seen what you get. You know it's for you. Now here's what it costs &#8212; less than a cup of Starbucks per week.</p>
 <div class="pgrid">
 <div class="pcard feat">
-<div class="pbadge or" data-en="Most Popular" data-zh="最多人选择">Most Popular</div>
 <div class="pname" data-en="3-Month Plan" data-zh="3个月计划">3-Month Plan</div>
 <div class="pprice">RM 50 <span data-en="/ 3 months" data-zh="/ 3个月">/ 3 months</span></div>
 <div class="pavg" data-en="Avg RM16.67/month &#8212; less than RM4/week" data-zh="平均每月RM16.67 &#8212; 每周不到RM4">Avg RM16.67/month &#8212; less than RM4/week</div>
-<div class="pdesc" data-en="Try it. If it doesn&#8217;t help you understand Bursa better, cancel after 3 months." data-zh="试试看。如果没有帮助你更好地理解Bursa，就不续订。">Try it. If it doesn&#8217;t help you understand Bursa better, cancel after 3 months.</div>
-<ul class="pfl">
-<li data-en="Daily report: 2&#8211;6 Bursa companies per trading day" data-zh="每日报告：每个交易日2&#8211;6家Bursa公司">Daily report: 2&#8211;6 Bursa companies per trading day</li>
-<li data-en="Full 3-section format: Numbers &#183; What Matters &#183; Watch Out" data-zh="完整三板块：表面 &#183; 关键看点 &#183; 提醒">Full 3-section: Numbers &#183; What Matters &#183; Watch Out</li>
-<li data-en="WhatsApp delivery before market opens (9am)" data-zh="开盘前（9点前）WhatsApp推送">WhatsApp delivery before market opens</li>
-<li data-en="Corporate exercises explained in plain language" data-zh="用浅白语言解释企业行动">Corporate exercises explained in plain language</li>
-<li data-en="Weekly hot money flow &#8212; fund flow trends" data-zh="每周外资动向 &#8212; 资金流向趋势">Weekly hot money flow</li>
-<li class="no" data-en="Monthly deep-dive (VIP only)" data-zh="每月深度报告（仅VIP）">Monthly deep-dive (VIP only)</li>
-</ul>
-<button class="pbtn or" onclick="openWA('Hi, I would like to subscribe to Daily Reports 3-month plan (RM50)')" data-en="Subscribe via WhatsApp &#8594;" data-zh="通过WhatsApp订阅 &#8594;">Subscribe via WhatsApp &#8594;</button>
+<button class="pbtn or" onclick="openWA('Hi, I would like to subscribe to Daily Analysis 3-month analysis plan (RM50)')" data-en="Subscribe via WhatsApp &#8594;" data-zh="通过WhatsApp订阅 &#8594;">Subscribe via WhatsApp &#8594;</button>
 </div>
 <div class="pcard drk">
-<div class="pbadge nv" data-en="Best Value &#183; Save RM12" data-zh="最超值 &#183; 省RM12">Best Value &#183; Save RM12</div>
+<div class="pbadge nv" data-en="Most Popular &#183; Save RM12" data-zh="最多人选择 &#183; 省RM12">Most Popular &#183; Save RM12</div>
 <div class="pname">&#39532;&#32946;&#26089;&#30693;&#36947; VIP</div>
 <div class="pprice">RM 88 <span data-en="/ 6 months" data-zh="/ 6个月">/ 6 months</span></div>
 <div class="pavg" data-en="Avg RM14.67/month &#183; Save RM12" data-zh="平均每月RM14.67 &#183; 省RM12">Avg RM14.67/month &#183; Save RM12</div>
-<div class="pdesc" data-en="For those who want to go deeper. Everything in 3-month + monthly deep-dive." data-zh="适合想要深入了解的人。含3个月计划所有内容+每月深度报告。">For those who want to go deeper. Everything in 3-month + monthly deep-dive.</div>
-<ul class="pfl">
-<li data-en="Everything in 3-month plan, plus:" data-zh="包含3个月计划所有内容，另加：">Everything in 3-month plan, plus:</li>
-<li data-en="Monthly company deep-dive: background + financials + developments" data-zh="每月企业深度报告：背景+财务+发展">Monthly company deep-dive: full analysis</li>
-<li data-en="Why this company is worth knowing &#8212; NOT a buy call" data-zh="为什么值得了解&#8212;非买入建议">Why this company is worth knowing &#8212; NOT a buy call</li>
-<li data-en="Priority WhatsApp community access" data-zh="优先加入WhatsApp社群">Priority WhatsApp community access</li>
-<li data-en="Save RM12 vs 3-month plan" data-zh="比3个月计划省RM12">Save RM12 vs 3-month plan</li>
-</ul>
 <button class="pbtn or" onclick="openWA('Hi, I would like to subscribe to VIP 6-month plan (RM88)')" data-en="Subscribe via WhatsApp &#8594;" data-zh="通过WhatsApp订阅 &#8594;">Subscribe via WhatsApp &#8594;</button>
 </div>
 </div>
 <p class="pnote" data-en="Payment: Bank transfer / TNG / DuitNow. No auto-debit. No contracts. Cancel anytime." data-zh="付款：银行转账 / TNG / DuitNow。不设自动扣款。无合约。随时可取消。">Payment: Bank transfer / TNG / DuitNow. No auto-debit. No contracts. Cancel anytime.</p>
-<div class="pdisc"><strong data-en="&#9888;&#65039; Important:" data-zh="&#9888;&#65039; 重要：">&#9888;&#65039; Important:</strong> <span data-en="We will NEVER say &#8216;buy this stock&#8217;. Our reports give you context, analysis and watchlists &#8212; you make your own decisions. We are educators, not financial advisors. Content is for educational purposes only." data-zh="我们永远不会说&#8216;买这只股票&#8217;。我们的报告给你背景、分析和观察名单&#8212;你自己做决定。我们是教育者，不是财务顾问。内容仅供教育目的。">We will NEVER say &#8216;buy this stock&#8217;. Our reports give you context and analysis &#8212; you decide. We are educators, not financial advisors. Content is for educational purposes only.</span></div>
+<div class="pdisc"><strong data-en="&#9888;&#65039; Important:" data-zh="&#9888;&#65039; 重要：">&#9888;&#65039; Important:</strong> <span data-en="We will NEVER say &#8216;buy this stock'. Our reports give you context, analysis and watchlists &#8212; you make your own decisions. We are educators, not financial advisors. Content is for educational purposes only." data-zh="我们永远不会说&#8216;买这只股票'。我们的报告给你背景、分析和观察名单&#8212;你自己做决定。我们是教育者，不是财务顾问。内容仅供教育目的。">We will NEVER say &#8216;buy this stock'. Our reports give you context and analysis &#8212; you decide. We are educators, not financial advisors. Content is for educational purposes only.</span></div>
 </div></section>
 
 <!-- FAQ -->
@@ -492,10 +514,10 @@ body{font-size:17px;}
 <span class="slbl tc" data-en="FAQ" data-zh="常见问题">FAQ</span>
 <h2 class="stitle tc" data-en="Questions we get asked a lot." data-zh="我们常被问到的问题。">Questions we get asked a lot.</h2>
 <div style="margin-top:2rem;">
-<div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-en="Do I need to complete the Starter Kit before subscribing?" data-zh="订阅前需要完成入门包吗？">Do I need to complete the Starter Kit before subscribing?</span><span class="faq-icon">+</span></div><div class="faq-a" data-en="Not required, but strongly recommended. The Starter Kit helps you open a brokerage account first &#8212; which makes the daily reports 10&#215; more useful. It&#8217;s free and takes less than a week." data-zh="不是必须的，但强烈建议。入门包帮助你先开设券商账户&#8212;这会让每日报告有用10倍。免费且不到一周。">Not required, but strongly recommended. The Starter Kit helps you open a brokerage account first &#8212; making the daily reports much more useful. Free, takes less than a week.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-en="Do I need to complete the Starter Kit before subscribing?" data-zh="订阅前需要完成入门包吗？">Do I need to complete the Starter Kit before subscribing?</span><span class="faq-icon">+</span></div><div class="faq-a" data-en="Not required, but strongly recommended. The Starter Kit helps you open a brokerage account first &#8212; which makes the daily analysis 10&#215; more useful. It's free and takes less than a week." data-zh="不是必须的，但强烈建议。入门包帮助你先开设券商账户&#8212;这会让每日分析有用10倍。免费且不到一周。">Not required, but strongly recommended. The Starter Kit helps you open a brokerage account first &#8212; making the daily analysis much more useful. Free, takes less than a week.</div></div>
 <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-en="How many companies per day?" data-zh="每天分析多少家公司？">How many companies per day?</span><span class="faq-icon">+</span></div><div class="faq-a" data-en="2&#8211;6 companies per trading day depending on Bursa announcement volume. Busy earnings season = more. Quiet days = fewer but deeper." data-zh="每个交易日2&#8211;6家公司，取决于Bursa公告数量。盈利季节繁忙=更多。平静日子=更少但更深入。">2&#8211;6 per trading day depending on Bursa announcement volume. Busy seasons = more. Quiet days = fewer but deeper.</div></div>
 <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-en="Is this investment advice?" data-zh="这是投资建议吗？">Is this investment advice?</span><span class="faq-icon">+</span></div><div class="faq-a" data-en="No. We are NOT licensed financial advisors. We never say buy or sell. We give you context and analysis so you can make your own informed decisions." data-zh="不是。我们不是持牌财务顾问。我们从不建议买卖。我们给你背景和分析，让你做出自己的明智决定。">No. We are NOT licensed financial advisors. We never say buy or sell. We give you context and analysis so you can make your own informed decisions.</div></div>
-<div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-en="What if it&#8217;s not useful for me?" data-zh="如果对我没用怎么办？">What if it&#8217;s not useful for me?</span><span class="faq-icon">+</span></div><div class="faq-a" data-en="Then don&#8217;t renew. No auto-debit, no contract. We&#8217;d rather you not pay than pay for something that doesn&#8217;t help you." data-zh="那就不要续订。没有自动扣款，没有合约。我们宁愿你不付钱，也不要你为无用的东西付钱。">Then don&#8217;t renew. No auto-debit, no contract. We&#8217;d rather you not pay than pay for something that doesn&#8217;t help you.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-en="What if it's not useful for me?" data-zh="如果对我没用怎么办？">What if it's not useful for me?</span><span class="faq-icon">+</span></div><div class="faq-a" data-en="Then don't renew. No auto-debit, no contract. We'd rather you not pay than pay for something that doesn't help you." data-zh="那就不要续订。没有自动扣款，没有合约。我们宁愿你不付钱，也不要你为无用的东西付钱。">Then don't renew. No auto-debit, no contract. We'd rather you not pay than pay for something that doesn't help you.</div></div>
 <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-en="How do I pay?" data-zh="如何付款？">How do I pay?</span><span class="faq-icon">+</span></div><div class="faq-a" data-en="WhatsApp us &#8212; bank transfer, TNG, or DuitNow. Simple and local." data-zh="WhatsApp我们&#8212;银行转账、TNG或DuitNow。简单本地化。">WhatsApp us &#8212; bank transfer, TNG, or DuitNow. Simple and local.</div></div>
 </div>
 </div></section>
@@ -504,8 +526,7 @@ body{font-size:17px;}
 document.addEventListener("DOMContentLoaded",function(){
   var tk=document.getElementById("sub-tk");
   if(tk) tk.innerHTML+=tk.innerHTML;
-  var pageDefault=document.documentElement.getAttribute("data-default-lang")||"zh";
-  if(typeof setLang==="function") setLang(localStorage.getItem("bn_lang")||pageDefault);
+  if(typeof setLang==="function") setLang(localStorage.getItem("bn_lang")||"en");
 });
 </script>
 </body>
