@@ -31,6 +31,29 @@ function setLang(l) {
   }
 }
 
+function toggleMob() {
+  var mob = document.getElementById('mob-menu');
+  var btn = document.querySelector('.nav-mob-toggle');
+  if (!mob) return;
+  var open = mob.style.display === 'flex';
+  mob.style.display = open ? 'none' : 'flex';
+  if (btn) {
+    btn.setAttribute('aria-expanded', String(!open));
+    btn.innerHTML = open ? '☰' : '✕';
+  }
+  document.removeEventListener('click', _mobClose);
+  if (!open) setTimeout(function(){ document.addEventListener('click', _mobClose); }, 10);
+}
+function _mobClose(e) {
+  var mob = document.getElementById('mob-menu');
+  var btn = document.querySelector('.nav-mob-toggle');
+  if (mob && !mob.contains(e.target) && btn && !btn.contains(e.target)) {
+    mob.style.display = 'none';
+    if (btn) { btn.setAttribute('aria-expanded','false'); btn.innerHTML='☰'; }
+    document.removeEventListener('click', _mobClose);
+  }
+}
+
 function openWA(m) {
   const text = m || (lang === 'zh'
     ? 'Hi，我想了解更多关于马股报报看的信息'
@@ -50,8 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
   </a>
   <div class="nav-links" role="menubar">
     <a href="${ROOT}index.html" class="nav-link" data-en="Home" data-zh="首页" role="menuitem">首页</a>
-    <a href="${ROOT}starterkit.html" class="nav-link nav-highlight" data-en="🎁 Starter Kit" data-zh="🎁 免费入门包" role="menuitem">🎁 免费入门包</a>
-    <a href="${ROOT}insights.html" class="nav-link" data-en="Market Insights" data-zh="市场分析" role="menuitem">市场分析</a>
+    <a href="${ROOT}starterkit.html" class="nav-link nav-highlight" data-en="🎁 Starter Kit" data-zh="🎁 免费入门包" role="menuitem" style="background:#16a34a;color:#fff!important;padding:7px 14px;border-radius:20px;font-weight:700;font-size:13px;">🎁 免费入门包</a>
+    
     <a href="${ROOT}resources.html" class="nav-link" data-en="Resources" data-zh="学习资源" role="menuitem">学习资源</a>
     <a href="${ROOT}affiliates.html" class="nav-link" data-en="Brokers" data-zh="开户指南" role="menuitem">开户指南</a>
     <a href="${ROOT}subscription.html" class="nav-link" data-en="Subscribe" data-zh="订阅计划" role="menuitem">订阅计划</a>
@@ -59,18 +82,18 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="${ROOT}community.html" class="nav-link" data-en="Community" data-zh="社群" role="menuitem">社群</a>
     <a href="${ROOT}about.html" class="nav-link" data-en="About" data-zh="关于我们" role="menuitem">关于我们</a>
   </div>
-  <div class="nav-actions">
-    <button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
-      <span class="lang-btn" data-lang="en" onclick="setLang('en')">EN</span>
-      <span class="lang-btn active" data-lang="zh" onclick="setLang('zh')">中文</span>
+  <div class="nav-actions" style="display:flex;align-items:center;gap:.35rem;flex-shrink:0;">
+    <button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language" style="display:inline-flex;align-items:center;padding:2px;background:rgba(0,0,0,.06);border-radius:30px;border:none;cursor:pointer;">
+      <span class="lang-btn" data-lang="en" onclick="setLang('en')" style="font-size:14px;font-weight:700;padding:6px 14px;border-radius:20px;cursor:pointer;">EN</span>
+      <span class="lang-btn active" data-lang="zh" onclick="setLang('zh')" style="font-size:14px;font-weight:700;padding:6px 14px;border-radius:20px;cursor:pointer;">中文</span>
     </button>
-    <button class="nav-mob-toggle" onclick="toggleMob()" aria-label="Open menu" aria-expanded="false">☰</button>
+    <button class="nav-mob-toggle" onclick="toggleMob()" aria-label="Open menu" aria-expanded="false" style="font-size:1.6rem;width:46px;height:46px;display:inline-flex;align-items:center;justify-content:center;background:none;border:none;cursor:pointer;color:var(--navy,#0a1628);flex-shrink:0;">☰</button>
   </div>
 </nav>
 <div class="mob" id="mob-menu" role="dialog" aria-label="Mobile navigation">
   <a href="${ROOT}index.html" data-en="Home" data-zh="首页">首页</a>
   <a href="${ROOT}starterkit.html" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包">🎁 免费入门包</a>
-  <a href="${ROOT}insights.html" data-en="Market Insights" data-zh="市场分析">市场分析</a>
+  
   <a href="${ROOT}resources.html" data-en="Resources" data-zh="学习资源">学习资源</a>
   <a href="${ROOT}affiliates.html" data-en="Brokers" data-zh="开户指南">开户指南</a>
   <a href="${ROOT}subscription.html" data-en="Subscribe" data-zh="订阅计划">订阅计划</a>
@@ -125,9 +148,10 @@ document.body.insertAdjacentHTML('beforeend', `
 <div class="wa-float">
   <div class="wa-tip" data-en="Chat on WhatsApp" data-zh="WhatsApp 联系">Chat on WhatsApp</div>
   <button class="wa-btn" onclick="openWA()" aria-label="WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" style="display:block;margin:auto;">
-  <path fill="white" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.306A9.935 9.935 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.2 14.4c-.22.61-1.3 1.16-1.78 1.22-.46.06-.9.22-3.06-.64-2.6-1.04-4.28-3.7-4.4-3.88-.14-.18-1.1-1.46-1.1-2.78 0-1.32.68-1.96 1-2.22.26-.22.58-.28.78-.28l.56.01c.18 0 .44-.07.68.52.26.62.88 2.14.96 2.3.08.16.14.36.03.58-.1.22-.16.36-.32.56l-.48.56c-.16.16-.32.32-.14.64.18.32.8 1.32 1.72 2.14 1.18 1.06 2.18 1.38 2.5 1.54.32.16.5.14.68-.08.2-.22.82-.96 1.04-1.3.22-.32.44-.26.74-.16.3.1 1.9.9 2.22 1.06.32.16.54.24.62.38.08.28-.14 1.14-.36 1.72z"/>
-</svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" style="display:block;margin:auto;" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="22" y1="2" x2="11" y2="13"/>
+      <polygon points="22 2 15 22 11 13 2 9 22 2" fill="white" stroke="white"/>
+    </svg>
   </button>
 </div>`);
 

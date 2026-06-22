@@ -1105,8 +1105,8 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 /* Subscribe mini */
 .sub-section { background: var(--navy); padding: 4rem 2rem; }
 .sub-inner { max-width: 760px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-.sub-left h2 { font-family: var(--serif); font-size: 1.6rem; color: #fff; margin-bottom: .6rem; }
-.sub-left p { color: rgba(255,255,255,.65); font-size: 15px; line-height: 1.75; }
+.sub-left h2 { font-family: var(--serif); font-size: 1.6rem; color: #fff; margin-bottom: .75rem; }
+.sub-left p { color: rgba(255,255,255,.65); font-size: 15px; line-height: 1.75; font-family: var(--sans); }
 .sub-right { text-align: center; }
 .sub-price { font-size: 2.5rem; font-weight: 900; color: var(--gold2); line-height: 1; }
 .sub-per { font-size: 14px; color: rgba(255,255,255,.5); margin-bottom: 1.25rem; }
@@ -1418,6 +1418,15 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
       </div>
     </div>
   </div>
+
+<!-- 明明 SECTION -->
+<section style="background:var(--navy);padding:3rem 2rem;" aria-label="Our positioning">
+  <div style="max-width:680px;margin:0 auto;text-align:center;">
+    <h2 style="font-family:var(--serif);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;color:#fff;line-height:1.4;margin-bottom:.85rem;" data-en="We could coast on good looks — but we didn't." data-zh="明明可以靠脸吃饭，但是我们不做明明。">明明可以靠脸吃饭，但是我们不做明明。</h2>
+    <p style="font-size:15px;color:rgba(255,255,255,.55);line-height:1.8;font-family:var(--sans);margin:0;" data-en="We want to make investing simple — with a bit of humour. So even the uncle and aunty on the street can understand it." data-zh="我们希望用幽默的方式把投资变简单，路上的Uncle Aunty也可以看懂。">我们希望用幽默的方式把投资变简单，路上的Uncle Aunty也可以看懂。</p>
+  </div>
+</section>
+
 </section>
 
 <!-- ══════════════════════════════════════
@@ -1539,55 +1548,37 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 <!-- ══════════════════════════════════════
      FAQ
 ══════════════════════════════════════ -->
-
-
 <!-- ══════════════════════════════════════
      FOOTER
 ══════════════════════════════════════ -->
 
 
 
-
-
 <script>
-/* ── TYPEWRITER ── */
 (function(){
-  var words = {
-    zh: ['好玩又容易上手！','不再雾里看花！','原来这么简单！','人人都听得懂！'],
-    en: ['fun and easy to understand!','finally making sense!','simpler than you think!','something everyone gets!']
-  };
-  var twSpan = document.getElementById('tw-span');
-  if (!twSpan) return;
-  var wordIdx=0, charIdx=0, deleting=false;
-  var TYPE=65, DELETE=35, HOLD=1800, GAP=400;
-  function currentLang(){ return (typeof window.lang!=='undefined') ? window.lang : 'zh'; }
-  function tick(){
-    var list = words[currentLang()]||words.zh;
-    var word = list[wordIdx%list.length];
-    if (!deleting){ charIdx++; twSpan.textContent=word.slice(0,charIdx); if(charIdx===word.length){deleting=true;return setTimeout(tick,HOLD);} return setTimeout(tick,TYPE); }
-    else { charIdx--; twSpan.textContent=word.slice(0,charIdx); if(charIdx===0){deleting=false;wordIdx++;return setTimeout(tick,GAP);} return setTimeout(tick,DELETE); }
-  }
+  var words={zh:['好玩又容易上手！','不再雾里看花！','原来这么简单！','人人都听得懂！'],en:['fun and easy to understand!','finally making sense!','simpler than you think!','something everyone gets!']};
+  var sp=document.getElementById('tw-span'); if(!sp)return;
+  var wi=0,ci=0,del=false;
+  function cl(){return(typeof window.lang!=='undefined')?window.lang:'zh';}
+  function tick(){var list=words[cl()]||words.zh,word=list[wi%list.length];if(!del){ci++;sp.textContent=word.slice(0,ci);if(ci===word.length){del=true;return setTimeout(tick,1800);}return setTimeout(tick,65);}else{ci--;sp.textContent=word.slice(0,ci);if(ci===0){del=false;wi++;return setTimeout(tick,400);}return setTimeout(tick,35);}}
   setTimeout(tick,1200);
 })();
-
-/* ── COUNTER ── */
 (function(){
-  var targets=[{id:'c-years',end:10,suffix:'+'},{id:'c-cos',end:50,suffix:'+'},{id:'c-views',end:10,suffix:'mil+'}];
-  var els=targets.map(function(t){return Object.assign({},t,{el:document.getElementById(t.id)});}).filter(function(t){return t.el;});
-  if(!els.length) return;
-  var animated=false;
-  function countUp(t){ var dur=1400,start=performance.now(); function frame(now){ var prog=Math.min((now-start)/dur,1),eased=1-Math.pow(1-prog,3),val=Math.floor(eased*t.end); t.el.textContent=val+t.suffix; if(prog<1)requestAnimationFrame(frame); else t.el.textContent=t.end+t.suffix; } requestAnimationFrame(frame); }
-  function runAll(){ if(animated)return; animated=true; els.forEach(countUp); }
-  var statsBlock=document.getElementById('hero-stats');
-  if('IntersectionObserver' in window && statsBlock){ var obs=new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){runAll();obs.disconnect();} }); },{threshold:0.4}); obs.observe(statsBlock); } else { runAll(); }
+  var tgts=[{id:'c-years',end:10,suf:'+'},{id:'c-cos',end:50,suf:'+'},{id:'c-views',end:10,suf:'mil+'}];
+  var els=tgts.map(function(t){return Object.assign({},t,{el:document.getElementById(t.id)});}).filter(function(t){return t.el;});
+  if(!els.length)return; var done=false;
+  function cu(t){var dur=1400,s=performance.now();function f(n){var p=Math.min((n-s)/dur,1),e=1-Math.pow(1-p,3),v=Math.floor(e*t.end);t.el.textContent=v+t.suf;if(p<1)requestAnimationFrame(f);else t.el.textContent=t.end+t.suf;}requestAnimationFrame(f);}
+  function run(){if(done)return;done=true;els.forEach(cu);}
+  var sb=document.getElementById('hero-stats');
+  if('IntersectionObserver' in window&&sb){var o=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){run();o.disconnect();}});},{threshold:0.4});o.observe(sb);}else{run();}
 })();
-
-/* ── FAQ TOGGLE ── */
 function toggleFaq(el){
-  var isOpen=el.classList.contains('open');
-  document.querySelectorAll('.faq-q.open').forEach(function(q){ q.classList.remove('open'); q.nextElementSibling.style.maxHeight='0'; });
-  if(!isOpen){ el.classList.add('open'); el.nextElementSibling.style.maxHeight='none'; }
+  var open=el.classList.contains('open');
+  document.querySelectorAll('.faq-q.open').forEach(function(q){q.classList.remove('open');q.nextElementSibling.style.maxHeight='0';});
+  if(!open){el.classList.add('open');el.nextElementSibling.style.maxHeight='none';}
 }
 </script>
+
+</html>
 </body>
 </html>
