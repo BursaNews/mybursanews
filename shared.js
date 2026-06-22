@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </a>
   <div class="nav-links" role="menubar">
     <a href="${ROOT}index.html" class="nav-link" data-en="Home" data-zh="首页" role="menuitem">首页</a>
-    <a href="${ROOT}starterkit.html" class="nav-link nav-highlight" data-en="🎁 Starter Kit" data-zh="🎁 免费入门包" role="menuitem" style="background:#16a34a;color:#fff!important;padding:7px 14px;border-radius:20px;font-weight:700;font-size:13px;">🎁 免费入门包</a>
+    <a href="${ROOT}starterkit.html" class="nav-link nav-highlight" data-en="🎁 Starter Kit" data-zh="🎁 免费入门包" role="menuitem" style="background:#16a34a!important;color:#fff!important;padding:6px 14px!important;border-radius:20px;font-weight:700;font-size:13px;line-height:1;">🎁 免费入门包</a>
     
     <a href="${ROOT}resources.html" class="nav-link" data-en="Resources" data-zh="学习资源" role="menuitem">学习资源</a>
     <a href="${ROOT}affiliates.html" class="nav-link" data-en="Brokers" data-zh="开户指南" role="menuitem">开户指南</a>

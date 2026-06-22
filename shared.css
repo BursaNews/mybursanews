@@ -243,3 +243,6 @@ div#hero.hero-section {
   background-color: #0a1628 !important;
   color: #fff !important;
 }
+/* Nav highlight - Starter Kit green pill */
+.nav-highlight{background:#16a34a!important;color:#fff!important;padding:6px 14px!important;border-radius:20px!important;font-weight:700!important;line-height:1;}
+.nav-highlight:hover{background:#15803d!important;color:#fff!important;}
