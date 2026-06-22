@@ -146,10 +146,10 @@ body{font-size:17px;}
     <p class="joke" data-en="(We decided to fix that. You're welcome 😄)" data-zh="（我们决定改变这一点。不客气 😄）">(We decided to fix that. You're welcome 😄)</p>
   </div>
   <div class="ah-right">
-    <div style="background:#0a1628;border-radius:16px;padding:1.75rem 1.75rem 1.25rem;width:100%;max-width:420px;">
+    <div style="background:#0a1628;border-radius:16px;padding:2rem 2rem 1.5rem;width:100%;">
   <p style="font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#FF6B00;font-weight:700;margin:0 0 .3rem;">长期投资的威力</p>
   <p style="font-size:15px;font-weight:700;color:#fff;margin:0 0 1.1rem;line-height:1.3;font-family:'Noto Serif SC',serif;">坚持投资，财富如何随时间加速增长</p>
-  <div style="position:relative;height:210px;">
+  <div style="position:relative;height:280px;">
     <canvas id="ab-combo" role="img" aria-label="Combo chart showing bars growing incrementally each year and a line curving upward to illustrate compound growth over 10 years">年度增值（柱状图，逐年递增）与累计净值（折线图，加速上升）示意图。</canvas>
   </div>
   <p style="font-size:10px;color:rgba(255,255,255,.3);margin:.6rem 0 0;text-align:right;">示意图，仅供参考，非实际投资回报保证</p>
@@ -161,10 +161,10 @@ body{font-size:17px;}
   var annual=[5,7,9,12,16,20,26,33,42,54];
   var cumulative=[5,12,21,33,49,69,95,128,170,224];
   var ctx=document.getElementById('ab-combo').getContext('2d');
-  var barGrad=ctx.createLinearGradient(0,0,0,210);
+  var barGrad=ctx.createLinearGradient(0,0,0,280);
   barGrad.addColorStop(0,'rgba(255,107,0,0.85)');
   barGrad.addColorStop(1,'rgba(255,107,0,0.15)');
-  var lineGrad=ctx.createLinearGradient(0,0,0,210);
+  var lineGrad=ctx.createLinearGradient(0,0,0,280);
   lineGrad.addColorStop(0,'rgba(255,213,128,0.2)');
   lineGrad.addColorStop(1,'rgba(255,213,128,0)');
   new Chart(ctx,{
@@ -234,19 +234,18 @@ body{font-size:17px;}
 <!-- FOUNDERS -->
 <section class="founders-section">
   <div class="wrap">
-    <span style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FF6B00;margin-bottom:.65rem;display:block;" data-en="Our Founders" data-zh="我们的创办人">Our Founders</span>
-    <h2 style="font-family:'Noto Serif SC',serif;font-size:2rem;font-weight:900;color:#0a1628;margin-bottom:.75rem;" data-en="Two ex-investment bankers.<br>One shared mission." data-zh="两位前投资银行家。<br>一个共同的使命。">两位前投资银行家。<br>一个共同的使命。</h2>
+    <span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FF6B00;margin-bottom:.65rem;display:block;" data-en="Our Founders" data-zh="我们的创办人">我们的创办人</span>
+    <h2 style="font-family:'Noto Serif SC',serif;font-size:2rem;font-weight:900;color:#0a1628;margin-bottom:.75rem;" data-en="Two ex-investment bankers. One shared mission." data-zh="两位前投资银行家。一个共同的使命。">两位前投资银行家。一个共同的使命。</h2>
     <div class="founder-card" style="max-width:740px;">
-      <div style="display:flex;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap;">
+      <div style="display:flex;gap:.75rem;margin-bottom:1.25rem;flex-wrap:wrap;">
         <div class="fc-exp" style="margin-top:0;" data-en="10+ years as capital markets advisors" data-zh="逾10年资本市场顾问经验">逾10年资本市场顾问经验</div>
         <div class="fc-exp" style="margin-top:0;" data-en="10+ years of business valuation" data-zh="逾10年企业估值经验">逾10年企业估值经验</div>
         <div class="fc-exp" style="margin-top:0;" data-en="Structured deals with directors of PLCs" data-zh="曾与上市公司董事合作主导企业活动">曾与上市公司董事合作主导企业活动</div>
       </div>
-      <p class="fc-desc" data-en="And here we are now — ready to bring you investing content that's actually fun and easy to understand. Unlike other gurus who hand out stock tips, we want you to learn how to spot the real insight behind every market development. Because investing is a lifelong journey — from your university years until the very end, that's potentially 60 years on the road. If you're only looking for tips and shortcuts, we're honestly not the right fit for you. But if you want to truly understand the market and make your own informed decisions, welcome home." data-zh="现在，我们准备好了，要把真正有趣、易懂的投资内容带给你。不像其他老师只给贴士，我们希望你学会怎么从每一个市场动态中看到真正的洞见。因为投资是一段漫长的旅程，从你大学时代开始，直到生命尽头，可能长达60年。如果你只是想要贴士和捷径，老实说，我们不适合你。但如果你真的想读懂市场，做出自己的明智判断，欢迎来到这里。">现在，我们准备好了，要把真正有趣、易懂的投资内容带给你。不像其他老师只给贴士，我们希望你学会怎么从每一个市场动态中看到真正的洞见。因为投资是一段漫长的旅程，从你大学时代开始，直到生命尽头，可能长达60年。如果你只是想要贴士和捷径，老实说，我们不适合你。但如果你真的想读懂市场，做出自己的明智判断，欢迎来到这里。</p>
+      <p class="fc-desc" data-en="And here we are now — ready to bring you investing content that&#39;s actually fun and easy to understand. Unlike other gurus who hand out stock tips, we want you to learn how to spot the real insight behind every market development. Because investing is a lifelong journey — from your university years until the very end, that&#39;s potentially 60 years on the road. If you&#39;re only looking for tips and shortcuts, we&#39;re honestly not the right fit for you. But if you want to truly understand the market and make your own informed decisions, welcome home." data-zh="现在，我们准备好了，要把真正有趣、易懂的投资内容带给你。不像其他老师只给贴士，我们希望你学会怎么从每一个市场动态中看到真正的洞见。因为投资是一段漫长的旅程，从你大学时代开始，直到生命尽头，可能长达60年。如果你只是想要贴士和捷径，老实说，我们不适合你。但如果你真的想读懂市场，做出自己的明智判断，欢迎来到这里。">现在，我们准备好了，要把真正有趣、易懂的投资内容带给你。不像其他老师只给贴士，我们希望你学会怎么从每一个市场动态中看到真正的洞见。因为投资是一段漫长的旅程，从你大学时代开始，直到生命尽头，可能长达60年。如果你只是想要贴士和捷径，老实说，我们不适合你。但如果你真的想读懂市场，做出自己的明智判断，欢迎来到这里。</p>
     </div>
   </div>
 </section>
-
 <!-- VALUES -->
 <section class="values-section">
   <div class="wrap">
