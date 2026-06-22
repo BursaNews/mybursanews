@@ -59,6 +59,34 @@ body { font-size: 17px; }
 .res-cta p { color: var(--gray); margin-bottom: 1.5rem; font-size: 15px; }
 
 @media(max-width:600px) { .res-grid { grid-template-columns: 1fr 1fr; } }
+
+.cat-bar{background:#fff;border-bottom:1px solid var(--border);padding:.85rem 2rem;position:sticky;top:68px;z-index:100;}
+.cat-bar-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;}
+.cat-pill{display:inline-flex;align-items:center;padding:5px 14px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--gray);transition:all .18s;text-decoration:none;}
+.cat-pill:hover,.cat-pill.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.insights-grid{max-width:1100px;margin:0 auto;padding:3rem 2rem;}
+.insights-grid-inner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;}
+.ins-card{background:#fff;border-radius:16px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;text-decoration:none;color:inherit;}
+.ins-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.ins-card.featured{grid-column:1/-1;flex-direction:row;}
+.ins-card-img{aspect-ratio:16/9;position:relative;overflow:hidden;flex-shrink:0;}
+.ins-card.featured .ins-card-img{width:48%;aspect-ratio:auto;min-height:280px;}
+.ins-card-img-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.5rem;}
+.ins-card-body{padding:1.5rem;display:flex;flex-direction:column;gap:.6rem;flex:1;}
+.ins-card.featured .ins-card-body{padding:2rem 2.5rem;justify-content:center;}
+.ins-cat{display:inline-flex;align-items:center;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(184,115,51,.3);background:rgba(184,115,51,.08);padding:3px 10px;border-radius:20px;width:fit-content;}
+.ins-card h2{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--navy);line-height:1.4;margin:0;}
+.ins-card.featured h2{font-size:1.5rem;}
+.ins-excerpt{font-size:14px;color:var(--gray);line-height:1.7;-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;}
+.ins-meta{display:flex;align-items:center;gap:.75rem;font-size:12.5px;color:var(--gray);margin-top:auto;padding-top:.75rem;border-top:1px solid var(--border);}
+.ins-meta-dot{width:3px;height:3px;border-radius:50%;background:var(--border);}
+.premium-badge{position:absolute;top:12px;right:12px;background:var(--gold);color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em;padding:3px 10px;border-radius:20px;}
+.insights-cta{background:var(--navy);padding:3.5rem 2rem;text-align:center;}
+.insights-cta h2{font-family:var(--serif);font-size:1.7rem;color:#fff;margin-bottom:.75rem;}
+.insights-cta p{color:rgba(255,255,255,.65);margin-bottom:1.75rem;}
+.insights-cta a.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:#fff;padding:13px 28px;border-radius:10px;font-weight:800;text-decoration:none;font-size:15px;}
+@media(max-width:900px){.insights-grid-inner{grid-template-columns:1fr 1fr;}.ins-card.featured{flex-direction:column;}.ins-card.featured .ins-card-img{width:100%;min-height:200px;}}
+@media(max-width:600px){.insights-grid-inner{grid-template-columns:1fr;}.ins-card.featured{grid-column:1;}}
 </style>
 <script type="application/ld+json">
 {
@@ -398,5 +426,89 @@ searchEl.addEventListener('input', function() {
   });
 });
 </script>
+
+<!-- ═══════════════════════════════════════════
+     深度教学文章 (从市场分析合并)
+════════════════════════════════════════════ -->
+<div style="background:var(--navy);padding:3rem 2rem;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(184,115,51,.15);border:1px solid rgba(184,115,51,.3);border-radius:30px;padding:5px 16px;font-size:12px;font-weight:700;color:var(--gold2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem;">📊 Market Insights</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:#fff;margin-bottom:.75rem;" data-en="&lt;em&gt;When It Matters&lt;/em&gt;, We Write." data-zh="只写&lt;em&gt;真正重要&lt;/em&gt;的分析。">只写<em style="font-style:normal;color:var(--gold2);">真正重要</em>的分析。</h2>
+    <p style="color:rgba(255,255,255,.65);max-width:620px;line-height:1.75;font-size:15px;" data-en="We don&#39;t publish daily summaries. When something significant happens on Bursa, we write a deep, honest analysis." data-zh="我们不发每日新闻摘要。当Bursa发生真正重要的事情，我们才写。每篇都是深度、诚实的分析。">我们不发每日新闻摘要。当Bursa发生真正重要的事情，我们才写。每篇都是深度、诚实的分析。</p>
+  </div>
+</div>
+
+<div class="cat-bar" role="navigation" aria-label="Filter by category">
+  <div class="cat-bar-inner">
+    <span style="font-size:13px;font-weight:700;color:var(--gray);margin-right:.5rem;" data-en="Filter:" data-zh="筛选：">筛选：</span>
+    <a href="#" class="cat-pill active" data-cat="all" data-en="All" data-zh="全部">全部</a>
+    <a href="#" class="cat-pill" data-cat="company" data-en="Company Analysis" data-zh="公司分析">公司分析</a>
+    <a href="#" class="cat-pill" data-cat="ipo" data-en="IPO" data-zh="IPO">IPO</a>
+    <a href="#" class="cat-pill" data-cat="education" data-en="Education" data-zh="投资教育">投资教育</a>
+  </div>
+</div>
+
+<section class="insights-grid" aria-label="Market Insights articles">
+  <div class="insights-grid-inner" id="articles-grid">
+    <a href="posts/how-to-start-investing-malaysia.html" class="ins-card featured" data-cat="education">
+      <div class="ins-card-img"><div class="ins-card-img-inner" style="background:linear-gradient(135deg,#0a1628,#1a3a5e);">📈</div><div class="premium-badge">EDUCATION</div></div>
+      <div class="ins-card-body">
+        <span class="ins-cat" data-en="📚 Education" data-zh="📚 投资教育">📚 投资教育</span>
+        <h2 data-en="Complete Guide: How to Start Investing in Malaysia in 2026" data-zh="2026年马来西亚投资入门完整指南：零基础到第一支股票">2026年马来西亚投资入门完整指南：零基础到第一支股票</h2>
+        <p class="ins-excerpt" data-en="Everything a complete beginner needs, from understanding stocks to making your first trade. Step-by-step, jargon-free." data-zh="完全零基础新手需要知道的一切，一步步，零行话。">完全零基础新手需要知道的一切，一步步，零行话。</p>
+        <div class="ins-meta"><span>12分钟阅读</span><span class="ins-meta-dot"></span><span>Jun 2026</span></div>
+      </div>
+    </a>
+    <a href="posts/what-is-bursa-announcement.html" class="ins-card" data-cat="education">
+      <div class="ins-card-img"><div class="ins-card-img-inner" style="background:linear-gradient(135deg,#1a2d4f,#243b5e);">📋</div></div>
+      <div class="ins-card-body"><span class="ins-cat">📋 公告解读</span><h2 data-en="How to Read a Malaysian Stock Announcement" data-zh="如何看懂马股公司公告">如何看懂马股公司公告</h2><p class="ins-excerpt" data-en="Break down every section so you know what to look for." data-zh="拆解每个部分，让你知道该关注什么。">拆解每个部分，让你知道该关注什么。</p><div class="ins-meta"><span>8分钟阅读</span><span class="ins-meta-dot"></span><span>Jun 2026</span></div></div>
+    </a>
+    <a href="posts/dividend-stocks-malaysia.html" class="ins-card" data-cat="education">
+      <div class="ins-card-img"><div class="ins-card-img-inner" style="background:linear-gradient(135deg,#0d3320,#1a5c3a);">💰</div></div>
+      <div class="ins-card-body"><span class="ins-cat">💰 股息投资</span><h2 data-en="Dividend Investing in Malaysia: The Complete Guide" data-zh="马来西亚股息投资完整指南">马来西亚股息投资完整指南</h2><p class="ins-excerpt" data-en="How dividend investing works and how to build passive income." data-zh="股息如何运作以及如何建立被动收入。">股息如何运作以及如何建立被动收入。</p><div class="ins-meta"><span>10分钟阅读</span><span class="ins-meta-dot"></span><span>Jun 2026</span></div></div>
+    </a>
+    <a href="posts/ipo-guide-malaysia.html" class="ins-card" data-cat="ipo">
+      <div class="ins-card-img"><div class="ins-card-img-inner" style="background:linear-gradient(135deg,#1a1628,#3d1a60);">🚀</div></div>
+      <div class="ins-card-body"><span class="ins-cat">🚀 IPO</span><h2 data-en="How to Apply for Malaysian Stock IPOs" data-zh="如何申购马股IPO？从基础到实战">如何申购马股IPO？从基础到实战</h2><p class="ins-excerpt" data-en="What is an IPO and how to evaluate whether one is worth applying for." data-zh="什么是IPO，以及如何判断是否值得申购。">什么是IPO，以及如何判断是否值得申购。</p><div class="ins-meta"><span>9分钟阅读</span><span class="ins-meta-dot"></span><span>Jun 2026</span></div></div>
+    </a>
+    <a href="posts/reit-guide-malaysia.html" class="ins-card" data-cat="education">
+      <div class="ins-card-img"><div class="ins-card-img-inner" style="background:linear-gradient(135deg,#1a0d00,#4a2800);">🏢</div></div>
+      <div class="ins-card-body"><span class="ins-cat">🏢 REIT</span><h2 data-en="Malaysia REIT Guide: What It Is and How to Buy" data-zh="马来西亚REIT完整指南：什么是REIT？怎么买？">马来西亚REIT完整指南：什么是REIT？怎么买？</h2><p class="ins-excerpt" data-en="How REITs generate income and how to evaluate them on Bursa." data-zh="REIT如何产生收入以及如何评估它们。">REIT如何产生收入以及如何评估它们。</p><div class="ins-meta"><span>11分钟阅读</span><span class="ins-meta-dot"></span><span>Jun 2026</span></div></div>
+    </a>
+    <a href="posts/rights-issue-explained.html" class="ins-card" data-cat="company">
+      <div class="ins-card-img"><div class="ins-card-img-inner" style="background:linear-gradient(135deg,#0a1628,#0d3320);">⚖️</div></div>
+      <div class="ins-card-body"><span class="ins-cat">⚖️ 企业活动</span><h2 data-en="Rights Issue Explained: Subscribe or Sell?" data-zh="供股权解析：你该认购还是卖掉？">供股权解析：你该认购还是卖掉？</h2><p class="ins-excerpt" data-en="A company you own just announced a Rights Issue. Here is the honest breakdown." data-zh="你持有的公司刚宣布了供股权。诚实的分析在这里。">你持有的公司刚宣布了供股权。诚实的分析在这里。</p><div class="ins-meta"><span>8分钟阅读</span><span class="ins-meta-dot"></span><span>Jun 2026</span></div></div>
+    </a>
+    <a href="posts/beginner-mistakes.html" class="ins-card" data-cat="education">
+      <div class="ins-card-img"><div class="ins-card-img-inner" style="background:linear-gradient(135deg,#3d0a0a,#7a1515);">⚠️</div></div>
+      <div class="ins-card-body"><span class="ins-cat">⚠️ 投资教育</span><h2 data-en="7 Common Beginner Mistakes in Malaysian Stock Investing" data-zh="马股新手最常犯的7个错误">马股新手最常犯的7个错误</h2><p class="ins-excerpt" data-en="The most common mistakes beginners make — avoid them from day one." data-zh="最常见的新手错误，从第一天就避开。">最常见的新手错误，从第一天就避开。</p><div class="ins-meta"><span>7分钟阅读</span><span class="ins-meta-dot"></span><span>Jun 2026</span></div></div>
+    </a>
+    <a href="posts/what-is-cds-account.html" class="ins-card" data-cat="education">
+      <div class="ins-card-img"><div class="ins-card-img-inner" style="background:linear-gradient(135deg,#0a1628,#1a2d4f);">📂</div></div>
+      <div class="ins-card-body"><span class="ins-cat">📂 开户教学</span><h2 data-en="What is a CDS Account? Every Bursa Investor Needs One" data-zh="什么是CDS账户？每个Bursa投资者都需要知道">什么是CDS账户？每个Bursa投资者都需要知道</h2><p class="ins-excerpt" data-en="Without a CDS account, you cannot own Malaysian stocks." data-zh="没有CDS账户，你就无法持有马股。">没有CDS账户，你就无法持有马股。</p><div class="ins-meta"><span>6分钟阅读</span><span class="ins-meta-dot"></span><span>Jun 2026</span></div></div>
+    </a>
+  </div>
+</section>
+
+<section class="insights-cta">
+  <h2 data-en="Get Notified When We Publish" data-zh="第一时间收到我们的分析">第一时间收到我们的分析</h2>
+  <p data-en="When something important happens on Bursa, we send it to your WhatsApp before market opens." data-zh="当Bursa发生重要的事情，我们会在开盘前把分析发到你的WhatsApp。">当Bursa发生重要的事情，我们会在开盘前把分析发到你的WhatsApp。</p>
+  <a href="subscription.html" class="btn" data-en="📩 Subscribe to 马股早知道" data-zh="📩 订阅马股早知道">📩 订阅马股早知道</a>
+</section>
+
+<script>
+document.querySelectorAll('.cat-pill').forEach(function(pill){
+  pill.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelectorAll('.cat-pill').forEach(function(p){p.classList.remove('active');});
+    pill.classList.add('active');
+    var cat = pill.dataset.cat;
+    document.querySelectorAll('.ins-card').forEach(function(card){
+      card.style.display = (cat==='all'||card.dataset.cat===cat)?'':'none';
+    });
+  });
+});
+</script>
+
 </body>
 </html>
