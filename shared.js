@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="${ROOT}index.html" class="nav-link" data-en="Home" data-zh="首页" role="menuitem">首页</a>
     <a href="${ROOT}starterkit.html" class="nav-link nav-highlight" data-en="🎁 Starter Kit" data-zh="🎁 免费入门包" role="menuitem" style="background:#16a34a!important;color:#fff!important;padding:6px 14px!important;border-radius:20px;font-weight:700;font-size:13px;line-height:1;">🎁 免费入门包</a>
     
-    <a href="${ROOT}resources.html" class="nav-link" data-en="Resources" data-zh="学习资源" role="menuitem">学习资源</a>
+    <a href="${ROOT}resources.html" class="nav-link" data-en="Investing Guide" data-zh="投资指南" role="menuitem">投资指南</a>
     <a href="${ROOT}affiliates.html" class="nav-link" data-en="Brokers" data-zh="开户指南" role="menuitem">开户指南</a>
     <a href="${ROOT}subscription.html" class="nav-link" data-en="Subscribe" data-zh="订阅计划" role="menuitem">订阅计划</a>
     <a href="${ROOT}coaching.html" class="nav-link" data-en="Coaching" data-zh="课程辅导" role="menuitem">课程辅导</a>
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <a href="${ROOT}index.html" data-en="Home" data-zh="首页">首页</a>
   <a href="${ROOT}starterkit.html" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包">🎁 免费入门包</a>
   
-  <a href="${ROOT}resources.html" data-en="Resources" data-zh="学习资源">学习资源</a>
+  <a href="${ROOT}resources.html" data-en="Investing Guide" data-zh="投资指南">投资指南</a>
   <a href="${ROOT}affiliates.html" data-en="Brokers" data-zh="开户指南">开户指南</a>
   <a href="${ROOT}subscription.html" data-en="Subscribe" data-zh="订阅计划">订阅计划</a>
   <a href="${ROOT}coaching.html" data-en="Coaching" data-zh="课程辅导">课程辅导</a>
