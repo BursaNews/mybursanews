@@ -61,38 +61,38 @@
 
 /* ── PHONE MOCKUP ── */
 .broker-visual{display:flex;justify-content:center;align-items:center;position:relative;align-self:center;min-height:520px;}
-.phone-wrap{position:relative;width:260px;}
-.phone-shell{background:var(--navy);border-radius:42px;padding:10px 10px 14px;box-shadow:0 32px 64px rgba(0,0,0,.22),0 0 0 1.5px rgba(255,255,255,.08);}
-.phone-notch{width:90px;height:28px;background:var(--navy);border-radius:0 0 18px 18px;margin:0 auto 8px;position:relative;z-index:2;}
-.phone-notch::before{content:'';position:absolute;width:10px;height:10px;background:rgba(255,255,255,.08);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);}
-.phone-screen{background:#fff;border-radius:32px;overflow:hidden;height:420px;}
+
+
+
+
+
 
 /* ── SCREEN CONTENTS ── */
-.scr-header{padding:16px 16px 12px;display:flex;align-items:center;justify-content:space-between;}
-.scr-header-title{font-size:13px;font-weight:800;color:var(--navy);}
-.scr-badge{font-size:10px;font-weight:800;padding:3px 9px;border-radius:10px;color:#fff;}
-.scr-chart{width:100%;height:100px;position:relative;overflow:hidden;}
-.scr-stat-row{display:flex;gap:8px;padding:0 14px 14px;}
-.scr-stat{background:var(--off);border-radius:10px;padding:10px 10px;flex:1;text-align:center;}
-.scr-stat-v{font-size:15px;font-weight:900;}
-.scr-stat-l{font-size:9px;color:var(--gray);margin-top:2px;font-weight:600;letter-spacing:.03em;}
-.scr-divider{height:1px;background:var(--border);margin:0 14px;}
-.scr-item{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--border);}
-.scr-item-icon{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
-.scr-item-name{font-size:12px;font-weight:700;color:var(--navy);}
-.scr-item-sub{font-size:10px;color:var(--gray);margin-top:1px;}
-.scr-item-right{margin-left:auto;text-align:right;}
-.scr-item-val{font-size:12px;font-weight:800;}
-.scr-item-chg{font-size:10px;font-weight:700;}
-.scr-btn{margin:12px 14px;display:block;text-align:center;border-radius:10px;padding:11px;font-size:13px;font-weight:800;color:#fff;border:none;}
-.scr-reward{margin:10px 14px;background:var(--off);border-radius:10px;padding:12px;}
-.scr-reward-label{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--gold);}
-.scr-reward-val{font-size:1.1rem;font-weight:900;color:var(--navy);margin-top:3px;}
-.scr-code-row{display:flex;align-items:center;gap:6px;margin-top:6px;}
-.scr-code-box{background:var(--navy);color:#fff;font-size:13px;font-weight:900;letter-spacing:.12em;padding:5px 12px;border-radius:7px;flex:1;text-align:center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ── GLOW ACCENT ── */
-.phone-glow{position:absolute;width:320px;height:320px;border-radius:50%;opacity:.12;filter:blur(60px);pointer-events:none;top:50%;left:50%;transform:translate(-50%,-50%);z-index:-1;}
+
 
 /* ── COMPARISON TABLE ── */
 .compare-section{background:var(--navy);padding:5rem 2rem;}
@@ -118,13 +118,13 @@
   .broker-inner,.broker-inner.flip{grid-template-columns:1fr;}
   .broker-inner.flip .broker-content{order:1;}
   .broker-inner.flip .broker-visual{order:2;}
-  .phone-wrap{width:220px;}
+  
   .broker-visual{margin-top:2.5rem;}
   .broker-section{padding:4rem 1.5rem;}
   .broker-inner{gap:3rem;}
 }
 @media(max-width:600px){
-  .phone-wrap{width:200px;}
+  
   .broker-name{font-size:2rem;}
 }
 </style>
@@ -178,55 +178,81 @@
     </div>
 
     <!-- MOOMOO PHONE MOCKUP -->
-    <div class="broker-visual">
-      <div class="phone-glow" style="background:#FF6B00;"></div>
-      <div class="phone-wrap">
-        <div class="phone-shell">
-          <div class="phone-notch"></div>
-          <div class="phone-screen">
-            <!-- Header -->
-            <div class="scr-header" style="background:#FF6B00;">
-              <span style="font-size:13px;font-weight:900;color:#fff;">Moomoo</span>
-              <span class="scr-badge" style="background:rgba(255,255,255,.25);">MY ✓</span>
-            </div>
-            <!-- Welcome reward -->
-            <div class="scr-reward">
-              <div class="scr-reward-label">BursaNews Exclusive</div>
-              <div class="scr-reward-val">Up to RM1,500+</div>
-              <div class="scr-code-row">
-                <div class="scr-code-box">BURSA88</div>
-              </div>
-            </div>
-            <!-- Chart SVG -->
-            <div class="scr-chart" style="background:#fff8f5;padding:8px 14px 0;">
-              <svg viewBox="0 0 220 70" style="width:100%;height:60px;" aria-hidden="true">
-                <polyline points="0,55 30,48 55,50 80,38 110,30 140,20 165,12 185,8 220,4" fill="none" stroke="#FF6B00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <polyline points="0,55 30,48 55,50 80,38 110,30 140,20 165,12 185,8 220,4 220,70 0,70" fill="url(#mg)" stroke="none"/>
-                <defs><linearGradient id="mg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FF6B00" stop-opacity=".18"/><stop offset="100%" stop-color="#FF6B00" stop-opacity="0"/></linearGradient></defs>
-              </svg>
-            </div>
-            <!-- Stats -->
-            <div class="scr-stat-row">
-              <div class="scr-stat"><div class="scr-stat-v" style="color:#FF6B00;">28M+</div><div class="scr-stat-l">Users</div></div>
-              <div class="scr-stat"><div class="scr-stat-v" style="color:#16a34a;">0%</div><div class="scr-stat-l">Commission</div></div>
-              <div class="scr-stat"><div class="scr-stat-v" style="color:var(--navy);">180d</div><div class="scr-stat-l">Free period</div></div>
-            </div>
-            <div class="scr-divider"></div>
-            <!-- Stock rows -->
-            <div class="scr-item">
-              <div class="scr-item-icon" style="background:#fff3e0;">📈</div>
-              <div><div class="scr-item-name">MY Stocks</div><div class="scr-item-sub">Bursa Malaysia</div></div>
-              <div class="scr-item-right"><div class="scr-item-val" style="color:#16a34a;">+2.4%</div><div class="scr-item-chg" style="color:#16a34a;">↑ Today</div></div>
-            </div>
-            <div class="scr-item">
-              <div class="scr-item-icon" style="background:#e8edf5;">🇺🇸</div>
-              <div><div class="scr-item-name">US Stocks</div><div class="scr-item-sub">NYSE · NASDAQ</div></div>
-              <div class="scr-item-right"><div class="scr-item-val" style="color:#16a34a;">+1.1%</div><div class="scr-item-chg" style="color:#16a34a;">↑ Today</div></div>
-            </div>
-            <a href="https://start.moomoo.com/0Bpp3E" target="_blank" rel="noopener" style="text-decoration:none;"><div class="scr-btn" style="background:#FF6B00;">Sign Up — Use Code BURSA88</div></a>
-          </div>
-        </div>
-      </div>
+    <div class="broker-visual" style="justify-content:center;padding:2rem 0;">
+      <svg viewBox="0 0 220 440" width="220" height="440" xmlns="http://www.w3.org/2000/svg" aria-label="Moomoo Malaysia app screen showing BursaNews exclusive reward BURSA88, portfolio chart, and stock list" role="img" style="display:block;filter:drop-shadow(0 24px 48px rgba(0,0,0,.35));">
+  <defs>
+    <linearGradient id="mm-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e1e2e"/><stop offset="100%" stop-color="#111118"/></linearGradient>
+    <linearGradient id="mm-grad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FF6B00" stop-opacity=".22"/><stop offset="100%" stop-color="#FF6B00" stop-opacity="0"/></linearGradient>
+    <clipPath id="mm-clip"><rect x="10" y="10" width="200" height="420" rx="28"/></clipPath>
+  </defs>
+  <!-- Outer shell -->
+  <rect x="0" y="0" width="220" height="440" rx="36" fill="url(#mm-body)"/>
+  <rect x="0" y="0" width="220" height="440" rx="36" fill="none" stroke="#3a3a4a" stroke-width="1.5"/>
+  <!-- Side buttons -->
+  <rect x="-2" y="90" width="4" height="26" rx="2" fill="#2a2a3a"/>
+  <rect x="-2" y="124" width="4" height="26" rx="2" fill="#2a2a3a"/>
+  <rect x="218" y="106" width="4" height="40" rx="2" fill="#2a2a3a"/>
+  <!-- Camera notch -->
+  <rect x="72" y="4" width="76" height="18" rx="9" fill="#111118"/>
+  <circle cx="148" cy="13" r="4" fill="#1e1e2e"/>
+  <!-- Screen content (clipped) -->
+  <g clip-path="url(#mm-clip)">
+    <rect x="10" y="10" width="200" height="420" rx="28" fill="#fff"/>
+    <!-- Status bar -->
+    <rect x="10" y="10" width="200" height="22" fill="#FF6B00"/>
+    <text x="20" y="25" font-family="system-ui,-apple-system,sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,.9)">9:41</text>
+    <text x="200" y="25" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="rgba(255,255,255,.7)" text-anchor="end">●●● ▌</text>
+    <!-- App header -->
+    <rect x="10" y="32" width="200" height="38" fill="#FF6B00"/>
+    <text x="110" y="48" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="900" fill="#fff" text-anchor="middle">Moomoo</text>
+    <text x="110" y="62" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,.7)" text-anchor="middle">MY Market · SC Licensed ✓</text>
+    <!-- BursaNews reward card -->
+    <rect x="18" y="78" width="184" height="62" rx="12" fill="#FFF8F3" stroke="#FF6B00" stroke-width="1.2"/>
+    <text x="28" y="92" font-family="system-ui,-apple-system,sans-serif" font-size="8" font-weight="800" fill="#FF6B00" letter-spacing=".06em">BURSANEWS EXCLUSIVE</text>
+    <text x="28" y="108" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="900" fill="#1a1a2e">Up to RM1,500+</text>
+    <rect x="28" y="115" width="90" height="18" rx="6" fill="#1a1a2e"/>
+    <text x="73" y="127" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="900" fill="#FF6B00" text-anchor="middle" letter-spacing=".1em">BURSA88</text>
+    <!-- AI feature pill -->
+    <rect x="18" y="148" width="184" height="26" rx="8" fill="#1a1a2e"/>
+    <text x="28" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="8.5" font-weight="800" fill="#FF6B00">✦ Moomoo AI</text>
+    <text x="28" y="168" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="rgba(255,255,255,.8)">Ask me anything about stocks →</text>
+    <!-- Chart area -->
+    <rect x="10" y="182" width="200" height="80" fill="#fff8f5"/>
+    <text x="20" y="196" font-family="system-ui,-apple-system,sans-serif" font-size="8.5" font-weight="700" fill="#999">Portfolio Performance</text>
+    <text x="200" y="196" font-family="system-ui,-apple-system,sans-serif" font-size="8.5" font-weight="800" fill="#16a34a" text-anchor="end">+12.4%</text>
+    <polyline points="20,248 44,240 62,242 84,230 106,218 124,208 144,198 160,192 200,184" fill="none" stroke="#FF6B00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="20,248 44,240 62,242 84,230 106,218 124,208 144,198 160,192 200,184 200,258 20,258" fill="url(#mm-grad)"/>
+    <!-- Stat pills -->
+    <rect x="18" y="266" width="56" height="32" rx="9" fill="#f5f5f5"/>
+    <text x="46" y="278" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="900" fill="#FF6B00" text-anchor="middle">28M+</text>
+    <text x="46" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="7.5" fill="#888" text-anchor="middle">Users</text>
+    <rect x="82" y="266" width="56" height="32" rx="9" fill="#f5f5f5"/>
+    <text x="110" y="278" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="900" fill="#16a34a" text-anchor="middle">0%</text>
+    <text x="110" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="7.5" fill="#888" text-anchor="middle">Comm.</text>
+    <rect x="146" y="266" width="56" height="32" rx="9" fill="#f5f5f5"/>
+    <text x="174" y="278" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="900" fill="#1a1a2e" text-anchor="middle">180d</text>
+    <text x="174" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="7.5" fill="#888" text-anchor="middle">Free</text>
+    <!-- Divider -->
+    <line x1="18" y1="306" x2="202" y2="306" stroke="#f0f0f0" stroke-width="1"/>
+    <!-- MY Stocks row -->
+    <rect x="18" y="312" width="34" height="28" rx="8" fill="#FFF0E6"/>
+    <text x="35" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="14" text-anchor="middle">📈</text>
+    <text x="60" y="323" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#1a1a2e">MY Stocks</text>
+    <text x="60" y="334" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="#888">Bursa Malaysia</text>
+    <text x="202" y="323" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="800" fill="#16a34a" text-anchor="end">+2.4%</text>
+    <text x="202" y="334" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="#16a34a" text-anchor="end">↑ Today</text>
+    <line x1="18" y1="346" x2="202" y2="346" stroke="#f0f0f0" stroke-width="1"/>
+    <!-- US Stocks row -->
+    <rect x="18" y="352" width="34" height="28" rx="8" fill="#E8EDF5"/>
+    <text x="35" y="370" font-family="system-ui,-apple-system,sans-serif" font-size="14" text-anchor="middle">🇺🇸</text>
+    <text x="60" y="363" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#1a1a2e">US Stocks</text>
+    <text x="60" y="374" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="#888">NYSE · NASDAQ</text>
+    <text x="202" y="363" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="800" fill="#16a34a" text-anchor="end">+1.1%</text>
+    <!-- CTA button -->
+    <rect x="18" y="388" width="184" height="32" rx="10" fill="#FF6B00"/>
+    <text x="110" y="408" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="800" fill="#fff" text-anchor="middle">Sign Up · Code BURSA88</text>
+  </g>
+</svg>
     </div>
   </div>
 </section>
@@ -258,48 +284,69 @@
     </div>
 
     <!-- WEBULL PHONE MOCKUP -->
-    <div class="broker-visual">
-      <div class="phone-glow" style="background:#0063F7;"></div>
-      <div class="phone-wrap">
-        <div class="phone-shell">
-          <div class="phone-notch"></div>
-          <div class="phone-screen">
-            <div class="scr-header" style="background:#0063F7;">
-              <span style="font-size:13px;font-weight:900;color:#fff;">Webull</span>
-              <span class="scr-badge" style="background:rgba(255,255,255,.25);">MY ✓</span>
-            </div>
-            <div class="scr-reward">
-              <div class="scr-reward-label">BursaNews Referral Link</div>
-              <div class="scr-reward-val" style="font-size:1rem;">RM300 Trading Vouchers</div>
-              <div style="margin-top:6px;font-size:10px;color:var(--gray);">No promo code needed</div>
-            </div>
-            <div class="scr-chart" style="background:#f0f6ff;padding:8px 14px 0;">
-              <svg viewBox="0 0 220 70" style="width:100%;height:60px;" aria-hidden="true">
-                <polyline points="0,60 25,52 50,45 80,48 110,35 140,25 165,18 185,10 220,5" fill="none" stroke="#0063F7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <polyline points="0,60 25,52 50,45 80,48 110,35 140,25 165,18 185,10 220,5 220,70 0,70" fill="url(#wbg)" stroke="none"/>
-                <defs><linearGradient id="wbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0063F7" stop-opacity=".18"/><stop offset="100%" stop-color="#0063F7" stop-opacity="0"/></linearGradient></defs>
-              </svg>
-            </div>
-            <div class="scr-stat-row">
-              <div class="scr-stat"><div class="scr-stat-v" style="color:#0063F7;">0%</div><div class="scr-stat-l">US Comm.</div></div>
-              <div class="scr-stat"><div class="scr-stat-v" style="color:#16a34a;">RM300</div><div class="scr-stat-l">Vouchers</div></div>
-              <div class="scr-stat"><div class="scr-stat-v" style="color:var(--navy);">Dec'26</div><div class="scr-stat-l">0% until</div></div>
-            </div>
-            <div class="scr-divider"></div>
-            <div class="scr-item">
-              <div class="scr-item-icon" style="background:#f0f6ff;">🇺🇸</div>
-              <div><div class="scr-item-name">US Stocks</div><div class="scr-item-sub">0% commission until Dec 2026</div></div>
-              <div class="scr-item-right"><div class="scr-item-val" style="color:#16a34a;">0% fee</div></div>
-            </div>
-            <div class="scr-item">
-              <div class="scr-item-icon" style="background:#fff3e0;">📊</div>
-              <div><div class="scr-item-name">Bursa Malaysia</div><div class="scr-item-sub">MY stocks &amp; ETFs</div></div>
-              <div class="scr-item-right"><div class="scr-item-val" style="color:#16a34a;">Live</div></div>
-            </div>
-            <a href="https://www.webull.com.my/k/bursanews" target="_blank" rel="noopener" style="text-decoration:none;"><div class="scr-btn" style="background:#0063F7;">Sign Up via BursaNews Link</div></a>
-          </div>
-        </div>
-      </div>
+    <div class="broker-visual" style="justify-content:center;padding:2rem 0;">
+      <svg viewBox="0 0 220 440" width="220" height="440" xmlns="http://www.w3.org/2000/svg" aria-label="Webull Malaysia app screen showing RM300 trading vouchers reward and US market access" role="img" style="display:block;filter:drop-shadow(0 24px 48px rgba(0,0,0,.35));">
+  <defs>
+    <linearGradient id="wb-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e1e2e"/><stop offset="100%" stop-color="#111118"/></linearGradient>
+    <linearGradient id="wb-grad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0063F7" stop-opacity=".2"/><stop offset="100%" stop-color="#0063F7" stop-opacity="0"/></linearGradient>
+    <clipPath id="wb-clip"><rect x="10" y="10" width="200" height="420" rx="28"/></clipPath>
+  </defs>
+  <rect x="0" y="0" width="220" height="440" rx="36" fill="url(#wb-body)"/>
+  <rect x="0" y="0" width="220" height="440" rx="36" fill="none" stroke="#3a3a4a" stroke-width="1.5"/>
+  <rect x="-2" y="90" width="4" height="26" rx="2" fill="#2a2a3a"/>
+  <rect x="-2" y="124" width="4" height="26" rx="2" fill="#2a2a3a"/>
+  <rect x="218" y="106" width="4" height="40" rx="2" fill="#2a2a3a"/>
+  <rect x="72" y="4" width="76" height="18" rx="9" fill="#111118"/>
+  <circle cx="148" cy="13" r="4" fill="#1e1e2e"/>
+  <g clip-path="url(#wb-clip)">
+    <rect x="10" y="10" width="200" height="420" rx="28" fill="#fff"/>
+    <rect x="10" y="10" width="200" height="22" fill="#0063F7"/>
+    <text x="20" y="25" font-family="system-ui,-apple-system,sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,.9)">9:41</text>
+    <text x="200" y="25" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="rgba(255,255,255,.7)" text-anchor="end">●●● ▌</text>
+    <rect x="10" y="32" width="200" height="38" fill="#0063F7"/>
+    <text x="110" y="48" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="900" fill="#fff" text-anchor="middle">Webull</text>
+    <text x="110" y="62" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,.7)" text-anchor="middle">MY Market · SC Licensed ✓</text>
+    <!-- Reward card -->
+    <rect x="18" y="78" width="184" height="62" rx="12" fill="#EFF6FF" stroke="#0063F7" stroke-width="1.2"/>
+    <text x="28" y="92" font-family="system-ui,-apple-system,sans-serif" font-size="8" font-weight="800" fill="#0063F7" letter-spacing=".06em">BURSANEWS REFERRAL LINK</text>
+    <text x="28" y="110" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="900" fill="#1a1a2e">RM300 Trading Vouchers</text>
+    <text x="28" y="128" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#0063F7" font-weight="600">No promo code needed</text>
+    <!-- Feature pill -->
+    <rect x="18" y="148" width="184" height="26" rx="8" fill="#0a1628"/>
+    <text x="28" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="8.5" font-weight="800" fill="#60a5fa">🇺🇸 US + MY Markets</text>
+    <text x="28" y="168" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="rgba(255,255,255,.8)">Fractional shares from USD1 →</text>
+    <!-- Chart -->
+    <rect x="10" y="182" width="200" height="80" fill="#f0f6ff"/>
+    <text x="20" y="196" font-family="system-ui,-apple-system,sans-serif" font-size="8.5" font-weight="700" fill="#999">US Market Performance</text>
+    <text x="200" y="196" font-family="system-ui,-apple-system,sans-serif" font-size="8.5" font-weight="800" fill="#16a34a" text-anchor="end">+8.7%</text>
+    <polyline points="20,250 44,240 64,244 86,230 108,218 130,208 152,198 172,190 200,182" fill="none" stroke="#0063F7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="20,250 44,240 64,244 86,230 108,218 130,208 152,198 172,190 200,182 200,258 20,258" fill="url(#wb-grad)"/>
+    <!-- Stats -->
+    <rect x="18" y="266" width="56" height="32" rx="9" fill="#f5f5f5"/>
+    <text x="46" y="278" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="900" fill="#0063F7" text-anchor="middle">0%</text>
+    <text x="46" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="7.5" fill="#888" text-anchor="middle">US Comm.</text>
+    <rect x="82" y="266" width="56" height="32" rx="9" fill="#f5f5f5"/>
+    <text x="110" y="278" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="900" fill="#16a34a" text-anchor="middle">RM300</text>
+    <text x="110" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="7.5" fill="#888" text-anchor="middle">Vouchers</text>
+    <rect x="146" y="266" width="56" height="32" rx="9" fill="#f5f5f5"/>
+    <text x="174" y="278" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="900" fill="#1a1a2e" text-anchor="middle">Dec'26</text>
+    <text x="174" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="7.5" fill="#888" text-anchor="middle">0% until</text>
+    <line x1="18" y1="306" x2="202" y2="306" stroke="#f0f0f0" stroke-width="1"/>
+    <rect x="18" y="312" width="34" height="28" rx="8" fill="#EFF6FF"/>
+    <text x="35" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="14" text-anchor="middle">🇺🇸</text>
+    <text x="60" y="323" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#1a1a2e">US Stocks</text>
+    <text x="60" y="334" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="#888">0% commission until Dec 2026</text>
+    <text x="202" y="327" font-family="system-ui,-apple-system,sans-serif" font-size="9" font-weight="800" fill="#0063F7" text-anchor="end">0% fee</text>
+    <line x1="18" y1="346" x2="202" y2="346" stroke="#f0f0f0" stroke-width="1"/>
+    <rect x="18" y="352" width="34" height="28" rx="8" fill="#FFF0E6"/>
+    <text x="35" y="370" font-family="system-ui,-apple-system,sans-serif" font-size="14" text-anchor="middle">🏛️</text>
+    <text x="60" y="363" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#1a1a2e">Bursa Malaysia</text>
+    <text x="60" y="374" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="#888">MY stocks &amp; ETFs</text>
+    <text x="202" y="363" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="800" fill="#16a34a" text-anchor="end">Live</text>
+    <rect x="18" y="388" width="184" height="32" rx="10" fill="#0063F7"/>
+    <text x="110" y="408" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="800" fill="#fff" text-anchor="middle">Sign Up via BursaNews Link</text>
+  </g>
+</svg>
     </div>
   </div>
 </section>
@@ -331,48 +378,75 @@
     </div>
 
     <!-- RAKUTEN PHONE MOCKUP -->
-    <div class="broker-visual">
-      <div class="phone-glow" style="background:#bf0000;"></div>
-      <div class="phone-wrap">
-        <div class="phone-shell">
-          <div class="phone-notch"></div>
-          <div class="phone-screen">
-            <div class="scr-header" style="background:#bf0000;">
-              <span style="font-size:12px;font-weight:900;color:#fff;">Rakuten Trade</span>
-              <span class="scr-badge" style="background:rgba(255,255,255,.25);">MY ✓</span>
-            </div>
-            <div class="scr-reward">
-              <div class="scr-reward-label">Malaysia's Lowest Fees</div>
-              <div class="scr-reward-val" style="font-size:.95rem;">RM1 flat for trades ≤ RM100</div>
-              <div style="margin-top:5px;font-size:10px;color:var(--gray);">Earn RT Points on every trade</div>
-            </div>
-            <div class="scr-chart" style="background:#fff5f5;padding:8px 14px 0;">
-              <svg viewBox="0 0 220 70" style="width:100%;height:60px;" aria-hidden="true">
-                <polyline points="0,50 30,42 55,38 80,32 110,28 140,22 165,15 185,10 220,6" fill="none" stroke="#bf0000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <polyline points="0,50 30,42 55,38 80,32 110,28 140,22 165,15 185,10 220,6 220,70 0,70" fill="url(#rkg)" stroke="none"/>
-                <defs><linearGradient id="rkg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bf0000" stop-opacity=".15"/><stop offset="100%" stop-color="#bf0000" stop-opacity="0"/></linearGradient></defs>
-              </svg>
-            </div>
-            <div class="scr-stat-row">
-              <div class="scr-stat"><div class="scr-stat-v" style="color:#bf0000;">RM1</div><div class="scr-stat-l">Min fee</div></div>
-              <div class="scr-stat"><div class="scr-stat-v" style="color:#16a34a;">~1hr</div><div class="scr-stat-l">Approval</div></div>
-              <div class="scr-stat"><div class="scr-stat-v" style="color:var(--navy);">RT pts</div><div class="scr-stat-l">Rewards</div></div>
-            </div>
-            <div class="scr-divider"></div>
-            <div class="scr-item">
-              <div class="scr-item-icon" style="background:#fff5f5;">🏛️</div>
-              <div><div class="scr-item-name">Bursa Malaysia</div><div class="scr-item-sub">MY stocks · SC regulated</div></div>
-              <div class="scr-item-right"><div class="scr-item-val" style="color:#16a34a;">Live</div></div>
-            </div>
-            <div class="scr-item">
-              <div class="scr-item-icon" style="background:#f0f6ff;">🇺🇸</div>
-              <div><div class="scr-item-name">US Stocks</div><div class="scr-item-sub">Backed by IBKR</div></div>
-              <div class="scr-item-right"><div class="scr-item-val" style="color:#16a34a;">Live</div></div>
-            </div>
-            <a href="https://www.rakutentrade.my" target="_blank" rel="noopener" style="text-decoration:none;"><div class="scr-btn" style="background:#bf0000;">Sign Up at rakutentrade.my</div></a>
-          </div>
-        </div>
-      </div>
+    <div class="broker-visual" style="justify-content:center;padding:2rem 0;">
+      <svg viewBox="0 0 220 440" width="220" height="440" xmlns="http://www.w3.org/2000/svg" aria-label="Rakuten Trade Malaysia app screen showing RM1 minimum fee and dividend bar chart" role="img" style="display:block;filter:drop-shadow(0 24px 48px rgba(0,0,0,.35));">
+  <defs>
+    <linearGradient id="rk-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e1e2e"/><stop offset="100%" stop-color="#111118"/></linearGradient>
+    <clipPath id="rk-clip"><rect x="10" y="10" width="200" height="420" rx="28"/></clipPath>
+  </defs>
+  <rect x="0" y="0" width="220" height="440" rx="36" fill="url(#rk-body)"/>
+  <rect x="0" y="0" width="220" height="440" rx="36" fill="none" stroke="#3a3a4a" stroke-width="1.5"/>
+  <rect x="-2" y="90" width="4" height="26" rx="2" fill="#2a2a3a"/>
+  <rect x="-2" y="124" width="4" height="26" rx="2" fill="#2a2a3a"/>
+  <rect x="218" y="106" width="4" height="40" rx="2" fill="#2a2a3a"/>
+  <rect x="72" y="4" width="76" height="18" rx="9" fill="#111118"/>
+  <circle cx="148" cy="13" r="4" fill="#1e1e2e"/>
+  <g clip-path="url(#rk-clip)">
+    <rect x="10" y="10" width="200" height="420" rx="28" fill="#fff"/>
+    <rect x="10" y="10" width="200" height="22" fill="#bf0000"/>
+    <text x="20" y="25" font-family="system-ui,-apple-system,sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,.9)">9:41</text>
+    <text x="200" y="25" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="rgba(255,255,255,.7)" text-anchor="end">●●● ▌</text>
+    <rect x="10" y="32" width="200" height="38" fill="#bf0000"/>
+    <text x="110" y="48" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="900" fill="#fff" text-anchor="middle">Rakuten Trade</text>
+    <text x="110" y="62" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,.7)" text-anchor="middle">MY Market · SC Licensed ✓</text>
+    <!-- Fee highlight card -->
+    <rect x="18" y="78" width="184" height="62" rx="12" fill="#FFF5F5" stroke="#bf0000" stroke-width="1.2"/>
+    <text x="28" y="92" font-family="system-ui,-apple-system,sans-serif" font-size="8" font-weight="800" fill="#bf0000" letter-spacing=".06em">MALAYSIA'S LOWEST FEES</text>
+    <text x="28" y="110" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="900" fill="#1a1a2e">RM1 flat ≤ RM100</text>
+    <text x="28" y="128" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#888">Earn RT Points on every trade</text>
+    <!-- Feature pill -->
+    <rect x="18" y="148" width="184" height="26" rx="8" fill="#2d0a0a"/>
+    <text x="28" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="8.5" font-weight="800" fill="#f87171">🏆 Lowest brokerage in Malaysia</text>
+    <text x="28" y="168" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="rgba(255,255,255,.8)">RM2.88 for RM100–RM9,999 →</text>
+    <!-- Dividend bar chart -->
+    <rect x="10" y="182" width="200" height="80" fill="#fff5f5"/>
+    <text x="20" y="196" font-family="system-ui,-apple-system,sans-serif" font-size="8.5" font-weight="700" fill="#999">Dividend Portfolio Yield</text>
+    <text x="200" y="196" font-family="system-ui,-apple-system,sans-serif" font-size="8.5" font-weight="800" fill="#16a34a" text-anchor="end">5.8% p.a.</text>
+    <!-- Bars growing left to right, last one green -->
+    <rect x="28" y="246" width="16" height="16" rx="2" fill="#bf0000" opacity=".4"/>
+    <rect x="50" y="238" width="16" height="24" rx="2" fill="#bf0000" opacity=".5"/>
+    <rect x="72" y="230" width="16" height="32" rx="2" fill="#bf0000" opacity=".6"/>
+    <rect x="94" y="222" width="16" height="40" rx="2" fill="#bf0000" opacity=".7"/>
+    <rect x="116" y="214" width="16" height="48" rx="2" fill="#bf0000" opacity=".8"/>
+    <rect x="138" y="206" width="16" height="56" rx="2" fill="#bf0000" opacity=".9"/>
+    <rect x="160" y="198" width="16" height="64" rx="2" fill="#bf0000"/>
+    <rect x="182" y="192" width="16" height="70" rx="2" fill="#16a34a"/>
+    <!-- Stats -->
+    <rect x="18" y="266" width="56" height="32" rx="9" fill="#f5f5f5"/>
+    <text x="46" y="278" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="900" fill="#bf0000" text-anchor="middle">RM1</text>
+    <text x="46" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="7.5" fill="#888" text-anchor="middle">Min fee</text>
+    <rect x="82" y="266" width="56" height="32" rx="9" fill="#f5f5f5"/>
+    <text x="110" y="278" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="900" fill="#16a34a" text-anchor="middle">~1hr</text>
+    <text x="110" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="7.5" fill="#888" text-anchor="middle">Approval</text>
+    <rect x="146" y="266" width="56" height="32" rx="9" fill="#f5f5f5"/>
+    <text x="174" y="278" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="900" fill="#1a1a2e" text-anchor="middle">RT pts</text>
+    <text x="174" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="7.5" fill="#888" text-anchor="middle">Rewards</text>
+    <line x1="18" y1="306" x2="202" y2="306" stroke="#f0f0f0" stroke-width="1"/>
+    <rect x="18" y="312" width="34" height="28" rx="8" fill="#FFF5F5"/>
+    <text x="35" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="14" text-anchor="middle">🏛️</text>
+    <text x="60" y="323" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#1a1a2e">Bursa Malaysia</text>
+    <text x="60" y="334" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="#888">MY stocks · SC regulated</text>
+    <text x="202" y="327" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="800" fill="#16a34a" text-anchor="end">Live</text>
+    <line x1="18" y1="346" x2="202" y2="346" stroke="#f0f0f0" stroke-width="1"/>
+    <rect x="18" y="352" width="34" height="28" rx="8" fill="#f0f6ff"/>
+    <text x="35" y="370" font-family="system-ui,-apple-system,sans-serif" font-size="14" text-anchor="middle">🇺🇸</text>
+    <text x="60" y="363" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#1a1a2e">US Stocks</text>
+    <text x="60" y="374" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="#888">via IBKR</text>
+    <text x="202" y="363" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="800" fill="#16a34a" text-anchor="end">Live</text>
+    <rect x="18" y="388" width="184" height="32" rx="10" fill="#bf0000"/>
+    <text x="110" y="408" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="800" fill="#fff" text-anchor="middle">Sign Up at rakutentrade.my</text>
+  </g>
+</svg>
     </div>
   </div>
 </section>
