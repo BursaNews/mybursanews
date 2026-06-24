@@ -1132,9 +1132,69 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media(max-width:600px) {
-  .journey-grid, .insights-grid, .why-grid, .broker-cards, .testi-grid { grid-template-columns: 1fr; }
+  .journey-grid, .insights-grid, .why-grid, .broker-cards { grid-template-columns: 1fr; }
+  .explore-grid { grid-template-columns: 1fr !important; }
   .trust-inner { grid-template-columns: repeat(2,1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── START HERE SECTION ─────────────────────────────── */
+.start-here-section{background:#fff;padding:5rem 2rem;}
+.start-here-inner{max-width:1100px;margin:0 auto;}
+.sh-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+  margin-top:2.5rem;
+}
+.sh-card{
+  background:#fff;
+  border:1.5px solid var(--border);
+  border-radius:18px;
+  padding:2rem 1.75rem;
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+  transition:transform .2s,box-shadow .2s,border-color .2s;
+  position:relative;
+  overflow:hidden;
+}
+.sh-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--gold2);opacity:0;transition:opacity .2s;
+  border-radius:18px 18px 0 0;
+}
+.sh-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--gold2);}
+.sh-card:hover::before{opacity:1;}
+.sh-icon{font-size:2.2rem;line-height:1;}
+.sh-title{
+  font-family:var(--serif);font-size:1.1rem;font-weight:800;
+  color:var(--navy);line-height:1.35;margin:0;
+}
+.sh-desc{
+  font-size:14px;color:var(--gray);line-height:1.75;flex:1;margin:0;
+}
+.sh-btn{
+  display:inline-flex;align-items:center;
+  font-size:13.5px;font-weight:800;color:var(--gold);
+  text-decoration:none;margin-top:.25rem;transition:gap .15s;gap:.3rem;
+}
+.sh-btn:hover{color:var(--gold2);}
+.sh-btn-accent{
+  color:#fff !important;background:var(--navy);
+  padding:9px 18px;border-radius:8px;
+  font-size:13px;margin-top:.5rem;
+}
+.sh-btn-accent:hover{background:#FF6B00 !important;color:#fff !important;}
+.sh-trust{
+  display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:center;
+  margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);
+}
+.sh-trust span[role="listitem"]{font-size:13px;color:var(--gray);font-weight:500;}
+@media(max-width:960px){.sh-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:580px){
+  .sh-grid{grid-template-columns:1fr;}
+  .start-here-section{padding:3.5rem 1.25rem;}
 }
 </style>
 
@@ -1630,30 +1690,6 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 <!-- ══════════════════════════════════════
      TESTIMONIALS
 ══════════════════════════════════════ -->
-<section class="testi-section" aria-label="Testimonials from BursaNews readers">
-  <div class="testi-inner">
-    <div class="section-label" data-en="WHAT OUR READERS SAY" data-zh="读者怎么说">读者怎么说</div>
-    <h2 class="section-h" data-en="Trusted by <em>Malaysian Investors</em>" data-zh="马来西亚投资者的<em>选择</em>">马来西亚投资者的<em>选择</em></h2>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"终于找到用人话解释马股的内容了。看了BursaNews之后，我才真正看懂公司公告是什么意思，也终于明白怎么开始投资马股新手该做什么。"</p>
-        <div class="testi-author">小明</div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"作为刚开始投资的年轻人，我一直找不到适合自己的马股入门资源。BursaNews把买股票、看股息这些概念讲得很清楚，完全没有那种听不懂的财经术语。"</p>
-        <div class="testi-author">Karen L.</div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"跟BursaNews聊过之后，我才真正理解供股权和认股权证是什么。以前看到这些股票术语就头大，现在投资马股完全不一样了。"</p>
-        <div class="testi-author">David T.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══════════════════════════════════════
      FAQ
 ══════════════════════════════════════ -->
@@ -1667,49 +1703,77 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 <!-- ══════════════════════════════════════
      BOTTOM CTA + RELATED GUIDES
 ══════════════════════════════════════ -->
-<section style="background:var(--off);padding:4rem 2rem;" aria-label="Continue exploring BursaNews guides">
-  <div style="max-width:900px;margin:0 auto;text-align:center;">
-    <div style="font-family:var(--serif);font-size:1.5rem;font-weight:900;color:var(--navy);margin-bottom:.6rem;"
-      data-en="Keep Exploring 📖"
-      data-zh="继续探索 📖">继续探索 📖</div>
-    <p style="color:var(--gray);font-size:15px;margin-bottom:2rem;"
-      data-en="Explore more free investing guides tailored for Malaysian investors."
-      data-zh="探索更多专为马来西亚投资者打造的免费投资指南。">探索更多专为马来西亚投资者打造的免费投资指南。</p>
-    <div style="display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;" role="list">
-      <a href="posts/ipo-guide-malaysia.html" role="listitem"
-        style="background:#fff;border:1px solid var(--border);border-radius:30px;padding:8px 18px;font-size:13.5px;font-weight:700;color:var(--navy);text-decoration:none;transition:border-color .15s,color .15s;"
-        onmouseover="this.style.borderColor='var(--gold2)';this.style.color='var(--gold)'"
-        onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--navy)'"
-        data-en="🚀 IPO Guide Malaysia"
-        data-zh="🚀 马股IPO指南">🚀 马股IPO指南</a>
-      <a href="posts/dividend-stocks-malaysia.html" role="listitem"
-        style="background:#fff;border:1px solid var(--border);border-radius:30px;padding:8px 18px;font-size:13.5px;font-weight:700;color:var(--navy);text-decoration:none;transition:border-color .15s,color .15s;"
-        onmouseover="this.style.borderColor='var(--gold2)';this.style.color='var(--gold)'"
-        onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--navy)'"
-        data-en="💰 Dividend Investing Malaysia"
-        data-zh="💰 马股股息投资">💰 马股股息投资</a>
-      <a href="posts/what-is-bursa-announcement.html" role="listitem"
-        style="background:#fff;border:1px solid var(--border);border-radius:30px;padding:8px 18px;font-size:13.5px;font-weight:700;color:var(--navy);text-decoration:none;transition:border-color .15s,color .15s;"
-        onmouseover="this.style.borderColor='var(--gold2)';this.style.color='var(--gold)'"
-        onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--navy)'"
-        data-en="📋 How to Read Bursa Announcements"
-        data-zh="📋 如何看懂Bursa公告">📋 如何看懂Bursa公告</a>
-      <a href="posts/reit-guide-malaysia.html" role="listitem"
-        style="background:#fff;border:1px solid var(--border);border-radius:30px;padding:8px 18px;font-size:13.5px;font-weight:700;color:var(--navy);text-decoration:none;transition:border-color .15s,color .15s;"
-        onmouseover="this.style.borderColor='var(--gold2)';this.style.color='var(--gold)'"
-        onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--navy)'"
-        data-en="🏢 Malaysia REIT Guide"
-        data-zh="🏢 马来西亚REIT指南">🏢 马来西亚REIT指南</a>
-      <a href="affiliates.html" role="listitem"
-        style="background:#fff;border:1px solid var(--border);border-radius:30px;padding:8px 18px;font-size:13.5px;font-weight:700;color:var(--navy);text-decoration:none;transition:border-color .15s,color .15s;"
-        onmouseover="this.style.borderColor='var(--gold2)';this.style.color='var(--gold)'"
-        onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--navy)'"
-        data-en="🏦 Compare Malaysia Brokers"
-        data-zh="🏦 比较马来西亚券商">🏦 比较马来西亚券商</a>
-      <a href="resources.html" role="listitem"
-        style="background:var(--navy);border:1px solid var(--navy);border-radius:30px;padding:8px 18px;font-size:13.5px;font-weight:800;color:#fff;text-decoration:none;"
-        data-en="📚 All Investing Guides →"
-        data-zh="📚 全部投资指南 →">📚 全部投资指南 →</a>
+<section style="background:var(--navy);padding:5rem 2rem;" aria-label="Continue exploring BursaNews guides">
+  <div style="max-width:1000px;margin:0 auto;">
+    <!-- Header -->
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(184,115,51,.15);border:1px solid rgba(184,115,51,.3);border-radius:30px;padding:5px 16px;font-size:12px;font-weight:700;color:var(--gold2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem;"
+        data-en="📚 FREE GUIDES" data-zh="📚 免费指南">📚 免费指南</div>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:#fff;margin-bottom:.65rem;"
+        data-en="Keep Exploring <em style='color:var(--gold2);font-style:normal;'>Malaysian Investing</em>"
+        data-zh="继续探索<em style='color:var(--gold2);font-style:normal;'>马股投资</em>">继续探索<em style="color:var(--gold2);font-style:normal;">马股投资</em></h2>
+      <p style="color:rgba(255,255,255,.55);font-size:15px;max-width:520px;margin:0 auto;"
+        data-en="More free guides written specifically for Malaysian retail investors."
+        data-zh="更多专为马来西亚散户投资者撰写的免费指南。">更多专为马来西亚散户投资者撰写的免费指南。</p>
+    </div>
+    <!-- Guide cards 2×2 grid -->
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1.5rem;" class="explore-grid">
+      <a href="posts/ipo-guide-malaysia.html"
+        style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.25rem 1.4rem;display:flex;align-items:center;gap:1rem;text-decoration:none;transition:background .2s,border-color .2s;"
+        onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(184,115,51,.5)'"
+        onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.1)'">
+        <span style="font-size:1.75rem;flex-shrink:0;">🚀</span>
+        <div>
+          <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:2px;" data-en="IPO Guide Malaysia" data-zh="马股IPO申购指南">马股IPO申购指南</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.45);" data-en="How to apply and what to check" data-zh="如何申购及上市日注意事项">如何申购及上市日注意事项</div>
+        </div>
+        <span style="margin-left:auto;color:var(--gold2);font-size:1rem;flex-shrink:0;">→</span>
+      </a>
+      <a href="posts/dividend-stocks-malaysia.html"
+        style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.25rem 1.4rem;display:flex;align-items:center;gap:1rem;text-decoration:none;transition:background .2s,border-color .2s;"
+        onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(184,115,51,.5)'"
+        onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.1)'">
+        <span style="font-size:1.75rem;flex-shrink:0;">💰</span>
+        <div>
+          <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:2px;" data-en="Dividend Investing Malaysia" data-zh="马来西亚股息投资指南">马来西亚股息投资指南</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.45);" data-en="Build passive income with Bursa stocks" data-zh="通过马股建立被动收入">通过马股建立被动收入</div>
+        </div>
+        <span style="margin-left:auto;color:var(--gold2);font-size:1rem;flex-shrink:0;">→</span>
+      </a>
+      <a href="posts/reit-guide-malaysia.html"
+        style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.25rem 1.4rem;display:flex;align-items:center;gap:1rem;text-decoration:none;transition:background .2s,border-color .2s;"
+        onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(184,115,51,.5)'"
+        onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.1)'">
+        <span style="font-size:1.75rem;flex-shrink:0;">🏢</span>
+        <div>
+          <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:2px;" data-en="Malaysia REIT Guide" data-zh="马来西亚REIT完整指南">马来西亚REIT完整指南</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.45);" data-en="Rental income, yield and how to invest" data-zh="租金收益及如何投资REIT">租金收益及如何投资REIT</div>
+        </div>
+        <span style="margin-left:auto;color:var(--gold2);font-size:1rem;flex-shrink:0;">→</span>
+      </a>
+      <a href="affiliates.html"
+        style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.25rem 1.4rem;display:flex;align-items:center;gap:1rem;text-decoration:none;transition:background .2s,border-color .2s;"
+        onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(184,115,51,.5)'"
+        onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.1)'">
+        <span style="font-size:1.75rem;flex-shrink:0;">🏦</span>
+        <div>
+          <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:2px;" data-en="Best Broker Malaysia 2026" data-zh="马来西亚最佳券商比较 2026">马来西亚最佳券商比较 2026</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.45);" data-en="Moomoo vs Webull vs Rakuten Trade" data-zh="Moomoo vs Webull vs Rakuten Trade">Moomoo vs Webull vs Rakuten Trade</div>
+        </div>
+        <span style="margin-left:auto;color:var(--gold2);font-size:1rem;flex-shrink:0;">→</span>
+      </a>
+    </div>
+    <!-- CTA row -->
+    <div style="text-align:center;">
+      <a href="resources.html"
+        style="display:inline-flex;align-items:center;gap:.5rem;background:var(--gold2);color:#fff;font-weight:800;font-size:15px;padding:13px 30px;border-radius:10px;text-decoration:none;transition:background .15s;"
+        onmouseover="this.style.background='var(--gold)'"
+        onmouseout="this.style.background='var(--gold2)'"
+        data-en="📚 View All Investing Guides →"
+        data-zh="📚 查看全部投资指南 →">📚 查看全部投资指南 →</a>
+      <p style="font-size:12px;color:rgba(255,255,255,.35);margin-top:.85rem;"
+        data-en="Free to read · No sign-up required · Updated 2026"
+        data-zh="免费阅读 · 无需注册 · 2026年更新">免费阅读 · 无需注册 · 2026年更新</p>
     </div>
   </div>
 </section>
