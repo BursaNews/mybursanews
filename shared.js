@@ -12,7 +12,14 @@ function setLang(l) {
     const txt = el.dataset[l];
     if (txt !== undefined) el.innerHTML = txt;
   });
-  // swap logo
+  // swap logo — show correct language logo
+  const logoZh = document.querySelector('.logo-zh');
+  const logoEn = document.querySelector('.logo-en');
+  if (logoZh && logoEn) {
+    logoZh.style.display = l === 'zh' ? '' : 'none';
+    logoEn.style.display = l === 'en' ? '' : 'none';
+  }
+  // legacy fallback for .nav-logo-img
   const logoEl = document.querySelector('.nav-logo-img');
   if (logoEl) {
     const ROOT = (document.querySelector('meta[name=root]') || {content:''}).content;
