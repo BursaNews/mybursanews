@@ -19,6 +19,11 @@ function setLang(l) {
     logoZh.style.display = l === 'zh' ? '' : 'none';
     logoEn.style.display = l === 'en' ? '' : 'none';
   }
+  // hero typewriter prefix spans — tw-prefix-zh/en are plain spans not data-en/zh
+  const pfxEn = document.getElementById('tw-prefix-en');
+  const pfxZh = document.getElementById('tw-prefix-zh');
+  if (pfxEn) pfxEn.style.display = l === 'en' ? 'inline' : 'none';
+  if (pfxZh) pfxZh.style.display = l === 'zh' ? 'inline' : 'none';
   // legacy fallback for .nav-logo-img
   const logoEl = document.querySelector('.nav-logo-img');
   if (logoEl) {
