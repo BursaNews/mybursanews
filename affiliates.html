@@ -60,12 +60,12 @@
 .spoke-link:hover::after{transform:translateX(3px);}
 
 /* ── PHONE MOCKUP ── */
-.broker-visual{display:flex;justify-content:center;align-items:center;position:relative;align-self:center;}
+.broker-visual{display:flex;justify-content:center;align-items:center;position:relative;align-self:center;min-height:520px;}
 .phone-wrap{position:relative;width:260px;}
-.phone-shell{background:var(--navy);border-radius:42px;padding:12px;box-shadow:0 32px 64px rgba(0,0,0,.22),0 0 0 1.5px rgba(255,255,255,.08),inset 0 0 0 2px rgba(255,255,255,.04);}
+.phone-shell{background:var(--navy);border-radius:42px;padding:10px 10px 14px;box-shadow:0 32px 64px rgba(0,0,0,.22),0 0 0 1.5px rgba(255,255,255,.08);}
 .phone-notch{width:90px;height:28px;background:var(--navy);border-radius:0 0 18px 18px;margin:0 auto 8px;position:relative;z-index:2;}
 .phone-notch::before{content:'';position:absolute;width:10px;height:10px;background:rgba(255,255,255,.08);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);}
-.phone-screen{background:#fff;border-radius:32px;overflow:hidden;min-height:460px;}
+.phone-screen{background:#fff;border-radius:32px;overflow:hidden;height:420px;}
 
 /* ── SCREEN CONTENTS ── */
 .scr-header{padding:16px 16px 12px;display:flex;align-items:center;justify-content:space-between;}
@@ -240,9 +240,7 @@
       <p class="broker-desc" data-en="A modern, feature-rich platform with zero platform fees and 0% US stock commission until end 2026. Strong for investors who want US market access alongside Bursa, with fractional shares from just USD1." data-zh="现代化、功能丰富的交易平台，零平台费，美股佣金0%直至2026年底。适合同时交易美股与马股的投资者，美股零股从USD1起购。">现代化、功能丰富的交易平台，零平台费，美股佣金0%直至2026年底。适合同时交易美股与马股的投资者，美股零股从USD1起购。</p>
       <ul class="broker-features">
         <li data-en="RM300 welcome trading vouchers (3 × RM100) via BursaNews referral link" data-zh="通过BursaNews链接注册获RM300欢迎礼券（3 × RM100）">通过BursaNews链接注册获RM300欢迎礼券（3 × RM100）</li>
-        <li data-en="NVIDIA fractional shares (~RM200) with RM1,000 deposit held 60 days" data-zh="存款RM1,000持满60天获NVIDIA碎股（约RM200）">存款RM1,000持满60天获NVIDIA碎股（约RM200）</li>
         <li data-en="0% commission on US stocks until 31 December 2026" data-zh="美股佣金0%直至2026年12月31日">美股佣金0%直至2026年12月31日</li>
-        <li data-en="Moneybull: 6% p.a. on idle cash for 45 days (up to RM50,000)" data-zh="Moneybull：闲置资金6% p.a.，45天，最高RM50,000">Moneybull：闲置资金6% p.a.，45天，最高RM50,000</li>
         <li data-en="US fractional shares from just USD1" data-zh="美股零股从USD1起购">美股零股从USD1起购</li>
         <li data-en="Regulated by Securities Commission (SC) Malaysia — CMSL licensed" data-zh="受马来西亚证券委员会（SC）监管，CMSL持牌">受马来西亚证券委员会（SC）监管，CMSL持牌</li>
         <li data-en="24-hour US stock trading available" data-zh="支持24小时美股交易">支持24小时美股交易</li>
@@ -272,7 +270,7 @@
             </div>
             <div class="scr-reward">
               <div class="scr-reward-label">BursaNews Referral Link</div>
-              <div class="scr-reward-val" style="font-size:1rem;">RM300 Vouchers + NVIDIA Shares</div>
+              <div class="scr-reward-val" style="font-size:1rem;">RM300 Trading Vouchers</div>
               <div style="margin-top:6px;font-size:10px;color:var(--gray);">No promo code needed</div>
             </div>
             <div class="scr-chart" style="background:#f0f6ff;padding:8px 14px 0;">
@@ -394,14 +392,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td data-en="Welcome Reward" data-zh="开户奖励">开户奖励</td><td><strong style="color:#FF6B00;">Up to RM1,500+</strong></td><td>RM300 + NVIDIA shares</td><td>Apple shares</td></tr>
+        <tr><td data-en="Welcome Reward" data-zh="开户奖励">开户奖励</td><td><strong style="color:#FF6B00;">Up to RM1,500+</strong></td><td>RM300 trading vouchers</td><td>Apple shares</td></tr>
         <tr><td data-en="How to Get Reward" data-zh="如何获取奖励">如何获取奖励</td><td>Code <strong style="color:#FF6B00;">BURSA88</strong></td><td style="color:#60a5fa;font-size:12px;">BursaNews link only (no code)</td><td style="color:rgba(255,255,255,.4);font-size:12px;">Direct sign-up</td></tr>
         <tr><td data-en="Min. Deposit for Reward" data-zh="获奖最低存款">获奖最低存款</td><td>RM1,000 (60 days)</td><td>RM1,000 (60 days)</td><td>Any deposit + first trade</td></tr>
         <tr><td data-en="Bursa Commission" data-zh="马股经纪费">马股经纪费</td><td>0% for 180 days</td><td>Standard rates</td><td><strong>RM1 flat (≤RM100)</strong></td></tr>
         <tr><td data-en="US Stocks" data-zh="美股">美股</td><td>✓</td><td>✓ (0% until Dec 2026)</td><td>✓</td></tr>
         <tr><td data-en="Fractional Shares" data-zh="零股">零股</td><td>✓</td><td>✓ (from USD1)</td><td>—</td></tr>
         <tr><td data-en="AI Tools" data-zh="AI工具">AI工具</td><td>✓ Moomoo AI</td><td>—</td><td>—</td></tr>
-        <tr><td data-en="Idle Cash Returns" data-zh="闲置资金收益">闲置资金收益</td><td>6% pa (Cash Plus)</td><td>6% pa (Moneybull)</td><td>—</td></tr>
+        <tr><td data-en="Idle Cash Returns" data-zh="闲置资金收益">闲置资金收益</td><td>6% pa (Cash Plus)</td><td>—</td><td>—</td></tr>
         <tr><td data-en="Best For" data-zh="最适合">最适合</td><td data-en="Beginners + active traders" data-zh="新手 + 活跃交易者">新手 + 活跃交易者</td><td data-en="US stocks + low fees" data-zh="美股 + 低费率">美股 + 低费率</td><td data-en="Pure Bursa, lowest cost" data-zh="专注马股，费用最低">专注马股，费用最低</td></tr>
         <tr>
           <td data-en="Full Guide" data-zh="完整教学">完整教学</td>
