@@ -31,14 +31,20 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.96);backdrop
 .nav-cta:hover{background:var(--navy2)!important;}
 .nav-right{display:flex;align-items:center;gap:1rem;}
 .lang-switch{display:flex;align-items:center;gap:2px;background:var(--off);border:1px solid var(--border);border-radius:20px;padding:3px 4px;}
-.lang-btn{font-size:12px;font-weight:500;padding:3px 9px;border-radius:14px;cursor:pointer;border:none;background:transparent;color:var(--gray);transition:.15s;font-family:var(--sans);}
+.lang-btn{font-size:14px;font-weight:700;padding:6px 16px;border-radius:22px;cursor:pointer;border:none;background:transparent;color:var(--gray);transition:.15s;font-family:var(--sans);white-space:nowrap;line-height:1;display:inline-block;}
 .lang-btn.active{background:var(--navy);color:#fff;}
+.lang-toggle{display:inline-flex;flex-direction:row;align-items:center;background:rgba(0,0,0,.06);border-radius:26px;padding:3px;gap:2px;border:none;cursor:pointer;white-space:nowrap;flex-shrink:0;}
+.nav-actions{display:flex;flex-direction:row;align-items:center;gap:8px;flex-shrink:0;}
+.nav-mob-toggle{width:42px;height:42px;border:1.5px solid var(--navy);border-radius:9px;background:#fff;cursor:pointer;display:none;align-items:center;justify-content:center;flex-shrink:0;padding:0;}
+.nav-mob-toggle-inner{display:flex;flex-direction:column;gap:4.5px;align-items:center;pointer-events:none;}
+.nav-mob-toggle-inner span{display:block;width:20px;height:2px;background:var(--navy);border-radius:2px;}
+
 .hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
 .hbg span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:.3s;}
-.mob{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:1.25rem 1.5rem;flex-direction:column;gap:.65rem;z-index:199;box-shadow:0 8px 32px rgba(0,0,0,.12);}
+.mob{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:0;flex-direction:column;gap:0;z-index:199;box-shadow:0 8px 32px rgba(0,0,0,.12);max-height:calc(100vh - 68px);overflow-y:auto;}
 .mob.open{display:flex;}
-.mob a{font-size:15px;font-weight:500;padding:.5rem 0;border-bottom:1px solid var(--border);color:var(--text);}
-.mob a:last-child{border:none;color:var(--gold);}
+.mob a{font-size:15.5px;font-weight:500;padding:14px 1.5rem;border-bottom:1px solid var(--border);color:var(--text);display:flex;align-items:center;gap:10px;text-decoration:none;}
+.mob a:last-child{border:none;}.mob a.mob-starter{color:#16a34a;font-weight:700;background:#f0fdf4;}
 
 /* ── BUTTONS ── */
 .btn{display:inline-flex;align-items:center;gap:.4rem;padding:11px 26px;border-radius:8px;font-size:14.5px;font-weight:600;cursor:pointer;border:none;transition:all .2s;font-family:var(--sans);letter-spacing:-.01em;}
@@ -235,7 +241,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:4rem 2rem 2.5r
 
 /* ── RESPONSIVE ── */
 @media(max-width:960px){.ft-grid{grid-template-columns:1fr 1fr;}.ft-brand{grid-column:1/-1;}.broker-card-body{grid-template-columns:1fr;}}
-@media(max-width:768px){nav{padding:0 1.25rem;}.nav-links{display:none;}.hbg{display:flex;}section{padding:4rem 1.25rem;}h2.ttl{font-size:1.6rem;}}
+@media(max-width:768px){nav{padding:0 1.25rem;}.nav-links{display:none;}.nav-mob-toggle{display:inline-flex;}section{padding:4rem 1.25rem;}h2.ttl{font-size:1.6rem;}}
 @media(max-width:480px){.ft-grid{grid-template-columns:1fr;}.hero-stats{gap:1.5rem;}.hero-btns{flex-direction:column;align-items:center;}}
 
 /* ═══ HERO SECTION - DO NOT REMOVE ═══ */
@@ -243,6 +249,3 @@ div#hero.hero-section {
   background-color: #0a1628 !important;
   color: #fff !important;
 }
-/* Nav highlight - Starter Kit green pill */
-.nav-highlight{background:#16a34a!important;color:#fff!important;padding:6px 14px!important;border-radius:20px!important;font-weight:700!important;line-height:1;}
-.nav-highlight:hover{background:#15803d!important;color:#fff!important;}

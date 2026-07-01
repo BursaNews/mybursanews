@@ -12,6 +12,18 @@ function setLang(l) {
     const txt = el.dataset[l];
     if (txt !== undefined) el.innerHTML = txt;
   });
+  // swap typewriter prefix spans (not data-en/zh — plain spans)
+  var pfxEn = document.getElementById('tw-prefix-en');
+  var pfxZh = document.getElementById('tw-prefix-zh');
+  if (pfxEn) pfxEn.style.display = l === 'en' ? 'inline' : 'none';
+  if (pfxZh) pfxZh.style.display = l === 'zh' ? 'inline' : 'none';
+  // swap nav logo
+  var logoZh = document.querySelector('.logo-zh');
+  var logoEn = document.querySelector('.logo-en');
+  if (logoZh && logoEn) {
+    logoZh.style.display = l === 'zh' ? '' : 'none';
+    logoEn.style.display = l === 'en' ? '' : 'none';
+  }
   // swap logo
   const logoEl = document.querySelector('.nav-logo-img');
   if (logoEl) {
@@ -28,6 +40,33 @@ function setLang(l) {
     ftLogo.src = l === 'zh'
       ? ROOT + 'assets/images/logo-cn.png'
       : ROOT + 'assets/images/logo-en.png';
+  }
+}
+
+
+function toggleMob() {
+  var mob = document.getElementById('mob-menu');
+  var btn = document.querySelector('.nav-mob-toggle');
+  if (!mob) return;
+  var isOpen = mob.classList.contains('open');
+  if (isOpen) {
+    mob.classList.remove('open');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+    document.removeEventListener('click', _mobClose);
+  } else {
+    mob.classList.add('open');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+    setTimeout(function() { document.addEventListener('click', _mobClose); }, 10);
+  }
+}
+function _mobClose(e) {
+  var mob = document.getElementById('mob-menu');
+  var btn = document.querySelector('.nav-mob-toggle');
+  if (!mob) return;
+  if (!mob.contains(e.target) && (!btn || !btn.contains(e.target))) {
+    mob.classList.remove('open');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+    document.removeEventListener('click', _mobClose);
   }
 }
 
@@ -59,17 +98,23 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="${ROOT}community.html" class="nav-link" data-en="Community" data-zh="社群" role="menuitem">社群</a>
     <a href="${ROOT}about.html" class="nav-link" data-en="About" data-zh="关于我们" role="menuitem">关于我们</a>
   </div>
-  <div class="nav-actions">
-    <button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
-      <span class="lang-btn" data-lang="en" onclick="setLang('en')">EN</span>
-      <span class="lang-btn active" data-lang="zh" onclick="setLang('zh')">中文</span>
+  <div class="nav-actions" style="display:flex;flex-direction:row;align-items:center;gap:8px;flex-shrink:0;">
+    <div class="lang-toggle" role="group" aria-label="Language selector" style="display:inline-flex;flex-direction:row;align-items:center;background:rgba(0,0,0,.06);border-radius:26px;padding:3px;gap:2px;white-space:nowrap;flex-shrink:0;">
+      <span class="lang-btn" data-lang="en" onclick="setLang('en')" role="button" tabindex="0" style="font-size:14px;font-weight:700;padding:6px 16px;border-radius:22px;cursor:pointer;line-height:1;display:inline-block;">EN</span>
+      <span class="lang-btn active" data-lang="zh" onclick="setLang('zh')" role="button" tabindex="0" style="font-size:14px;font-weight:700;padding:6px 16px;border-radius:22px;cursor:pointer;line-height:1;display:inline-block;">中文</span>
+    </div>
+    <button class="nav-mob-toggle" onclick="toggleMob()" aria-label="Open menu" aria-expanded="false" style="width:42px;height:42px;border:1.5px solid var(--navy,#0a1628);border-radius:9px;background:#fff;cursor:pointer;display:none;align-items:center;justify-content:center;flex-shrink:0;padding:0;">
+      <div style="display:flex;flex-direction:column;gap:4.5px;align-items:center;pointer-events:none;">
+        <span style="display:block;width:20px;height:2px;background:var(--navy,#0a1628);border-radius:2px;"></span>
+        <span style="display:block;width:20px;height:2px;background:var(--navy,#0a1628);border-radius:2px;"></span>
+        <span style="display:block;width:20px;height:2px;background:var(--navy,#0a1628);border-radius:2px;"></span>
+      </div>
     </button>
-    <button class="nav-mob-toggle" onclick="toggleMob()" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>
 </nav>
 <div class="mob" id="mob-menu" role="dialog" aria-label="Mobile navigation">
   <a href="${ROOT}index.html" data-en="Home" data-zh="首页">首页</a>
-  <a href="${ROOT}starterkit.html" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包">🎁 免费入门包</a>
+  <a href="${ROOT}starterkit.html" class="mob-starter" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包" style="color:#16a34a!important;font-weight:700;background:#f0fdf4;">🎁 免费入门包</a>
   <a href="${ROOT}insights.html" data-en="Market Insights" data-zh="市场分析">市场分析</a>
   <a href="${ROOT}resources.html" data-en="Resources" data-zh="学习资源">学习资源</a>
   <a href="${ROOT}affiliates.html" data-en="Brokers" data-zh="开户指南">开户指南</a>
