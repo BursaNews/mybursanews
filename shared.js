@@ -12,19 +12,19 @@ function setLang(l) {
     const txt = el.dataset[l];
     if (txt !== undefined) el.innerHTML = txt;
   });
-  // swap typewriter prefix spans (not data-en/zh — plain spans)
+  // tw-prefix spans (not data-en/zh, need explicit toggle)
   var pfxEn = document.getElementById('tw-prefix-en');
   var pfxZh = document.getElementById('tw-prefix-zh');
   if (pfxEn) pfxEn.style.display = l === 'en' ? 'inline' : 'none';
   if (pfxZh) pfxZh.style.display = l === 'zh' ? 'inline' : 'none';
-  // swap nav logo
+  // nav logo swap
   var logoZh = document.querySelector('.logo-zh');
   var logoEn = document.querySelector('.logo-en');
   if (logoZh && logoEn) {
     logoZh.style.display = l === 'zh' ? '' : 'none';
     logoEn.style.display = l === 'en' ? '' : 'none';
   }
-  // swap logo
+  // legacy logo swap
   const logoEl = document.querySelector('.nav-logo-img');
   if (logoEl) {
     const ROOT = (document.querySelector('meta[name=root]') || {content:''}).content;
@@ -51,12 +51,12 @@ function toggleMob() {
   var isOpen = mob.classList.contains('open');
   if (isOpen) {
     mob.classList.remove('open');
-    if (btn) btn.setAttribute('aria-expanded', 'false');
+    if (btn) btn.setAttribute('aria-expanded','false');
     document.removeEventListener('click', _mobClose);
   } else {
     mob.classList.add('open');
-    if (btn) btn.setAttribute('aria-expanded', 'true');
-    setTimeout(function() { document.addEventListener('click', _mobClose); }, 10);
+    if (btn) btn.setAttribute('aria-expanded','true');
+    setTimeout(function(){ document.addEventListener('click', _mobClose); }, 10);
   }
 }
 function _mobClose(e) {
@@ -65,7 +65,7 @@ function _mobClose(e) {
   if (!mob) return;
   if (!mob.contains(e.target) && (!btn || !btn.contains(e.target))) {
     mob.classList.remove('open');
-    if (btn) btn.setAttribute('aria-expanded', 'false');
+    if (btn) btn.setAttribute('aria-expanded','false');
     document.removeEventListener('click', _mobClose);
   }
 }
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </nav>
 <div class="mob" id="mob-menu" role="dialog" aria-label="Mobile navigation">
   <a href="${ROOT}index.html" data-en="Home" data-zh="首页">首页</a>
-  <a href="${ROOT}starterkit.html" class="mob-starter" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包" style="color:#16a34a!important;font-weight:700;background:#f0fdf4;">🎁 免费入门包</a>
+  <a href="${ROOT}starterkit.html" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包" style="color:#16a34a!important;font-weight:700;background:#f0fdf4;">🎁 免费入门包</a>
   <a href="${ROOT}insights.html" data-en="Market Insights" data-zh="市场分析">市场分析</a>
   <a href="${ROOT}resources.html" data-en="Resources" data-zh="学习资源">学习资源</a>
   <a href="${ROOT}affiliates.html" data-en="Brokers" data-zh="开户指南">开户指南</a>
