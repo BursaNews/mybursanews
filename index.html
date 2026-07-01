@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hans-MY" data-default-lang="zh">
 <head>
-<link rel="preload" href="shared.css" as="style">
 <link rel="stylesheet" href="shared.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -11,25 +10,25 @@
 <meta name="language" content="zh-MY, en-MY">
 <meta name="author" content="BursaNews 马股报报看">
 
-<title>BursaNews 马股报报看 | Learn Bursa Malaysia Stock Investing — Beginner Guides, IPO, Dividends</title>
-<meta name="description" content="BursaNews — free Bursa Malaysia investing guides for beginners. Learn IPO, dividends, quarterly reports and how to open a stock account. Trusted by Malaysian investors. Moomoo code BURSA88.">
+<title>BursaNews 马股报报看 | Malaysia Bursa Stock Investing, Cara Beli Saham, Dividend, REIT, IPO</title>
+<meta name="description" content="BursaNews, Malaysia's #1 Mandarin Bursa investing education platform. Free beginner guide: cara beli saham, open CDS account, dividend stocks, REIT, IPO Malaysia 2026. Compare Moomoo (BURSA88) vs Webull vs Rakuten Trade. SC-licensed experts.">
 <meta name="keywords" content="bursa malaysia, cara beli saham, cara nak labur duit, how to invest in malaysia, saham malaysia, KLCI FBM KLCI, moomoo malaysia BURSA88, webull malaysia, rakuten trade malaysia, best broker malaysia 2026, CDS account malaysia, dividend stocks malaysia, saham dividen tinggi, REIT malaysia, IPO malaysia 2026, cara labur RM1000, ETF malaysia, blue chip stocks malaysia, rights issue malaysia, PE ratio malaysia, unit trust vs stocks malaysia, how to read bursa announcement, 马股入门, 马股新手, 马来西亚投资, 如何买股票, 马股报报看, bursanews, 马股早知道, EPF investment malaysia, ASB amanah saham alternative, shariah stocks malaysia">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://bursanews.github.io/mybursanews/index.html">
+<meta property="og:url" content="https://mybursanews.com/">
 <meta property="og:title" content="马股投资入门 | 免费5步骤 Bursa 马股新手指南">
 <meta property="og:description" content="马来西亚股票投资，终于说人话了。免费入门包帮你从零开始，5个简单任务学会看股票新闻。">
-<meta property="og:image" content="https://bursanews.github.io/mybursanews/assets/images/logo-cn.png">
+<meta property="og:image" content="https://mybursanews.com/assets/images/logo-cn.png">
 <meta property="og:site_name" content="BursaNews 马股报报看">
 <meta property="og:locale" content="zh_MY">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="马股投资入门 | BursaNews 免费5步骤新手指南">
 <meta name="twitter:description" content="马来西亚股票投资，终于说人话了。免费入门包，5个简单任务，零基础开始。">
-<meta name="twitter:image" content="https://bursanews.github.io/mybursanews/assets/images/logo-cn.png">
+<meta name="twitter:image" content="https://mybursanews.com/assets/images/logo-cn.png">
 
 <link rel="sitemap" type="application/xml" href="sitemap.xml">
-<link rel="canonical" href="https://bursanews.github.io/mybursanews/index.html">
+<link rel="canonical" href="https://mybursanews.com/">
 <style id="hero-css">
 html body div#hero.hero-section[id="hero"] {
   background-color: #0a1628 !important;
@@ -1106,8 +1105,8 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 /* Subscribe mini */
 .sub-section { background: var(--navy); padding: 4rem 2rem; }
 .sub-inner { max-width: 760px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-.sub-left h2 { font-family: var(--serif); font-size: 1.6rem; color: #fff; margin-bottom: .75rem; }
-.sub-left p { color: rgba(255,255,255,.65); font-size: 15px; line-height: 1.75; font-family: var(--sans); }
+.sub-left h2 { font-family: var(--serif); font-size: 1.6rem; color: #fff; margin-bottom: .6rem; }
+.sub-left p { color: rgba(255,255,255,.65); font-size: 15px; line-height: 1.75; }
 .sub-right { text-align: center; }
 .sub-price { font-size: 2.5rem; font-weight: 900; color: var(--gold2); line-height: 1; }
 .sub-per { font-size: 14px; color: rgba(255,255,255,.5); margin-bottom: 1.25rem; }
@@ -1132,69 +1131,9 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media(max-width:600px) {
-  .journey-grid, .insights-grid, .why-grid, .broker-cards { grid-template-columns: 1fr; }
-  .explore-grid { grid-template-columns: 1fr !important; }
+  .journey-grid, .insights-grid, .why-grid, .broker-cards, .testi-grid { grid-template-columns: 1fr; }
   .trust-inner { grid-template-columns: repeat(2,1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
-}
-
-/* ── START HERE SECTION ─────────────────────────────── */
-.start-here-section{background:#fff;padding:5rem 2rem;}
-.start-here-inner{max-width:1100px;margin:0 auto;}
-.sh-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1.5rem;
-  margin-top:2.5rem;
-}
-.sh-card{
-  background:#fff;
-  border:1.5px solid var(--border);
-  border-radius:18px;
-  padding:2rem 1.75rem;
-  display:flex;
-  flex-direction:column;
-  gap:.75rem;
-  transition:transform .2s,box-shadow .2s,border-color .2s;
-  position:relative;
-  overflow:hidden;
-}
-.sh-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:var(--gold2);opacity:0;transition:opacity .2s;
-  border-radius:18px 18px 0 0;
-}
-.sh-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--gold2);}
-.sh-card:hover::before{opacity:1;}
-.sh-icon{font-size:2.2rem;line-height:1;}
-.sh-title{
-  font-family:var(--serif);font-size:1.1rem;font-weight:800;
-  color:var(--navy);line-height:1.35;margin:0;
-}
-.sh-desc{
-  font-size:14px;color:var(--gray);line-height:1.75;flex:1;margin:0;
-}
-.sh-btn{
-  display:inline-flex;align-items:center;
-  font-size:13.5px;font-weight:800;color:var(--gold);
-  text-decoration:none;margin-top:.25rem;transition:gap .15s;gap:.3rem;
-}
-.sh-btn:hover{color:var(--gold2);}
-.sh-btn-accent{
-  color:#fff !important;background:var(--navy);
-  padding:9px 18px;border-radius:8px;
-  font-size:13px;margin-top:.5rem;
-}
-.sh-btn-accent:hover{background:#FF6B00 !important;color:#fff !important;}
-.sh-trust{
-  display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:center;
-  margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);
-}
-.sh-trust span[role="listitem"]{font-size:13px;color:var(--gray);font-weight:500;}
-@media(max-width:960px){.sh-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:580px){
-  .sh-grid{grid-template-columns:1fr;}
-  .start-here-section{padding:3.5rem 1.25rem;}
 }
 </style>
 
@@ -1206,11 +1145,11 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://bursanews.github.io/mybursanews/#org",
+      "@id": "https://mybursanews.com/#org",
       "name": "BursaNews 马股报报看",
       "alternateName": ["马股报报看","马股早知道","BursaNews Malaysia"],
-      "url": "https://bursanews.github.io/mybursanews/",
-      "logo": {"@type":"ImageObject","url":"https://bursanews.github.io/mybursanews/assets/images/logo-cn.png"},
+      "url": "https://mybursanews.com/",
+      "logo": {"@type":"ImageObject","url":"https://mybursanews.com/assets/images/logo-cn.png"},
       "description": "Malaysia's leading Mandarin-language Malaysian stock investing education platform. BursaNews teaches Malaysians how to invest in stocks (cara beli saham), understand Malaysian stock announcements, compare brokers (Moomoo, Webull, Rakuten Trade), analyse REIT, dividend stocks, and IPOs. Founded by SC-licensed former investment bankers with 10+ years of capital markets experience.",
       "areaServed": {"@type":"Country","name":"Malaysia"},
       "inLanguage": ["zh-MY","en-MY"],
@@ -1255,13 +1194,13 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
     },
     {
       "@type":"WebSite",
-      "@id":"https://bursanews.github.io/mybursanews/#website",
-      "url":"https://bursanews.github.io/mybursanews/",
+      "@id":"https://mybursanews.com/#website",
+      "url":"https://mybursanews.com/",
       "name":"BursaNews 马股报报看",
       "description":"Malaysian stock investing education, beginner guides, market analysis, broker comparisons, investment glossary and 1-on-1 coaching in Mandarin Chinese",
       "inLanguage":["zh-MY","en-MY"],
-      "publisher":{"@id":"https://bursanews.github.io/mybursanews/#org"},
-      "potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://bursanews.github.io/mybursanews/resources.html?q={search_term_string}"},"query-input":"required name=search_term_string"}
+      "publisher":{"@id":"https://mybursanews.com/#org"},
+      "potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://mybursanews.com/resources.html?q={search_term_string}"},"query-input":"required name=search_term_string"}
     },
     {
       "@type":"FAQPage",
@@ -1269,7 +1208,7 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
         {
           "@type":"Question",
           "name":"How to start investing in Malaysia for beginners? (cara nak labur duit Malaysia)",
-          "acceptedAnswer":{"@type":"Answer","text":"To start investing in Malaysia: 1) Learn the basics, use BursaNews free 5-step Starter Kit (completely free, no email needed). 2) Open a trading account with an SC-regulated broker: Moomoo Malaysia (use promo code BURSA88 for extra Apple stock + 180 days 0 commission), Webull Malaysia, or Rakuten Trade. 3) Your broker will open a CDS account (Central Depository System) for you automatically. 4) Fund your account via FPX online banking. 5) Start with RM500-RM1,000 in blue-chip stocks or ETFs. BursaNews has free guides for every step at bursanews.github.io/mybursanews/"}
+          "acceptedAnswer":{"@type":"Answer","text":"To start investing in Malaysia: 1) Learn the basics, use BursaNews free 5-step Starter Kit (completely free, no email needed). 2) Open a trading account with an SC-regulated broker: Moomoo Malaysia (use promo code BURSA88 for extra Apple stock + 180 days 0 commission), Webull Malaysia, or Rakuten Trade. 3) Your broker will open a CDS account (Central Depository System) for you automatically. 4) Fund your account via FPX online banking. 5) Start with RM500-RM1,000 in blue-chip stocks or ETFs. BursaNews has free guides for every step at mybursanews.com/"}
         },
         {
           "@type":"Question",
@@ -1322,18 +1261,17 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
       "@type":"ItemList",
       "name":"BursaNews Services for Malaysian Investors",
       "itemListElement":[
-        {"@type":"ListItem","position":1,"item":{"@type":"Course","name":"Free Malaysian Stocks Starter Kit (Cara Beli Saham Guide)","description":"Free 5-step interactive guide: why invest, how Bursa works, open CDS account, invest RM1000, avoid beginner mistakes. No email needed.","url":"https://bursanews.github.io/mybursanews/starterkit.html","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"MYR"}}},
-        {"@type":"ListItem","position":2,"item":{"@type":"Product","name":"马股早知道 Daily Malaysian Stocks WhatsApp Analysis","description":"Daily Bursa analysis before 8:30am. RM49/quarter. Cancel anytime.","url":"https://bursanews.github.io/mybursanews/subscription.html","offers":{"@type":"Offer","price":"49","priceCurrency":"MYR"}}},
-        {"@type":"ListItem","position":3,"item":{"@type":"Service","name":"1-on-1 Malaysian Stocks Investing Coaching in Mandarin","description":"SC-licensed coaching via Zoom. Track 1 Beginner RM299, Track 2 Advanced RM399.","url":"https://bursanews.github.io/mybursanews/coaching.html","offers":[{"@type":"Offer","price":"299","priceCurrency":"MYR"},{"@type":"Offer","price":"399","priceCurrency":"MYR"}]}},
-        {"@type":"ListItem","position":4,"item":{"@type":"WebPage","name":"Moomoo Malaysia BURSA88 Broker Guide + Free PDF","description":"Step-by-step guide to open Moomoo Malaysia account with promo code BURSA88. Free PDF download.","url":"https://bursanews.github.io/mybursanews/affiliates.html"}},
-        {"@type":"ListItem","position":5,"item":{"@type":"WebPage","name":"Malaysia Investing Glossary, PE Ratio REIT ETF IPO Rights Issue","description":"Complete Malaysian stocks investing glossary in Mandarin Chinese and English.","url":"https://bursanews.github.io/mybursanews/resources.html"}}
+        {"@type":"ListItem","position":1,"item":{"@type":"Course","name":"Free Malaysian Stocks Starter Kit (Cara Beli Saham Guide)","description":"Free 5-step interactive guide: why invest, how Bursa works, open CDS account, invest RM1000, avoid beginner mistakes. No email needed.","url":"https://mybursanews.com/starterkit.html","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"MYR"}}},
+        {"@type":"ListItem","position":2,"item":{"@type":"Product","name":"马股早知道 Daily Malaysian Stocks WhatsApp Analysis","description":"Daily Bursa analysis before 8:30am. RM49/quarter. Cancel anytime.","url":"https://mybursanews.com/subscription.html","offers":{"@type":"Offer","price":"49","priceCurrency":"MYR"}}},
+        {"@type":"ListItem","position":3,"item":{"@type":"Service","name":"1-on-1 Malaysian Stocks Investing Coaching in Mandarin","description":"SC-licensed coaching via Zoom. Track 1 Beginner RM299, Track 2 Advanced RM399.","url":"https://mybursanews.com/coaching.html","offers":[{"@type":"Offer","price":"299","priceCurrency":"MYR"},{"@type":"Offer","price":"399","priceCurrency":"MYR"}]}},
+        {"@type":"ListItem","position":4,"item":{"@type":"WebPage","name":"Moomoo Malaysia BURSA88 Broker Guide + Free PDF","description":"Step-by-step guide to open Moomoo Malaysia account with promo code BURSA88. Free PDF download.","url":"https://mybursanews.com/affiliates.html"}},
+        {"@type":"ListItem","position":5,"item":{"@type":"WebPage","name":"Malaysia Investing Glossary, PE Ratio REIT ETF IPO Rights Issue","description":"Complete Malaysian stocks investing glossary in Mandarin Chinese and English.","url":"https://mybursanews.com/resources.html"}}
       ]
     }
   ]
 }
 </script>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bursanews.my/"}]}</script>
 </head>
 <body>
 <script src="shared.js"></script>
@@ -1354,14 +1292,14 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
     <h1 id="hero-h1" style="font-size:clamp(2.2rem,5vw,3.4rem);font-weight:900;color:#ffffff;line-height:1.15;letter-spacing:-.025em;margin:0 auto 1.25rem;max-width:780px;">
       <span id="tw-prefix-en">Investing in Malaysian stocks,<br>finally explained in</span>
       <span id="tw-prefix-zh" style="display:none;">马股投资，<br>终于</span>
-      <br><em style="color:#FF6B00;font-style:normal;"><span id="tw-span">好玩又容易上手！</span><span class="tw-cursor" style="display:inline-block;width:3px;height:.85em;background:#FF6B00;margin-left:2px;vertical-align:middle;border-radius:1px;"></span></em>
+      <br><em style="color:#FF6B00;font-style:normal;"><span id="tw-span">simple language!</span><span class="tw-cursor" style="display:inline-block;width:3px;height:.85em;background:#FF6B00;margin-left:2px;vertical-align:middle;border-radius:1px;"></span></em>
     </h1>
 
     <!-- Sub -->
     <p style="color:rgba(255,255,255,.72);font-size:1.1rem;max-width:580px;margin:0 auto 2.5rem;line-height:1.8;"
-      data-en="Free Bursa Malaysia investing guides for beginners. Learn IPO investing, how to read quarterly results, dividend stocks, and how to choose the right broker — all in simple language."
-      data-zh="免费马股投资入门指南。学习IPO申购、季度业绩解读、股息投资，以及如何选择合适的券商——全部用最简单的语言解释。">
-      Free Bursa Malaysia investing guides for beginners. Learn IPO investing, how to read quarterly results, dividend stocks, and how to choose the right broker — all in simple language.
+      data-en="Stop feeling lost when you see stock news. Learn exactly what matters, in 5 simple missions, completely free."
+      data-zh="看到股票新闻不再迷茫。学会真正重要的东西，5个简单任务，完全免费。">
+      Stop feeling lost when you see stock news. Learn exactly what matters, in 5 simple missions, completely free.
     </p>
 
     <!-- CTA -->
@@ -1420,142 +1358,35 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 
 
 
-
-<!-- ══════════════════════════════════════
-     START HERE — Primary navigation hub
-     Priority 13 + Priority 4 + Priority 8
-══════════════════════════════════════ -->
-<section class="start-here-section" aria-labelledby="start-here-heading" itemscope itemtype="https://schema.org/ItemList">
-  <div class="start-here-inner">
-    <div class="section-label" data-en="👋 START HERE" data-zh="👋 从这里开始">👋 从这里开始</div>
-    <h2 class="section-h" id="start-here-heading"
-      data-en="New to Investing? <em>Begin Here.</em>"
-      data-zh="投资新手？<em>从这里开始。</em>">投资新手？<em>从这里开始。</em></h2>
-    <p class="section-sub"
-      data-en="These are the most important guides to help you start investing in Bursa Malaysia with confidence."
-      data-zh="这些是帮助你在马股自信起步的最重要指南。">这些是帮助你在马股自信起步的最重要指南。</p>
-
-    <div class="sh-grid" role="list">
-
-      <article class="sh-card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <div class="sh-icon" aria-hidden="true">📚</div>
-        <h3 class="sh-title" itemprop="name"
-          data-en="Beginner's Guide to Bursa Malaysia"
-          data-zh="马股投资入门指南">马股投资入门指南</h3>
-        <p class="sh-desc"
-          data-en="Start your stock investing journey from zero. Learn how Bursa Malaysia works, what stocks are, and how to make your first investment."
-          data-zh="从零开始你的股票投资旅程。了解Bursa Malaysia如何运作、什么是股票，以及如何完成第一笔投资。">从零开始你的股票投资旅程。了解Bursa Malaysia如何运作、什么是股票，以及如何完成第一笔投资。</p>
-        <a href="posts/how-to-start-investing-malaysia.html" class="sh-btn"
-          data-en="Learn the Basics →"
-          data-zh="开始学习 →">开始学习 →</a>
-      </article>
-
-      <article class="sh-card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <div class="sh-icon" aria-hidden="true">🚀</div>
-        <h3 class="sh-title" itemprop="name"
-          data-en="IPO Guide Malaysia 2026"
-          data-zh="马股IPO申购完整指南">马股IPO申购完整指南</h3>
-        <p class="sh-desc"
-          data-en="Learn how IPO investing works in Malaysia, how to apply for new listings on Bursa, and what to check before the listing day."
-          data-zh="了解马来西亚IPO申购的运作方式，如何申请Bursa新上市股票，以及上市日前需要检查什么。">了解马来西亚IPO申购的运作方式，如何申请Bursa新上市股票，以及上市日前需要检查什么。</p>
-        <a href="posts/ipo-guide-malaysia.html" class="sh-btn"
-          data-en="Read IPO Guide →"
-          data-zh="阅读IPO指南 →">阅读IPO指南 →</a>
-      </article>
-
-      <article class="sh-card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <div class="sh-icon" aria-hidden="true">📈</div>
-        <h3 class="sh-title" itemprop="name"
-          data-en="How to Read Quarterly Results"
-          data-zh="如何看懂季度业绩报告">如何看懂季度业绩报告</h3>
-        <p class="sh-desc"
-          data-en="Understand Bursa Malaysia quarterly reports and company announcements without needing an accounting background. Learn what PATAMI, EPS and revenue mean."
-          data-zh="无需会计背景，看懂Bursa公司公告和季度财务报告。了解PATAMI、EPS和营收的含义。">无需会计背景，看懂Bursa公司公告和季度财务报告。了解PATAMI、EPS和营收的含义。</p>
-        <a href="resources.html" class="sh-btn"
-          data-en="Learn to Read Reports →"
-          data-zh="学会看报告 →">学会看报告 →</a>
-      </article>
-
-      <article class="sh-card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <div class="sh-icon" aria-hidden="true">💰</div>
-        <h3 class="sh-title" itemprop="name"
-          data-en="Dividend Investing in Malaysia"
-          data-zh="马来西亚股息投资指南">马来西亚股息投资指南</h3>
-        <p class="sh-desc"
-          data-en="Learn how dividends work on Bursa Malaysia, how dividend yield is calculated, and how to build a passive income portfolio with Malaysian stocks."
-          data-zh="了解马股股息如何运作、股息率如何计算，以及如何通过马股建立被动收入投资组合。">了解马股股息如何运作、股息率如何计算，以及如何通过马股建立被动收入投资组合。</p>
-        <a href="posts/dividend-stocks-malaysia.html" class="sh-btn"
-          data-en="Explore Dividend Guide →"
-          data-zh="探索股息指南 →">探索股息指南 →</a>
-      </article>
-
-      <article class="sh-card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <div class="sh-icon" aria-hidden="true">🏦</div>
-        <h3 class="sh-title" itemprop="name"
-          data-en="Best Malaysian Broker 2026"
-          data-zh="马来西亚最佳券商比较 2026">马来西亚最佳券商比较 2026</h3>
-        <p class="sh-desc"
-          data-en="Compare Moomoo, Webull and Rakuten Trade side by side. Find the best Malaysian brokerage platform for your investing style, with exclusive sign-up rewards."
-          data-zh="对比Moomoo、Webull和Rakuten Trade。找到最适合你投资风格的马来西亚券商平台，附独家开户奖励。">对比Moomoo、Webull和Rakuten Trade。找到最适合你投资风格的马来西亚券商平台，附独家开户奖励。</p>
-        <a href="affiliates.html" class="sh-btn sh-btn-accent"
-          data-en="Compare Brokers →"
-          data-zh="比较券商 →">比较券商 →</a>
-      </article>
-
-      <article class="sh-card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <div class="sh-icon" aria-hidden="true">📰</div>
-        <h3 class="sh-title" itemprop="name"
-          data-en="Daily Bursa Market Updates"
-          data-zh="每日马股市场分析">每日马股市场分析</h3>
-        <p class="sh-desc"
-          data-en="Follow concise daily analysis of Bursa Malaysia — major announcements, earnings results and sector moves — so you stay informed without spending hours on research."
-          data-zh="跟随每日马股简明分析——重大公告、业绩发布和行业动态——让你无需花数小时也能保持市场敏感度。">跟随每日马股简明分析——重大公告、业绩发布和行业动态——让你无需花数小时也能保持市场敏感度。</p>
-        <a href="subscription.html" class="sh-btn"
-          data-en="View Daily Updates →"
-          data-zh="查看每日更新 →">查看每日更新 →</a>
-      </article>
-
-    </div>
-
-    <!-- Trust signals row -->
-    <div class="sh-trust" role="list" aria-label="Trust signals">
-      <span role="listitem">✓ <span data-en="Malaysia-focused investing content" data-zh="专注马股投资内容">专注马股投资内容</span></span>
-      <span role="listitem">✓ <span data-en="Beginner-friendly explanations" data-zh="初学者友好的解说">初学者友好的解说</span></span>
-      <span role="listitem">✓ <span data-en="Written by ex-investment bankers" data-zh="由前投行人员撰写">由前投行人员撰写</span></span>
-      <span role="listitem">✓ <span data-en="Updated regularly" data-zh="定期更新">定期更新</span></span>
-    </div>
-  </div>
-</section>
-
 <!-- ══════════════════════════════════════
      JOURNEY CHOOSER
 ══════════════════════════════════════ -->
 <section class="journey-section" aria-label="Choose your investment journey">
   <div class="journey-inner">
-    <div class="section-label" data-en="WHERE DO YOU START?" data-zh="从哪里开始？">从哪里开始？</div>
-    <h2 class="section-h" data-en="Choose <em>Your Journey</em>" data-zh="选择你的<em>投资之路</em>">选择你的<em>投资之路</em></h2>
-    <p class="section-sub" data-en="Whether you're just starting out or a seasoned investor wanting to stay sharp, we have something for you." data-zh="无论你是刚刚开始，还是想保持市场敏感度的老手投资者，我们都有适合你的内容。">无论你是刚刚开始，还是想保持市场敏感度的老手投资者，我们都有适合你的内容。</p>
+    <div class="section-label" data-en="WHERE DO YOU START?" data-zh="从哪里开始？">WHERE DO YOU START?</div>
+    <h2 class="section-h" data-en="Choose <em>Your Journey</em>" data-zh="选择你的<em>投资之路</em>">Choose <em>Your Journey</em><em>投资之路</em></h2>
+    <p class="section-sub" data-en="Whether you're just starting out or a seasoned investor wanting to stay sharp, we have something for you." data-zh="无论你是刚刚开始，还是想保持市场敏感度的老手投资者，我们都有适合你的内容。">Whether you're just starting out or a seasoned investor wanting to stay sharp, we have something for you.</p>
     <div class="journey-grid">
       <a href="starterkit.html" class="journey-card" aria-label="I am new to investing">
         <div class="journey-emoji">🌱</div>
-        <h3 data-en="I'm New to Investing" data-zh="我是投资新手">我是投资新手</h3>
-        <p data-en="Never bought a stock before? Start here. We'll walk you through everything, no jargon, no fluff." data-zh="从来没买过股票？从这里开始。我们会带你了解一切，零行话，零废话。">从来没买过股票？从这里开始。我们会带你了解一切，零行话，零废话。</p>
+        <h3 data-en="I'm New to Investing" data-zh="我是投资新手">I'm New to Investing</h3>
+        <p data-en="Never bought a stock before? Start here. We'll walk you through everything, no jargon, no fluff." data-zh="从来没买过股票？从这里开始。我们会带你了解一切，零行话，零废话。">Never bought a stock before? Start here. We'll walk you through everything, no jargon, no fluff.</p>
         <ul>
-          <li data-en="Free 5-step Starter Kit" data-zh="免费5步骤入门包">免费5步骤入门包</li>
-          <li data-en="How to open a brokerage account" data-zh="如何开立券商账户">如何开立券商账户</li>
-          <li data-en="First RM1,000 investing guide" data-zh="第一个RM1,000投资指南">第一个RM1,000投资指南</li>
-          <li data-en="Common beginner mistakes" data-zh="新手常犯错误">新手常犯错误</li>
+          <li data-en="Free 5-step Starter Kit" data-zh="免费5步骤入门包">Free 5-step Starter Kit</li>
+          <li data-en="How to open a brokerage account" data-zh="如何开立券商账户">How to open a brokerage account</li>
+          <li data-en="First RM1,000 investing guide" data-zh="第一个RM1,000投资指南">First RM1,000 investing guide</li>
+          <li data-en="Common beginner mistakes" data-zh="新手常犯错误">Common beginner mistakes</li>
         </ul>
       </a>
       <a href="insights.html" class="journey-card active" aria-label="I am a busy investor">
         <div class="journey-emoji">⚡</div>
-        <h3 data-en="I'm a Busy Investor" data-zh="我是忙碌的投资者">我是忙碌的投资者</h3>
-        <p data-en="You invest already but don't have time to monitor every Malaysian stock announcement. We filter the noise and tell you what actually matters." data-zh="你已经在投资，但没有时间监控每个马股公告。我们过滤噪音，告诉你真正重要的事情。">你已经在投资，但没有时间监控每个马股公告。我们过滤噪音，告诉你真正重要的事情。</p>
+        <h3 data-en="I'm a Busy Investor" data-zh="我是忙碌的投资者">I'm a Busy Investor</h3>
+        <p data-en="You invest already but don't have time to monitor every Malaysian stock announcement. We filter the noise and tell you what actually matters." data-zh="你已经在投资，但没有时间监控每个马股公告。我们过滤噪音，告诉你真正重要的事情。">You invest already but don't have time to monitor every Malaysian stock announcement. We filter the noise and tell you what actually matters.</p>
         <ul>
-          <li data-en="Deep company & sector analysis" data-zh="深度公司与行业分析">深度公司与行业分析</li>
-          <li data-en="IPO & placement analysis" data-zh="IPO与配售分析">IPO与配售分析</li>
-          <li data-en="Government policy impact" data-zh="政策对市场的影响">政策对市场的影响</li>
-          <li data-en="Delivered before market opens" data-zh="开盘前送达">开盘前送达</li>
+          <li data-en="Deep company & sector analysis" data-zh="深度公司与行业分析">Deep company & sector analysis</li>
+          <li data-en="IPO & placement analysis" data-zh="IPO与配售分析">IPO & placement analysis</li>
+          <li data-en="Government policy impact" data-zh="政策对市场的影响">Government policy impact</li>
+          <li data-en="Delivered before market opens" data-zh="开盘前送达">Delivered before market opens</li>
         </ul>
       </a>
     </div>
@@ -1567,35 +1398,41 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 ══════════════════════════════════════ -->
 <section class="why-section" aria-label="Why trust BursaNews">
   <div class="why-inner">
-    <div class="section-label" data-en="WHY BURSANEWS?" data-zh="为什么选择BursaNews？">为什么选择BursaNews？</div>
+    <div class="section-label" data-en="WHY BURSANEWS?" data-zh="为什么选择BursaNews？">WHY BURSANEWS?</div>
     <h2 class="section-h" data-en="<em>Institutional</em> Expertise,<br>Human Language" data-zh="<em>机构级</em>专业，<br>最人话的表达"><em>机构级</em>专业，<br>最人话的表达</h2>
-    <div class="why-grid" style="grid-template-columns:1fr 1fr 1fr;">
+    <div class="why-grid">
       <div class="why-card" style="text-align:center;">
         <div class="why-icon">🏦</div>
-        <h3 data-en="Real Capital Markets Experience" data-zh="真实的资本市场经验">真实的资本市场经验</h3>
-        <p data-en="Our founders spent 10+ years in investment banking, advising on IPOs, M&amp;A, and fundraising for 50+ listed companies. We sat in the boardrooms, drafted the announcements, and advised the directors. Now we decode all of it for you." data-zh="我们的创办人在投资银行工作了10年以上，为50家以上上市公司提供IPO、并购和集资顾问服务。我们坐过董事会议室，起草过那些公告，也为董事提供意见。现在我们帮你解读这一切。">我们的创办人在投资银行工作了10年以上，为50家以上上市公司提供IPO、并购和集资顾问服务。我们坐过董事会议室，起草过那些公告，也为董事提供意见。现在我们帮你解读这一切。</p>
+        <h3 data-en="Real Capital Markets Experience" data-zh="真实的资本市场经验">Real Capital Markets Experience</h3>
+        <p data-en="Our founders spent 10+ years in investment banking, advising on IPOs, M&A, and fundraising for 50+ listed companies. We didn't just sit in boardrooms; we sat at the front row of general meetings too." data-zh="我们的创办人在投资银行工作了10年以上，为50家以上上市公司提供IPO、并购和集资顾问服务。我们不只是坐过董事会议室，也坐过上市公司股东大会的前排。">Our founders spent 10+ years in investment banking, advising on IPOs, M&A, and fundraising for 50+ listed companies. We didn't just sit in boardrooms; we sat at the front row of general meetings too.</p>
       </div>
       <div class="why-card" style="text-align:center;">
         <div class="why-icon">🎓</div>
-        <h3 data-en="Qualified Professionals, Not KOLs" data-zh="真正的专业人士，不是网红">真正的专业人士，不是网红</h3>
-        <p data-en="We have passed SC Module 12 and Module 19 exams and hold an MR licence. Simply put: we are real capital markets professionals — not social media influencers posting for view counts." data-zh="我们通过了SC Module 12与Module 19考试，并有MR执照。简而言之：我们是真正曾在资本市场工作的专业人士，不是靠流量生活的KOL网红。">我们通过了SC Module 12与Module 19考试，并有MR执照。简而言之：我们是真正曾在资本市场工作的专业人士，不是靠流量生活的KOL网红。</p>
+        <h3 data-en="Licensed & Regulated" data-zh="持牌，受监管">Licensed & Regulated</h3>
+        <p data-en="We hold SC Module 12, Module 19, and MR licences. Our content is backed by real qualifications, not social media personalities pretending to know investing." data-zh="我们持有SC Module 12、Module 19和MR执照。我们的内容有真实资格认证支撑，不是社交媒体网红假装懂投资。">We hold SC Module 12, Module 19, and MR licences. Our content is backed by real qualifications, not social media personalities pretending to know investing.</p>
+      </div>
+      <div class="why-card" style="text-align:center;">
+        <div class="why-icon">🚫</div>
+        <h3 data-en="Zero Stock Tips, Ever" data-zh="从不卖股票贴士，永远">Zero Stock Tips, Ever</h3>
+        <p data-en="We will never tell you to buy or sell a specific stock. We teach you how to analyse so you can make your own informed decision." data-zh="我们永远不会告诉你买卖特定股票。我们教你如何分析，让你能做出自己的明智决定。">We will never tell you to buy or sell a specific stock. We teach you how to analyse so you can make your own informed decision.</p>
+      </div>
+      <div class="why-card" style="text-align:center;">
+        <div class="why-icon">💬</div>
+        <h3 data-en="Plain Language, Always" data-zh="永远说人话">Plain Language, Always</h3>
+        <p data-en="We believe great financial education should be understandable to everyone, not just people with finance degrees. If uncle and aunty can't understand it, we rewrite it." data-zh="我们相信优质的财经教育应该让每个人都能理解，不只是有金融学位的人。如果Uncle Aunty看不懂，我们就重写。">We believe great financial education should be understandable to everyone, not just people with finance degrees. If uncle and aunty can't understand it, we rewrite it.</p>
       </div>
       <div class="why-card" style="text-align:center;">
         <div class="why-icon">🇲🇾</div>
-        <h3 data-en="Built for Malaysian Stock Investors" data-zh="专为马股投资者打造">专为马股投资者打造</h3>
-        <p data-en="Focused exclusively on Malaysian stocks. Everything we publish is directly relevant to you as a Malaysian investor. No US noise, no global distractions — just Bursa." data-zh="我们专注于马股。我们发布的每一条内容都与你作为马来西亚投资者直接相关。没有美股、没有无关的全球资讯，只有Bursa。">我们专注于马股。我们发布的每一条内容都与你作为马来西亚投资者直接相关。没有美股、没有无关的全球资讯，只有Bursa。</p>
+        <h3 data-en="Built for Malaysian Investors" data-zh="专为马来西亚投资者打造">Built for Malaysian Investors</h3>
+        <p data-en="Focused exclusively on Malaysian stocks. No irrelevant US or global content. Everything we publish is relevant to you as a Malaysian investor." data-zh="专注于马股。没有与你无关的美股或全球内容。我们发布的所有内容都与你作为马来西亚投资者息息相关。">Focused exclusively on Malaysian stocks. No irrelevant US or global content. Everything we publish is relevant to you as a Malaysian investor.</p>
+      </div>
+      <div class="why-card" style="text-align:center;">
+        <div class="why-icon">📱</div>
+        <h3 data-en="Where You Already Are" data-zh="在你常用的平台">Where You Already Are</h3>
+        <p data-en="WhatsApp, YouTube, Instagram, Facebook, Telegram, and Xiaohongshu. We meet you where you spend your time, and we keep it educational everywhere." data-zh="WhatsApp、YouTube、Instagram、Facebook、Telegram、小红书。我们在你花时间的地方陪伴你，无论在哪个平台都保持教育性内容。">WhatsApp、YouTube、Instagram、Facebook、Telegram、小红书。我们在你花时间的地方陪伴你。</p>
       </div>
     </div>
   </div>
-
-<!-- 明明 SECTION -->
-<section style="background:var(--navy);padding:3rem 2rem;" aria-label="Our positioning">
-  <div style="max-width:680px;margin:0 auto;text-align:center;">
-    <h2 style="font-family:var(--serif);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:800;color:#fff;line-height:1.4;margin-bottom:.85rem;" data-en="We could coast on good looks — but we didn't." data-zh="明明可以靠脸吃饭，但是我们不做明明。">明明可以靠脸吃饭，但是我们不做明明。</h2>
-    <p style="font-size:15px;color:rgba(255,255,255,.55);line-height:1.8;font-family:var(--sans);margin:0;" data-en="We want to make investing simple — with a bit of humour. So even the uncle and aunty on the street can understand it." data-zh="我们希望用幽默的方式把投资变简单，路上的Uncle Aunty也可以看懂。">我们希望用幽默的方式把投资变简单，路上的Uncle Aunty也可以看懂。</p>
-  </div>
-</section>
-
 </section>
 
 <!-- ══════════════════════════════════════
@@ -1603,15 +1440,15 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 ══════════════════════════════════════ -->
 <section class="insights-preview" aria-label="Latest Market Insights">
   <div class="insights-preview-inner">
-    <div class="section-label" data-en="LATEST FROM BURSANEWS" data-zh="最新分析">最新分析</div>
+    <div class="section-label" data-en="LATEST FROM BURSANEWS" data-zh="最新分析">LATEST FROM BURSANEWS</div>
     <h2 class="section-h" data-en="<em>Market Insights</em>" data-zh="<em>市场分析</em>"><em>市场分析</em></h2>
-    <p class="section-sub" data-en="Not daily summaries. When something significant happens on Bursa, we write a deep, honest analysis." data-zh="不是每日摘要。当Bursa发生重要的事情，我们才写深度分析。">不是每日摘要。当Bursa发生重要的事情，我们才写深度分析。</p>
+    <p class="section-sub" data-en="Not daily summaries. When something significant happens on Bursa, we write a deep, honest analysis." data-zh="不是每日摘要。当Bursa发生重要的事情，我们才写深度分析。">Not daily summaries. When something significant happens on Bursa, we write a deep, honest analysis.</p>
     <div class="insights-grid">
       <a href="posts/how-to-start-investing-malaysia.html" class="ins-prev-card">
         <div class="ins-prev-img" style="background:linear-gradient(135deg,#0a1628,#1a3a5e);">📈</div>
         <div class="ins-prev-body">
           <span class="ins-cat-badge">📚 教育</span>
-          <h3 data-en="How to Start Investing in Malaysia (Complete 2026 Guide)" data-zh="马来西亚投资入门完整指南（2026年版）">马来西亚投资入门完整指南（2026年版）</h3>
+          <h3 data-en="How to Start Investing in Malaysia (Complete 2026 Guide)" data-zh="马来西亚投资入门完整指南（2026年版）">How to Start Investing in Malaysia (Complete 2026 Guide)</h3>
           <div class="ins-meta">12分钟 · Jun 2026</div>
         </div>
       </a>
@@ -1619,7 +1456,7 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
         <div class="ins-prev-img" style="background:linear-gradient(135deg,#0d3320,#1a5c3a);">💰</div>
         <div class="ins-prev-body">
           <span class="ins-cat-badge">💰 股息</span>
-          <h3 data-en="Dividend Investing Malaysia: Build Passive Income from Bursa Stocks" data-zh="马来西亚股息投资：用Bursa股票建立被动收入">马来西亚股息投资：用Bursa股票建立被动收入</h3>
+          <h3 data-en="Dividend Investing Malaysia: Build Passive Income from Bursa Stocks" data-zh="马来西亚股息投资：用Bursa股票建立被动收入">Dividend Investing Malaysia: Build Passive Income from Bursa Stocks</h3>
           <div class="ins-meta">10分钟 · Jun 2026</div>
         </div>
       </a>
@@ -1627,12 +1464,12 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
         <div class="ins-prev-img" style="background:linear-gradient(135deg,#1a1628,#3d1a60);">🚀</div>
         <div class="ins-prev-body">
           <span class="ins-cat-badge">🚀 IPO</span>
-          <h3 data-en="How to Apply for Bursa IPOs: Step-by-Step Guide for Beginners" data-zh="如何申购Bursa IPO：新手完整教学">如何申购Bursa IPO：新手完整教学</h3>
+          <h3 data-en="How to Apply for Bursa IPOs: Step-by-Step Guide for Beginners" data-zh="如何申购Bursa IPO：新手完整教学">How to Apply for Bursa IPOs: Step-by-Step Guide for Beginners</h3>
           <div class="ins-meta">9分钟 · Jun 2026</div>
         </div>
       </a>
     </div>
-    <a href="insights.html" class="view-all-link" data-en="View All Market Insights →" data-zh="查看全部分析 →">查看全部分析 →</a>
+    <a href="insights.html" class="view-all-link" data-en="View All Market Insights →" data-zh="查看全部分析 →">View All Market Insights →</a>
   </div>
 </section>
 
@@ -1641,18 +1478,18 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 ══════════════════════════════════════ -->
 <section class="sk-cta" aria-label="Free Starter Kit">
   <div class="sk-cta-inner">
-    <div class="section-label" style="color:var(--gold2);" data-en="FREE FOR EVERYONE" data-zh="完全免费">完全免费</div>
+    <div class="section-label" style="color:var(--gold2);" data-en="FREE FOR EVERYONE" data-zh="完全免费">FREE FOR EVERYONE</div>
     <h2 data-en="Start Your Journey with the <em>Free Starter Kit</em>" data-zh="用<em>免费入门包</em>开始你的投资之旅">用<em>免费入门包</em>开始你的投资之旅</h2>
-    <p data-en="5 interactive missions. No email required. Progress saved automatically. Everything a complete beginner needs." data-zh="5个互动任务。无需电子邮件。进度自动保存。零基础新手需要的一切。">5个互动任务。无需电子邮件。进度自动保存。零基础新手需要的一切。</p>
+    <p data-en="5 interactive missions. No email required. Progress saved automatically. Everything a complete beginner needs." data-zh="5个互动任务。无需电子邮件。进度自动保存。零基础新手需要的一切。">5 interactive missions. No email required. Progress saved automatically. Everything a complete beginner needs.</p>
     <div class="sk-checklist">
-      <div class="sk-check" data-en="Why invest, and why now?" data-zh="为什么要投资，为什么是现在？">为什么要投资，为什么是现在？</div>
-      <div class="sk-check" data-en="How the Malaysian stock market works" data-zh="马股是如何运作的">马股是如何运作的</div>
-      <div class="sk-check" data-en="How to choose and open a brokerage account" data-zh="如何选择和开立券商账户">如何选择和开立券商账户</div>
-      <div class="sk-check" data-en="How to invest your first RM1,000" data-zh="如何投资你的第一个RM1,000">如何投资你的第一个RM1,000</div>
-      <div class="sk-check" data-en="Mistakes to avoid as a beginner" data-zh="新手需要避免的错误">新手需要避免的错误</div>
+      <div class="sk-check" data-en="Why invest, and why now?" data-zh="为什么要投资，为什么是现在？">Why invest, and why now?</div>
+      <div class="sk-check" data-en="How the Malaysian stock market works" data-zh="马股是如何运作的">How the Malaysian stock market works</div>
+      <div class="sk-check" data-en="How to choose and open a brokerage account" data-zh="如何选择和开立券商账户">How to choose and open a brokerage account</div>
+      <div class="sk-check" data-en="How to invest your first RM1,000" data-zh="如何投资你的第一个RM1,000">How to invest your first RM1,000</div>
+      <div class="sk-check" data-en="Mistakes to avoid as a beginner" data-zh="新手需要避免的错误">Mistakes to avoid as a beginner</div>
     </div>
     <button class="btn-primary" onclick="location.href='starterkit.html'" style="font-size:17px;padding:16px 40px;" data-en="🧭 Get the Free Starter Kit" data-zh="🧭 获取免费入门包">🧭 Get Free Starter Kit</button>
-    <p style="font-size:13px;color:rgba(255,255,255,.35);margin-top:1rem;" data-en="No email. No sign-up. Completely free." data-zh="无需邮件。无需注册。完全免费。">无需邮件。无需注册。完全免费。</p>
+    <p style="font-size:13px;color:rgba(255,255,255,.35);margin-top:1rem;" data-en="No email. No sign-up. Completely free." data-zh="无需邮件。无需注册。完全免费。">No email. No sign-up. Completely free.</p>
   </div>
 </section>
 
@@ -1662,13 +1499,13 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 <section class="sub-section" aria-label="Daily market announcements">
   <div class="sub-inner">
     <div class="sub-left">
-      <div class="section-label" style="color:var(--gold2);" data-en="DID YOU KNOW?" data-zh="你知道吗？">你知道吗？</div>
-      <h2 data-en="Listed Companies Make Announcements <em>Every Single Day</em>" data-zh="上市公司<em>每天</em>都在发公告">上市公司<em>每天</em>都在发公告</h2>
-      <p data-en="If you already invest in Malaysian stocks, or you're thinking about it, here's something most people don't know: listed companies publish announcements daily, and most of these go completely unnoticed by everyday investors. Some of them quietly move the share price days later." data-zh="如果你已经在投资马股，或正打算开始，这里有件大多数人都不知道的事：上市公司每天都会发布公告，而大部分公告都被一般投资者完全忽略了。其中一些公告，会在几天后悄悄推动股价变动。">如果你已经在投资马股，或正打算开始，这里有件大多数人都不知道的事：上市公司每天都会发布公告，而大部分公告都被一般投资者完全忽略了。其中一些公告，会在几天后悄悄推动股价变动。</p>
+      <div class="section-label" style="color:var(--gold2);" data-en="DID YOU KNOW?" data-zh="你知道吗？">DID YOU KNOW?</div>
+      <h2 data-en="Listed Companies Make Announcements <em>Every Single Day</em>" data-zh="上市公司<em>每天</em>都在发公告">Listed Companies Make Announcements <em>Every Single Day</em><em>每天</em>都在发公告</h2>
+      <p data-en="If you already invest in Malaysian stocks, or you're thinking about it, here's something most people don't know: listed companies publish announcements daily, and most of these go completely unnoticed by everyday investors. Some of them quietly move the share price days later." data-zh="如果你已经在投资马股，或正打算开始，这里有件大多数人都不知道的事：上市公司每天都会发布公告，而大部分公告都被一般投资者完全忽略了。其中一些公告，会在几天后悄悄推动股价变动。">If you already invest in Malaysian stocks, or you're thinking about it, here's something most people don't know: listed companies publish announcements daily, and most of these go completely unnoticed by everyday investors. Some of them quietly move the share price days later.</p>
     </div>
     <div class="sub-right">
-      <a href="subscription.html" class="btn-primary" style="width:100%;justify-content:center;" data-en="🔍 See What You're Missing" data-zh="🔍 看看你错过了什么">🔍 看看你错过了什么</a>
-      <p style="font-size:12.5px;color:rgba(255,255,255,.35);margin-top:.75rem;" data-en="We'll show you how to read them" data-zh="我们会教你怎么看懂这些公告">我们会教你怎么看懂这些公告</p>
+      <a href="subscription.html" class="btn-primary" style="width:100%;justify-content:center;" data-en="🔍 See What You're Missing" data-zh="🔍 看看你错过了什么">🔍 See What You're Missing</a>
+      <p style="font-size:12.5px;color:rgba(255,255,255,.35);margin-top:.75rem;" data-en="We'll show you how to read them" data-zh="我们会教你怎么看懂这些公告">We'll show you how to read them</p>
     </div>
   </div>
 </section>
@@ -1678,11 +1515,11 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 ══════════════════════════════════════ -->
 <section style="padding:5rem 2rem;background:var(--off);" aria-label="Chat with us about investing">
   <div style="max-width:760px;margin:0 auto;text-align:center;">
-    <div class="section-label" data-en="WANT TO GO FURTHER?" data-zh="想更进一步？">想更进一步？</div>
+    <div class="section-label" data-en="WANT TO GO FURTHER?" data-zh="想更进一步？">WANT TO GO FURTHER?</div>
     <h2 class="section-h" data-en="Talk to Someone Who's <em>Actually Been There</em>" data-zh="跟<em>真正经历过</em>的人聊聊">跟<em>真正经历过</em>的人聊聊</h2>
-    <p style="color:var(--gray);font-size:1.05rem;line-height:1.8;margin-bottom:2.25rem;" data-en="If you're hungry to know more and go further down the investing road, you can have a chat with us. Whether you're a beginner or an amateur investor, we'll guide you to become savvy on capital market developments, so once something moves, you already know what's likely to happen next." data-zh="如果你想了解更多、想在投资这条路上走得更远，欢迎跟我们聊聊。无论你是新手还是有一点经验的投资者，我们都会引导你熟悉资本市场的动态，让你在市场一有变动时，脑中就能立刻浮现接下来可能发生的事。">如果你想了解更多、想在投资这条路上走得更远，欢迎跟我们聊聊。无论你是新手还是有一点经验的投资者，我们都会引导你熟悉资本市场的动态，让你在市场一有变动时，脑中就能立刻浮现接下来可能发生的事。</p>
+    <p style="color:var(--gray);font-size:1.05rem;line-height:1.8;margin-bottom:2.25rem;" data-en="If you're hungry to know more and go further down the investing road, you can have a chat with us. Whether you're a beginner or an amateur investor, we'll guide you to become savvy on capital market developments, so once something moves, you already know what's likely to happen next." data-zh="如果你想了解更多、想在投资这条路上走得更远，欢迎跟我们聊聊。无论你是新手还是有一点经验的投资者，我们都会引导你熟悉资本市场的动态，让你在市场一有变动时，脑中就能立刻浮现接下来可能发生的事。">If you're hungry to know more and go further down the investing road, you can have a chat with us. Whether you're a beginner or an amateur investor, we'll guide you to become savvy on capital market developments, so once something moves, you already know what's likely to happen next.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <a href="https://wa.me/601156482183?text=Hi%2C+I+want+to+chat+about+investing" target="_blank" rel="noopener" class="btn-primary" data-en="💬 Let's Chat" data-zh="💬 跟我们聊聊">💬 跟我们聊聊</a>
+      <a href="https://wa.me/601156482183?text=Hi%2C+I+want+to+chat+about+investing" target="_blank" rel="noopener" class="btn-primary" data-en="💬 Let's Chat" data-zh="💬 跟我们聊聊">💬 Let's Chat</a>
     </div>
   </div>
 </section>
@@ -1690,119 +1527,113 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 <!-- ══════════════════════════════════════
      TESTIMONIALS
 ══════════════════════════════════════ -->
+<section class="testi-section" aria-label="Testimonials from BursaNews readers">
+  <div class="testi-inner">
+    <div class="section-label" data-en="WHAT OUR READERS SAY" data-zh="读者怎么说">WHAT OUR READERS SAY</div>
+    <h2 class="section-h" data-en="Trusted by <em>Malaysian Investors</em>" data-zh="马来西亚投资者的<em>选择</em>">Trusted by <em>Malaysian Investors</em><em>选择</em></h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"终于找到用人话解释马股的内容了。看了BursaNews之后，我才真正看懂公司公告是什么意思，也终于明白怎么开始投资马股新手该做什么。"</p>
+        <div class="testi-author">小明</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"作为刚开始投资的年轻人，我一直找不到适合自己的马股入门资源。BursaNews把买股票、看股息这些概念讲得很清楚，完全没有那种听不懂的财经术语。"</p>
+        <div class="testi-author">Karen L.</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"跟BursaNews聊过之后，我才真正理解供股权和认股权证是什么。以前看到这些股票术语就头大，现在投资马股完全不一样了。"</p>
+        <div class="testi-author">David T.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════════════════════════
      FAQ
 ══════════════════════════════════════ -->
+<section class="faq-section" aria-label="Frequently asked questions">
+  <div class="faq-inner">
+    <div class="section-label" data-en="COMMON QUESTIONS" data-zh="常见问题">COMMON QUESTIONS</div>
+    <h2 class="section-h" data-en="<em>FAQ</em>" data-zh="<em>常见问题</em>"><em>常见问题</em></h2>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span data-en="Is BursaNews suitable for complete beginners?" data-zh="BursaNews适合完全零基础的新手吗？">Is BursaNews suitable for complete beginners?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner" data-en="Yes, absolutely. Our Free Starter Kit was specifically designed for people who have never invested before. It uses simple language, no jargon, and walks you through 5 missions at your own pace, completely free." data-zh="是的，完全适合。我们的免费入门包专为从未投资过的人设计。使用简单语言，零行话，按照你自己的节奏完成5个任务，完全免费。">Yes, absolutely. Our Free Starter Kit was specifically designed for people who have never invested before. It uses simple language, no jargon, and walks you through 5 missions at your own pace, completely free.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span data-en="Do you give stock tips or buy/sell recommendations?" data-zh="你们会给股票贴士或买卖建议吗？">Do you give stock tips or buy/sell recommendations?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner" data-en="No. We will never tell you to buy or sell a specific stock. We believe education is the best investment, we teach you how to analyse, so you can make your own informed decisions." data-zh="不会。我们永远不会告诉你买卖特定股票。我们相信教育是最好的投资，我们教你如何分析，让你能做出自己的明智决定。">No. We will never tell you to buy or sell a specific stock. We believe education is the best investment, we teach you how to analyse, so you can make your own informed decisions.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span data-en="What is 马股早知道 and who is it for?" data-zh="马股早知道是什么？适合谁？">What is 马股早知道 and who is it for?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner" data-en="马股早知道 is our daily WhatsApp analysis service. Every trading day before 8:30am, we send a concise breakdown of the most important Malaysian stock announcements. It's for investors who are already investing but don't have time to monitor every announcement themselves." data-zh="马股早知道是我们的每日WhatsApp分析服务。每个交易日8:30am前，我们发送最重要的马股公告简明分析。适合已经在投资但没有时间自己监控每个公告的投资者。">马股早知道 is our daily WhatsApp analysis service. Every trading day before 8:30am, we send a concise breakdown of the most important Malaysian stock announcements. It's for investors who are already investing but don't have time to monitor every announcement themselves.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span data-en="How do I open a brokerage account in Malaysia?" data-zh="如何在马来西亚开立券商账户？">How do I open a brokerage account in Malaysia?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner" data-en="You need to open an account with an SC-regulated broker (like Moomoo, Webull, or Rakuten Trade) and also open a CDS account, which the broker typically handles for you during registration. Our Free Starter Kit walks you through this step by step, and our Brokers page includes a free PDF guide with screenshots." data-zh="你需要在受SC监管的券商（如Moomoo、Webull或Rakuten Trade）开立账户，同时开立CDS账户，通常券商在注册过程中就会帮你处理好。我们的免费入门包一步步带你完成，开户指南页面还有免费PDF指南附上截图。">你需要在受SC监管的券商开立账户并开立CDS账户，通常券商在注册过程中就会帮你处理好。我们的免费入门包一步步带你完成，开户指南页面还有免费PDF指南附上截图。</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span data-en="Is BursaNews content in Chinese or English?" data-zh="BursaNews的内容是中文还是英文？">Is BursaNews content in Chinese or English?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner" data-en="Our main content is in Mandarin Chinese (华语), targeting Chinese-speaking Malaysian investors. This website is bilingual, you can switch between Chinese and English using the toggle in the navigation." data-zh="我们的主要内容以华语为主，面向华语系马来西亚投资者。这个网站是双语的，你可以使用导航栏的切换按钮在中文和英文之间切换。">Our main content is in Mandarin Chinese (华语), targeting Chinese-speaking Malaysian investors. This website is bilingual, you can switch between Chinese and English using the toggle in the navigation.</div></div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ══════════════════════════════════════
      FOOTER
 ══════════════════════════════════════ -->
 
 
-
-
-<!-- ══════════════════════════════════════
-     BOTTOM CTA + RELATED GUIDES
-══════════════════════════════════════ -->
-<section style="background:var(--navy2);padding:5rem 2rem;" aria-label="Continue exploring BursaNews guides">
-  <div style="max-width:1000px;margin:0 auto;">
-    <!-- Header -->
-    <div style="text-align:center;margin-bottom:3rem;">
-      <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(184,115,51,.15);border:1px solid rgba(184,115,51,.3);border-radius:30px;padding:5px 16px;font-size:12px;font-weight:700;color:var(--gold2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem;"
-        data-en="📚 FREE GUIDES" data-zh="📚 免费指南">📚 免费指南</div>
-      <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:#fff;margin-bottom:.65rem;"
-        data-en="Keep Exploring <em style='color:var(--gold2);font-style:normal;'>Malaysian Investing</em>"
-        data-zh="继续探索<em style='color:var(--gold2);font-style:normal;'>马股投资</em>">继续探索<em style="color:var(--gold2);font-style:normal;">马股投资</em></h2>
-      <p style="color:rgba(255,255,255,.55);font-size:15px;max-width:520px;margin:0 auto;"
-        data-en="More free guides written specifically for Malaysian retail investors."
-        data-zh="更多专为马来西亚散户投资者撰写的免费指南。">更多专为马来西亚散户投资者撰写的免费指南。</p>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logo-cn.png" alt="BursaNews 马股报报看" height="44" class="logo-zh">
+        <img src="assets/images/logo-en.png" alt="BursaNews Malaysia" height="44" class="logo-en" style="display:none;">
+        <p data-en="Founded by 2 investment bankers who have seen how the capital markets really work. We know what the public wants to know, and we want to bridge the gap between uncle and aunty on the street and institutional investors." data-zh="由2位投资银行家创办，我们见过资本市场真正的运作方式，也知道大众想了解什么。我们希望拉近街上的Uncle Aunty与机构投资者之间的差距，提升大家的财务知识和敏感度。">Founded by 2 investment bankers who have seen how the capital markets really work. We know what the public wants to know, and we want to bridge the gap between uncle and aunty on the street and institutional investors.</p>
+        <div style="display:flex;gap:.75rem;margin-top:1.25rem;">
+          <a href="https://www.youtube.com/@bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="BursaNews YouTube">YT</a>
+          <a href="https://www.instagram.com/bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="BursaNews Instagram">IG</a>
+          <a href="https://www.facebook.com/bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="BursaNews Facebook">FB</a>
+          <a href="https://t.me/bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="BursaNews Telegram">TG</a>
+        </div>
+      </div>
     </div>
-    <!-- Guide cards 2×2 grid -->
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1.5rem;" class="explore-grid">
-      <a href="posts/ipo-guide-malaysia.html"
-        style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.25rem 1.4rem;display:flex;align-items:center;gap:1rem;text-decoration:none;transition:background .2s,border-color .2s;"
-        onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(184,115,51,.5)'"
-        onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.1)'">
-        <span style="font-size:1.75rem;flex-shrink:0;">🚀</span>
-        <div>
-          <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:2px;" data-en="IPO Guide Malaysia" data-zh="马股IPO申购指南">马股IPO申购指南</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.45);" data-en="How to apply and what to check" data-zh="如何申购及上市日注意事项">如何申购及上市日注意事项</div>
-        </div>
-        <span style="margin-left:auto;color:var(--gold2);font-size:1rem;flex-shrink:0;">→</span>
-      </a>
-      <a href="posts/dividend-stocks-malaysia.html"
-        style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.25rem 1.4rem;display:flex;align-items:center;gap:1rem;text-decoration:none;transition:background .2s,border-color .2s;"
-        onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(184,115,51,.5)'"
-        onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.1)'">
-        <span style="font-size:1.75rem;flex-shrink:0;">💰</span>
-        <div>
-          <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:2px;" data-en="Dividend Investing Malaysia" data-zh="马来西亚股息投资指南">马来西亚股息投资指南</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.45);" data-en="Build passive income with Bursa stocks" data-zh="通过马股建立被动收入">通过马股建立被动收入</div>
-        </div>
-        <span style="margin-left:auto;color:var(--gold2);font-size:1rem;flex-shrink:0;">→</span>
-      </a>
-      <a href="posts/reit-guide-malaysia.html"
-        style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.25rem 1.4rem;display:flex;align-items:center;gap:1rem;text-decoration:none;transition:background .2s,border-color .2s;"
-        onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(184,115,51,.5)'"
-        onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.1)'">
-        <span style="font-size:1.75rem;flex-shrink:0;">🏢</span>
-        <div>
-          <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:2px;" data-en="Malaysia REIT Guide" data-zh="马来西亚REIT完整指南">马来西亚REIT完整指南</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.45);" data-en="Rental income, yield and how to invest" data-zh="租金收益及如何投资REIT">租金收益及如何投资REIT</div>
-        </div>
-        <span style="margin-left:auto;color:var(--gold2);font-size:1rem;flex-shrink:0;">→</span>
-      </a>
-      <a href="affiliates.html"
-        style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.25rem 1.4rem;display:flex;align-items:center;gap:1rem;text-decoration:none;transition:background .2s,border-color .2s;"
-        onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(184,115,51,.5)'"
-        onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.1)'">
-        <span style="font-size:1.75rem;flex-shrink:0;">🏦</span>
-        <div>
-          <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:2px;" data-en="Best Broker Malaysia 2026" data-zh="马来西亚最佳券商比较 2026">马来西亚最佳券商比较 2026</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.45);" data-en="Moomoo vs Webull vs Rakuten Trade" data-zh="Moomoo vs Webull vs Rakuten Trade">Moomoo vs Webull vs Rakuten Trade</div>
-        </div>
-        <span style="margin-left:auto;color:var(--gold2);font-size:1rem;flex-shrink:0;">→</span>
-      </a>
-    </div>
-    <!-- CTA row -->
-    <div style="text-align:center;">
-      <a href="resources.html"
-        style="display:inline-flex;align-items:center;gap:.5rem;background:var(--gold2);color:#fff;font-weight:800;font-size:15px;padding:13px 30px;border-radius:10px;text-decoration:none;transition:background .15s;"
-        onmouseover="this.style.background='var(--gold)'"
-        onmouseout="this.style.background='var(--gold2)'"
-        data-en="📚 View All Investing Guides →"
-        data-zh="📚 查看全部投资指南 →">📚 查看全部投资指南 →</a>
-      <p style="font-size:12px;color:rgba(255,255,255,.35);margin-top:.85rem;"
-        data-en="Free to read · No sign-up required · Updated 2026"
-        data-zh="免费阅读 · 无需注册 · 2026年更新">免费阅读 · 无需注册 · 2026年更新</p>
+    <div class="footer-bottom">
+      <p data-en="© 2026 BursaNews 马股报报看. All rights reserved." data-zh="© 2026 BursaNews 马股报报看. 版权所有。">© 2026 BursaNews 马股报报看. All rights reserved.</p>
     </div>
   </div>
-</section>
+</footer>
 
 <script>
-(function(){
-  var words={zh:['好玩又容易上手！','不再雾里看花！','原来这么简单！','人人都听得懂！'],en:['fun and easy to understand!','finally making sense!','simpler than you think!','something everyone gets!']};
-  var sp=document.getElementById('tw-span'); if(!sp)return;
-  var wi=0,ci=0,del=false;
-  function cl(){return(typeof window.lang!=='undefined')?window.lang:'zh';}
-  function tick(){var list=words[cl()]||words.zh,word=list[wi%list.length];if(!del){ci++;sp.textContent=word.slice(0,ci);if(ci===word.length){del=true;return setTimeout(tick,1800);}return setTimeout(tick,65);}else{ci--;sp.textContent=word.slice(0,ci);if(ci===0){del=false;wi++;return setTimeout(tick,400);}return setTimeout(tick,35);}}
-  setTimeout(tick,1200);
-})();
-(function(){
-  var tgts=[{id:'c-years',end:10,suf:'+'},{id:'c-cos',end:50,suf:'+'},{id:'c-views',end:10,suf:'mil+'}];
-  var els=tgts.map(function(t){return Object.assign({},t,{el:document.getElementById(t.id)});}).filter(function(t){return t.el;});
-  if(!els.length)return; var done=false;
-  function cu(t){var dur=1400,s=performance.now();function f(n){var p=Math.min((n-s)/dur,1),e=1-Math.pow(1-p,3),v=Math.floor(e*t.end);t.el.textContent=v+t.suf;if(p<1)requestAnimationFrame(f);else t.el.textContent=t.end+t.suf;}requestAnimationFrame(f);}
-  function run(){if(done)return;done=true;els.forEach(cu);}
-  var sb=document.getElementById('hero-stats');
-  if('IntersectionObserver' in window&&sb){var o=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){run();o.disconnect();}});},{threshold:0.4});o.observe(sb);}else{run();}
-})();
-function toggleFaq(el){
-  var open=el.classList.contains('open');
-  document.querySelectorAll('.faq-q.open').forEach(function(q){q.classList.remove('open');q.nextElementSibling.style.maxHeight='0';});
-  if(!open){el.classList.add('open');el.nextElementSibling.style.maxHeight='none';}
+function toggleFaq(el) {
+  el.classList.toggle('open');
+  const ans = el.nextElementSibling;
+  ans.style.maxHeight = el.classList.contains('open') ? ans.scrollHeight + 'px' : '0';
 }
 </script>
-
-</html>
 </body>
 </html>
