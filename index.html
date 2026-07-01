@@ -1395,6 +1395,21 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 <!-- ══════════════════════════════════════
      WHY TRUST BURSANEWS
 ══════════════════════════════════════ -->
+
+<!-- ══════════════════════════════════════
+     明明 SECTION
+══════════════════════════════════════ -->
+<section style="background:var(--navy);padding:4.5rem 2rem;text-align:center;" aria-label="Our philosophy">
+  <div style="max-width:680px;margin:0 auto;">
+    <p style="font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#fff;line-height:1.6;margin-bottom:1rem;"
+      data-en='"We could have coasted on our credentials — but we didn't."'
+      data-zh='"明明可以靠脸吃饭，但是我们不做明明"'>"明明可以靠脸吃饭，但是我们不做明明"</p>
+    <p style="font-size:15px;color:rgba(255,255,255,.5);line-height:1.8;"
+      data-en="With 10+ years in investment banking and audit, we could have stayed comfortable. Instead we chose to bridge the gap between institutional knowledge and everyday Malaysian investors."
+      data-zh="凭着10年以上的投行和审计经验，我们完全可以安逸度日。但我们选择了另一条路——把机构投资者才懂的知识，带给每一个普通的马来西亚投资者。">凭着10年以上的投行和审计经验，我们完全可以安逸度日。但我们选择了另一条路——把机构投资者才懂的知识，带给每一个普通的马来西亚投资者。</p>
+  </div>
+</section>
+
 <section class="why-section" aria-label="Why trust BursaNews">
   <div class="why-inner">
     <div class="section-label" data-en="WHY BURSANEWS?" data-zh="为什么选择BursaNews？">WHY BURSANEWS?</div>
@@ -1526,30 +1541,6 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 <!-- ══════════════════════════════════════
      TESTIMONIALS
 ══════════════════════════════════════ -->
-<section class="testi-section" aria-label="Testimonials from BursaNews readers">
-  <div class="testi-inner">
-    <div class="section-label" data-en="WHAT OUR READERS SAY" data-zh="读者怎么说">WHAT OUR READERS SAY</div>
-    <h2 class="section-h" data-en="Trusted by <em>Malaysian Investors</em>" data-zh="马来西亚投资者的<em>选择</em>">Trusted by <em>Malaysian Investors</em><em>选择</em></h2>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"终于找到用人话解释马股的内容了。看了BursaNews之后，我才真正看懂公司公告是什么意思，也终于明白怎么开始投资马股新手该做什么。"</p>
-        <div class="testi-author">小明</div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"作为刚开始投资的年轻人，我一直找不到适合自己的马股入门资源。BursaNews把买股票、看股息这些概念讲得很清楚，完全没有那种听不懂的财经术语。"</p>
-        <div class="testi-author">Karen L.</div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"跟BursaNews聊过之后，我才真正理解供股权和认股权证是什么。以前看到这些股票术语就头大，现在投资马股完全不一样了。"</p>
-        <div class="testi-author">David T.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══════════════════════════════════════
      FAQ
 ══════════════════════════════════════ -->
@@ -1638,7 +1629,7 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
   function gw(){return TW[gl()]||TW.en;}
   function tick(){
     var list=gw(),word=list[wi%list.length];
-    if(!del){ci++;sp.textContent=word.slice(0,ci);if(ci===word.length){del=true;return setTimeout(tick,2800);}return setTimeout(tick,110);}
+    if(!del){ci++;sp.textContent=word.slice(0,ci);if(ci===word.length){del=true;return setTimeout(tick,3500);}return setTimeout(tick,110);}
     else{ci--;sp.textContent=word.slice(0,ci);if(ci===0){del=false;wi++;return setTimeout(tick,600);}return setTimeout(tick,55);}
   }
   setTimeout(tick,1000);
