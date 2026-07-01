@@ -229,9 +229,9 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:4rem 2rem 2.5r
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
 .wa-tip{background:var(--navy);color:#fff;border-radius:var(--r);padding:8px 14px;font-size:13px;font-weight:500;white-space:nowrap;opacity:0;transform:translateX(8px);transition:.2s;pointer-events:none;box-shadow:var(--shadow);}
 .wa-float:hover .wa-tip{opacity:1;transform:translateX(0);}
-.wa-btn{width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s,box-shadow .2s;}
+.wa-btn{width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s,box-shadow .2s;-webkit-tap-highlight-color:transparent;}
 .wa-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.5);}
-.wa-btn svg{width:28px;height:28px;fill:white;}
+.wa-btn svg{width:30px;height:30px;display:block;}
 
 /* ── RESPONSIVE ── */
 @media(max-width:960px){.ft-grid{grid-template-columns:1fr 1fr;}.ft-brand{grid-column:1/-1;}.broker-card-body{grid-template-columns:1fr;}}
