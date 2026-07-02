@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="${ROOT}affiliates.html" class="nav-link" data-en="Broker Bonuses" data-zh="券商推荐" role="menuitem">券商推荐</a>
     <a href="${ROOT}subscription.html" class="nav-link" data-en="Subscribe" data-zh="订阅计划" role="menuitem">订阅计划</a>
     <a href="${ROOT}coaching.html" class="nav-link" data-en="Coaching" data-zh="课程辅导" role="menuitem">课程辅导</a>
-    <a href="${ROOT}community.html" class="nav-link" data-en="Community" data-zh="社群" role="menuitem">社群</a>
+    <a href="${ROOT}community.html" class="nav-link" data-en="Social Media" data-zh="社交媒体" role="menuitem">社交媒体</a>
     <a href="${ROOT}about.html" class="nav-link" data-en="About" data-zh="关于我们" role="menuitem">关于我们</a>
   </div>
   <div class="nav-actions" style="display:flex;flex-direction:row;align-items:center;gap:8px;flex-shrink:0;">
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <a href="${ROOT}affiliates.html" data-en="Broker Bonuses" data-zh="券商推荐">券商推荐</a>
   <a href="${ROOT}subscription.html" data-en="Subscribe" data-zh="订阅计划">订阅计划</a>
   <a href="${ROOT}coaching.html" data-en="Coaching" data-zh="课程辅导">课程辅导</a>
-  <a href="${ROOT}community.html" data-en="Community" data-zh="社群">社群</a>
+  <a href="${ROOT}community.html" data-en="Social Media" data-zh="社交媒体">社交媒体</a>
   <a href="${ROOT}about.html" data-en="About" data-zh="关于我们">关于我们</a>
 </div>
 `);
