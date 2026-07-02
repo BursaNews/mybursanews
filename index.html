@@ -1318,7 +1318,7 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
         <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:6px;" data-en="Years in capital markets" data-zh="年资本市场经验">Years in capital markets</div>
       </div>
       <div>
-        <div id="c-cos" style="font-size:2rem;font-weight:900;color:#FF6B00;line-height:1.1;">50+</div>
+        <div id="c-cos" style="font-size:2rem;font-weight:900;color:#FF6B00;line-height:1.1;">80+</div>
         <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:6px;" data-en="Listed co. corporate advisory" data-zh="上市公司企业活动顾问">Listed co. corporate advisory</div>
       </div>
       <div>
@@ -1542,31 +1542,7 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
      TESTIMONIALS
 ══════════════════════════════════════ -->
 
-<!-- ══════════════════════════════════════
-     FOOTER
-══════════════════════════════════════ -->
 
-
-<footer class="site-footer" role="contentinfo">
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="assets/images/logo-cn.png" alt="BursaNews 马股报报看" height="44" class="logo-zh">
-        <img src="assets/images/logo-en.png" alt="BursaNews Malaysia" height="44" class="logo-en" style="display:none;">
-        <p data-en="Founded by 2 investment bankers who have seen how the capital markets really work. We know what the public wants to know, and we want to bridge the gap between uncle and aunty on the street and institutional investors." data-zh="由2位投资银行家创办，我们见过资本市场真正的运作方式，也知道大众想了解什么。我们希望拉近街上的Uncle Aunty与机构投资者之间的差距，提升大家的财务知识和敏感度。">Founded by 2 investment bankers who have seen how the capital markets really work. We know what the public wants to know, and we want to bridge the gap between uncle and aunty on the street and institutional investors.</p>
-        <div style="display:flex;gap:.75rem;margin-top:1.25rem;">
-          <a href="https://www.youtube.com/@bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="BursaNews YouTube">YT</a>
-          <a href="https://www.instagram.com/bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="BursaNews Instagram">IG</a>
-          <a href="https://www.facebook.com/bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="BursaNews Facebook">FB</a>
-          <a href="https://t.me/bursanews" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;" aria-label="BursaNews Telegram">TG</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p data-en="© 2026 BursaNews 马股报报看. All rights reserved." data-zh="© 2026 BursaNews 马股报报看. 版权所有。">© 2026 BursaNews 马股报报看. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
 
 
 <script>
@@ -1587,7 +1563,7 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
   if(typeof _osl==='function'){window.setLang=function(l){_osl(l);wi=0;ci=0;del=false;sp.textContent='';setTimeout(tick,400);};}
 })();
 (function(){
-  var tgts=[{id:'c-years',end:10,suf:'+'},{id:'c-cos',end:50,suf:'+'},{id:'c-views',end:10,suf:'mil+'}];
+  var tgts=[{id:'c-years',end:10,suf:'+'},{id:'c-cos',end:80,suf:'+'},{id:'c-views',end:10,suf:'mil+'}];
   var els=tgts.map(function(t){return Object.assign({},t,{el:document.getElementById(t.id)});}).filter(function(t){return t.el;});
   if(!els.length)return;var done=false;
   function cu(t){var dur=1400,s=performance.now();function f(n){var p=Math.min((n-s)/dur,1),e=1-Math.pow(1-p,3);t.el.textContent=Math.floor(e*t.end)+t.suf;if(p<1)requestAnimationFrame(f);else t.el.textContent=t.end+t.suf;}requestAnimationFrame(f);}
