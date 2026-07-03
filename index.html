@@ -1555,7 +1555,7 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
   function gw(){return TW[gl()]||TW.en;}
   function tick(){
     var list=gw(),word=list[wi%list.length];
-    if(!del){ci++;sp.textContent=word.slice(0,ci);if(ci===word.length){del=true;return setTimeout(tick,3500);}return setTimeout(tick,100);}
+    if(!del){ci++;sp.textContent=word.slice(0,ci);if(ci===word.length){del=true;return setTimeout(tick,7000);}return setTimeout(tick,100);}
     else{ci--;sp.textContent=word.slice(0,ci);if(ci===0){del=false;wi++;return setTimeout(tick,600);}return setTimeout(tick,120);}
   }
   setTimeout(tick,1000);
@@ -1566,7 +1566,7 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
   var tgts=[{id:'c-years',end:10,suf:'+'},{id:'c-cos',end:80,suf:'+'},{id:'c-views',end:10,suf:'mil+'}];
   var els=tgts.map(function(t){return Object.assign({},t,{el:document.getElementById(t.id)});}).filter(function(t){return t.el;});
   if(!els.length)return;var done=false;
-  function cu(t){var dur=1400,s=performance.now();function f(n){var p=Math.min((n-s)/dur,1),e=1-Math.pow(1-p,3);t.el.textContent=Math.floor(e*t.end)+t.suf;if(p<1)requestAnimationFrame(f);else t.el.textContent=t.end+t.suf;}requestAnimationFrame(f);}
+  function cu(t){var dur=3000,s=performance.now();function f(n){var p=Math.min((n-s)/dur,1),e=1-Math.pow(1-p,3);t.el.textContent=Math.floor(e*t.end)+t.suf;if(p<1)requestAnimationFrame(f);else t.el.textContent=t.end+t.suf;}requestAnimationFrame(f);}
   function run(){if(done)return;done=true;els.forEach(cu);}
   var sb=document.getElementById('hero-stats');
   if('IntersectionObserver' in window&&sb){var o=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){run();o.disconnect();}});},{threshold:0.4});o.observe(sb);}else{run();}
