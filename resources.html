@@ -59,6 +59,20 @@ body { font-size: 17px; }
 .res-cta p { color: var(--gray); margin-bottom: 1.5rem; font-size: 15px; }
 
 @media(max-width:600px) { .res-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ── GLOSSARY SECTION ─────────────────────────────────────────────── */
+.gloss-section{padding:4rem 2rem;background:#f0eeea;}
+.gloss-inner{max-width:860px;margin:0 auto;}
+.gloss-intro{font-size:15px;color:#555;line-height:1.8;margin-bottom:2rem;}
+.gloss-item{border-bottom:1px solid #ddd;overflow:hidden;}
+.gloss-q{width:100%;background:none;border:none;text-align:left;padding:1.1rem 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:15.5px;font-weight:700;color:#0a1628;gap:1rem;}
+.gloss-q:hover{color:#B87333;}
+.gloss-icon{font-size:1.2rem;font-weight:400;flex-shrink:0;color:#B87333;transition:transform .25s;}
+.gloss-item.open .gloss-icon{transform:rotate(45deg);}
+.gloss-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.gloss-a-inner{padding:.25rem 0 1.25rem;font-size:14.5px;color:#444;line-height:1.85;}
+.gloss-a-inner strong{color:#0a1628;}
+.gloss-tag{display:inline-block;background:#0a1628;color:#fff;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;margin-right:6px;vertical-align:middle;}
 </style>
 <script type="application/ld+json">
 {
@@ -296,6 +310,207 @@ body { font-size: 17px; }
   </div>
 
 </div>
+
+<!-- ══════════════════════════════════════
+     GLOSSARY SECTION
+══════════════════════════════════════ -->
+<section class="gloss-section" aria-label="Investing glossary">
+  <div class="gloss-inner">
+    <div style="text-align:center;margin-bottom:2rem;">
+      <div class="section-label" data-en="GLOSSARY" data-zh="投资术语表">GLOSSARY</div>
+      <h2 style="font-family:'Noto Serif SC',serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#0a1628;margin-bottom:.6rem;"
+        data-en="Heard a term and had no idea what it means?" data-zh="听过这些词，但不知道是什么意思？">Heard a term and had no idea what it means?</h2>
+      <p class="gloss-intro"
+        data-en="You are not alone. These are the most common investing terms you will hear when following Malaysian stocks. Click any term to see a plain-language explanation."
+        data-zh="你不是一个人。以下是追踪马股时最常听到的投资术语。点击任何词汇即可看到浅白解释。">You are not alone. These are the most common investing terms you will hear when following Malaysian stocks. Click any term to see a plain-language explanation.</p>
+    </div>
+
+    <div class="gloss-list">
+
+      <!-- Market Capitalisation -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="Market Capitalisation (市值)" data-zh="市值 Market Capitalisation">
+          Market Capitalisation <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">市值</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="The total value of a company as the stock market sees it. Calculated by multiplying the share price by the total number of shares. Example: if a company has 1 billion shares at RM2 each, its market cap is RM2 billion. Bigger market cap generally means a more established company."
+          data-zh="股票市场对一家公司的总估值。计算方法是股价乘以总股数。例如：一家公司有10亿股，每股RM2，则市值为RM20亿。市值越大，通常代表公司越成熟稳健。">The total value of a company as the stock market sees it. Calculated by multiplying the share price by the total number of shares. Example: if a company has 1 billion shares at RM2 each, its market cap is RM2 billion. Bigger market cap generally means a more established company.</div></div>
+      </div>
+
+      <!-- PE Ratio -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="PE Ratio (Price-to-Earnings)" data-zh="本益比 PE Ratio">
+          PE Ratio <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">本益比</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="<strong>PE (Price-to-Earnings)</strong> tells you how many years it would take for the company to earn back what you paid for the share, based on current profits. A PE of 10x means you are paying RM10 for every RM1 of earnings. <br><br><strong>Forward PE</strong> uses the estimated future earnings instead of past earnings. It is more useful because markets are forward-looking. If a company is expected to grow profits significantly, the forward PE will be lower than the trailing PE, which makes it look cheaper."
+          data-zh="<strong>本益比（PE）</strong>告诉你，以目前的盈利水平，公司需要多少年才能赚回你买股票的钱。PE 10倍意味着你每花RM10买到RM1的盈利。<br><br><strong>预测本益比（Forward PE）</strong>则是用预期未来盈利来计算，比历史PE更实用，因为市场是向前看的。如果公司预期盈利大幅增长，Forward PE会比Trailing PE低，看起来更便宜。">PE (Price-to-Earnings) tells you how many years it would take for the company to earn back what you paid for the share, based on current profits. A PE of 10x means you are paying RM10 for every RM1 of earnings. <br><br><strong>Forward PE</strong> uses estimated future earnings instead of past earnings. More useful because markets are forward-looking.</div></div>
+      </div>
+
+      <!-- EPS -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="EPS (Earnings Per Share)" data-zh="每股盈利 EPS">
+          EPS <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">每股盈利</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="Earnings Per Share. The company's total profit divided by the number of shares. If a company earns RM100 million and has 500 million shares, the EPS is 20 sen. Higher EPS generally means the company is more profitable per share. Watch out for diluted EPS, which accounts for warrants and convertible bonds that could increase the share count."
+          data-zh="每股盈利。公司的总盈利除以股数。若公司赚了RM1亿，拥有5亿股，则每股盈利为20仙。每股盈利越高，代表公司每股赚得越多。注意摊薄后每股盈利（Diluted EPS），它考虑了认股权证和可转换债券可能增加的股数。">Earnings Per Share. The company total profit divided by the number of shares. If a company earns RM100 million and has 500 million shares, the EPS is 20 sen. Higher EPS means the company is more profitable per share. Watch out for diluted EPS, which accounts for warrants and bonds that could increase the share count.</div></div>
+      </div>
+
+      <!-- Dividend Yield -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="Dividend Yield (股息率)" data-zh="股息率 Dividend Yield">
+          Dividend Yield <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">股息率</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="How much cash a company pays you every year as a percentage of the share price. If a stock costs RM2 and pays 10 sen dividend per year, the dividend yield is 5%. A higher yield is attractive, but always check if the company can sustain it. A very high yield sometimes signals the share price has dropped for a reason."
+          data-zh="公司每年派发股息占股价的百分比。若股价RM2，每年派10仙股息，则股息率为5%。股息率越高越吸引，但要检查公司能否持续派息。股息率异常高，有时反而代表股价因某些原因大跌。">How much cash a company pays you every year as a percentage of the share price. If a stock costs RM2 and pays 10 sen dividend per year, the yield is 5%. A higher yield is attractive, but check if it is sustainable. Very high yield sometimes means the share price dropped for a reason.</div></div>
+      </div>
+
+      <!-- PAT -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="PAT (Profit After Tax)" data-zh="税后净利 PAT">
+          PAT <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">税后净利</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="Profit After Tax. The company's bottom-line profit after all expenses, interest, and taxes have been deducted. This is the number most people refer to when they say a company 'made RM50 million in profit.' It is the clearest measure of how much the company actually earned."
+          data-zh="税后净利。公司扣除所有开支、利息和税项后的最终盈利。大多数人说公司"赚了RM5000万"，指的就是这个数字。这是衡量公司实际盈利最直接的指标。">Profit After Tax. The bottom-line profit after all expenses, interest, and taxes. When people say a company made RM50 million in profit, this is what they mean. The clearest measure of what the company actually earned.</div></div>
+      </div>
+
+      <!-- YoY / QoQ -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="YoY and QoQ (Year-on-Year, Quarter-on-Quarter)" data-zh="同比与环比 YoY QoQ">
+          YoY &amp; QoQ <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">同比 / 环比</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="<strong>YoY (Year-on-Year)</strong>: comparing this quarter or year to the same period last year. Useful because it removes seasonal effects. If Q2 2025 profit is compared to Q2 2024, that is YoY.<br><br><strong>QoQ (Quarter-on-Quarter)</strong>: comparing this quarter to the previous quarter. Useful for spotting short-term momentum, but can be misleading for seasonal businesses."
+          data-zh="<strong>YoY（同比）</strong>：将本季度或本年度与去年同期相比。好处是消除季节性影响。例如2025年Q2与2024年Q2比较，就是同比。<br><br><strong>QoQ（环比）</strong>：将本季度与上一季度相比。适合观察短期动力，但对季节性业务可能有误导性。"><strong>YoY (Year-on-Year)</strong>: comparing this period to the same period last year. Removes seasonal effects.<br><br><strong>QoQ (Quarter-on-Quarter)</strong>: comparing this quarter to the previous quarter. Good for spotting short-term momentum trends.</div></div>
+      </div>
+
+      <!-- UMA -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="UMA (Unusual Market Activity)" data-zh="异常市场活动 UMA">
+          UMA <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">异常市场活动</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="Unusual Market Activity. When a stock's price or volume moves sharply without an obvious reason, the stock exchange issues a UMA query, asking the company to explain. The company must respond publicly. A UMA is sometimes a warning sign of speculation or insider activity. Always check what the company says in its UMA response before reacting."
+          data-zh="异常市场活动。当一只股票的价格或成交量出现异常波动而没有明显原因时，交易所会发出UMA查询，要求公司公开解释。UMA有时是投机或内幕活动的警示信号。在做出反应之前，务必查看公司对UMA的回应声明。">When a stock price or volume moves sharply without an obvious reason, the exchange issues a UMA query asking the company to explain publicly. A UMA is sometimes a warning sign of speculation. Always check the company response before reacting.</div></div>
+      </div>
+
+      <!-- Limit Up / Limit Down -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="Limit Up and Limit Down (涨停 / 跌停)" data-zh="涨停与跌停 Limit Up / Limit Down">
+          Limit Up &amp; Limit Down <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">涨停 / 跌停</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="The maximum a stock is allowed to move in a single trading day. On Bursa Malaysia, a stock can move up or down by a maximum of 30% in one day. If it hits the upper limit, it is limit up (涨停). If it hits the lower limit, it is limit down (跌停). Trading may continue at that price but cannot go beyond it."
+          data-zh="一只股票在单个交易日内允许波动的最大幅度。在马股，股票单日最多可涨跌30%。触及上限称为涨停，触及下限称为跌停。触及限价后交易可继续，但价格不能突破该限制。">The maximum a stock can move in one trading day. On Bursa Malaysia, a stock can move up or down by a maximum of 30% in one day. Hitting the upper limit is limit up. Hitting the lower limit is limit down.</div></div>
+      </div>
+
+      <!-- Ex-Date -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="Ex-Date (除息日 / 除权日)" data-zh="除息日 Ex-Date">
+          Ex-Date <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">除息日 / 除权日</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="The cut-off date to be eligible for a dividend or corporate exercise. If you buy shares on or after the ex-date, you will NOT receive the upcoming dividend. You must own the shares before the ex-date. On the ex-date itself, the share price typically drops by roughly the dividend amount because new buyers are no longer entitled to it."
+          data-zh="获得股息或参与企业行动的截止日期。如果你在除息日当天或之后才买入股票，将无法获得即将派发的股息。你必须在除息日之前持有股票。除息日当天，股价通常会下跌约股息金额，因为新买家不再享有派息权利。">The cut-off date to qualify for a dividend. Buy before the ex-date to receive it. Buy on or after, and you miss it. On the ex-date, the share price typically drops by roughly the dividend amount.</div></div>
+      </div>
+
+      <!-- Investment Bank -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="Investment Bank (投资银行)" data-zh="投资银行 Investment Bank">
+          Investment Bank <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">投资银行</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="Not the same as a regular bank. An investment bank advises companies on big financial decisions, like getting listed on the stock exchange, buying or selling other companies, or raising money from investors. They do not take deposits from the public. In Malaysia, examples include Maybank IB, CIMB, RHB IB, and AmInvestment Bank. The BursaNews founders worked in investment banking."
+          data-zh="和普通银行不同。投资银行为公司的重大财务决策提供顾问服务，例如股票上市、收购或出售其他公司、以及向投资者筹集资金。它们不接受公众存款。在马来西亚，例子包括Maybank IB、CIMB、RHB IB和AmInvestment Bank。BursaNews的创始人曾在投资银行工作。">Not the same as a regular bank. An investment bank advises companies on major financial decisions like getting listed, buying or selling companies, or raising money. They do not take deposits. In Malaysia, examples include Maybank IB, CIMB, and RHB IB.</div></div>
+      </div>
+
+      <!-- MOU -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="MOU (Memorandum of Understanding 谅解备忘录)" data-zh="谅解备忘录 MOU">
+          MOU <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">谅解备忘录</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="A Memorandum of Understanding. A non-binding agreement between two parties that says they intend to work together or do a deal. It is essentially a handshake on paper. An MOU does not guarantee anything will happen. Many companies announce MOUs to positive market reaction, but MOUs frequently expire or fall through. Always wait for a definitive agreement before getting too excited."
+          data-zh="谅解备忘录。双方之间的非约束性协议，表明双方有意合作或达成交易，本质上是书面上的握手。MOU并不保证任何事情会发生。许多公司宣布MOU后股价上涨，但MOU经常到期或告吹。在看到正式协议之前，不宜过度兴奋。">A non-binding agreement saying two parties intend to work together. Essentially a handshake on paper. Does not guarantee anything will happen. Many MOUs expire or fall through, so always wait for a definitive agreement before getting excited.</div></div>
+      </div>
+
+      <!-- IPO -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="IPO (Initial Public Offering 首次公开募股)" data-zh="首次公开募股 IPO">
+          IPO <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">首次公开募股</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="When a private company sells its shares to the public for the first time and gets listed on the stock exchange. It is how companies raise money from public investors. Once listed, anyone can buy and sell the shares freely. IPO shares are often oversubscribed, meaning more people apply than there are shares available, so allocation is done by ballot."
+          data-zh="当一家私人公司首次向公众出售股份并在证券交易所上市时，就称为IPO（首次公开募股）。这是公司向公众投资者筹集资金的方式。上市后，任何人都可以自由买卖该股票。IPO股份通常超额认购，即申请人数超过可用股份数量，因此通过抽签分配。">When a private company sells shares to the public for the first time and gets listed on the stock exchange. After listing, anyone can freely buy and sell the shares. IPOs are often oversubscribed, with allocation done by ballot.</div></div>
+      </div>
+
+      <!-- Rights Issue -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="Rights Issue (供股权)" data-zh="供股权 Rights Issue">
+          Rights Issue <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">供股权</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="When a listed company raises money by offering existing shareholders new shares at a discounted price. As a shareholder, you have 3 choices: (1) Subscribe, buy the new shares at the discounted price. (2) Sell your rights entitlement to another investor. (3) Do nothing, let the rights lapse. If you do nothing, your shareholding percentage gets diluted because more shares are now in circulation."
+          data-zh="上市公司向现有股东以折扣价发行新股来筹集资金。作为股东，你有3个选择：(1) 认购，以折扣价买入新股。(2) 出售你的供股权给其他投资者。(3) 什么都不做，让供股权失效。如果你什么都不做，你的持股比例会被摊薄，因为市场上流通的股份增加了。">A listed company offers existing shareholders new shares at a discount to raise money. As a shareholder you can: (1) subscribe at the discounted price, (2) sell your entitlement, or (3) do nothing and get diluted.</div></div>
+      </div>
+
+      <!-- Private Placement -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="Private Placement (私人配售)" data-zh="私人配售 Private Placement">
+          Private Placement <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">私人配售</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="When a listed company issues new shares directly to selected investors, usually institutions or high-net-worth individuals, without offering them to the general public. It is a faster way to raise money than a rights issue. The downside for existing shareholders is dilution. The price is usually at a small discount to the market price."
+          data-zh="上市公司直接向特定投资者（通常是机构或高净值人士）发行新股，而不向公众开放。这是比供股更快速的筹资方式。对现有股东的影响是持股被摊薄。发行价通常比市价略有折扣。">A listed company issues new shares directly to selected investors without a public offering. Faster than a rights issue but dilutes existing shareholders. Price is usually at a small discount to market price.</div></div>
+      </div>
+
+      <!-- Bonus Issue -->
+      <div class="gloss-item">
+        <button class="gloss-q" onclick="toggleGloss(this)" data-en="Bonus Issue (红股)" data-zh="红股 Bonus Issue">
+          Bonus Issue <span style="color:#B87333;font-weight:400;font-size:14px;margin-left:6px;">红股</span>
+          <span class="gloss-icon">+</span>
+        </button>
+        <div class="gloss-a"><div class="gloss-a-inner"
+          data-en="Free extra shares given to existing shareholders in proportion to their holdings. For example, a 1-for-2 bonus issue means for every 2 shares you own, you get 1 free extra share. The total value stays roughly the same because the share price adjusts down proportionally. It is not free money, but it makes the share price lower and more accessible, which can improve liquidity."
+          data-zh="按持股比例免费派发给现有股东的额外股份。例如，1送2的红股意味着你每持有2股，就免费获得1股。总价值大致不变，因为股价会相应调低。这不是真正的免费钱，但较低的股价可以提高股票的流通性。">Free extra shares given to existing shareholders in proportion to their holdings. The share price adjusts down proportionally so the total value stays the same. Not free money, but improves liquidity by making the stock more affordable.</div></div>
+      </div>
+
+    </div><!-- end gloss-list -->
+  </div>
+</section>
+
+<script>
+function toggleGloss(btn){
+  var item=btn.parentElement;
+  var ans=btn.nextElementSibling;
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.gloss-item.open').forEach(function(el){
+    el.classList.remove('open');
+    el.querySelector('.gloss-a').style.maxHeight='0';
+  });
+  if(!isOpen){
+    item.classList.add('open');
+    ans.style.maxHeight=ans.scrollHeight+'px';
+  }
+}
+</script>
 </main>
 
 <script>
