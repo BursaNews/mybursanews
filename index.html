@@ -1556,7 +1556,7 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
   function tick(){
     var list=gw(),word=list[wi%list.length];
     if(!del){ci++;sp.textContent=word.slice(0,ci);if(ci===word.length){del=true;return setTimeout(tick,3500);}return setTimeout(tick,100);}
-    else{ci--;sp.textContent=word.slice(0,ci);if(ci===0){del=false;wi++;return setTimeout(tick,600);}return setTimeout(tick,60);}
+    else{ci--;sp.textContent=word.slice(0,ci);if(ci===0){del=false;wi++;return setTimeout(tick,600);}return setTimeout(tick,120);}
   }
   setTimeout(tick,1000);
   var _osl=window.setLang;
