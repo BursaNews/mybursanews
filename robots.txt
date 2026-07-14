@@ -7,7 +7,7 @@ Allow: /
 Disallow: /test-hero.html
 Disallow: /test2.html
 
-Sitemap: https://bursanews.github.io/mybursanews/sitemap.xml
+Sitemap: https://mybursanews.com/sitemap.xml
 
 # ═══ SEARCH ENGINES ═══
 User-agent: Googlebot
