@@ -23,7 +23,8 @@
 .sp-eyebrow{display:inline-flex;align-items:center;gap:6px;background:rgba(0,99,247,.18);border:1px solid rgba(0,99,247,.35);border-radius:30px;padding:5px 16px;font-size:12px;font-weight:800;color:#60a5fa;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.25rem;}
 .sp-hero h1{font-family:var(--serif);font-size:clamp(2rem,4.5vw,3rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:1rem;}
 .sp-hero h1 em{color:#60a5fa;font-style:normal;}
-.sp-hero-sub{font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:2rem;max-width:500px;}
+.sp-hero-sub{font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:1.25rem;max-width:500px;}
+.sp-byline{font-size:12.5px;color:rgba(255,255,255,.45);margin-bottom:1.5rem;font-weight:600;}
 .ai-summary{background:rgba(255,255,255,.05);border:1.5px solid rgba(0,99,247,.5);border-radius:18px;padding:1.5rem;backdrop-filter:blur(8px);}
 .ai-label{display:flex;align-items:center;gap:.5rem;font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#60a5fa;margin-bottom:1rem;}
 .ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1.25rem;}
@@ -93,6 +94,7 @@
 .trust-icon{font-size:1.75rem;margin-bottom:.65rem;}
 .trust-title{font-family:var(--serif);font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:.35rem;}
 .trust-desc{font-size:13px;color:var(--gray);line-height:1.6;}
+.trust-desc a{color:var(--gray);text-decoration:underline;}
 /* CTA BANNER */
 .cta-banner{background:#0063F7;border-radius:20px;padding:3rem 2.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;margin-bottom:4rem;}
 .cta-banner h2{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2rem);font-weight:900;color:#fff;margin-bottom:.5rem;}
@@ -108,6 +110,7 @@
 .faq-row summary::after{content:'+';font-size:1.2rem;color:#0063F7;font-weight:700;flex-shrink:0;}
 .faq-row[open] summary::after{content:'×';}
 .faq-row p{padding:.5rem 1.4rem 1.1rem;font-size:14.5px;color:var(--text);line-height:1.8;border-top:1px solid var(--border);}
+.faq-row p a{color:#0063F7;font-weight:700;}
 .breadcrumb{background:var(--off);border-bottom:1px solid var(--border);padding:.7rem 2rem;font-size:13px;color:var(--gray);}
 .breadcrumb a{color:var(--gold);font-weight:700;}
 .sp-disc{background:var(--off);border-radius:12px;padding:1.25rem 1.5rem;font-size:12.5px;color:var(--gray);line-height:1.75;}
@@ -138,9 +141,10 @@
       <div class="sp-eyebrow">🔗 BursaNews Referral · Webull Malaysia 2026</div>
       <h1>Webull Malaysia<br><em>No Code Needed</em></h1>
       <p class="sp-hero-sub">Sign up via the <strong style="color:#60a5fa;">BursaNews referral link</strong> and deposit <strong style="color:#fff;">RM5,000</strong> for 60 days to unlock <strong style="color:#fff;">RM300 in trading vouchers</strong>. No promo code required.</p>
+      <div class="sp-byline">Reviewed by the BursaNews Team · Ex-Investment Bankers (SC Module 12 &amp; 19) · Updated July 2026</div>
       <div style="display:flex;flex-wrap:wrap;gap:.65rem;">
         <span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:6px 14px;font-size:13px;color:rgba(255,255,255,.7);">✓ RM300 Trading Vouchers (RM5k deposit)</span>
-        
+
         <span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:6px 14px;font-size:13px;color:rgba(255,255,255,.7);">✓ 0% US Commission until Dec 2026</span>
         <span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:6px 14px;font-size:13px;color:rgba(255,255,255,.7);">✓ SC Malaysia Licensed</span>
       </div>
@@ -170,7 +174,7 @@
     <div class="trust-card">
       <div class="trust-icon">🏛️</div>
       <div class="trust-title">SC Malaysia Licensed</div>
-      <div class="trust-desc">Webull Malaysia holds a Capital Markets Services Licence (CMSL) from the Securities Commission Malaysia. Fully regulated.</div>
+      <div class="trust-desc">Webull Malaysia holds a Capital Markets Services Licence (CMSL) from the <a href="https://www.sc.com.my/" target="_blank" rel="noopener">Securities Commission Malaysia</a>. Fully regulated, and covered by the <a href="https://www.sc.com.my/investor-empowerment/investor-alerts/cmc-fund" target="_blank" rel="noopener">Capital Market Compensation Fund</a>.</div>
     </div>
     <div class="trust-card">
       <div class="trust-icon">🇺🇸</div>
@@ -322,16 +326,21 @@
       <details class="faq-row"><summary>Do I need a promo code for Webull Malaysia?</summary><p>No. Webull Malaysia does not use a promo code system. Simply sign up via the <strong>BursaNews referral link</strong> above — it automatically registers you under BursaNews and unlocks all available rewards including the RM300 trading vouchers.</p></details>
       <details class="faq-row"><summary>How much is the Webull Malaysia welcome reward in 2026?</summary><p>Using the BursaNews referral link, you receive <strong>RM300 in trading vouchers</strong> (3 × RM100) upon sign-up. No deposit required to claim the vouchers. You also get 0% commission on US stocks until 31 December 2026.</p></details>
       <details class="faq-row"><summary>Why do I need to use the BursaNews referral link and not sign up directly?</summary><p>The rewards are tied to referral tracking. When you sign up directly through the Webull app or website without a referral link, the system does not know you came from BursaNews and the welcome rewards may not be applied. Always use the BursaNews referral link to ensure full reward eligibility.</p></details>
-      <details class="faq-row"><summary>Is Webull Malaysia regulated and safe?</summary><p>Yes. Webull Malaysia holds a <strong>Capital Markets Services Licence (CMSL)</strong> issued by the Securities Commission (SC) Malaysia. Your account and funds are protected under Malaysian securities law.</p></details>
+      <details class="faq-row"><summary>Is Webull Malaysia regulated and safe?</summary><p>Yes. Webull Malaysia holds a <strong>Capital Markets Services Licence (CMSL)</strong> issued by the <a href="https://www.sc.com.my/" target="_blank" rel="noopener">Securities Commission (SC) Malaysia</a>. Your account and funds are protected under Malaysian securities law and the <a href="https://www.sc.com.my/investor-empowerment/investor-alerts/cmc-fund" target="_blank" rel="noopener">Capital Market Compensation Fund</a>. Read our full <a href="posts/webull-review-malaysia.html">Webull Malaysia review</a> for a deeper breakdown.</p></details>
       <details class="faq-row"><summary>What is the difference between Webull and Moomoo Malaysia?</summary><p>Both are SC-regulated and offer 0% commission on Malaysian stocks for new users. Key differences: <strong>Moomoo</strong> offers higher welcome rewards (up to RM1,500+, requires code BURSA88) and AI analysis tools. <strong>Webull</strong> has 0% US stock commission until Dec 2026, stronger options trading features, and 24-hour US market access. <a href="affiliates.html" style="color:#0063F7;font-weight:700;">See the full comparison →</a></p></details>
       <details class="faq-row"><summary>Can I trade during the 60-day holding period?</summary><p>Yes. You can trade Malaysian and US stocks freely during the 60-day period. Only your net deposit needs to remain — market value changes to your portfolio do not affect reward eligibility. Avoid withdrawing the initial RM5,000.</p></details>
     </div>
   </section>
 
   <!-- COMPARE LINK -->
-  <div style="background:var(--off);border-radius:14px;padding:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:3rem;">
+  <div style="background:var(--off);border-radius:14px;padding:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
     <div><div style="font-family:var(--serif);font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:.25rem;">Compare Webull with Moomoo and Rakuten Trade</div><div style="font-size:14px;color:var(--gray);">Side-by-side comparison with reward amounts and best-for summary.</div></div>
     <a href="affiliates.html" style="display:inline-flex;align-items:center;gap:.4rem;background:var(--navy);color:#fff;font-weight:800;font-size:14px;padding:11px 22px;border-radius:10px;text-decoration:none;">Compare All Brokers →</a>
+  </div>
+
+  <div style="background:var(--off);border-radius:14px;padding:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:3rem;">
+    <div><div style="font-family:var(--serif);font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:.25rem;">Want the full picture, not just the rewards?</div><div style="font-size:14px;color:var(--gray);">Read our in-depth Webull Malaysia review — fees, features, who it's for, and who it isn't.</div></div>
+    <a href="posts/webull-review-malaysia.html" style="display:inline-flex;align-items:center;gap:.4rem;background:#0063F7;color:#fff;font-weight:800;font-size:14px;padding:11px 22px;border-radius:10px;text-decoration:none;">Read Full Review →</a>
   </div>
 
   <div class="sp-disc"><strong>Disclosure:</strong> BursaNews earns a commission when you sign up via our referral link, at no extra cost to you. Reward amounts are subject to Webull's current campaign and may change — verify at sign-up. BursaNews is not a licensed financial advisor. This page is for informational purposes only and does not constitute investment advice.</div>
