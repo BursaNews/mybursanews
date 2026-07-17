@@ -140,16 +140,17 @@ document.body.insertAdjacentHTML('beforeend', `
     </div>
     <div class="ft-col">
       <h4 data-en="Learn" data-zh="学习">Learn</h4>
+      <a href="${ROOT}posts/moomoo-review-malaysia.html" data-en="Moomoo Malaysia Review" data-zh="Moomoo完整评测">Moomoo Malaysia Review</a>
+      <a href="${ROOT}posts/webull-review-malaysia.html" data-en="Webull Malaysia Review" data-zh="Webull完整评测">Webull Malaysia Review</a>
       <a href="${ROOT}posts/how-to-start-investing-malaysia.html" data-en="How to Start Investing" data-zh="如何开始投资">How to Start Investing</a>
       <a href="${ROOT}posts/what-is-cds-account.html" data-en="CDS Account Guide" data-zh="CDS账户指南">CDS Account Guide</a>
-      <a href="${ROOT}posts/moomoo-sign-up-guide.html" data-en="Moomoo Sign Up Guide" data-zh="Moomoo开户指南">Moomoo Sign Up Guide</a>
       <a href="${ROOT}posts/rights-issue-explained.html" data-en="Rights Issue Explained" data-zh="供股详解">Rights Issue Explained</a>
     </div>
     <div class="ft-col">
       <h4 data-en="Services" data-zh="服务">Services</h4>
       <a href="${ROOT}subscription.html" data-en="Daily Reports (订阅)" data-zh="每日报告（订阅）">Daily Reports (订阅)</a>
-      <a href="${ROOT}affiliates.html" data-en="Moomoo Sign Up Rewards" data-zh="Moomoo开户奖励">Moomoo Sign Up Rewards</a>
-      <a href="${ROOT}affiliates.html" data-en="Webull Sign Up Rewards" data-zh="Webull开户奖励">Webull Sign Up Rewards</a>
+      <a href="${ROOT}moomoo-sign-up-code.html" data-en="Moomoo Sign Up Rewards" data-zh="Moomoo开户奖励">Moomoo Sign Up Rewards</a>
+      <a href="${ROOT}webull-sign-up-code.html" data-en="Webull Sign Up Rewards" data-zh="Webull开户奖励">Webull Sign Up Rewards</a>
       <a href="${ROOT}coaching.html" data-en="1-on-1 Coaching" data-zh="一对一辅导">1-on-1 Coaching</a>
     </div>
     <div class="ft-col">
