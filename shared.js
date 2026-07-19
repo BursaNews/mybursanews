@@ -70,6 +70,33 @@ function _mobClose(e) {
   }
 }
 
+function toggleServicesDropdown(e) {
+  e.stopPropagation();
+  var dd = document.getElementById('services-dropdown');
+  var trigger = document.getElementById('services-trigger');
+  if (!dd) return;
+  var isOpen = dd.classList.contains('open');
+  if (isOpen) {
+    dd.classList.remove('open');
+    if (trigger) trigger.setAttribute('aria-expanded','false');
+    document.removeEventListener('click', _servicesClose);
+  } else {
+    dd.classList.add('open');
+    if (trigger) trigger.setAttribute('aria-expanded','true');
+    setTimeout(function(){ document.addEventListener('click', _servicesClose); }, 10);
+  }
+}
+function _servicesClose(e) {
+  var dd = document.getElementById('services-dropdown');
+  if (!dd) return;
+  if (!dd.contains(e.target)) {
+    dd.classList.remove('open');
+    var trigger = document.getElementById('services-trigger');
+    if (trigger) trigger.setAttribute('aria-expanded','false');
+    document.removeEventListener('click', _servicesClose);
+  }
+}
+
 function openWA(m) {
   const text = m || (lang === 'zh'
     ? 'Hi，我想了解更多关于马股报报看的信息'
@@ -92,8 +119,13 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="${ROOT}starterkit.html" class="nav-link nav-highlight" data-en="🎁 Starter Kit" data-zh="🎁 免费入门包" role="menuitem">🎁 免费入门包</a>
     <a href="${ROOT}resources.html" class="nav-link" data-en="Investing Guide" data-zh="投资指南" role="menuitem">投资指南</a>
     <a href="${ROOT}affiliates.html" class="nav-link" data-en="Broker Bonuses" data-zh="券商推荐" role="menuitem">券商推荐</a>
-    <a href="${ROOT}subscription.html" class="nav-link" data-en="Subscribe" data-zh="订阅计划" role="menuitem">订阅计划</a>
-    <a href="${ROOT}coaching.html" class="nav-link" data-en="Coaching" data-zh="课程辅导" role="menuitem">课程辅导</a>
+    <div class="nav-dropdown" id="services-dropdown" role="none">
+      <button type="button" class="nav-dropdown-trigger" id="services-trigger" onclick="toggleServicesDropdown(event)" aria-haspopup="true" aria-expanded="false" data-en="Our Services &#9662;" data-zh="我们的服务 &#9662;" role="menuitem">我们的服务 &#9662;</button>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="${ROOT}subscription.html" data-en="Subscription Plans" data-zh="订阅计划" role="menuitem">订阅计划</a>
+        <a href="${ROOT}coaching.html" data-en="Coaching" data-zh="课程辅导" role="menuitem">课程辅导</a>
+      </div>
+    </div>
     <a href="${ROOT}community.html" class="nav-link" data-en="Social Media" data-zh="社交媒体" role="menuitem">社交媒体</a>
     <a href="${ROOT}about.html" class="nav-link" data-en="About" data-zh="关于我们" role="menuitem">关于我们</a>
   </div>
@@ -116,8 +148,9 @@ document.addEventListener('DOMContentLoaded', function() {
   <a href="${ROOT}starterkit.html" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包" style="color:#16a34a!important;font-weight:700;background:#f0fdf4;">🎁 免费入门包</a>
   <a href="${ROOT}resources.html" data-en="Investing Guide" data-zh="投资指南">投资指南</a>
   <a href="${ROOT}affiliates.html" data-en="Broker Bonuses" data-zh="券商推荐">券商推荐</a>
-  <a href="${ROOT}subscription.html" data-en="Subscribe" data-zh="订阅计划">订阅计划</a>
-  <a href="${ROOT}coaching.html" data-en="Coaching" data-zh="课程辅导">课程辅导</a>
+  <div class="mob-service-label" data-en="Our Services" data-zh="我们的服务">我们的服务</div>
+  <a href="${ROOT}subscription.html" class="mob-service-link" data-en="Subscription Plans" data-zh="订阅计划">订阅计划</a>
+  <a href="${ROOT}coaching.html" class="mob-service-link" data-en="Coaching" data-zh="课程辅导">课程辅导</a>
   <a href="${ROOT}community.html" data-en="Social Media" data-zh="社交媒体">社交媒体</a>
   <a href="${ROOT}about.html" data-en="About" data-zh="关于我们">关于我们</a>
 </div>
@@ -177,9 +210,14 @@ document.body.insertAdjacentHTML('beforeend', `
 </div>`);
 
   // active nav
-  document.querySelectorAll('.nav-links a, .mob a').forEach(a => {
+  document.querySelectorAll('.nav-links a, .nav-dropdown-menu a, .mob a').forEach(a => {
     if (a.getAttribute('href') && a.getAttribute('href').split('/').pop() === pg) a.classList.add('active');
   });
+  // mark services dropdown trigger active when a child page is current
+  if (pg === 'subscription.html' || pg === 'coaching.html') {
+    var trig = document.getElementById('services-trigger');
+    if (trig) trig.classList.add('active');
+  }
 
   setLang(lang);
 });
