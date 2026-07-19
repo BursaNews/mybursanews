@@ -83,16 +83,16 @@ body{font-size:17px;}
 
 .values-section{padding:5rem 4rem;background:#fff;}
 .credential-section{padding:5rem 4rem;background:#f8f7f4;border-top:1px solid #e8e6e2;}
-.credential-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:3rem;align-items:center;}
-.credential-img-wrap{background:#fff;border:1px solid #e8e6e2;border-radius:18px;padding:1rem;box-shadow:0 8px 28px rgba(10,22,40,.08);}
+.credential-inner{display:flex;flex-direction:column;align-items:center;gap:2.5rem;}
+.credential-img-wrap{background:#fff;border:1px solid #e8e6e2;border-radius:18px;padding:1rem;box-shadow:0 8px 28px rgba(10,22,40,.08);max-width:800px;width:100%;}
 .credential-img-wrap img{width:100%;display:block;border-radius:10px;}
-.credential-caption{font-size:12px;color:#6b6760;text-align:center;margin-top:.75rem;}
+.credential-text{max-width:640px;text-align:center;}
 .credential-text .cred-eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FF6B00;margin-bottom:.65rem;display:block;}
 .credential-text h2{font-family:'Noto Serif SC',serif;font-size:1.9rem;font-weight:900;color:#0a1628;margin-bottom:1rem;line-height:1.35;}
-.credential-text p{font-size:15px;color:#6b6760;line-height:1.85;margin-bottom:1rem;}
+.credential-text p{font-size:15px;color:#6b6760;line-height:1.85;margin-bottom:1rem;text-align:left;}
 .credential-text p:last-of-type{margin-bottom:0;}
 .credential-text strong{color:#0a1628;}
-@media(max-width:860px){.credential-grid{grid-template-columns:1fr;gap:2rem;}.credential-section{padding:3.5rem 1.5rem;}}
+@media(max-width:860px){.credential-section{padding:3.5rem 1.5rem;}}
 .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:2rem;}
 .val-item{border-radius:16px;padding:2rem;}
 .val-item.navy-bg{background:#0a1628;}
@@ -234,19 +234,17 @@ body{font-size:17px;}
 <!-- CREDENTIAL -->
 <section class="credential-section">
   <div class="wrap">
-    <div class="credential-grid">
+    <div class="credential-inner">
       <div>
         <div class="credential-img-wrap">
-          <img src="assets/images/spm-certificate-chun-sian.jpg" alt="Law Chun Sian SPM 2008 certificate" loading="lazy" width="900" height="1200">
+          <img src="assets/images/spm-certificate-chun-sian.jpg" alt="Academic certificate" loading="lazy" width="700" height="495">
         </div>
-        <p class="credential-caption" data-en="Law Chun Sian, SPM 2008 transcript (personal details redacted)" data-zh="Law Chun Sian, SPM 2008 成绩单（个人资料已隐藏）">Law Chun Sian, SPM 2008 transcript (personal details redacted)</p>
       </div>
       <div class="credential-text">
-        <span class="cred-eyebrow" data-en="A Small Example" data-zh="一个小小的例子">A Small Example</span>
-        <h2 data-en="Not Showing Off. Just Explaining Ourselves." data-zh="不是想炫耀，只是想说明白">Not Showing Off. Just Explaining Ourselves.</h2>
-        <p data-en="We're sharing this 2008 SPM certificate, not to impress anyone." data-zh="我们放上这张2008年的SPM成绩单，不是为了证明自己有多厉害。">We're sharing this 2008 SPM certificate, not to impress anyone.</p>
-        <p data-en="It's a simpler point: if we held ourselves to a high standard back then, in something as unglamorous as school exams, we&#8217;ll hold ourselves to that <strong>same standard</strong> when it comes to teaching you how to invest." data-zh="而是想告诉你一件很简单的事：如果连自己的学业，我们都能负责任地做到最好，那教你投资的时候，我们也会用<strong>同样的态度</strong>对待。">It's a simpler point: if we held ourselves to a high standard back then, in something as unglamorous as school exams, we&#8217;ll hold ourselves to that <strong>same standard</strong> when it comes to teaching you how to invest.</p>
-        <p data-en="This isn&#8217;t about the grades. It&#8217;s about how we do things, carefully, responsibly, without cutting corners. We believe that&#8217;s what real trust is actually built on." data-zh="这跟分数无关，而是关于我们做事的方式, , 认真、负责、不敷衍。我们相信，这才是真正值得你信任的原因。">This isn&#8217;t about the grades. It&#8217;s about how we do things, carefully, responsibly, without cutting corners. We believe that&#8217;s what real trust is actually built on.</p>
+        <h2 data-en="Why Trust Us?" data-zh="为什么信任我们？">Why Trust Us?</h2>
+        <p data-en="We take real pride in our work and in the courses we teach. We hold ourselves to a high standard, in everything we do, not just the things people happen to see." data-zh="我们对自己的工作和课程要求很高，因为我们始终坚持同一个标准, ,认真、负责、不敷衍，不只是做给别人看的部分才用心。">We take real pride in our work and in the courses we teach. We hold ourselves to a high standard, in everything we do, not just the things people happen to see.</p>
+        <p data-en="Our aim is simple: bring real stock market literacy to everyday people on the street, not keep it locked inside a small circle of insiders." data-zh="我们的目标很简单：把真正的股票投资知识带给街头巷尾的普通人，而不是把它藏在小圈子里。">Our aim is simple: bring real stock market literacy to everyday people on the street, not keep it locked inside a small circle of insiders.</p>
+        <p data-en="We&#8217;re not KOLs chasing views with hot tips. We&#8217;re professionals who&#8217;ve actually done the work, and we know exactly where your pain points are, because we&#8217;ve been there too." data-zh="我们不是靠喊单博眼球的网红，而是真正做过投资银行工作的专业人士。我们清楚知道你在投资路上会遇到的痛点，因为我们也曾经历过。">We&#8217;re not KOLs chasing views with hot tips. We&#8217;re professionals who&#8217;ve actually done the work, and we know exactly where your pain points are, because we&#8217;ve been there too.</p>
       </div>
     </div>
   </div>
