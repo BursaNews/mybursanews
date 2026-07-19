@@ -70,32 +70,10 @@ function _mobClose(e) {
   }
 }
 
-function toggleServicesDropdown(e) {
-  e.stopPropagation();
+document.addEventListener('click', function(e) {
   var dd = document.getElementById('services-dropdown');
-  var trigger = document.getElementById('services-trigger');
-  if (!dd) return;
-  var isOpen = dd.classList.contains('open');
-  if (isOpen) {
-    dd.classList.remove('open');
-    if (trigger) trigger.setAttribute('aria-expanded','false');
-    document.removeEventListener('click', _servicesClose);
-  } else {
-    dd.classList.add('open');
-    if (trigger) trigger.setAttribute('aria-expanded','true');
-    setTimeout(function(){ document.addEventListener('click', _servicesClose); }, 10);
-  }
-}
-function _servicesClose(e) {
-  var dd = document.getElementById('services-dropdown');
-  if (!dd) return;
-  if (!dd.contains(e.target)) {
-    dd.classList.remove('open');
-    var trigger = document.getElementById('services-trigger');
-    if (trigger) trigger.setAttribute('aria-expanded','false');
-    document.removeEventListener('click', _servicesClose);
-  }
-}
+  if (dd && dd.open && !dd.contains(e.target)) dd.open = false;
+});
 
 function openWA(m) {
   const text = m || (lang === 'zh'
@@ -119,13 +97,13 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="${ROOT}starterkit.html" class="nav-link nav-highlight" data-en="🎁 Starter Kit" data-zh="🎁 免费入门包" role="menuitem">🎁 免费入门包</a>
     <a href="${ROOT}resources.html" class="nav-link" data-en="Investing Guide" data-zh="投资指南" role="menuitem">投资指南</a>
     <a href="${ROOT}affiliates.html" class="nav-link" data-en="Broker Bonuses" data-zh="券商推荐" role="menuitem">券商推荐</a>
-    <div class="nav-dropdown" id="services-dropdown" role="none">
-      <button type="button" class="nav-dropdown-trigger" id="services-trigger" onclick="toggleServicesDropdown(event)" aria-haspopup="true" aria-expanded="false" data-en="Our Services &#9662;" data-zh="我们的服务 &#9662;" role="menuitem">我们的服务 &#9662;</button>
+    <details class="nav-dropdown" id="services-dropdown">
+      <summary class="nav-dropdown-trigger" id="services-trigger" data-en="Our Services &#9662;" data-zh="我们的服务 &#9662;" role="menuitem">我们的服务 &#9662;</summary>
       <div class="nav-dropdown-menu" role="menu">
         <a href="${ROOT}subscription.html" data-en="Subscription Plans" data-zh="订阅计划" role="menuitem">订阅计划</a>
         <a href="${ROOT}coaching.html" data-en="Coaching" data-zh="课程辅导" role="menuitem">课程辅导</a>
       </div>
-    </div>
+    </details>
     <a href="${ROOT}community.html" class="nav-link" data-en="Social Media" data-zh="社交媒体" role="menuitem">社交媒体</a>
     <a href="${ROOT}about.html" class="nav-link" data-en="About" data-zh="关于我们" role="menuitem">关于我们</a>
   </div>
