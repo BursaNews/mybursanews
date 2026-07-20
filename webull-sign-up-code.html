@@ -54,7 +54,7 @@
 .link-spotlight-left .main{font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:.3rem;}
 .link-spotlight-left .sub{font-size:13px;color:rgba(255,255,255,.5);}
 /* STEPS */
-.steps-wrap{display:grid;grid-template-columns:1fr 380px;gap:4rem;align-items:start;}
+.steps-wrap{display:block;max-width:700px;}
 .steps-list{display:flex;flex-direction:column;gap:0;list-style:none;padding:0;margin:0;}
 .step-item{display:flex;gap:1.5rem;padding:1.75rem 0;border-bottom:1px solid var(--border);}
 .step-item:last-child{border-bottom:none;}
@@ -66,28 +66,6 @@
 .step-title{font-family:var(--serif);font-size:1.2rem;font-weight:800;color:var(--navy);margin-bottom:.5rem;}
 .step-desc{font-size:15px;color:var(--gray);line-height:1.75;}
 .step-tip{display:flex;align-items:flex-start;gap:.6rem;background:#eff6ff;border:1px solid rgba(0,99,247,.25);border-radius:10px;padding:.85rem 1rem;margin-top:.75rem;font-size:13.5px;color:#1e40af;line-height:1.65;}
-/* PHONE */
-.steps-phone-wrap{align-self:center;position:sticky;top:calc(50vh - 280px);}
-.steps-phone{width:240px;margin:0 auto;}
-.phone-shell{background:var(--navy);border-radius:40px;padding:10px;box-shadow:0 32px 64px rgba(0,0,0,.2),0 0 0 1.5px rgba(255,255,255,.08);}
-.phone-notch{width:80px;height:24px;background:var(--navy);border-radius:0 0 14px 14px;margin:0 auto 6px;position:relative;}
-.phone-notch::before{content:'';position:absolute;width:8px;height:8px;background:rgba(255,255,255,.1);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);}
-.phone-screen{background:#fff;border-radius:30px;overflow:hidden;}
-.scr-hdr{padding:14px 14px 10px;display:flex;align-items:center;justify-content:space-between;background:#0063F7;}
-.scr-hdr-name{font-size:13px;font-weight:900;color:#fff;}
-.scr-badge{font-size:9.5px;font-weight:800;background:rgba(255,255,255,.25);color:#fff;padding:3px 8px;border-radius:8px;}
-.scr-reward-block{margin:10px 12px;background:var(--off);border-radius:10px;padding:11px 12px;}
-.scr-r-lbl{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#0063F7;}
-.scr-r-val{font-size:.95rem;font-weight:900;color:var(--navy);margin-top:3px;}
-.scr-r-sub{font-size:10px;color:var(--gray);margin-top:5px;}
-.scr-chart-mini{margin:0 12px 10px;background:#f0f6ff;border-radius:8px;overflow:hidden;height:60px;display:flex;align-items:flex-end;}
-.scr-steps-mini{padding:0 12px 6px;}
-.scr-step-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--border);}
-.scr-step-row:last-child{border-bottom:none;}
-.scr-step-dot{width:22px;height:22px;border-radius:50%;background:#0063F7;color:#fff;font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.scr-step-txt{font-size:10px;color:var(--navy);font-weight:600;line-height:1.3;}
-.scr-btn-row{margin:8px 12px 12px;}
-.scr-btn{display:block;background:#0063F7;color:#fff;font-weight:900;font-size:12px;text-align:center;padding:10px;border-radius:9px;text-decoration:none;}
 /* TRUST */
 .trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:4rem;}
 .trust-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;}
@@ -114,7 +92,7 @@
 .breadcrumb{background:var(--off);border-bottom:1px solid var(--border);padding:.7rem 2rem;font-size:13px;color:var(--gray);}
 .breadcrumb a{color:var(--gold);font-weight:700;}
 .sp-disc{background:var(--off);border-radius:12px;padding:1.25rem 1.5rem;font-size:12.5px;color:var(--gray);line-height:1.75;}
-@media(max-width:960px){.sp-hero-inner{grid-template-columns:1fr;gap:2.5rem;}.steps-wrap{grid-template-columns:1fr;}.steps-phone-wrap{display:none;}.reward-blocks{grid-template-columns:1fr;}.cta-banner{grid-template-columns:1fr;text-align:center;}.cta-banner-btn{width:100%;justify-content:center;}.trust-row{grid-template-columns:1fr 1fr;}}
+@media(max-width:960px){.sp-hero-inner{grid-template-columns:1fr;gap:2.5rem;}.reward-blocks{grid-template-columns:1fr;}.cta-banner{grid-template-columns:1fr;text-align:center;}.cta-banner-btn{width:100%;justify-content:center;}.trust-row{grid-template-columns:1fr 1fr;}}
 @media(max-width:600px){.sp-hero{padding:3.5rem 1.25rem 3rem;}.sp-body{padding:3rem 1.25rem;}.trust-row{grid-template-columns:1fr;}}
 </style>
 <script type="application/ld+json">
@@ -273,37 +251,6 @@
           </div>
         </li>
       </ol>
-      <!-- Sticky phone -->
-      <div class="steps-phone-wrap">
-        <div class="steps-phone">
-          <div class="phone-shell">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <div class="scr-hdr"><span class="scr-hdr-name">Webull</span><span class="scr-badge">MY ✓ SC Licensed</span></div>
-              <div class="scr-reward-block">
-                <div class="scr-r-lbl">BursaNews Referral Rewards</div>
-                <div class="scr-r-val">RM300 Trading Vouchers</div>
-                <div class="scr-r-sub">No promo code needed</div>
-              </div>
-              <div class="scr-chart-mini">
-                <svg viewBox="0 0 200 55" style="width:100%;height:55px;" aria-hidden="true">
-                  <polyline points="0,48 25,40 50,42 80,30 110,22 140,15 170,9 200,4" fill="none" stroke="#0063F7" stroke-width="2" stroke-linecap="round"/>
-                  <polyline points="0,48 25,40 50,42 80,30 110,22 140,15 170,9 200,4 200,55 0,55" fill="url(#wbg2)" stroke="none"/>
-                  <defs><linearGradient id="wbg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0063F7" stop-opacity=".2"/><stop offset="100%" stop-color="#0063F7" stop-opacity="0"/></linearGradient></defs>
-                </svg>
-              </div>
-              <div class="scr-steps-mini">
-                <div class="scr-step-row"><div class="scr-step-dot">1</div><div class="scr-step-txt">Use BursaNews link ← key step</div></div>
-                <div class="scr-step-row"><div class="scr-step-dot">2</div><div class="scr-step-txt">Sign up + eKYC</div></div>
-                <div class="scr-step-row" style="background:#eff6ff;border-radius:8px;padding:6px 8px;margin:4px -2px;border:none;"><div class="scr-step-dot">3</div><div class="scr-step-txt" style="color:#0063F7;font-weight:800;">RM300 vouchers credited ✓</div></div>
-                <div class="scr-step-row"><div class="scr-step-dot">4</div><div class="scr-step-txt">Deposit RM5,000 (60 days)</div></div>
-                <div class="scr-step-row"><div class="scr-step-dot">5</div><div class="scr-step-txt">Deposit rewards credited</div></div>
-              </div>
-              <div class="scr-btn-row"><a href="https://www.webull.com.my/k/bursanews" target="_blank" rel="noopener" class="scr-btn">Sign Up via BursaNews Link</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
