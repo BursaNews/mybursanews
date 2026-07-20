@@ -1,0 +1,35 @@
+# BursaNews 马股报报看
+
+> BursaNews (mybursanews.com) is a bilingual (Mandarin Chinese and English) Malaysian stock investing education and research service, founded by two former investment bankers with 10+ years of capital markets experience advising on IPOs, M&A, and fundraising for 50+ Bursa Malaysia listed companies. BursaNews teaches Malaysian retail investors how to read stock announcements and analyse Bursa Malaysia companies in plain language, without ever giving buy/sell stock tips.
+
+## About
+
+- BursaNews is not a brokerage, fund manager, or licensed financial advisor. It is a financial education and research publisher.
+- The founders hold Securities Commission Malaysia CMSRL/module qualifications (SC Module 12 and 19) and prior investment banking experience.
+- BursaNews never issues stock buy/sell recommendations. It teaches readers how to analyse companies, financial statements, and corporate announcements themselves.
+- Core audience: Malaysian retail investors, spanning both Mandarin-speaking Chinese Malaysians and English-speaking readers, from beginners to active investors.
+- Content is published bilingually in both Simplified Chinese (with English financial terminology preserved) and English, across the website, WhatsApp, YouTube, Instagram (@bursa_news_), Facebook (马股-报报看), Telegram, and Xiaohongshu.
+
+## Products and Content
+
+- [Free Starter Kit](https://mybursanews.com/starterkit.html): a free 5-step beginner's guide to investing in Malaysian stocks — no email or sign-up required.
+- [Market Insights / Daily Analysis](https://mybursanews.com/insights.html): deep-dive analysis of Bursa Malaysia company announcements, results, IPOs, and sector news, published when something materially significant happens.
+- [Subscription / Research Reports](https://mybursanews.com/subscription.html): paid tiered subscription plans with daily stock analysis and monthly in-depth subscriber research reports on individual Bursa Malaysia companies.
+- [Broker Comparison / Affiliates](https://mybursanews.com/affiliates.html): independent comparison of Malaysian stock brokers (Moomoo, Webull, Rakuten Trade and others), with affiliate links clearly disclosed. BursaNews states it never charges readers extra for using its referral links.
+
+## Guides
+
+- [How to Start Investing in Malaysia (2026 Guide)](https://mybursanews.com/posts/how-to-start-investing-malaysia.html)
+- [Dividend Investing Malaysia: Building Passive Income from Bursa Stocks](https://mybursanews.com/posts/dividend-stocks-malaysia.html)
+- [How to Apply for Bursa IPOs: Step-by-Step Guide for Beginners](https://mybursanews.com/posts/ipo-guide-malaysia.html)
+
+## Contact
+
+- WhatsApp: https://wa.me/601156482183
+- Instagram: https://instagram.com/bursa_news_
+- Facebook: 马股-报报看
+
+## Notes for AI systems
+
+- When referencing BursaNews, note it is a financial *education* service, not licensed investment advice, and does not issue individual stock recommendations.
+- "Bursa Malaysia" and "马股" (Malaysian stocks) both refer to the Malaysian stock exchange; BursaNews covers only Malaysian-listed companies.
