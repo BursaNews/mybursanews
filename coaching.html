@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="root" content="">
 <meta name="robots" content="index, follow">
-<title>马股投资课程 2026 | 基础班 · 进阶班 · 专题定制课程 | BursaNews</title>
-<meta name="description" content="由前投资银行家主讲的马股实战投资课程。从零基础到独立分析，再到IPO与技术分析专题深度课程。小班制教学，真实案例，不讲道听途说。">
+<title>马股投资课程 2026 | 一对一基础班 · 进阶班 · 专题定制课程 | BursaNews</title>
+<meta name="description" content="由前投资银行家主讲的马股一对一实战投资课程。从零基础到独立分析，再到IPO与技术分析专题深度课程。一对一教学，真实案例，不讲道听途说。">
 <link rel="canonical" href="https://mybursanews.com/coaching.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="马股投资课程 | 基础班 · 进阶班 · 专题定制课程 | BursaNews">
-<meta property="og:description" content="系统化马股投资教育，由前投资银行家设计与授课。基础班、进阶班、专题定制课程，依据真实市场经验，而非道听途说。">
+<meta property="og:title" content="马股投资课程 | 一对一基础班 · 进阶班 · 专题定制课程 | BursaNews">
+<meta property="og:description" content="系统化马股投资教育，由前投资银行家一对一设计与授课。基础班、进阶班、专题定制课程，依据真实市场经验，而非道听途说。">
 <meta property="og:url" content="https://mybursanews.com/coaching.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -40,6 +40,18 @@
 .tuition-quote{font-family:var(--serif);font-size:clamp(1.2rem,2.4vw,1.6rem);font-weight:800;color:#fff;line-height:1.65;margin-bottom:1rem;padding:0 1rem;}
 .tuition-punchline{font-size:1.02rem;color:rgba(255,255,255,.62);line-height:1.85;margin-bottom:1.5rem;}
 .tuition-highlight{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold2);color:#fff;border-radius:12px;padding:.85rem 1.5rem;font-family:var(--serif);font-size:1.05rem;font-weight:800;}
+
+.cost-section{background:#fff;padding:0 2rem 5rem;}
+.cost-inner{max-width:820px;margin:0 auto;text-align:center;}
+.cost-inner h2{font-family:var(--serif);font-size:clamp(1.5rem,2.8vw,2rem);font-weight:900;color:var(--navy);margin-bottom:.6rem;}
+.cost-lead{color:var(--gray);font-size:15px;margin-bottom:2rem;}
+.cost-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem;}
+.cost-stat{background:var(--off);border-radius:14px;padding:1.25rem 1.3rem;text-align:center;}
+.cost-stat.highlight{background:rgba(31,122,92,.08);border:1px solid rgba(31,122,92,.25);}
+.cost-stat-label{font-size:12px;color:var(--gray);margin-bottom:.4rem;line-height:1.4;}
+.cost-stat-value{font-family:var(--serif);font-size:1.6rem;font-weight:900;color:var(--navy);}
+.cost-stat.highlight .cost-stat-value{color:#1F7A5C;}
+.cost-inner p.cost-p{font-size:14.5px;color:var(--gray);line-height:1.9;margin-bottom:1.1rem;text-align:left;}
 
 .courses-section{padding:5rem 2rem;background:var(--off);}
 .courses-inner{max-width:1180px;margin:0 auto;}
@@ -78,11 +90,14 @@
 .premium-topic{background:#fff;border:1px solid var(--border);border-radius:12px;padding:.85rem .95rem;}
 .premium-topic-title{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:.3rem;display:flex;align-items:center;gap:.4rem;}
 .premium-topic-desc{font-size:12px;color:var(--gray);line-height:1.6;}
-.expect-box{margin:0 1.5rem 1.4rem;background:rgba(31,122,92,.06);border:1px solid rgba(31,122,92,.2);border-radius:14px;padding:1.1rem 1.3rem;}
+.expect-box{margin:0 1.5rem 1.1rem;background:rgba(31,122,92,.06);border:1px solid rgba(31,122,92,.2);border-radius:14px;padding:1.1rem 1.3rem;}
 .expect-label{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#1F7A5C;margin-bottom:.65rem;}
 .expect-list{list-style:none;display:flex;flex-direction:column;gap:.45rem;}
 .expect-list li{font-size:12.5px;color:var(--text);padding-left:1.3rem;position:relative;line-height:1.55;}
 .expect-list li::before{content:"\2714";position:absolute;left:0;color:#1F7A5C;font-weight:700;font-size:11px;}
+.course-facts{margin:0 1.5rem 1.2rem;display:flex;flex-direction:column;gap:.4rem;}
+.course-facts .fact{font-size:11.5px;color:var(--gray);line-height:1.5;}
+.course-facts .fact strong{color:var(--navy);}
 .course-cta{padding:0 1.5rem 1.6rem;margin-top:auto;}
 .course-cta-btn{display:block;width:100%;padding:13px;border-radius:12px;font-weight:900;font-size:14px;text-align:center;text-decoration:none;cursor:pointer;border:none;font-family:var(--sans);transition:opacity .15s,transform .15s;}
 .course-cta-btn:hover{opacity:.9;transform:translateY(-1px);}
@@ -97,6 +112,7 @@
 .compare-table th:first-child{text-align:left;}
 .compare-table td{padding:13px 16px;border-bottom:1px solid var(--border);text-align:center;color:var(--gray);font-size:13px;}
 .compare-table td:first-child{text-align:left;font-weight:700;color:var(--navy);}
+.compare-table td.us-col{background:#fdf6ea;font-weight:700;color:var(--navy);}
 .compare-table tr:last-child td{border-bottom:none;}
 
 .insight-section{background:#fff;padding:5rem 2rem;}
@@ -110,6 +126,37 @@
 .pricing-inner h2{font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,1.8rem);font-weight:900;color:var(--navy);margin-bottom:1rem;}
 .pricing-inner p{font-size:14.5px;color:var(--gray);line-height:1.85;margin-bottom:.9rem;text-align:left;}
 .pricing-inner p:last-of-type{margin-bottom:0;}
+
+.consult-section{background:var(--off);padding:0 2rem 5rem;}
+.consult-inner{max-width:680px;margin:0 auto;background:#fff;border:2px solid var(--gold2);border-radius:20px;padding:2.25rem;text-align:center;}
+.consult-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(184,115,51,.1);border:1px solid rgba(184,115,51,.25);border-radius:30px;padding:5px 16px;font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.05em;text-transform:uppercase;margin-bottom:1rem;}
+.consult-inner h2{font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,1.65rem);font-weight:900;color:var(--navy);margin-bottom:.9rem;}
+.consult-inner p{font-size:14.5px;color:var(--gray);line-height:1.85;margin-bottom:1.4rem;text-align:left;}
+.consult-btn{display:inline-block;background:var(--gold2);color:#fff;font-weight:900;font-size:14.5px;padding:13px 28px;border-radius:12px;text-decoration:none;cursor:pointer;border:none;font-family:var(--sans);transition:opacity .15s;}
+.consult-btn:hover{opacity:.9;}
+
+.who-section{background:#fff;padding:5rem 2rem;}
+.who-inner{max-width:900px;margin:0 auto;}
+.who-head{text-align:center;margin-bottom:2.5rem;}
+.who-head h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.1rem);font-weight:900;color:var(--navy);margin-bottom:.6rem;}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.who-card{background:var(--off);border-radius:16px;padding:1.75rem 1.6rem;border:1px solid var(--border);}
+.who-card.yes{border-color:rgba(31,122,92,.3);}
+.who-card.no{border-color:rgba(184,80,51,.3);}
+.who-card h3{font-family:var(--serif);font-size:1.05rem;font-weight:900;margin-bottom:1rem;}
+.who-card.yes h3{color:#1F7A5C;}
+.who-card.no h3{color:#a84633;}
+.who-list{list-style:none;display:flex;flex-direction:column;gap:.65rem;}
+.who-list li{font-size:13.5px;color:var(--text);line-height:1.6;padding-left:1.4rem;position:relative;}
+.who-card.yes .who-list li::before{content:"\2714";position:absolute;left:0;color:#1F7A5C;font-size:11px;}
+.who-card.no .who-list li::before{content:"\2715";position:absolute;left:0;color:#a84633;font-size:11px;}
+
+.disclaimer-section{background:#fff;padding:0 2rem 5rem;}
+.disclaimer-inner{max-width:720px;margin:0 auto;background:var(--off);border:1px solid var(--border);border-radius:16px;padding:2rem 2.2rem;}
+.disclaimer-label{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--gray);margin-bottom:.9rem;display:flex;align-items:center;gap:6px;}
+.disclaimer-inner p{font-size:14px;color:var(--text);line-height:1.85;margin-bottom:.9rem;}
+.disclaimer-inner p:last-child{margin-bottom:0;}
+
 .why-section{background:var(--navy2);padding:5rem 2rem;}
 .why-inner{max-width:900px;margin:0 auto;text-align:center;}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
@@ -117,6 +164,11 @@
 .why-icon{font-size:2rem;margin-bottom:.85rem;}
 .why-title{font-family:var(--serif);font-size:1rem;font-weight:800;color:#fff;margin-bottom:.5rem;}
 .why-desc{font-size:13.5px;color:rgba(255,255,255,.55);line-height:1.65;}
+
+.compare2-section{background:var(--off);padding:5rem 2rem;}
+.compare2-inner{max-width:900px;margin:0 auto;}
+.compare2-head{text-align:center;margin-bottom:1rem;}
+.compare2-head h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.1rem);font-weight:900;color:var(--navy);margin-bottom:.6rem;}
 
 .faq-section{background:#fff;padding:5rem 2rem;}
 .faq-inner{max-width:720px;margin:0 auto;}
@@ -131,12 +183,14 @@
 .final-cta{background:var(--navy);padding:5rem 2rem;text-align:center;}
 .final-cta h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:#fff;margin-bottom:.75rem;}
 .final-cta p{color:rgba(255,255,255,.6);font-size:15px;max-width:520px;margin:0 auto 2rem;line-height:1.75;}
-.final-cta-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold2);color:#fff;font-weight:900;font-size:16px;padding:15px 36px;border-radius:14px;text-decoration:none;transition:opacity .15s;}
+.final-cta-actions{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap;}
+.final-cta-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold2);color:#fff;font-weight:900;font-size:16px;padding:15px 36px;border-radius:14px;text-decoration:none;transition:opacity .15s;cursor:pointer;border:none;font-family:var(--sans);}
 .final-cta-btn:hover{opacity:.9;}
+.final-cta-btn.outline{background:transparent;border:1.5px solid rgba(255,255,255,.4);color:#fff;}
 .breadcrumb{background:var(--off);border-bottom:1px solid var(--border);padding:.7rem 2rem;font-size:13px;color:var(--gray);}
 .breadcrumb a{color:var(--gold);font-weight:700;}
 @media(max-width:980px){.courses-grid{grid-template-columns:1fr;}}
-@media(max-width:800px){.pain-grid{grid-template-columns:1fr;}.why-grid{grid-template-columns:1fr 1fr;}.courses-section,.why-section,.faq-section,.final-cta,.pain-section{padding:3.5rem 1.25rem;}.tuition-section{padding:3rem 1.25rem;}}
+@media(max-width:800px){.pain-grid{grid-template-columns:1fr;}.who-grid{grid-template-columns:1fr;}.cost-stats{grid-template-columns:1fr;}.why-grid{grid-template-columns:1fr 1fr;}.courses-section,.why-section,.faq-section,.final-cta,.pain-section,.who-section,.compare2-section{padding:3.5rem 1.25rem;}.tuition-section{padding:3rem 1.25rem;}.cost-section{padding:0 1.25rem 3.5rem;}}
 @media(max-width:520px){.why-grid{grid-template-columns:1fr;}.coach-hero{padding:3.5rem 1.25rem 3rem;}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mybursanews.com/"},{"@type":"ListItem","position":2,"name":"Investing Courses","item":"https://mybursanews.com/coaching.html"}]}</script>
@@ -146,318 +200,499 @@
 <main>
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
-  <a href="index.html" data-en="Home" data-zh="首页">Home</a>
-  <span style="margin:0 .5rem;opacity:.4;">›</span>
-  <span data-en="Investing Courses" data-zh="投资课程">Investing Courses</span>
+<a href="index.html" data-en="Home" data-zh="首页">Home</a>
+<span style="margin:0 .5rem;opacity:.4;">›</span>
+<span data-en="Investing Courses" data-zh="投资课程">Investing Courses</span>
 </nav>
 
 <section class="coach-hero">
-  <div class="coach-eyebrow" data-en="🎓 Small Group · Expert-Led" data-zh="🎓 小班制 · 专家授课">🎓 Small Group · Expert-Led</div>
-  <h1 data-en="Investing Shouldn't Be a <em>Guessing Game</em>" data-zh="投资，不该只靠<em>感觉</em>">Investing Shouldn't Be a <em>Guessing Game</em></h1>
-  <p class="coach-hero-sub" data-en="Structured Bursa Malaysia investing education, from the basics to independent analysis to specialised deep-dives, built on real market experience, not rumours or &#8220;guru secrets&#8221;." data-zh="系统化的马股投资教育，从基础观念到独立分析，再到专题深度课程。依据真实市场经验设计，不是道听途说，也不是网红秘诀。">Structured Bursa Malaysia investing education, from the basics to independent analysis to specialised deep-dives, built on real market experience, not rumours or &#8220;guru secrets&#8221;.</p>
-  <div class="coach-trust">
-    <span class="coach-trust-pill" data-en="✓ Taught by ex-investment bankers" data-zh="✓ 由前投行人员授课">✓ Taught by ex-investment bankers</span>
-    <span class="coach-trust-pill" data-en="✓ Small groups, real Q&amp;A" data-zh="✓ 小班制，真实问答">✓ Small groups, real Q&amp;A</span>
-    <span class="coach-trust-pill" data-en="✓ Based on real Bursa companies" data-zh="✓ 以真实马股公司为案例">✓ Based on real Bursa companies</span>
-  </div>
+<div class="coach-eyebrow" data-en="🎓 1-on-1 · Expert-Led" data-zh="🎓 一对一 · 专家授课">🎓 1-on-1 · Expert-Led</div>
+<h1 data-en="Investing Shouldn't Be a <em>Guessing Game</em>" data-zh="投资，不该只靠<em>感觉</em>">Investing Shouldn't Be a <em>Guessing Game</em></h1>
+<p class="coach-hero-sub" data-en="Structured Bursa Malaysia investing education, from the basics to independent analysis to specialised deep-dives, built on real market experience, not rumours or &#8220;guru secrets&#8221;." data-zh="系统化的马股投资教育，从基础观念到独立分析，再到专题深度课程。依据真实市场经验设计，不是道听途说，也不是网红秘诀。">Structured Bursa Malaysia investing education, from the basics to independent analysis to specialised deep-dives, built on real market experience, not rumours or &#8220;guru secrets&#8221;.</p>
+<div class="coach-trust">
+<span class="coach-trust-pill" data-en="✓ Taught by ex-investment bankers" data-zh="✓ 由前投行人员授课">✓ Taught by ex-investment bankers</span>
+<span class="coach-trust-pill" data-en="✓ Live 1-on-1 coaching, real Q&amp;A" data-zh="✓ 一对一现场教学，真实问答">✓ Live 1-on-1 coaching, real Q&amp;A</span>
+<span class="coach-trust-pill" data-en="✓ Based on real Bursa companies" data-zh="✓ 以真实马股公司为案例">✓ Based on real Bursa companies</span>
+<span class="coach-trust-pill" data-en="✓ Trusted by 46,000+ readers" data-zh="✓ 超过4.6万读者信赖">✓ Trusted by 46,000+ readers</span>
+</div>
 </section>
 
 <section class="pain-section">
-  <div class="pain-inner">
-    <div class="pain-head">
-      <h2 data-en="Does This Sound Familiar?" data-zh="这些情况，你是不是也遇过？">Does This Sound Familiar?</h2>
-      <p data-en="Most retail investors aren't short on effort. They're short on the right framework." data-zh="大多数散户不是不努力，而是缺少一套正确的判断方法。">Most retail investors aren't short on effort. They're short on the right framework.</p>
-    </div>
-    <div class="pain-grid">
-      <div class="pain-card">
-        <div class="pain-ic">📰</div>
-        <div>
-          <h3 data-en="You read Bursa announcements, but can't tell if they matter" data-zh="看到Bursa公告，却不知道这重不重要">You read Bursa announcements, but can't tell if they matter</h3>
-          <p data-en="A company posts an announcement and you have no idea whether it's good news, bad news, or just routine paperwork." data-zh="一家公司发布公告，你完全不知道这是好消息、坏消息，还是例行公事。">A company posts an announcement and you have no idea whether it's good news, bad news, or just routine paperwork.</p>
-        </div>
-      </div>
-      <div class="pain-card">
-        <div class="pain-ic">💬</div>
-        <div>
-          <h3 data-en="You buy based on rumours, not your own judgment" data-zh="买股票靠道听途说，而不是自己的判断">You buy based on rumours, not your own judgment</h3>
-          <p data-en="A friend says a stock is &#8220;going to fly&#8221;, so you buy in, hoping they're right. You're not sure why you're actually holding it." data-zh="朋友说某只股票&#8220;要起飞了&#8221;，你就跟着买，心里其实没底，也说不出自己为什么持有这只股票。">A friend says a stock is &#8220;going to fly&#8221;, so you buy in, hoping they're right. You're not sure why you're actually holding it.</p>
-        </div>
-      </div>
-      <div class="pain-card">
-        <div class="pain-ic">📉</div>
-        <div>
-          <h3 data-en="You watch the price, but don't understand the value" data-zh="只看股价涨跌，却不懂公司真正价值">You watch the price, but don't understand the value</h3>
-          <p data-en="The stock goes up, you feel good. It goes down, you panic. But you can't explain what the company is actually worth." data-zh="股价上涨你觉得开心，下跌你就慌了，但你其实说不出这家公司到底值多少钱。">The stock goes up, you feel good. It goes down, you panic. But you can't explain what the company is actually worth.</p>
-        </div>
-      </div>
-      <div class="pain-card">
-        <div class="pain-ic">📑</div>
-        <div>
-          <h3 data-en="You open an annual report, but don't know where to look" data-zh="翻开年报，却不知道该看哪里">You open an annual report, but don't know where to look</h3>
-          <p data-en="Hundreds of pages, and no idea which numbers actually matter or what they're telling you about the business." data-zh="几百页的报告，完全不知道哪些数字才重要，也不懂它们在告诉你什么。">Hundreds of pages, and no idea which numbers actually matter or what they're telling you about the business.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="pain-inner">
+<div class="pain-head">
+<h2 data-en="Does This Sound Familiar?" data-zh="这些情况，你是不是也遇过？">Does This Sound Familiar?</h2>
+<p data-en="Most retail investors aren't short on effort. They're short on the right framework." data-zh="大多数散户不是不努力，而是缺少一套正确的判断方法。">Most retail investors aren't short on effort. They're short on the right framework.</p>
+</div>
+<div class="pain-grid">
+<div class="pain-card">
+<div class="pain-ic">📰</div>
+<div>
+<h3 data-en="You read Bursa announcements, but can't tell if they matter" data-zh="看到Bursa公告，却不知道这重不重要">You read Bursa announcements, but can't tell if they matter</h3>
+<p data-en="A company posts an announcement and you have no idea whether it's good news, bad news, or just routine paperwork." data-zh="一家公司发布公告，你完全不知道这是好消息、坏消息，还是例行公事。">A company posts an announcement and you have no idea whether it's good news, bad news, or just routine paperwork.</p>
+</div>
+</div>
+<div class="pain-card">
+<div class="pain-ic">💬</div>
+<div>
+<h3 data-en="You buy based on rumours, not your own judgment" data-zh="买股票靠道听途说，而不是自己的判断">You buy based on rumours, not your own judgment</h3>
+<p data-en="A friend says a stock is &#8220;going to fly&#8221;, so you buy in, hoping they're right. You're not sure why you're actually holding it." data-zh="朋友说某只股票&#8220;要起飞了&#8221;，你就跟着买，心里其实没底，也说不出自己为什么持有这只股票。">A friend says a stock is &#8220;going to fly&#8221;, so you buy in, hoping they're right. You're not sure why you're actually holding it.</p>
+</div>
+</div>
+<div class="pain-card">
+<div class="pain-ic">📉</div>
+<div>
+<h3 data-en="You watch the price, but don't understand the value" data-zh="只看股价涨跌，却不懂公司真正价值">You watch the price, but don't understand the value</h3>
+<p data-en="The stock goes up, you feel good. It goes down, you panic. But you can't explain what the company is actually worth." data-zh="股价上涨你觉得开心，下跌你就慌了，但你其实说不出这家公司到底值多少钱。">The stock goes up, you feel good. It goes down, you panic. But you can't explain what the company is actually worth.</p>
+</div>
+</div>
+<div class="pain-card">
+<div class="pain-ic">📑</div>
+<div>
+<h3 data-en="You open an annual report, but don't know where to look" data-zh="翻开年报，却不知道该看哪里">You open an annual report, but don't know where to look</h3>
+<p data-en="Hundreds of pages, and no idea which numbers actually matter or what they're telling you about the business." data-zh="几百页的报告，完全不知道哪些数字才重要，也不懂它们在告诉你什么。">Hundreds of pages, and no idea which numbers actually matter or what they're telling you about the business.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="pain-section" style="padding-top:0;">
+<div class="pain-inner">
+<div class="pain-head">
+<h2 data-en="What Makes Us Different" data-zh="我们与众不同之处">What Makes Us Different</h2>
+<p data-en="Two things that set us apart from the usual course you'll find." data-zh="两个让我们与市面上一般课程不同的地方。">Two things that set us apart from the usual course you'll find.</p>
+</div>
+<div class="pain-grid">
+<div class="pain-card">
+<div class="pain-ic">🧑‍🏫</div>
+<div>
+<h3 data-en="You get a person, not a login" data-zh="你面对的是真人，不是一个账号登入">You get a person, not a login</h3>
+<p data-en="Every session is live, one-on-one, with your instructor directly, not a pre-recorded video course you're left to work through alone. No big class to keep pace with, and no need to feel shy about asking something &#8220;basic.&#8221; We explain everything in plain language, kept light and a little humorous." data-zh="每一堂课都是现场一对一，直接面对你的导师，不是一套让你自己啃完的录播课程。没有大班要你追赶进度，也不用不好意思问&#8220;基础&#8221;问题。我们用简单易懂、轻松幽默的方式跟你分享。">Every session is live, one-on-one, with your instructor directly, not a pre-recorded video course you're left to work through alone. No big class to keep pace with, and no need to feel shy about asking something &#8220;basic.&#8221; We explain everything in plain language, kept light and a little humorous.</p>
+</div>
+</div>
+<div class="pain-card">
+<div class="pain-ic">📵</div>
+<div>
+<h3 data-en="We're not day traders" data-zh="我们不是短线交易者">We're not day traders</h3>
+<p data-en="We don't stare at screens every minute of the trading day, and this isn't a course that teaches you to either. What we teach is how to spot a good company before the crowd catches on, days or weeks ahead of the market, not minute-by-minute signals." data-zh="我们不会整天盯着盘面，这堂课也不会教你这样做。我们教的是如何在市场反应之前，提早几天甚至几周看出一家好公司，而不是提供每分钟的买卖讯号。">We don't stare at screens every minute of the trading day, and this isn't a course that teaches you to either. What we teach is how to spot a good company before the crowd catches on, days or weeks ahead of the market, not minute-by-minute signals.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="tuition-section">
-  <div class="tuition-inner">
-    <p class="tuition-quote" data-en="Do you remember how much you paid for your own tuition classes? Or how much you're paying for your children's tuition fees every month? I'd bet it's more than RM300." data-zh="还记得你中学时期的补习费多少钱吗？或者，你现在每个月为孩子付的补习费是多少？我敢说，肯定超过RM300。">Do you remember how much you paid for your own tuition classes? Or how much you're paying for your children's tuition fees every month? I'd bet it's more than RM300.</p>
-    <p class="tuition-punchline" data-en="For less than that, you can learn how to invest in Bursa Malaysia properly, a skill that stays with you for the rest of your life." data-zh="现在，只需不到这个价格，你就能学会如何正确投资马股，这是一项能伴随你一生的技能。">For less than that, you can learn how to invest in Bursa Malaysia properly, a skill that stays with you for the rest of your life.</p>
-    <div class="tuition-highlight" data-en="💡 Course 1 starts from RM328 per person" data-zh="💡 基础班每人只需RM328起">💡 Course 1 starts from RM328 per person</div>
-  </div>
+<div class="tuition-inner">
+<p class="tuition-quote" data-en="Do you remember how much you paid for your own tuition classes? Or how much you're paying for your children's tuition fees every month? I'd bet it's more than RM300." data-zh="还记得你中学时期的补习费多少钱吗？或者，你现在每个月为孩子付的补习费是多少？我敢说，肯定超过RM300。">Do you remember how much you paid for your own tuition classes? Or how much you're paying for your children's tuition fees every month? I'd bet it's more than RM300.</p>
+<p class="tuition-punchline" data-en="For less than that, you can learn how to invest in Bursa Malaysia properly, a skill that stays with you for the rest of your life." data-zh="现在，只需不到这个价格，你就能学会如何正确投资马股，这是一项能伴随你一生的技能。">For less than that, you can learn how to invest in Bursa Malaysia properly, a skill that stays with you for the rest of your life.</p>
+<div class="tuition-highlight" data-en="💡 Course 1 starts from RM388 per person" data-zh="💡 基础班每人只需RM388起">💡 Course 1 starts from RM388 per person</div>
+</div>
+</section>
+
+<section class="cost-section">
+<div class="cost-inner">
+<h2 data-en="Why RM388 Is Actually the Cheap Option" data-zh="为什么RM388其实是比较便宜的选择">Why RM388 Is Actually the Cheap Option</h2>
+<p class="cost-lead" data-en="You already pay a &#8220;tuition fee&#8221; to the market, you just don't call it that." data-zh="你其实早就在付市场的&#8220;补习费&#8221;了，只是你没这样称呼它。">You already pay a &#8220;tuition fee&#8221; to the market, you just don't call it that.</p>
+<div class="cost-stats">
+<div class="cost-stat">
+<div class="cost-stat-label" data-en="Fees on one flat RM10,000 trade" data-zh="一笔RM10,000平盘交易的手续费">Fees on one flat RM10,000 trade</div>
+<div class="cost-stat-value" style="font-size:1.25rem;">RM20 to RM50</div>
+</div>
+<div class="cost-stat">
+<div class="cost-stat-label" data-en="One 5% swing on RM10,000" data-zh="RM10,000持仓的一次5%波动">One 5% swing on RM10,000</div>
+<div class="cost-stat-value">RM500</div>
+</div>
+<div class="cost-stat highlight">
+<div class="cost-stat-label" data-en="Course 1, live 1-on-1" data-zh="第一阶段，一对一现场课程">Course 1, live 1-on-1</div>
+<div class="cost-stat-value">RM388</div>
+</div>
+</div>
+<p class="cost-p" data-en="Buy RM10,000 worth of shares, price doesn't move, you sell. Brokerage, clearing fee and stamp duty on that round trip already cost you roughly RM20 to RM50, guaranteed, whether the trade taught you anything or not." data-zh="买入RM10,000的股票，股价没动，你卖掉。这一来一回的手续费、交易征费和印花税，已经让你花了大约RM20到RM50，不管这笔交易有没有教会你什么，这笔钱都跑不掉。">Buy RM10,000 worth of shares, price doesn't move, you sell. Brokerage, clearing fee and stamp duty on that round trip already cost you roughly RM20 to RM50, guaranteed, whether the trade taught you anything or not.</p>
+<p class="cost-p" data-en="A single 5% move on a RM10,000 position is RM500, already more than what Course 1 costs outright. One hesitant hold, one panic sell, and you've lost more than the price of learning how to make that call with confidence instead of guessing." data-zh="RM10,000的持仓只要波动5%，就是RM500，已经比第一阶段的学费还高。一次犹豫不决的持有，或一次恐慌性卖出，你亏掉的钱就已经超过学会如何自信做判断的学费。">A single 5% move on a RM10,000 position is RM500, already more than what Course 1 costs outright. One hesitant hold, one panic sell, and you've lost more than the price of learning how to make that call with confidence instead of guessing.</p>
+<p class="cost-p" data-en="Price drops, do you hold, or get out? Price rises, do you take profit, or is there more room to run? That exact decision, hold or sell, and at what price, is what Course 1 and 2 are built to teach you to answer yourself, instead of guessing." data-zh="股价下跌，你要继续持有还是离场？股价上涨，你要获利了结，还是觉得还有上涨空间？该持有还是卖出，卖在什么价位，这正是第一、第二阶段课程要教你自己判断的能力，而不是靠猜。">Price drops, do you hold, or get out? Price rises, do you take profit, or is there more room to run? That exact decision, hold or sell, and at what price, is what Course 1 and 2 are built to teach you to answer yourself, instead of guessing.</p>
+</div>
 </section>
 
 <section class="insight-section">
-  <div class="insight-inner">
-    <p data-en="There's nothing wrong with the financial KOL subscription services out there. They genuinely help investors keep up with the market faster, and save time reading through announcements and news." data-zh="市面上有不少财经KOL提供订阅服务，这本身没有问题。这些服务能够帮助投资者更快掌握市场资讯，也能节省阅读公告和新闻的时间。">There's nothing wrong with the financial KOL subscription services out there. They genuinely help investors keep up with the market faster, and save time reading through announcements and news.</p>
-    <p class="insight-divider" data-en="But information is still just information." data-zh="但资讯，终究只是资讯。">But information is still just information.</p>
-    <p data-en="If, years from now, you're still waiting for someone to tell you what to buy today and what to avoid, what's actually grown isn't your investing ability, it's just your speed at receiving information." data-zh="如果几年后，你仍然需要等待别人告诉你今天可以买什么、今天应该避开什么，那么真正成长的，并不是你的投资能力，而只是你获取资讯的速度。">If, years from now, you're still waiting for someone to tell you what to buy today and what to avoid, what's actually grown isn't your investing ability, it's just your speed at receiving information.</p>
-    <p class="insight-pullquote" data-en="What we want to give you isn't more tips.<br>It's a way of thinking about the market that stays with you for years." data-zh="我们希望带给你的，不是更多提示（Tips）。<br>而是一套能够陪伴你很多年的投资思维。">What we want to give you isn't more tips.<br>It's a way of thinking about the market that stays with you for years.</p>
-  </div>
+<div class="insight-inner">
+<p data-en="There's nothing wrong with the financial KOL subscription services out there. They genuinely help investors keep up with the market faster, and save time reading through announcements and news." data-zh="市面上有不少财经KOL提供订阅服务，这本身没有问题。这些服务能够帮助投资者更快掌握市场资讯，也能节省阅读公告和新闻的时间。">There's nothing wrong with the financial KOL subscription services out there. They genuinely help investors keep up with the market faster, and save time reading through announcements and news.</p>
+<p class="insight-divider" data-en="But information is still just information." data-zh="但资讯，终究只是资讯。">But information is still just information.</p>
+<p data-en="If, years from now, you're still waiting for someone to tell you what to buy today and what to avoid, what's actually grown isn't your investing ability, it's just your speed at receiving information." data-zh="如果几年后，你仍然需要等待别人告诉你今天可以买什么、今天应该避开什么，那么真正成长的，并不是你的投资能力，而只是你获取资讯的速度。">If, years from now, you're still waiting for someone to tell you what to buy today and what to avoid, what's actually grown isn't your investing ability, it's just your speed at receiving information.</p>
+<p class="insight-pullquote" data-en="What we want to give you isn't more tips.<br>It's a way of thinking about the market that stays with you for years." data-zh="我们希望带给你的，不是更多提示（Tips）。<br>而是一套能够陪伴你很多年的投资思维。">What we want to give you isn't more tips.<br>It's a way of thinking about the market that stays with you for years.</p>
+</div>
 </section>
 
 <section class="courses-section">
-  <div class="courses-inner">
-    <div style="text-align:center;margin-bottom:.5rem;">
-      <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(184,115,51,.1);border:1px solid rgba(184,115,51,.25);border-radius:30px;padding:5px 16px;font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem;" data-en="📚 Our Courses" data-zh="📚 课程系列">📚 Our Courses</div>
-      <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:var(--navy);margin-bottom:.6rem;" data-en="From Zero to Independent Analysis" data-zh="从零基础，到独立分析">From Zero to Independent Analysis</h2>
-      <p style="color:var(--gray);font-size:15px;max-width:600px;margin:0 auto;" data-en="Three stages, built to match where you actually are, not a one-size-fits-all course." data-zh="三个阶段，根据你目前的投资程度设计，不是一套课程用到底。">Three stages, built to match where you actually are, not a one-size-fits-all course.</p>
-      <div style="display:inline-flex;align-items:center;gap:.5rem;margin-top:1.25rem;background:rgba(184,115,51,.08);border:1px solid rgba(184,115,51,.25);border-radius:30px;padding:8px 18px;font-size:13px;font-weight:700;color:var(--navy);" data-en="⏳ Classes are kept deliberately small, once a cohort is full, you'll wait for the next one." data-zh="⏳ 我们刻意保持小班制，一期满班后，就要等待下一期。">⏳ Classes are kept deliberately small, once a cohort is full, you'll wait for the next one.</div>
-    </div>
+<div class="courses-inner">
+<div style="text-align:center;margin-bottom:.5rem;">
+<div style="display:inline-flex;align-items:center;gap:6px;background:rgba(184,115,51,.1);border:1px solid rgba(184,115,51,.25);border-radius:30px;padding:5px 16px;font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem;" data-en="📚 Our Courses" data-zh="📚 课程系列">📚 Our Courses</div>
+<h2 style="font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:var(--navy);margin-bottom:.6rem;" data-en="From Zero to Independent Analysis" data-zh="从零基础，到独立分析">From Zero to Independent Analysis</h2>
+<p style="color:var(--gray);font-size:15px;max-width:600px;margin:0 auto;" data-en="Three stages, built to match where you actually are, not a one-size-fits-all course." data-zh="三个阶段，根据你目前的投资程度设计，不是一套课程用到底。">Three stages, built to match where you actually are, not a one-size-fits-all course.</p>
+<div style="display:inline-flex;align-items:center;gap:.5rem;margin-top:1.25rem;background:rgba(184,115,51,.08);border:1px solid rgba(184,115,51,.25);border-radius:30px;padding:8px 18px;font-size:13px;font-weight:700;color:var(--navy);" data-en="⏳ Only a few 1-on-1 slots open each week, once they're taken, you'll wait for the next opening." data-zh="⏳ 每周开放的一对一名额有限，额满后就要等待下一次开放。">⏳ Only a few 1-on-1 slots open each week, once they're taken, you'll wait for the next opening.</div>
+</div>
 
-    <div class="courses-grid">
+<div class="courses-grid">
 
-      <article class="course-card featured">
-        <div class="course-badge starter" data-en="⭐ For Complete Beginners" data-zh="⭐ 适合零基础">⭐ For Complete Beginners</div>
-        <div class="course-head">
-          <div class="course-num" data-en="COURSE 1" data-zh="第一阶段">COURSE 1</div>
-          <h3 class="course-title" data-en="Investing Foundations" data-zh="股票投资基础班">Investing Foundations</h3>
-          <p class="course-position" data-en="Build the right foundation from scratch, so you stop buying stocks on gut feeling." data-zh="从零开始建立正确投资基础，不再靠感觉买股票。">Build the right foundation from scratch, so you stop buying stocks on gut feeling.</p>
-          <p class="course-desc" data-en="For those who've never invested, or who feel confused by the jargon. We walk you through everything step-by-step." data-zh="适合从未投资过、或对股市术语感到困惑的你。我们一步步带你打好基础。">For those who've never invested, or who feel confused by the jargon. We walk you through everything step-by-step.</p>
-        </div>
-        <div class="course-price-box">
-          <div class="price-left">
-            <div class="original" data-en="Original: RM388 / person" data-zh="原价：RM388 / 人">Original: RM388 / person</div>
-            <div class="current">RM328</div>
-            <div class="per" data-en="per person" data-zh="每位学员">per person</div>
-          </div>
-          <div class="price-badge" data-en="Save RM60" data-zh="省RM60">Save RM60</div>
-        </div>
-        <div class="min-group">
-          <span>🎓</span>
-          <span data-en="Uni students: <strong>RM288/person</strong> (min. 2 pax, bundled)" data-zh="大学生优惠：<strong>RM288/人</strong>（需2人成班）">Uni students: <strong>RM288/person</strong> (min. 2 pax, bundled)</span>
-        </div>
-        <div class="sessions-wrap">
-          <div class="sessions-label" data-en="2 Sessions Included" data-zh="共2堂课程">2 Sessions Included</div>
-          <div class="session-item">
-            <div class="session-num">1</div>
-            <div>
-              <div class="session-title" data-en="Session 1: Stock Investing Fundamentals" data-zh="第1堂：股票投资基础">Session 1: Stock Investing Fundamentals</div>
-              <div class="session-time" data-en="1 hr 15 min + 15 min Q&amp;A" data-zh="1小时15分钟 + 15分钟问答">1 hr 15 min + 15 min Q&amp;A</div>
-              <ul class="session-topics">
-                <li data-en="What a stock actually is, and how Bursa Malaysia works" data-zh="搞懂股票是什么，Bursa Malaysia如何运作">What a stock actually is, and how Bursa Malaysia works</li>
-                <li data-en="How beginners take the right first step, without the rookie mistakes" data-zh="新手如何正确踏出第一步，避开常见错误">How beginners take the right first step, without the rookie mistakes</li>
-              </ul>
-            </div>
-          </div>
-          <div class="session-item">
-            <div class="session-num">2</div>
-            <div>
-              <div class="session-title" data-en="Session 2: Reading Reports &amp; Valuing a Stock" data-zh="第2堂：看懂财报，学会估值">Session 2: Reading Reports &amp; Valuing a Stock</div>
-              <div class="session-time" data-en="1 hr + 30 min Q&amp;A" data-zh="1小时 + 30分钟问答">1 hr + 30 min Q&amp;A</div>
-              <ul class="session-topics">
-                <li data-en="Understand the 3 core financial statements, without feeling lost" data-zh="看懂三大财务报表，不再雾里看花">Understand the 3 core financial statements, without feeling lost</li>
-                <li data-en="Learn to estimate what a company's stock is actually worth" data-zh="学会评估一家公司的股票值多少钱">Learn to estimate what a company's stock is actually worth</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="expect-box">
-          <div class="expect-label" data-en="✅ After This Course, You'll Be Able To:" data-zh="✅ 上完这堂课，你将能够：">After This Course, You'll Be Able To:</div>
-          <ul class="expect-list">
-            <li data-en="Understand how the stock market works, no more guessing" data-zh="看懂股票市场如何运作，不再瞎猜">Understand how the stock market works, no more guessing</li>
-            <li data-en="Read the 3 core financial statements on your own" data-zh="独立读懂三大财务报表">Read the 3 core financial statements on your own</li>
-            <li data-en="Roughly judge whether a stock is worth its price" data-zh="大致判断一只股票值不值这个价">Roughly judge whether a stock is worth its price</li>
-            <li data-en="Feel more confident buying your first stock" data-zh="更有信心地买入你的第一只股票">Feel more confident buying your first stock</li>
-          </ul>
-        </div>
-        <div class="course-cta">
-          <button onclick="openWA('Hi, I am interested in Course 1 (Investing Foundations). Please share the next available class date.')" class="course-cta-btn gold" data-en="📩 Register Interest, Course 1" data-zh="📩 报名咨询, 第一阶段">📩 Register Interest, Course 1</button>
-          <div class="course-cta-note" data-en="Small class sizes, WhatsApp us now to secure the next available date." data-zh="小班名额有限，现在WhatsApp我们锁定下期开课日期。">Small class sizes, WhatsApp us now to secure the next available date.</div>
-        </div>
-      </article>
+<article class="course-card featured">
+<div class="course-badge starter" data-en="⭐ For Complete Beginners" data-zh="⭐ 适合零基础">⭐ For Complete Beginners</div>
+<div class="course-head">
+<div class="course-num" data-en="COURSE 1" data-zh="第一阶段">COURSE 1</div>
+<h3 class="course-title" data-en="Investing Foundations" data-zh="股票投资基础班">Investing Foundations</h3>
+<p class="course-position" data-en="Build the right foundation from scratch, so you stop buying stocks on gut feeling." data-zh="从零开始建立正确投资基础，不再靠感觉买股票。">Build the right foundation from scratch, so you stop buying stocks on gut feeling.</p>
+<p class="course-desc" data-en="For those who've never invested, or who feel confused by the jargon. We walk you through everything step-by-step, 1-on-1." data-zh="适合从未投资过、或对股市术语感到困惑的你。我们以一对一的方式，一步步带你打好基础。">For those who've never invested, or who feel confused by the jargon. We walk you through everything step-by-step, 1-on-1.</p>
+</div>
+<div class="course-price-box">
+<div class="price-left">
+<div class="original" data-en="Original: RM488 / person" data-zh="原价：RM488 / 人">Original: RM488 / person</div>
+<div class="current">RM388</div>
+<div class="per" data-en="per person" data-zh="每位学员">per person</div>
+</div>
+<div class="price-badge" data-en="Save RM100" data-zh="省RM100">Save RM100</div>
+</div>
+<div class="min-group">
+<span>🎓</span>
+<span data-en="Uni students: <strong>RM338/person</strong>, min. 2 pax to start" data-zh="大学生优惠：<strong>RM338/人</strong>（需2人成班）">Uni students: <strong>RM338/person</strong>, min. 2 pax to start</span>
+</div>
+<div class="sessions-wrap">
+<div class="sessions-label" data-en="2 Sessions Included" data-zh="共2堂课程">2 Sessions Included</div>
+<div class="session-item">
+<div class="session-num">1</div>
+<div>
+<div class="session-title" data-en="Session 1: Stock Investing Basics" data-zh="第1堂：股票投资基础">Session 1: Stock Investing Basics</div>
+<div class="session-time" data-en="1 hr 30 min + 15 min Q&amp;A" data-zh="1小时30分钟 + 15分钟问答">1 hr 30 min + 15 min Q&amp;A</div>
+<ul class="session-topics">
+<li data-en="Stocks basics, and what actually determines a stock's price" data-zh="股票基础知识，以及什么决定了股价">Stocks basics, and what actually determines a stock's price</li>
+<li data-en="Understanding investing jargon, and what it really means" data-zh="看懂投资术语，了解它们真正的意思">Understanding investing jargon, and what it really means</li>
+<li data-en="Setting up a brokerage account and placing your first order" data-zh="开设券商户口，学会下单">Setting up a brokerage account and placing your first order</li>
+<li data-en="Common mistakes beginners make, and how to avoid them" data-zh="新手常犯的错误，以及如何避开">Common mistakes beginners make, and how to avoid them</li>
+</ul>
+</div>
+</div>
+<div class="session-item">
+<div class="session-num">2</div>
+<div>
+<div class="session-title" data-en="Session 2: Reading Reports &amp; Spotting What Matters" data-zh="第2堂：明白财报，抓重点">Session 2: Reading Reports &amp; Spotting What Matters</div>
+<div class="session-time" data-en="1 hr 30 min + 15 min Q&amp;A" data-zh="1小时30分钟 + 15分钟问答">1 hr 30 min + 15 min Q&amp;A</div>
+<ul class="session-topics">
+<li data-en="Understanding the 3 core financial statements" data-zh="看懂三大财务报表">Understanding the 3 core financial statements</li>
+<li data-en="Dividend yield, explained simply" data-zh="用简单的方式理解股息率">Dividend yield, explained simply</li>
+<li data-en="The basics of valuation, is this stock actually worth its price?" data-zh="估值基础，这只股票到底值不值这个价">The basics of valuation, is this stock actually worth its price?</li>
+<li data-en="Where to find information you can actually trust" data-zh="到哪里找真正可靠的资讯来源">Where to find information you can actually trust</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="expect-box">
+<div class="expect-label" data-en="✅ After This Course, You'll Be Able To:" data-zh="✅ 上完这堂课，你将能够：">After This Course, You'll Be Able To:</div>
+<ul class="expect-list">
+<li data-en="Understand how the stock market works, no more guessing" data-zh="看懂股票市场如何运作，不再瞎猜">Understand how the stock market works, no more guessing</li>
+<li data-en="Read the 3 core financial statements and understand dividend yield" data-zh="独立读懂三大财务报表，并理解股息率">Read the 3 core financial statements and understand dividend yield</li>
+<li data-en="Roughly judge whether a stock is worth its price" data-zh="大致判断一只股票值不值这个价">Roughly judge whether a stock is worth its price</li>
+<li data-en="Know where to find information you can actually trust" data-zh="知道到哪里找真正可靠的资讯">Know where to find information you can actually trust</li>
+</ul>
+</div>
+<div class="course-facts">
+<div class="fact"><strong data-en="Format:" data-zh="形式：">Format:</strong> <span data-en="1-on-1 (student pairs: 2 people, same session)" data-zh="一对一（学生优惠：2人同班）">1-on-1 (student pairs: 2 people, same session)</span></div>
+<div class="fact"><strong data-en="Language:" data-zh="语言：">Language:</strong> <span data-en="Mandarin or English, Bahasa Malaysia on request" data-zh="华语或英语，可要求马来文">Mandarin or English, Bahasa Malaysia on request</span></div>
+<div class="fact" data-en="Didn't learn anything? Tell us after the course and apply for a full refund." data-zh="如果你觉得没有学到东西，课程结束后告诉我们，可申请全额退款。">Didn't learn anything? Tell us after the course and apply for a full refund.</div>
+<div class="fact" data-en="Early-bird pricing ends 31 August 2026." data-zh="早鸟优惠将在2026年8月31日截止。">Early-bird pricing ends 31 August 2026.</div>
+</div>
+<div class="course-cta">
+<button onclick="openWA('Hi, I am interested in Course 1 (Investing Foundations, 1-on-1). Please share the next available slot.')" class="course-cta-btn gold" data-en="📩 Register Interest, Course 1" data-zh="📩 报名咨询, 第一阶段">📩 Register Interest, Course 1</button>
+<div class="course-cta-note" data-en="Only a few 1-on-1 slots open each week, WhatsApp us now to secure the next available time." data-zh="每周开放的一对一名额有限，现在WhatsApp我们锁定下一个可预约时段。">Only a few 1-on-1 slots open each week, WhatsApp us now to secure the next available time.</div>
+</div>
+</article>
 
-      <article class="course-card">
-        <div class="course-badge advanced" data-en="📊 For Independent Analysis" data-zh="📊 学习独立分析">📊 For Independent Analysis</div>
-        <div class="course-head">
-          <div class="course-num" data-en="COURSE 2" data-zh="第二阶段">COURSE 2</div>
-          <h3 class="course-title" data-en="Advanced Stock Analysis" data-zh="股票分析进阶班">Advanced Stock Analysis</h3>
-          <p class="course-position" data-en="Build the thinking process of a professional investor, so you stop buying stocks on tips." data-zh="建立专业投资人的分析思维，不再只是听消息买股票。">Build the thinking process of a professional investor, so you stop buying stocks on tips.</p>
-          <p class="course-desc" data-en="For investors who already buy stocks but want the confidence to analyse companies on their own." data-zh="适合已经在买股票、但想建立独立分析能力的投资者。">For investors who already buy stocks but want the confidence to analyse companies on their own.</p>
-        </div>
-        <div class="course-price-box">
-          <div class="price-left">
-            <div class="original" data-en="Original: RM788 / person" data-zh="原价：RM788 / 人">Original: RM788 / person</div>
-            <div class="current">RM688</div>
-            <div class="per" data-en="per person" data-zh="每位学员">per person</div>
-          </div>
-          <div class="price-badge" data-en="Save RM100" data-zh="省RM100">Save RM100</div>
-        </div>
-        <div class="sessions-wrap">
-          <div class="sessions-label" data-en="2 Sessions Included" data-zh="共2堂课程">2 Sessions Included</div>
-          <div class="session-item">
-            <div class="session-num">1</div>
-            <div>
-              <div class="session-title" data-en="Session 1: Deep-Dive Reports &amp; Valuation" data-zh="第1堂：深入解读财报，学会估值">Session 1: Deep-Dive Reports &amp; Valuation</div>
-              <div class="session-time" data-en="1 hr 15 min + 15 min Q&amp;A" data-zh="1小时15分钟 + 15分钟问答">1 hr 15 min + 15 min Q&amp;A</div>
-              <ul class="session-topics">
-                <li data-en="Deep dive into annual reports and quarterly reports" data-zh="深入解读年报与季报">Deep dive into annual reports and quarterly reports</li>
-                <li data-en="Learn valuation methods and how to arrive at a target price" data-zh="学会估值方法，抓到合理目标价">Learn valuation methods and how to arrive at a target price</li>
-              </ul>
-            </div>
-          </div>
-          <div class="session-item">
-            <div class="session-num">2</div>
-            <div>
-              <div class="session-title" data-en="Session 2: Corporate Actions, Technicals &amp; Announcements" data-zh="第2堂：企业活动、技术分析与公告解读">Session 2: Corporate Actions, Technicals &amp; Announcements</div>
-              <div class="session-time" data-en="1 hr 15 min + 15 min Q&amp;A" data-zh="1小时15分钟 + 15分钟问答">1 hr 15 min + 15 min Q&amp;A</div>
-              <ul class="session-topics">
-                <li data-en="Understand corporate exercises and what they actually mean for investors" data-zh="搞懂企业活动，以及它们对投资者的实际意义">Understand corporate exercises and what they actually mean for investors</li>
-                <li data-en="Master the fundamentals of technical analysis" data-zh="掌握技术分析基础">Master the fundamentals of technical analysis</li>
-                <li data-en="Read Bursa announcements like a pro" data-zh="像专业人士一样解读Bursa公告">Read Bursa announcements like a pro</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="expect-box">
-          <div class="expect-label" data-en="✅ After This Course, You'll Be Able To:" data-zh="✅ 上完这堂课，你将能够：">After This Course, You'll Be Able To:</div>
-          <ul class="expect-list">
-            <li data-en="Read annual and quarterly reports like an analyst, not just skim them" data-zh="像分析师一样解读年报与季报，而不只是随便翻翻">Read annual and quarterly reports like an analyst, not just skim them</li>
-            <li data-en="Understand how corporate actions actually affect your holdings" data-zh="看懂企业活动对你手上股票的实际影响">Understand how corporate actions actually affect your holdings</li>
-            <li data-en="Work out a reasonable target price for a stock yourself" data-zh="自己抓出一只股票的合理目标价">Work out a reasonable target price for a stock yourself</li>
-            <li data-en="Read basic technical charts and Bursa announcements with confidence" data-zh="有信心地看懂基础技术图表与Bursa公告">Read basic technical charts and Bursa announcements with confidence</li>
-          </ul>
-        </div>
-        <div class="course-cta">
-          <button onclick="openWA('Hi, I am interested in Course 2 (Advanced Stock Analysis). Please share the next available class date.')" class="course-cta-btn navy" data-en="📩 Register Interest, Course 2" data-zh="📩 报名咨询, 第二阶段">📩 Register Interest, Course 2</button>
-          <div class="course-cta-note" data-en="Small class sizes, WhatsApp us now to secure the next available date." data-zh="小班名额有限，现在WhatsApp我们锁定下期开课日期。">Small class sizes, WhatsApp us now to secure the next available date.</div>
-        </div>
-      </article>
+<article class="course-card">
+<div class="course-badge advanced" data-en="📊 For Independent Analysis" data-zh="📊 学习独立分析">📊 For Independent Analysis</div>
+<div class="course-head">
+<div class="course-num" data-en="COURSE 2" data-zh="第二阶段">COURSE 2</div>
+<h3 class="course-title" data-en="Advanced Stock Analysis" data-zh="股票分析进阶班">Advanced Stock Analysis</h3>
+<p class="course-position" data-en="Build the thinking process of a professional investor, so you stop buying stocks on tips." data-zh="建立专业投资人的分析思维，不再只是听消息买股票。">Build the thinking process of a professional investor, so you stop buying stocks on tips.</p>
+<p class="course-desc" data-en="For investors who already buy stocks but want the confidence to analyse companies on their own, 1-on-1." data-zh="适合已经在买股票、但想建立独立分析能力的投资者，一对一教学。">For investors who already buy stocks but want the confidence to analyse companies on their own, 1-on-1.</p>
+</div>
+<div class="course-price-box">
+<div class="price-left">
+<div class="original" data-en="Original: RM888 / person" data-zh="原价：RM888 / 人">Original: RM888 / person</div>
+<div class="current">RM768</div>
+<div class="per" data-en="per person" data-zh="每位学员">per person</div>
+</div>
+<div class="price-badge" data-en="Save RM120" data-zh="省RM120">Save RM120</div>
+</div>
+<div class="min-group">
+<span>🧑‍💼</span>
+<span data-en="1-on-1 only" data-zh="仅一对一">1-on-1 only</span>
+</div>
+<div class="sessions-wrap">
+<div class="sessions-label" data-en="2 Sessions Included" data-zh="共2堂课程">2 Sessions Included</div>
+<div class="session-item">
+<div class="session-num">1</div>
+<div>
+<div class="session-title" data-en="Session 1: Understanding the Business &amp; Its Value" data-zh="第1堂：明白公司业务，价值">Session 1: Understanding the Business &amp; Its Value</div>
+<div class="session-time" data-en="1 hr 30 min + 30 min Q&amp;A" data-zh="1小时30分钟 + 30分钟问答">1 hr 30 min + 30 min Q&amp;A</div>
+<ul class="session-topics">
+<li data-en="Deep-diving annual reports and quarterly reports" data-zh="深入解读年报与季报">Deep-diving annual reports and quarterly reports</li>
+<li data-en="Understanding analyst reports" data-zh="看懂分析师报告">Understanding analyst reports</li>
+<li data-en="Case studies on how this information actually gets used" data-zh="案例研究，了解这些资讯该如何实际运用">Case studies on how this information actually gets used</li>
+</ul>
+</div>
+</div>
+<div class="session-item">
+<div class="session-num">2</div>
+<div>
+<div class="session-title" data-en="Session 2: Get Ahead, Stop Relying on Rumours" data-zh="第2堂：抢先一步，不再依赖传言">Session 2: Get Ahead, Stop Relying on Rumours</div>
+<div class="session-time" data-en="1 hr 30 min + 30 min Q&amp;A" data-zh="1小时30分钟 + 30分钟问答">1 hr 30 min + 30 min Q&amp;A</div>
+<ul class="session-topics">
+<li data-en="Tracking institutional fund flow" data-zh="追踪机构资金动向">Tracking institutional fund flow</li>
+<li data-en="Reading Bursa announcements like a pro" data-zh="像专业人士一样解读Bursa公告">Reading Bursa announcements like a pro</li>
+<li data-en="Basic corporate exercises and how they affect share price" data-zh="基础企业活动，以及它们如何影响股价">Basic corporate exercises and how they affect share price</li>
+<li data-en="Technical analysis basics, to help time your entry" data-zh="基础技术分析，帮助你抓准进场时机">Technical analysis basics, to help time your entry</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="expect-box">
+<div class="expect-label" data-en="✅ After This Course, You'll Be Able To:" data-zh="✅ 上完这堂课，你将能够：">After This Course, You'll Be Able To:</div>
+<ul class="expect-list">
+<li data-en="Read annual and quarterly reports like an analyst, not just skim them" data-zh="像分析师一样解读年报与季报，而不只是随便翻翻">Read annual and quarterly reports like an analyst, not just skim them</li>
+<li data-en="Track institutional fund flow and read Bursa announcements like a pro" data-zh="追踪机构资金动向，像专业人士一样解读Bursa公告">Track institutional fund flow and read Bursa announcements like a pro</li>
+<li data-en="Understand how corporate actions actually affect your holdings" data-zh="看懂企业活动对你手上股票的实际影响">Understand how corporate actions actually affect your holdings</li>
+<li data-en="Use basic technical analysis to help time your entry" data-zh="运用基础技术分析，帮助抓准进场时机">Use basic technical analysis to help time your entry</li>
+</ul>
+</div>
+<div class="course-facts">
+<div class="fact"><strong data-en="Format:" data-zh="形式：">Format:</strong> <span data-en="1-on-1 only" data-zh="仅一对一">1-on-1 only</span></div>
+<div class="fact"><strong data-en="Language:" data-zh="语言：">Language:</strong> <span data-en="Mandarin or English, Bahasa Malaysia on request" data-zh="华语或英语，可要求马来文">Mandarin or English, Bahasa Malaysia on request</span></div>
+<div class="fact" data-en="Didn't learn anything? Tell us after the course and apply for a full refund." data-zh="如果你觉得没有学到东西，课程结束后告诉我们，可申请全额退款。">Didn't learn anything? Tell us after the course and apply for a full refund.</div>
+<div class="fact" data-en="Early-bird pricing ends 31 August 2026." data-zh="早鸟优惠将在2026年8月31日截止。">Early-bird pricing ends 31 August 2026.</div>
+</div>
+<div class="course-cta">
+<button onclick="openWA('Hi, I am interested in Course 2 (Advanced Stock Analysis, 1-on-1). Please share the next available slot.')" class="course-cta-btn navy" data-en="📩 Register Interest, Course 2" data-zh="📩 报名咨询, 第二阶段">📩 Register Interest, Course 2</button>
+<div class="course-cta-note" data-en="Only a few 1-on-1 slots open each week, WhatsApp us now to secure the next available time." data-zh="每周开放的一对一名额有限，现在WhatsApp我们锁定下一个可预约时段。">Only a few 1-on-1 slots open each week, WhatsApp us now to secure the next available time.</div>
+</div>
+</article>
 
-      <article class="course-card premium">
-        <div class="course-badge premium" data-en="🔒 Premium · By Application" data-zh="🔒 专题课程 · 需咨询">🔒 Premium · By Application</div>
-        <div class="course-head">
-          <div class="course-num" data-en="COURSE 3" data-zh="专题课程">COURSE 3</div>
-          <h3 class="course-title" data-en="Specialised Deep-Dive Track" data-zh="专题定制课程">Specialised Deep-Dive Track</h3>
-          <p class="course-position" data-en="For investors who want to go deeper into specific topics that most retail investors never learn properly." data-zh="为想深入特定投资主题的投资者设计，涵盖多数散户从未真正学过的内容。">For investors who want to go deeper into specific topics that most retail investors never learn properly.</p>
-          <p class="course-desc" data-en="Choose one or more focus areas below. Content is based on real analysis experience, not market rumours or street-side &#8220;guru&#8221; opinions." data-zh="可选择以下一个或多个专题深入学习。内容基于真实分析经验，而非市场传闻或&#8220;江湖秘诀&#8221;。">Choose one or more focus areas below. Content is based on real analysis experience, not market rumours or street-side &#8220;guru&#8221; opinions.</p>
-        </div>
-        <div class="premium-topics">
-          <div class="premium-topic">
-            <div class="premium-topic-title"><span>🚀</span><span data-en="IPO Investment Analysis" data-zh="IPO投资分析">IPO Investment Analysis</span></div>
-            <div class="premium-topic-desc" data-en="Learn how experienced investors read a prospectus, understand valuation, and identify what actually drives an IPO's pricing, based on real analysis experience." data-zh="结合真实IPO分析经验，了解专业投资人如何阅读招股说明书、评估估值，以及判断上市公司的合理价值。">Learn how experienced investors read a prospectus, understand valuation, and identify what actually drives an IPO's pricing, based on real analysis experience.</div>
-          </div>
-          <div class="premium-topic">
-            <div class="premium-topic-title"><span>🏢</span><span data-en="Corporate Exercises Deep Dive" data-zh="企业活动深度解析">Corporate Exercises Deep Dive</span></div>
-            <div class="premium-topic-desc" data-en="Private placements, bonus issues, rights issues, acquisitions, mergers and spin-offs, and how each one shapes market perception and hidden value." data-zh="私下配售、红股、附加股、收购、合并、分拆上市，了解这些企业活动如何影响市场认知，以及如何从中发现被低估的价值。">Private placements, bonus issues, rights issues, acquisitions, mergers and spin-offs, and how each one shapes market perception and hidden value.</div>
-          </div>
-          <div class="premium-topic">
-            <div class="premium-topic-title"><span>📈</span><span data-en="Technical Analysis Deep Dive" data-zh="技术分析深度课程">Technical Analysis Deep Dive</span></div>
-            <div class="premium-topic-desc" data-en="Trend analysis, volume, support and resistance, entry and exit strategy, and understanding overall market behaviour." data-zh="趋势分析、成交量、支撑与阻力、进出场策略，以及理解整体市场行为。">Trend analysis, volume, support and resistance, entry and exit strategy, and understanding overall market behaviour.</div>
-          </div>
-        </div>
-        <div class="course-cta">
-          <button onclick="openWA('Hi, I am interested in Course 3 (Specialised Deep-Dive Track). Could you share more details on the topics and schedule?')" class="course-cta-btn dark" data-en="📩 Enquire About Course 3" data-zh="📩 咨询专题课程详情">📩 Enquire About Course 3</button>
-          <div class="course-cta-note" data-en="Pricing depends on the topics and format you choose." data-zh="价格根据你所选的专题与形式而定。">Pricing depends on the topics and format you choose.</div>
-        </div>
-      </article>
+<article class="course-card premium">
+<div class="course-badge premium" data-en="🔒 Premium · By Application" data-zh="🔒 专题课程 · 需咨询">🔒 Premium · By Application</div>
+<div class="course-head">
+<div class="course-num" data-en="COURSE 3" data-zh="专题课程">COURSE 3</div>
+<h3 class="course-title" data-en="Specialised Deep-Dive Track" data-zh="专题定制课程">Specialised Deep-Dive Track</h3>
+<p class="course-position" data-en="For investors who want to go deeper into specific topics that most retail investors never learn properly." data-zh="为想深入特定投资主题的投资者设计，涵盖多数散户从未真正学过的内容。">For investors who want to go deeper into specific topics that most retail investors never learn properly.</p>
+<p class="course-desc" data-en="Choose one or more focus areas below. Content is based on real analysis experience, not market rumours or street-side &#8220;guru&#8221; opinions." data-zh="可选择以下一个或多个专题深入学习。内容基于真实分析经验，而非市场传闻或&#8220;江湖秘诀&#8221;。">Choose one or more focus areas below. Content is based on real analysis experience, not market rumours or street-side &#8220;guru&#8221; opinions.</p>
+</div>
+<div class="premium-topics">
+<div class="premium-topic">
+<div class="premium-topic-title"><span>🚀</span><span data-en="IPO Investment Analysis" data-zh="IPO投资分析">IPO Investment Analysis</span></div>
+<div class="premium-topic-desc" data-en="Learn how experienced investors read a prospectus, understand valuation, and identify what actually drives an IPO's pricing, based on real analysis experience." data-zh="结合真实IPO分析经验，了解专业投资人如何阅读招股说明书、评估估值，以及判断上市公司的合理价值。">Learn how experienced investors read a prospectus, understand valuation, and identify what actually drives an IPO's pricing, based on real analysis experience.</div>
+</div>
+<div class="premium-topic">
+<div class="premium-topic-title"><span>🏢</span><span data-en="Corporate Exercises Deep Dive" data-zh="企业活动深度解析">Corporate Exercises Deep Dive</span></div>
+<div class="premium-topic-desc" data-en="Private placements, bonus issues, rights issues, acquisitions, mergers and spin-offs, and how each one shapes market perception and hidden value." data-zh="私下配售、红股、附加股、收购、合并、分拆上市，了解这些企业活动如何影响市场认知，以及如何从中发现被低估的价值。">Private placements, bonus issues, rights issues, acquisitions, mergers and spin-offs, and how each one shapes market perception and hidden value.</div>
+</div>
+<div class="premium-topic">
+<div class="premium-topic-title"><span>📈</span><span data-en="Technical Analysis Deep Dive" data-zh="技术分析深度课程">Technical Analysis Deep Dive</span></div>
+<div class="premium-topic-desc" data-en="Trend analysis, volume, support and resistance, entry and exit strategy, and understanding overall market behaviour." data-zh="趋势分析、成交量、支撑与阻力、进出场策略，以及理解整体市场行为。">Trend analysis, volume, support and resistance, entry and exit strategy, and understanding overall market behaviour.</div>
+</div>
+<div class="premium-topic">
+<div class="premium-topic-title"><span>🎯</span><span data-en="Structured Warrants Deep Dive" data-zh="结构权证深度课程">Structured Warrants Deep Dive</span></div>
+<div class="premium-topic-desc" data-en="How structured warrants actually work: leverage, what determines a warrant's fair value, why time decay eats into your position, and how to calculate what a warrant should be worth before you buy." data-zh="了解结构权证到底是怎么运作的：杠杆效应、什么决定了权证的合理价值、时间价值为什么会不断流失，以及如何在买入前自己计算权证该值多少钱。">How structured warrants actually work: leverage, what determines a warrant's fair value, why time decay eats into your position, and how to calculate what a warrant should be worth before you buy.</div>
+</div>
+</div>
+<div class="course-cta">
+<button onclick="openWA('Hi, I am interested in Course 3 (Specialised Deep-Dive Track). Could you share more details on the topics and schedule?')" class="course-cta-btn dark" data-en="📩 Enquire About Course 3" data-zh="📩 咨询专题课程详情">📩 Enquire About Course 3</button>
+<div class="course-cta-note" data-en="From RM1,500, pricing depends on the topics and format you choose." data-zh="RM1,500起，价格根据你所选的专题与形式而定。">From RM1,500, pricing depends on the topics and format you choose.</div>
+</div>
+</article>
 
-    </div>
+</div>
 
-    <div class="compare-table-wrap">
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th data-en="" data-zh=""></th>
-            <th data-en="Course 1" data-zh="第一阶段">Course 1</th>
-            <th data-en="Course 2" data-zh="第二阶段">Course 2</th>
-            <th data-en="Course 3" data-zh="专题课程">Course 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-en="Best for" data-zh="适合谁">Best for</td>
-            <td data-en="Complete beginners" data-zh="完全零基础">Complete beginners</td>
-            <td data-en="Existing investors wanting to analyse independently" data-zh="想独立分析的现有投资者">Existing investors wanting to analyse independently</td>
-            <td data-en="Investors going deep into a specific topic" data-zh="想深入特定主题的投资者">Investors going deep into a specific topic</td>
-          </tr>
-          <tr>
-            <td data-en="Focus" data-zh="学习重点">Focus</td>
-            <td data-en="Stock basics, financial statements, valuation basics" data-zh="股票基础、财务报表、估值入门">Stock basics, financial statements, valuation basics</td>
-            <td data-en="Deep-dive reports, corporate actions, valuation, technicals" data-zh="深入财报、企业活动、估值、技术分析">Deep-dive reports, corporate actions, valuation, technicals</td>
-            <td data-en="IPOs, corporate exercises, or technical analysis" data-zh="IPO、企业活动，或技术分析">IPOs, corporate exercises, or technical analysis</td>
-          </tr>
-          <tr>
-            <td data-en="Format" data-zh="课程形式">Format</td>
-            <td data-en="2 live sessions, small group" data-zh="2堂现场课，小班制">2 live sessions, small group</td>
-            <td data-en="2 live sessions, small group" data-zh="2堂现场课，小班制">2 live sessions, small group</td>
-            <td data-en="Custom, by application" data-zh="定制形式，需咨询">Custom, by application</td>
-          </tr>
-          <tr>
-            <td data-en="Price" data-zh="价格">Price</td>
-            <td data-en="RM328 / person" data-zh="RM328 / 人">RM328 / person</td>
-            <td data-en="RM688 / person" data-zh="RM688 / 人">RM688 / person</td>
-            <td data-en="Contact us" data-zh="联系咨询">Contact us</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<div class="compare-table-wrap">
+<table class="compare-table">
+<thead>
+<tr>
+<th data-en="" data-zh=""></th>
+<th data-en="Course 1" data-zh="第一阶段">Course 1</th>
+<th data-en="Course 2" data-zh="第二阶段">Course 2</th>
+<th data-en="Course 3" data-zh="专题课程">Course 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Best for" data-zh="适合谁">Best for</td>
+<td data-en="Complete beginners" data-zh="完全零基础">Complete beginners</td>
+<td data-en="Existing investors wanting to analyse independently" data-zh="想独立分析的现有投资者">Existing investors wanting to analyse independently</td>
+<td data-en="Investors going deep into a specific topic" data-zh="想深入特定主题的投资者">Investors going deep into a specific topic</td>
+</tr>
+<tr>
+<td data-en="Focus" data-zh="学习重点">Focus</td>
+<td data-en="Stock basics, financial statements, valuation basics" data-zh="股票基础、财务报表、估值入门">Stock basics, financial statements, valuation basics</td>
+<td data-en="Deep-dive reports, fund flow, announcements, technicals" data-zh="深入财报、资金流向、公告解读、技术分析">Deep-dive reports, fund flow, announcements, technicals</td>
+<td data-en="IPOs, corporate exercises, or technical analysis" data-zh="IPO、企业活动，或技术分析">IPOs, corporate exercises, or technical analysis</td>
+</tr>
+<tr>
+<td data-en="Format" data-zh="课程形式">Format</td>
+<td data-en="2 live 1-on-1 sessions" data-zh="2堂现场一对一课程">2 live 1-on-1 sessions</td>
+<td data-en="2 live 1-on-1 sessions" data-zh="2堂现场一对一课程">2 live 1-on-1 sessions</td>
+<td data-en="Custom, by application" data-zh="定制形式，需咨询">Custom, by application</td>
+</tr>
+<tr>
+<td data-en="Price" data-zh="价格">Price</td>
+<td data-en="RM388 / person" data-zh="RM388 / 人">RM388 / person</td>
+<td data-en="RM768 / person" data-zh="RM768 / 人">RM768 / person</td>
+<td data-en="From RM1,500" data-zh="RM1,500起">From RM1,500</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section class="consult-section">
+<div class="consult-inner">
+<div class="consult-badge" data-en="💬 Free 15 Minute Chat" data-zh="💬 免费15分钟咨询">💬 Free 15 Minute Chat</div>
+<h2 data-en="Not Sure Which Course Fits You? Talk to Us First" data-zh="不确定该上哪个阶段？先跟我们聊聊">Not Sure Which Course Fits You? Talk to Us First</h2>
+<p data-en="Tell us where you're at and what's actually been holding you back, and we'll tell you honestly which course fits. Course 1 and Course 2 share the same core structure, but because every session is 1-on-1, we adjust the emphasis to what you specifically need to grow. We don't believe one class fits everyone." data-zh="告诉我们你目前的程度，以及真正卡住你的地方，我们会老实告诉你哪个阶段最适合你。第一、第二阶段的核心架构相同，但因为每堂课都是一对一，我们会根据你的需求调整重点。我们不相信一套课程适合所有人。">Tell us where you're at and what's actually been holding you back, and we'll tell you honestly which course fits. Course 1 and Course 2 share the same core structure, but because every session is 1-on-1, we adjust the emphasis to what you specifically need to grow. We don't believe one class fits everyone.</p>
+<button onclick="openWA('Hi, I would like to book a free 15 minute chat to find out which course suits me.')" class="consult-btn" data-en="💬 WhatsApp Us for a Free 15 Minute Chat" data-zh="💬 WhatsApp我们，免费聊15分钟">💬 WhatsApp Us for a Free 15 Minute Chat</button>
+</div>
 </section>
 
 <section class="pricing-section">
-  <div class="pricing-inner">
-    <div class="pricing-badge" data-en="🚀 Early-Bird Pricing" data-zh="🚀 早鸟价">🚀 Early-Bird Pricing</div>
-    <h2 data-en="Why Is the Price So Low Right Now?" data-zh="为什么现在的价格这么低？">Why Is the Price So Low Right Now?</h2>
-    <p data-en="Honestly, the pricing you're seeing right now won't stay this way long-term. We're still in the early stage of launching this course, and we want more investors who are genuinely serious about learning to be able to join at a more affordable price." data-zh="坦白说，现在看到的课程价格，并不会长期维持。这是我们课程刚推出的阶段，我们希望先让更多真正想学习的投资者，以一个相对容易负担的价格加入。">Honestly, the pricing you're seeing right now won't stay this way long-term. We're still in the early stage of launching this course, and we want more investors who are genuinely serious about learning to be able to join at a more affordable price.</p>
-    <p data-en="We will be raising course prices progressively over time. So joining earlier doesn't just mean a lower price, it means access to future content updates and growth opportunities as the course develops." data-zh="我们一定会将课程价格逐步调高，因此，越早加入，你获得的不只是较低的价格，更是未来持续更新的内容与成长机会。">We will be raising course prices progressively over time. So joining earlier doesn't just mean a lower price, it means access to future content updates and growth opportunities as the course develops.</p>
-  </div>
+<div class="pricing-inner">
+<div class="pricing-badge" data-en="🚀 Early-Bird Pricing, Ends 31 August 2026" data-zh="🚀 早鸟价，2026年8月31日截止">🚀 Early-Bird Pricing, Ends 31 August 2026</div>
+<h2 data-en="Why Is the Price So Low Right Now?" data-zh="为什么现在的价格这么低？">Why Is the Price So Low Right Now?</h2>
+<p data-en="Honestly, the pricing you're seeing right now won't stay this way long-term. We're still in the early stage of launching this course, and we want more investors who are genuinely serious about learning to be able to join at a more affordable price." data-zh="坦白说，现在看到的课程价格，并不会长期维持。这是我们课程刚推出的阶段，我们希望先让更多真正想学习的投资者，以一个相对容易负担的价格加入。">Honestly, the pricing you're seeing right now won't stay this way long-term. We're still in the early stage of launching this course, and we want more investors who are genuinely serious about learning to be able to join at a more affordable price.</p>
+<p data-en="We will be raising course prices progressively over time. So joining earlier doesn't just mean a lower price, it means access to future content updates and growth opportunities as the course develops." data-zh="我们一定会将课程价格逐步调高，因此，越早加入，你获得的不只是较低的价格，更是未来持续更新的内容与成长机会。">We will be raising course prices progressively over time. So joining earlier doesn't just mean a lower price, it means access to future content updates and growth opportunities as the course develops.</p>
+<p data-en="And to be clear: we don't mark our courses up to RM10,999 just to &#8220;discount&#8221; them down to RM199 the way some do. Given our background, we could charge premium tuition rates, but we choose not to. We believe that when the teaching is genuinely good, word gets around, and that's where the real return comes from, credibility and trust, not an inflated first invoice." data-zh="说清楚一点：我们不会像某些课程那样，把原价拉到RM10,999，再&#8220;打折&#8221;到RM199。以我们的背景，其实可以收取更高的学费，但我们选择不这样做。我们相信只要教学是真材实料的，口碑自然会传开，这才是真正的回报，来自信任与口碑，而不是灌水后的第一笔发票。">And to be clear: we don't mark our courses up to RM10,999 just to &#8220;discount&#8221; them down to RM199 the way some do. Given our background, we could charge premium tuition rates, but we choose not to. We believe that when the teaching is genuinely good, word gets around, and that's where the real return comes from, credibility and trust, not an inflated first invoice.</p>
+</div>
+</section>
+
+<section class="who-section">
+<div class="who-inner">
+<div class="who-head">
+<h2 data-en="Who This Is For" data-zh="这堂课适合谁">Who This Is For</h2>
+</div>
+<div class="who-grid">
+<div class="who-card yes">
+<h3 data-en="This is for you if" data-zh="如果你是这样的人，这堂课适合你">This is for you if</h3>
+<ul class="who-list">
+<li data-en="You're tired of buying on tips or gut feeling and want to think for yourself" data-zh="你厌倦了靠消息或感觉买股票，想学会自己判断">You're tired of buying on tips or gut feeling and want to think for yourself</li>
+<li data-en="You want to spot a promising company before the crowd catches on" data-zh="你想在市场反应之前，提早看出有潜力的公司">You want to spot a promising company before the crowd catches on</li>
+<li data-en="You're willing to actually read a report, not just wait for a summary" data-zh="你愿意真正去读报告，而不是只等别人帮你整理重点">You're willing to actually read a report, not just wait for a summary</li>
+<li data-en="You're investing for the long run, not chasing a &#8220;hot stock&#8221; this week" data-zh="你是为长期投资做准备，不是想追这个星期的&#8220;热门股&#8221;">You're investing for the long run, not chasing a &#8220;hot stock&#8221; this week</li>
+</ul>
+</div>
+<div class="who-card no">
+<h3 data-en="It's probably not for you if" data-zh="如果你是这样的人，这堂课可能不适合你">It's probably not for you if</h3>
+<ul class="who-list">
+<li data-en="You want daily buy/sell signals or minute-by-minute market watching" data-zh="你想要每天的买卖讯号，或是有人陪你分分钟盯盘">You want daily buy/sell signals or minute-by-minute market watching</li>
+<li data-en="You want someone to tell you exactly what to buy today" data-zh="你想要有人直接告诉你今天该买什么">You want someone to tell you exactly what to buy today</li>
+<li data-en="You're looking for guaranteed returns, no honest course can promise that" data-zh="你在寻找保证回报，诚实的课程都不会这样承诺">You're looking for guaranteed returns, no honest course can promise that</li>
+<li data-en="You're not willing to put in the time" data-zh="你不愿意投入时间">You're not willing to put in the time</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="disclaimer-section">
+<div class="disclaimer-inner">
+<div class="disclaimer-label" data-en="⚠️ A Quick Disclaimer" data-zh="⚠️ 重要声明">⚠️ A Quick Disclaimer</div>
+<p data-en="This course is built for people who genuinely want to grow as investors, not people looking for stock tips. If your goal is to be handed a stock code to buy today, we're not the right fit for you, and we'd rather tell you that upfront than take your money." data-zh="这堂课是为真正想在投资路上成长的人设计的，不是给想要股票代号的人。如果你的目标是想要有人直接告诉你今天该买什么，那我们可能不适合你，我们宁愿现在就跟你说清楚，也不愿意收你的钱却帮不到你。">This course is built for people who genuinely want to grow as investors, not people looking for stock tips. If your goal is to be handed a stock code to buy today, we're not the right fit for you, and we'd rather tell you that upfront than take your money.</p>
+<p data-en="We are not licensed financial advisors, and nothing taught in this course is a recommendation to buy or sell any specific stock. We teach you how to analyse, decide and think for yourself. Investing always involves risk, and past results, ours or anyone else's, are not a guarantee of future returns." data-zh="我们不是持牌财务顾问，课程内容不构成任何买卖特定股票的建议。我们教的是如何自己分析、判断与思考。投资永远存在风险，无论是我们或任何人过去的成绩，都不能保证未来的回报。">We are not licensed financial advisors, and nothing taught in this course is a recommendation to buy or sell any specific stock. We teach you how to analyse, decide and think for yourself. Investing always involves risk, and past results, ours or anyone else's, are not a guarantee of future returns.</p>
+</div>
 </section>
 
 <section class="why-section">
-  <div class="why-inner">
-    <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,3vw,2rem);font-weight:900;color:#fff;margin-bottom:.5rem;" data-en="Why Learn From BursaNews?" data-zh="为什么选择BursaNews？">Why Learn From BursaNews?</h2>
-    <p style="color:rgba(255,255,255,.5);font-size:15px;" data-en="We're not KOLs selling trading secrets. We're ex-investment bankers who've done the real work." data-zh="我们不是贩卖交易秘诀的网红，而是真正做过投资银行工作的专业人士。">We're not KOLs selling trading secrets. We're ex-investment bankers who've done the real work.</p>
-    <div class="why-grid">
-      <div class="why-card"><div class="why-icon">🏦</div><div class="why-title" data-en="10+ Years in Investment Banking" data-zh="超过10年投资银行经验">10+ Years in Investment Banking</div><div class="why-desc" data-en="We advised 50+ listed companies on IPOs, M&amp;A and fundraising. We know what companies actually look like from the inside." data-zh="我们为50家以上上市公司提供IPO、并购和融资顾问服务，真正了解公司的内部运作。">We advised 50+ listed companies on IPOs, M&amp;A and fundraising. We know what companies actually look like from the inside.</div></div>
-      <div class="why-card"><div class="why-icon">👥</div><div class="why-title" data-en="Small Group Learning" data-zh="小班制学习">Small Group Learning</div><div class="why-desc" data-en="No 200-person webinars. Small classes mean you get direct attention and real answers to your questions." data-zh="没有200人的网络研讨会。小班制确保你能获得直接关注和真正的问题解答。">No 200-person webinars. Small classes mean you get direct attention and real answers to your questions.</div></div>
-      <div class="why-card"><div class="why-icon">🇲🇾</div><div class="why-title" data-en="Malaysia-Specific Content" data-zh="专注马股内容">Malaysia-Specific Content</div><div class="why-desc" data-en="Everything is based on real Bursa Malaysia examples, real listed companies, real announcements, real scenarios." data-zh="所有内容均以真实的Bursa Malaysia案例为基础，真实上市公司、真实公告、真实情景。">Everything is based on real Bursa Malaysia examples, real listed companies, real announcements, real scenarios.</div></div>
-    </div>
-  </div>
+<div class="why-inner">
+<h2 style="font-family:var(--serif);font-size:clamp(1.5rem,3vw,2rem);font-weight:900;color:#fff;margin-bottom:.5rem;" data-en="Why Learn From BursaNews?" data-zh="为什么选择BursaNews？">Why Learn From BursaNews?</h2>
+<p style="color:rgba(255,255,255,.5);font-size:15px;" data-en="We're not KOLs selling trading secrets. We're ex-investment bankers who've done the real work." data-zh="我们不是贩卖交易秘诀的网红，而是真正做过投资银行工作的专业人士。">We're not KOLs selling trading secrets. We're ex-investment bankers who've done the real work.</p>
+<div class="why-grid">
+<div class="why-card"><div class="why-icon">🏦</div><div class="why-title" data-en="10+ Years in Investment Banking" data-zh="超过10年投资银行经验">10+ Years in Investment Banking</div><div class="why-desc" data-en="We've worked on real IPOs, M&amp;A deals and fundraising exercises, real, practical capital market experience. We know what companies actually look like from the inside." data-zh="我们参与过真实的IPO、并购与集资项目，具备真正的实战资本市场经验，深知公司内部运作的真实样貌。">We've worked on real IPOs, M&amp;A deals and fundraising exercises, real, practical capital market experience. We know what companies actually look like from the inside.</div></div>
+<div class="why-card"><div class="why-icon">👤</div><div class="why-title" data-en="1-on-1 Learning" data-zh="一对一学习">1-on-1 Learning</div><div class="why-desc" data-en="No big classes to keep pace with. Every session is direct attention, real answers to your actual questions." data-zh="没有大班要你追赶进度。每一堂课都是直接关注，真正回答你的问题。">No big classes to keep pace with. Every session is direct attention, real answers to your actual questions.</div></div>
+<div class="why-card"><div class="why-icon">🇲🇾</div><div class="why-title" data-en="Malaysia-Specific Content" data-zh="专注马股内容">Malaysia-Specific Content</div><div class="why-desc" data-en="Everything is based on real Bursa Malaysia examples, real listed companies, real announcements, real scenarios." data-zh="所有内容均以真实的Bursa Malaysia案例为基础，真实上市公司、真实公告、真实情景。">Everything is based on real Bursa Malaysia examples, real listed companies, real announcements, real scenarios.</div></div>
+</div>
+</div>
+</section>
+
+<section class="compare2-section">
+<div class="compare2-inner">
+<div class="compare2-head">
+<h2 data-en="How You Compare" data-zh="同类比较">How You Compare</h2>
+</div>
+<div class="compare-table-wrap" style="margin-top:1.5rem;">
+<table class="compare-table">
+<thead>
+<tr>
+<th data-en="" data-zh=""></th>
+<th data-en="BursaNews" data-zh="BursaNews">BursaNews</th>
+<th data-en="Typical AI-tool trading academy" data-zh="一般AI工具交易学院">Typical AI-tool trading academy</th>
+<th data-en="Typical free KOL subscription" data-zh="一般免费KOL订阅">Typical free KOL subscription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Instructor background" data-zh="导师背景">Instructor background</td>
+<td class="us-col" data-en="Ex-investment bankers, real practical capital market experience" data-zh="前投行人员，具备真实资本市场经验">Ex-investment bankers, real practical capital market experience</td>
+<td data-en="Self-taught trader" data-zh="自学成才的交易者">Self-taught trader</td>
+<td data-en="Content creator" data-zh="内容创作者">Content creator</td>
+</tr>
+<tr>
+<td data-en="Format" data-zh="形式">Format</td>
+<td class="us-col" data-en="Live, 1-on-1, real-time Q&amp;A" data-zh="现场一对一，实时问答">Live, 1-on-1, real-time Q&amp;A</td>
+<td data-en="Pre-recorded, self-paced videos" data-zh="预录影片，自行安排进度">Pre-recorded, self-paced videos</td>
+<td data-en="Passive reading only" data-zh="只能被动阅读">Passive reading only</td>
+</tr>
+<tr>
+<td data-en="Teaching focus" data-zh="教学重点">Teaching focus</td>
+<td class="us-col" data-en="Spot good companies early, not day-trading signals" data-zh="提早看出好公司，不是短线交易讯号">Spot good companies early, not day-trading signals</td>
+<td data-en="Often trade-signal / screen-watching style" data-zh="多为交易讯号、盯盘式教学">Often trade-signal / screen-watching style</td>
+<td data-en="Stock tips and news, not skill-building" data-zh="股票消息与新闻，不培养能力">Stock tips and news, not skill-building</td>
+</tr>
+<tr>
+<td data-en="Entry price" data-zh="入门价格">Entry price</td>
+<td class="us-col" data-en="RM388 (1-on-1)" data-zh="RM388（一对一）">RM388 (1-on-1)</td>
+<td data-en="RM1,999 and up" data-zh="RM1,999起">RM1,999 and up</td>
+<td data-en="Free" data-zh="免费">Free</td>
+</tr>
+<tr>
+<td data-en="Pricing honesty" data-zh="定价透明度">Pricing honesty</td>
+<td class="us-col" data-en="Real price shown, no inflated anchor" data-zh="价格公开透明，没有虚假原价">Real price shown, no inflated anchor</td>
+<td data-en="Some use inflated-then-discounted anchor pricing" data-zh="部分采用先抬高原价再打折的定价方式">Some use inflated-then-discounted anchor pricing</td>
+<td data-en="Not applicable" data-zh="不适用">Not applicable</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </section>
 
 <section class="faq-section">
-  <div class="faq-inner">
-    <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,3vw,1.9rem);font-weight:900;color:var(--navy);text-align:center;" data-en="Frequently Asked Questions" data-zh="常见问题">Frequently Asked Questions</h2>
-    <div class="faq-list">
-      <details class="faq-row"><summary data-en="Who are the courses suitable for?" data-zh="课程适合什么人？">Who are the courses suitable for?</summary><p data-en="Course 1 is for complete beginners with no finance background. Course 2 is for investors who already understand the basics and want to analyse independently. Course 3 is for investors who want to go deep into a specific topic like IPOs, corporate exercises, or technical analysis." data-zh="第一阶段适合完全零基础的新手。第二阶段适合已了解基础、想建立独立分析能力的投资者。专题课程适合想深入学习IPO、企业活动或技术分析等特定主题的投资者。">Course 1 is for complete beginners with no finance background. Course 2 is for investors who already understand the basics and want to analyse independently. Course 3 is for investors who want to go deep into a specific topic like IPOs, corporate exercises, or technical analysis.</p></details>
-      <details class="faq-row"><summary data-en="Why minimum 2 persons for Course 1 &amp; 2?" data-zh="为什么第一、二阶段最少需要2人？">Why minimum 2 persons for Course 1 &amp; 2?</summary><p data-en="We keep classes small so every student gets direct attention. Minimum 2 ensures the class runs. You're welcome to bring a friend, spouse, sibling or colleague!" data-zh="我们保持班级规模小，确保每位学员获得直接关注。2人要求确保课程顺利开班。欢迎带朋友、配偶、兄弟姐妹或同事！">We keep classes small so every student gets direct attention. Minimum 2 ensures the class runs. You're welcome to bring a friend, spouse, sibling or colleague!</p></details>
-      <details class="faq-row"><summary data-en="How does Course 3 work?" data-zh="专题课程是如何进行的？">How does Course 3 work?</summary><p data-en="Course 3 is a custom, application-based programme. WhatsApp us to discuss which topics you're interested in, and we'll advise on format, schedule and pricing." data-zh="专题课程是定制形式的课程。WhatsApp我们，告诉我们你感兴趣的主题，我们会为你建议合适的形式、时间与价格。">Course 3 is a custom, application-based programme. WhatsApp us to discuss which topics you're interested in, and we'll advise on format, schedule and pricing.</p></details>
-      <details class="faq-row"><summary data-en="Online or in-person?" data-zh="线上还是实体？">Online or in-person?</summary><p data-en="We can accommodate both online (Zoom/Google Meet) and in-person depending on your group's preference. WhatsApp us to confirm." data-zh="我们可以根据小组偏好提供线上（Zoom/Google Meet）或实体课程。WhatsApp我们确认。">We can accommodate both online (Zoom/Google Meet) and in-person depending on your group's preference. WhatsApp us to confirm.</p></details>
-      <details class="faq-row"><summary data-en="Do I need Course 1 before Course 2?" data-zh="需要先完成第一阶段才能上第二阶段吗？">Do I need Course 1 before Course 2?</summary><p data-en="Not necessarily. If you already know how to buy stocks and have basic investing knowledge, you can join Course 2 directly. Not sure? WhatsApp us and we'll advise you." data-zh="不一定。如果你已了解如何买股票并有基础知识，可以直接参加第二阶段。不确定？WhatsApp我们，我们会给你建议。">Not necessarily. If you already know how to buy stocks and have basic investing knowledge, you can join Course 2 directly. Not sure? WhatsApp us and we'll advise you.</p></details>
-      <details class="faq-row"><summary data-en="What language are the sessions in?" data-zh="课程用什么语言授课？">What language are the sessions in?</summary><p data-en="Our primary language is Mandarin Chinese, with English terms used where relevant. If your group prefers English, let us know when you register." data-zh="主要授课语言为华语，相关英语术语会穿插使用。如希望以英语授课，请在报名时告知我们。">Our primary language is Mandarin Chinese, with English terms used where relevant. If your group prefers English, let us know when you register.</p></details>
-      <details class="faq-row"><summary data-en="Will I make money after taking these courses?" data-zh="上完课程后我一定能赚钱吗？">Will I make money after taking these courses?</summary><p data-en="We can't promise returns, and you should be cautious of anyone who does. What we teach is how to analyse companies and make more informed decisions. Investing always involves risk." data-zh="我们无法承诺任何投资回报，也建议你对任何这样承诺的人保持谨慎。我们教的是如何分析公司、做出更有依据的判断。投资始终存在风险。">We can't promise returns, and you should be cautious of anyone who does. What we teach is how to analyse companies and make more informed decisions. Investing always involves risk.</p></details>
-    </div>
-  </div>
+<div class="faq-inner">
+<h2 style="font-family:var(--serif);font-size:clamp(1.5rem,3vw,1.9rem);font-weight:900;color:var(--navy);text-align:center;" data-en="Frequently Asked Questions" data-zh="常见问题">Frequently Asked Questions</h2>
+<div class="faq-list">
+<details class="faq-row"><summary data-en="Who are the courses suitable for?" data-zh="课程适合什么人？">Who are the courses suitable for?</summary><p data-en="Course 1 is for complete beginners with no finance background. Course 2 is for investors who already understand the basics and want to analyse independently. Course 3 is for investors who want to go deep into a specific topic like IPOs, corporate exercises, or technical analysis." data-zh="第一阶段适合完全零基础的新手。第二阶段适合已了解基础、想建立独立分析能力的投资者。专题课程适合想深入学习IPO、企业活动或技术分析等特定主题的投资者。">Course 1 is for complete beginners with no finance background. Course 2 is for investors who already understand the basics and want to analyse independently. Course 3 is for investors who want to go deep into a specific topic like IPOs, corporate exercises, or technical analysis.</p></details>
+<details class="faq-row"><summary data-en="Do you teach day trading or give live buy/sell signals?" data-zh="你们会教短线交易或提供买卖讯号吗？">Do you teach day trading or give live buy/sell signals?</summary><p data-en="No. We teach fundamental research and judgment, how to spot a good company early and hold with conviction. We're not a signals service or a day-trading course." data-zh="不会。我们教的是基本面研究与判断能力，如何提早看出一家好公司，并有信心地持有。我们不是讯号服务，也不是短线交易课程。">No. We teach fundamental research and judgment, how to spot a good company early and hold with conviction. We're not a signals service or a day-trading course.</p></details>
+<details class="faq-row"><summary data-en="Is this pre-recorded?" data-zh="这是录播课程吗？">Is this pre-recorded?</summary><p data-en="No, every session is live and 1-on-1 with your instructor directly, not a recorded video course." data-zh="不是，每一堂课都是现场一对一，直接由导师授课，不是录播影片课程。">No, every session is live and 1-on-1 with your instructor directly, not a recorded video course.</p></details>
+<details class="faq-row"><summary data-en="Why is your price lower than other courses I've seen?" data-zh="为什么你们的价格比我看过的其他课程便宜？">Why is your price lower than other courses I've seen?</summary><p data-en="We could charge more given our background, but we'd rather price fairly and let good teaching build our reputation through word of mouth than rely on an inflated discount." data-zh="以我们的背景，其实可以收取更高的学费，但我们宁愿定价公道，靠真材实料的教学累积口碑，而不是靠灌水后打折的手法。">We could charge more given our background, but we'd rather price fairly and let good teaching build our reputation through word of mouth than rely on an inflated discount.</p></details>
+<details class="faq-row"><summary data-en="Why minimum 2 persons for the student rate?" data-zh="为什么学生优惠价需要至少2人？">Why minimum 2 persons for the student rate?</summary><p data-en="All sessions are 1-on-1 by default, so you get direct attention either way. The student rate is the one exception, and needs two people to run since it's a discounted bundle." data-zh="所有课程默认都是一对一，确保你能获得直接的关注。学生优惠价是唯一的例外，因为这是配套优惠价，需要2人才能成班。">All sessions are 1-on-1 by default, so you get direct attention either way. The student rate is the one exception, and needs two people to run since it's a discounted bundle.</p></details>
+<details class="faq-row"><summary data-en="How does Course 3 work?" data-zh="专题课程是如何进行的？">How does Course 3 work?</summary><p data-en="Course 3 is a custom, application-based programme. WhatsApp us to discuss which topics you're interested in, and we'll advise on format, schedule and pricing." data-zh="专题课程是定制形式的课程。WhatsApp我们，告诉我们你感兴趣的主题，我们会为你建议合适的形式、时间与价格。">Course 3 is a custom, application-based programme. WhatsApp us to discuss which topics you're interested in, and we'll advise on format, schedule and pricing.</p></details>
+<details class="faq-row"><summary data-en="Online or in-person?" data-zh="线上还是实体？">Online or in-person?</summary><p data-en="We can accommodate both online (Zoom/Google Meet) and in-person depending on your preference. WhatsApp us to confirm." data-zh="我们可以根据你的偏好提供线上（Zoom/Google Meet）或实体课程。WhatsApp我们确认。">We can accommodate both online (Zoom/Google Meet) and in-person depending on your preference. WhatsApp us to confirm.</p></details>
+<details class="faq-row"><summary data-en="Do I need Course 1 before Course 2?" data-zh="需要先完成第一阶段才能上第二阶段吗？">Do I need Course 1 before Course 2?</summary><p data-en="Not necessarily. If you already know how to buy stocks and have basic investing knowledge, you can join Course 2 directly. Not sure? WhatsApp us and we'll advise you." data-zh="不一定。如果你已了解如何买股票并有基础知识，可以直接参加第二阶段。不确定？WhatsApp我们，我们会给你建议。">Not necessarily. If you already know how to buy stocks and have basic investing knowledge, you can join Course 2 directly. Not sure? WhatsApp us and we'll advise you.</p></details>
+<details class="faq-row"><summary data-en="What language are the sessions in?" data-zh="课程用什么语言授课？">What language are the sessions in?</summary><p data-en="Our default is Mandarin Chinese, with English terms used where relevant. If you'd prefer full English or Bahasa Malaysia, let us know when you register and we'll accommodate it." data-zh="我们预设以华语授课，相关英语术语会穿插使用。如希望以英语或马来文授课，请在报名时告知我们，我们可以配合。">Our default is Mandarin Chinese, with English terms used where relevant. If you'd prefer full English or Bahasa Malaysia, let us know when you register and we'll accommodate it.</p></details>
+<details class="faq-row"><summary data-en="What if I'm not satisfied with the course?" data-zh="如果我对课程不满意怎么办？">What if I'm not satisfied with the course?</summary><p data-en="If you feel you didn't learn anything, let us know after completing the course and you can apply for a full refund." data-zh="如果你觉得没有学到任何东西，可以在完成课程后告诉我们，并申请全额退款。">If you feel you didn't learn anything, let us know after completing the course and you can apply for a full refund.</p></details>
+<details class="faq-row"><summary data-en="Will I make money after taking these courses?" data-zh="上完课程后我一定能赚钱吗？">Will I make money after taking these courses?</summary><p data-en="We can't promise returns, and you should be cautious of anyone who does. What we teach is how to analyse companies and make more informed decisions. Investing always involves risk." data-zh="我们无法承诺任何投资回报，也建议你对任何这样承诺的人保持谨慎。我们教的是如何分析公司、做出更有依据的判断。投资始终存在风险。">We can't promise returns, and you should be cautious of anyone who does. What we teach is how to analyse companies and make more informed decisions. Investing always involves risk.</p></details>
+</div>
+</div>
 </section>
 
 <section class="final-cta">
-  <h2 data-en="Ready to Learn the Right Way?" data-zh="准备好开始有系统地学习了吗？">Ready to Learn the Right Way?</h2>
-  <p data-en="WhatsApp us to find out which course fits where you are right now, and check the next available class date." data-zh="WhatsApp我们，了解哪个阶段最适合你目前的程度，并查询下期开课日期。">WhatsApp us to find out which course fits where you are right now, and check the next available class date.</p>
-  <button onclick="openWA('Hi, I want to find out more about BursaNews investing courses. Please advise which course suits me and share the next available date.')" class="final-cta-btn" data-en="💬 WhatsApp Us to Register" data-zh="💬 WhatsApp我们报名">💬 WhatsApp Us to Register</button>
-  <p style="color:rgba(255,255,255,.35);font-size:13px;margin-top:1rem;" data-en="No hard sell. Just a chat about which course suits you." data-zh="没有强行推销，只是聊聊哪个课程最适合你。">No hard sell. Just a chat about which course suits you.</p>
+<h2 data-en="Ready to Learn the Right Way?" data-zh="准备好开始有系统地学习了吗？">Ready to Learn the Right Way?</h2>
+<p data-en="1-on-1 slots are limited each week. Early-bird pricing ends 31 August 2026." data-zh="一对一名额每周有限。早鸟优惠将在2026年8月31日截止。">1-on-1 slots are limited each week. Early-bird pricing ends 31 August 2026.</p>
+<div class="final-cta-actions">
+<button onclick="openWA('Hi, I want to find out more about BursaNews investing courses. Please advise which course suits me and share the next available slot.')" class="final-cta-btn" data-en="💬 WhatsApp Us to Register" data-zh="💬 WhatsApp我们报名">💬 WhatsApp Us to Register</button>
+<button onclick="openWA('Hi, I would like to book a free 15 minute chat to find out which course suits me.')" class="final-cta-btn outline" data-en="Book a Free 15 Minute Chat" data-zh="预约免费15分钟咨询">Book a Free 15 Minute Chat</button>
+</div>
+<p style="color:rgba(255,255,255,.35);font-size:13px;margin-top:1rem;" data-en="No hard sell. Just a chat about which course suits you." data-zh="没有强行推销，只是聊聊哪个课程最适合你。">No hard sell. Just a chat about which course suits you.</p>
 </section>
 
 </main>
