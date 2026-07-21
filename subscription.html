@@ -188,32 +188,31 @@ body{font-size:17px;}
 .comp-scroll-hint{display:none;}
 
 /* ── COMPARISON TABLE ───────────────────────────── */
-.comp-section{padding:5rem 2rem;background:var(--navy2,#1a2d4f);}
+.comp-section{padding:5rem 2rem;background:#F0E8DF;}
 .comp-inner{max-width:900px;margin:0 auto;}
-.comp-table{width:100%;border-collapse:separate;border-spacing:0;font-size:17px;}
-.comp-table th{padding:14px 16px;font-weight:700;text-align:center;font-size:15px;background:rgba(255,255,255,.06);color:rgba(255,255,255,.6);}
-.comp-table th:first-child{text-align:left;border-radius:12px 0 0 0;width:34%;}
-.comp-table th:last-child{border-radius:0 12px 0 0;color:#FFD700;}
-.comp-table td{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.06);text-align:center;color:rgba(255,255,255,.65);font-size:16.5px;}
-.comp-table td:first-child{text-align:left;font-weight:500;color:rgba(255,255,255,.5);}
+.comp-table{width:100%;border-collapse:separate;border-spacing:0;font-size:17px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(10,22,40,.06);}
+.comp-table th{padding:14px 16px;font-weight:700;text-align:center;font-size:15px;background:#e8e6e2;color:#0a1628;}
+.comp-table th:first-child{text-align:left;background:#fff;}
+.comp-table td{padding:14px 16px;border-bottom:1px solid #f0eeea;text-align:center;color:#444;font-size:16.5px;}
+.comp-table td:first-child{text-align:left;font-weight:500;color:#6b6760;}
 .comp-table tr:last-child td{border-bottom:none;font-weight:700;}
-.comp-table tr:last-child td:nth-child(2){color:rgba(255,255,255,.85);}
-.comp-table tr:last-child td:nth-child(3){color:rgba(255,255,255,.85);}
-.comp-table tr:last-child td:nth-child(4){color:#FFD700;}
-.comp-check{color:#1adb5e;font-size:1.1rem;font-weight:700;}
-.comp-dash{color:rgba(255,255,255,.2);}
-.comp-highlight{background:rgba(255,215,0,.04);border-left:2px solid rgba(255,215,0,.3);}
-.comp-table tr:hover td{background:rgba(255,255,255,.04);}
-.comp-table tr.comp-highlight:hover td{background:rgba(255,215,0,.08);}
-.comp-table th:nth-child(2){background:rgba(255,255,255,.08);color:rgba(255,255,255,.75);}
-.comp-table th:nth-child(3){background:rgba(59,130,246,.18);color:#93c5fd;}
-.comp-table th:nth-child(4){background:rgba(255,215,0,.14);}
-.comp-table td:nth-child(2){background:rgba(255,255,255,.03);color:rgba(255,255,255,.55);}
-.comp-table td:nth-child(3){background:rgba(59,130,246,.06);color:rgba(147,197,253,.85);}
-.comp-table td:nth-child(4){background:rgba(255,215,0,.05);color:rgba(255,215,0,.85);}
-.comp-table tr:hover td:nth-child(2){background:rgba(255,255,255,.07);}
-.comp-table tr:hover td:nth-child(3){background:rgba(59,130,246,.1);}
-.comp-table tr:hover td:nth-child(4){background:rgba(255,215,0,.09);}
+.comp-check{color:#16a34a;font-size:1.1rem;font-weight:700;}
+.comp-dash{color:#ccc;}
+.comp-highlight{background:rgba(255,107,0,.03);border-left:2px solid rgba(255,107,0,.35);}
+.comp-table tr:hover td{background:#faf9f7;}
+.comp-table tr.comp-highlight:hover td{background:rgba(255,107,0,.06);}
+.comp-table th:nth-child(2){background:#e8e6e2;color:#0a1628;}
+.comp-table th:nth-child(3){background:#185FA5;color:#fff;}
+.comp-table th:nth-child(4){background:#FF6B00;color:#fff;}
+.comp-table td:nth-child(2){background:#f8f7f4;color:#333;}
+.comp-table td:nth-child(3){background:#eff6ff;color:#1e40af;}
+.comp-table td:nth-child(4){background:#fff3e0;color:#9a3412;}
+.comp-table tr:last-child td:nth-child(2){color:#0a1628;}
+.comp-table tr:last-child td:nth-child(3){color:#185FA5;}
+.comp-table tr:last-child td:nth-child(4){color:#c2410c;}
+.comp-table tr:hover td:nth-child(2){background:#f0eeea;}
+.comp-table tr:hover td:nth-child(3){background:#e3edfa;}
+.comp-table tr:hover td:nth-child(4){background:#ffe9cc;}
 .fb-icon{vertical-align:-3px;margin-right:5px;}
 .gift-icon{font-size:1.15em;vertical-align:-3px;margin-right:4px;}
 </style>
@@ -441,9 +440,9 @@ body{font-size:17px;}
   <div class="comp-inner">
     <div style="text-align:center;margin-bottom:2rem;">
       <div class="section-label" data-en="COMPARE PLANS" data-zh="套餐对比">COMPARE PLANS</div>
-      <h2 style="font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#fff;margin-bottom:.5rem;"
+      <h2 style="font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#0a1628;margin-bottom:.5rem;"
         data-en="Which plan is right for you?" data-zh="哪个套餐最适合你？">Which plan is right for you?</h2>
-      <p style="color:rgba(255,255,255,.45);font-size:14px;"
+      <p style="color:#6b6760;font-size:14px;"
         data-en="All three start with the same free content. Paid tiers go deeper." data-zh="三个套餐都从同样的免费内容开始，付费层级提供更深入的分析。">All three start with the same free content. Paid tiers go deeper.</p>
     </div>
     <div class="comp-scroll-hint" data-en="&#8592; Swipe to compare &#8594;" data-zh="&#8592; 左右滑动查看 &#8594;">&#8592; Swipe to compare &#8594;</div>
@@ -509,7 +508,7 @@ body{font-size:17px;}
       </tbody>
     </table>
     </div>
-    <p style="font-size:12px;color:rgba(255,255,255,.3);text-align:center;margin-top:1.25rem;"
+    <p style="font-size:12px;color:#999;text-align:center;margin-top:1.25rem;"
       data-en="✦ 马股早知道 subscribers automatically get everything in the FB Subscription too."
       data-zh="✦ 订阅马股早知道的用户，已自动包含FB订阅专区的所有内容。">✦ 马股早知道 subscribers automatically get everything in the FB Subscription too.</p>
   </div>
