@@ -205,6 +205,17 @@ body{font-size:17px;}
 .comp-highlight{background:rgba(255,215,0,.04);border-left:2px solid rgba(255,215,0,.3);}
 .comp-table tr:hover td{background:rgba(255,255,255,.04);}
 .comp-table tr.comp-highlight:hover td{background:rgba(255,215,0,.08);}
+.comp-table th:nth-child(2){background:rgba(255,255,255,.08);color:rgba(255,255,255,.75);}
+.comp-table th:nth-child(3){background:rgba(59,130,246,.18);color:#93c5fd;}
+.comp-table th:nth-child(4){background:rgba(255,215,0,.14);}
+.comp-table td:nth-child(2){background:rgba(255,255,255,.03);color:rgba(255,255,255,.55);}
+.comp-table td:nth-child(3){background:rgba(59,130,246,.06);color:rgba(147,197,253,.85);}
+.comp-table td:nth-child(4){background:rgba(255,215,0,.05);color:rgba(255,215,0,.85);}
+.comp-table tr:hover td:nth-child(2){background:rgba(255,255,255,.07);}
+.comp-table tr:hover td:nth-child(3){background:rgba(59,130,246,.1);}
+.comp-table tr:hover td:nth-child(4){background:rgba(255,215,0,.09);}
+.fb-icon{vertical-align:-3px;margin-right:5px;}
+.gift-icon{font-size:1.15em;vertical-align:-3px;margin-right:4px;}
 </style>
 <script type="application/ld+json">{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mybursanews.com/index.html"},{"@type":"ListItem","position":2,"name":"Subscribe","item":"https://mybursanews.com/subscription.html"}]}</script>
 </head>
@@ -442,8 +453,8 @@ body{font-size:17px;}
         <tr>
           <th></th>
           <th data-en="📹 Daily Reel" data-zh="📹 每日Reel">📹 Daily Reel</th>
-          <th data-en="📰 FB Subscription" data-zh="📰 FB订阅专区">📰 FB Subscription</th>
-          <th data-en="📲 马股早知道" data-zh="📲 马股早知道">📲 马股早知道</th>
+          <th><svg class="fb-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#fff"/><path d="M15.5 8.5h-2c-.3 0-.5.2-.5.5v2h2.4l-.3 2.5H13v6.4h-2.7V13H8.5v-2.5h1.8V8.7c0-1.8 1.1-2.8 2.7-2.8h2.1z" fill="#3A76A8"/></svg><span data-en="FB Subscription" data-zh="FB订阅专区">FB Subscription</span></th>
+          <th><span class="gift-icon">🎁</span><span data-en="马股早知道" data-zh="马股早知道">马股早知道</span></th>
         </tr>
       </thead>
       <tbody>
