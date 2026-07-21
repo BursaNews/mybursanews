@@ -151,6 +151,12 @@
 .who-card.yes .who-list li::before{content:"\2714";position:absolute;left:0;color:#1F7A5C;font-size:11px;}
 .who-card.no .who-list li::before{content:"\2715";position:absolute;left:0;color:#a84633;font-size:11px;}
 
+.disclaimer-section{background:#fff;padding:0 2rem 5rem;}
+.disclaimer-inner{max-width:720px;margin:0 auto;background:var(--off);border:1px solid var(--border);border-radius:16px;padding:2rem 2.2rem;}
+.disclaimer-label{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--gray);margin-bottom:.9rem;display:flex;align-items:center;gap:6px;}
+.disclaimer-inner p{font-size:14px;color:var(--text);line-height:1.85;margin-bottom:.9rem;}
+.disclaimer-inner p:last-child{margin-bottom:0;}
+
 .why-section{background:var(--navy2);padding:5rem 2rem;}
 .why-inner{max-width:900px;margin:0 auto;text-align:center;}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
@@ -388,7 +394,7 @@
 <div class="course-facts">
 <div class="fact"><strong data-en="Format:" data-zh="形式：">Format:</strong> <span data-en="1-on-1 (student pairs: 2 people, same session)" data-zh="一对一（学生优惠：2人同班）">1-on-1 (student pairs: 2 people, same session)</span></div>
 <div class="fact"><strong data-en="Language:" data-zh="语言：">Language:</strong> <span data-en="Mandarin or English, Bahasa Malaysia on request" data-zh="华语或英语，可要求马来文">Mandarin or English, Bahasa Malaysia on request</span></div>
-<div class="fact" data-en="Not satisfied after Session 1? We'll refund you, no questions asked." data-zh="若第一堂课后不满意，我们会退款给你，无需理由。">Not satisfied after Session 1? We'll refund you, no questions asked.</div>
+<div class="fact" data-en="Didn't learn anything? Tell us after the course and apply for a full refund." data-zh="如果你觉得没有学到东西，课程结束后告诉我们，可申请全额退款。">Didn't learn anything? Tell us after the course and apply for a full refund.</div>
 <div class="fact" data-en="Early-bird pricing ends 31 August 2026." data-zh="早鸟优惠将在2026年8月31日截止。">Early-bird pricing ends 31 August 2026.</div>
 </div>
 <div class="course-cta">
@@ -457,7 +463,7 @@
 <div class="course-facts">
 <div class="fact"><strong data-en="Format:" data-zh="形式：">Format:</strong> <span data-en="1-on-1 only" data-zh="仅一对一">1-on-1 only</span></div>
 <div class="fact"><strong data-en="Language:" data-zh="语言：">Language:</strong> <span data-en="Mandarin or English, Bahasa Malaysia on request" data-zh="华语或英语，可要求马来文">Mandarin or English, Bahasa Malaysia on request</span></div>
-<div class="fact" data-en="Not satisfied after Session 1? We'll refund you, no questions asked." data-zh="若第一堂课后不满意，我们会退款给你，无需理由。">Not satisfied after Session 1? We'll refund you, no questions asked.</div>
+<div class="fact" data-en="Didn't learn anything? Tell us after the course and apply for a full refund." data-zh="如果你觉得没有学到东西，课程结束后告诉我们，可申请全额退款。">Didn't learn anything? Tell us after the course and apply for a full refund.</div>
 <div class="fact" data-en="Early-bird pricing ends 31 August 2026." data-zh="早鸟优惠将在2026年8月31日截止。">Early-bird pricing ends 31 August 2026.</div>
 </div>
 <div class="course-cta">
@@ -486,6 +492,10 @@
 <div class="premium-topic">
 <div class="premium-topic-title"><span>📈</span><span data-en="Technical Analysis Deep Dive" data-zh="技术分析深度课程">Technical Analysis Deep Dive</span></div>
 <div class="premium-topic-desc" data-en="Trend analysis, volume, support and resistance, entry and exit strategy, and understanding overall market behaviour." data-zh="趋势分析、成交量、支撑与阻力、进出场策略，以及理解整体市场行为。">Trend analysis, volume, support and resistance, entry and exit strategy, and understanding overall market behaviour.</div>
+</div>
+<div class="premium-topic">
+<div class="premium-topic-title"><span>🎯</span><span data-en="Structured Warrants Deep Dive" data-zh="结构权证深度课程">Structured Warrants Deep Dive</span></div>
+<div class="premium-topic-desc" data-en="How structured warrants actually work: leverage, what determines a warrant's fair value, why time decay eats into your position, and how to calculate what a warrant should be worth before you buy." data-zh="了解结构权证到底是怎么运作的：杠杆效应、什么决定了权证的合理价值、时间价值为什么会不断流失，以及如何在买入前自己计算权证该值多少钱。">How structured warrants actually work: leverage, what determines a warrant's fair value, why time decay eats into your position, and how to calculate what a warrant should be worth before you buy.</div>
 </div>
 </div>
 <div class="course-cta">
@@ -584,6 +594,14 @@
 </div>
 </section>
 
+<section class="disclaimer-section">
+<div class="disclaimer-inner">
+<div class="disclaimer-label" data-en="⚠️ A Quick Disclaimer" data-zh="⚠️ 重要声明">⚠️ A Quick Disclaimer</div>
+<p data-en="This course is built for people who genuinely want to grow as investors, not people looking for stock tips. If your goal is to be handed a stock code to buy today, we're not the right fit for you, and we'd rather tell you that upfront than take your money." data-zh="这堂课是为真正想在投资路上成长的人设计的，不是给想要股票代号的人。如果你的目标是想要有人直接告诉你今天该买什么，那我们可能不适合你，我们宁愿现在就跟你说清楚，也不愿意收你的钱却帮不到你。">This course is built for people who genuinely want to grow as investors, not people looking for stock tips. If your goal is to be handed a stock code to buy today, we're not the right fit for you, and we'd rather tell you that upfront than take your money.</p>
+<p data-en="We are not licensed financial advisors, and nothing taught in this course is a recommendation to buy or sell any specific stock. We teach you how to analyse, decide and think for yourself. Investing always involves risk, and past results, ours or anyone else's, are not a guarantee of future returns." data-zh="我们不是持牌财务顾问，课程内容不构成任何买卖特定股票的建议。我们教的是如何自己分析、判断与思考。投资永远存在风险，无论是我们或任何人过去的成绩，都不能保证未来的回报。">We are not licensed financial advisors, and nothing taught in this course is a recommendation to buy or sell any specific stock. We teach you how to analyse, decide and think for yourself. Investing always involves risk, and past results, ours or anyone else's, are not a guarantee of future returns.</p>
+</div>
+</section>
+
 <section class="why-section">
 <div class="why-inner">
 <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,3vw,2rem);font-weight:900;color:#fff;margin-bottom:.5rem;" data-en="Why Learn From BursaNews?" data-zh="为什么选择BursaNews？">Why Learn From BursaNews?</h2>
@@ -661,7 +679,7 @@
 <details class="faq-row"><summary data-en="Online or in-person?" data-zh="线上还是实体？">Online or in-person?</summary><p data-en="We can accommodate both online (Zoom/Google Meet) and in-person depending on your preference. WhatsApp us to confirm." data-zh="我们可以根据你的偏好提供线上（Zoom/Google Meet）或实体课程。WhatsApp我们确认。">We can accommodate both online (Zoom/Google Meet) and in-person depending on your preference. WhatsApp us to confirm.</p></details>
 <details class="faq-row"><summary data-en="Do I need Course 1 before Course 2?" data-zh="需要先完成第一阶段才能上第二阶段吗？">Do I need Course 1 before Course 2?</summary><p data-en="Not necessarily. If you already know how to buy stocks and have basic investing knowledge, you can join Course 2 directly. Not sure? WhatsApp us and we'll advise you." data-zh="不一定。如果你已了解如何买股票并有基础知识，可以直接参加第二阶段。不确定？WhatsApp我们，我们会给你建议。">Not necessarily. If you already know how to buy stocks and have basic investing knowledge, you can join Course 2 directly. Not sure? WhatsApp us and we'll advise you.</p></details>
 <details class="faq-row"><summary data-en="What language are the sessions in?" data-zh="课程用什么语言授课？">What language are the sessions in?</summary><p data-en="Our default is Mandarin Chinese, with English terms used where relevant. If you'd prefer full English or Bahasa Malaysia, let us know when you register and we'll accommodate it." data-zh="我们预设以华语授课，相关英语术语会穿插使用。如希望以英语或马来文授课，请在报名时告知我们，我们可以配合。">Our default is Mandarin Chinese, with English terms used where relevant. If you'd prefer full English or Bahasa Malaysia, let us know when you register and we'll accommodate it.</p></details>
-<details class="faq-row"><summary data-en="What if I'm not satisfied with the course?" data-zh="如果我对课程不满意怎么办？">What if I'm not satisfied with the course?</summary><p data-en="If you feel you didn't learn anything useful after Session 1, message us and we'll refund you." data-zh="如果你觉得第一堂课没有学到任何有用的东西，请联系我们，我们会退款给你。">If you feel you didn't learn anything useful after Session 1, message us and we'll refund you.</p></details>
+<details class="faq-row"><summary data-en="What if I'm not satisfied with the course?" data-zh="如果我对课程不满意怎么办？">What if I'm not satisfied with the course?</summary><p data-en="If you feel you didn't learn anything, let us know after completing the course and you can apply for a full refund." data-zh="如果你觉得没有学到任何东西，可以在完成课程后告诉我们，并申请全额退款。">If you feel you didn't learn anything, let us know after completing the course and you can apply for a full refund.</p></details>
 <details class="faq-row"><summary data-en="Will I make money after taking these courses?" data-zh="上完课程后我一定能赚钱吗？">Will I make money after taking these courses?</summary><p data-en="We can't promise returns, and you should be cautious of anyone who does. What we teach is how to analyse companies and make more informed decisions. Investing always involves risk." data-zh="我们无法承诺任何投资回报，也建议你对任何这样承诺的人保持谨慎。我们教的是如何分析公司、做出更有依据的判断。投资始终存在风险。">We can't promise returns, and you should be cautious of anyone who does. What we teach is how to analyse companies and make more informed decisions. Investing always involves risk.</p></details>
 </div>
 </div>
