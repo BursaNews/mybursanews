@@ -66,6 +66,12 @@ body{font-size:17px;}
 .stitle{font-family:"Noto Serif SC",serif;font-size:clamp(1.7rem,3vw,2.2rem);font-weight:900;color:#0a1628;margin-bottom:.75rem;line-height:1.2;letter-spacing:-.02em;}
 .stitle em{color:#FF6B00;font-style:normal;}.stitle.w{color:#fff;}
 .sjoke{font-size:.95rem;color:#FF6B00;font-style:italic;margin-bottom:1.5rem;}
+/* report card annotations */
+.rp-block{display:flex;align-items:stretch;gap:.65rem;margin:0 1.75rem 1rem;}
+.rp-box{flex:1;min-width:0;border-radius:12px;padding:1.1rem 1.25rem;}
+.rp-annot{display:flex;align-items:center;gap:.5rem;width:180px;flex-shrink:0;}
+.rp-bracket{flex-shrink:0;}
+.rp-annot-txt{font-size:11.5px;line-height:1.55;color:rgba(255,255,255,.55);}
 /* HERO */
 .hero{background:#0a1628;padding:5rem 2rem 4rem;text-align:center;position:relative;overflow:hidden;}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(255,107,0,.1),transparent);pointer-events:none;}
@@ -178,6 +184,7 @@ body{font-size:17px;}
 .faq-item.open .faq-icon{transform:rotate(45deg);color:#FF6B00;}
 .faq-a{font-size:14.5px;color:#6b6760;line-height:1.75;padding-bottom:1.1rem;display:none;}
 .faq-item.open .faq-a{display:block;}
+@media(max-width:768px){.rp-block{flex-direction:column;gap:.4rem;}.rp-annot{width:auto;}.rp-bracket{display:none;}.rp-annot-txt{padding-left:.6rem;border-left:2px solid rgba(255,255,255,.15);}}
 @media(max-width:768px){.wgrid{grid-template-columns:1fr;}.sample-outer{grid-template-columns:1fr;}.sarrow{transform:rotate(90deg);}.bsteps{grid-template-columns:1fr;}.barrow{transform:rotate(90deg);}
 .comp-table{width:auto;min-width:640px;font-size:14px;}
 .comp-table th{padding:12px 10px;font-size:13px;}
@@ -309,7 +316,8 @@ body{font-size:17px;}
   </div>
 
   <!-- 表面 block -->
-  <div style="margin:0 1.75rem 1rem;background:rgba(255,107,0,.08);border:1px solid rgba(255,107,0,.2);border-radius:12px;padding:1.1rem 1.25rem;">
+  <div class="rp-block">
+  <div class="rp-box" style="background:rgba(255,107,0,.08);border:1px solid rgba(255,107,0,.2);">
     <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:#FF8533;margin-bottom:.75rem;">👁 表面, Numbers</div>
     <div style="font-size:13.5px;color:rgba(255,255,255,.8);line-height:1.75;">
       <div style="margin-bottom:.35rem;color:rgba(255,255,255,.5);font-size:12.5px;">科普：公司有2个主要业务：自动化测试设备 (ATE) 和工厂自动化解决方案 (FAS)</div>
@@ -318,23 +326,40 @@ body{font-size:17px;}
       <div>· 但是，ATE 收入 YoY 下跌近 9%（QoQ 有进步，上升 84%）</div>
     </div>
   </div>
+  <div class="rp-annot">
+    <svg class="rp-bracket" width="14" height="100%" viewBox="0 0 14 100" preserveAspectRatio="none"><path d="M12 2 Q2 2 2 22 L2 46 Q2 50 0 50 Q2 50 2 54 L2 78 Q2 98 12 98" fill="none" stroke="rgba(255,133,51,.6)" stroke-width="1.6"/></svg>
+    <div class="rp-annot-txt" data-en="Info the company released — visible in the news" data-zh="公司发布的信息，在新闻上可以看到的资料">Info the company released — visible in the news</div>
+  </div>
+  </div>
 
   <!-- 关键看点 block -->
-  <div style="margin:0 1.75rem 1rem;background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.2);border-radius:12px;padding:1.1rem 1.25rem;">
+  <div class="rp-block">
+  <div class="rp-box" style="background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.2);">
     <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:#c4b5fd;margin-bottom:.75rem;">💡 关键看点, What Matters</div>
     <div style="font-size:13.5px;color:rgba(255,255,255,.8);line-height:1.75;">
       <div>· FAS 业务预计今年将贡献总营收的 50% 以上，正式超越传统的 ATE 核心业务</div>
     </div>
   </div>
+  <div class="rp-annot">
+    <svg class="rp-bracket" width="14" height="100%" viewBox="0 0 14 100" preserveAspectRatio="none"><path d="M12 2 Q2 2 2 22 L2 46 Q2 50 0 50 Q2 50 2 54 L2 78 Q2 98 12 98" fill="none" stroke="rgba(196,181,253,.6)" stroke-width="1.6"/></svg>
+    <div class="rp-annot-txt" data-en="Info the company released that moves the stock — not always in the news" data-zh="公司发布的信息，对股价有影响的重点，新闻上不一定看得到">Info the company released that moves the stock — not always in the news</div>
+  </div>
+  </div>
 
   <!-- 提醒 block -->
-  <div style="margin:0 1.75rem 1rem;background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.2);border-radius:12px;padding:1.1rem 1.25rem;">
+  <div class="rp-block">
+  <div class="rp-box" style="background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.2);">
     <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:#fca5a5;margin-bottom:.75rem;">📌 提醒, Watch Out</div>
     <div style="font-size:13.5px;color:rgba(255,255,255,.8);line-height:1.75;">
       <div style="margin-bottom:.35rem;">· 本季 FAS 的增长高度依赖「单一大客户」，一旦项目结束或客户砍单，业绩波动会很大</div>
       <div style="margin-bottom:.35rem;">· 截止去年12月尾，公司手上的订单是 RM400mil（3Q2025: RM450mil）。要看下个analyst briefing最新的订单数据</div>
       <div>· 公司2026全年指引：营业额 RM800mil，毛利率30%。如果是真的，接下来3个季度的成绩都会非常好</div>
     </div>
+  </div>
+  <div class="rp-annot">
+    <svg class="rp-bracket" width="14" height="100%" viewBox="0 0 14 100" preserveAspectRatio="none"><path d="M12 2 Q2 2 2 22 L2 46 Q2 50 0 50 Q2 50 2 54 L2 78 Q2 98 12 98" fill="none" stroke="rgba(252,165,165,.6)" stroke-width="1.6"/></svg>
+    <div class="rp-annot-txt" data-en="Our own team's analysis — guidance, macro impact, catalysts/risks, recent activity, valuation" data-zh="我们团队的分析，可以包括管理层指引，大环境如何影响公司，接下来有什么催化剂/危机，公司近期的活动，股价估值等的分析">Our own team's analysis — guidance, macro impact, catalysts/risks, recent activity, valuation</div>
+  </div>
   </div>
 
   <!-- Teaser + PM CTA -->
