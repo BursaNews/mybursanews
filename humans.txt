@@ -8,7 +8,7 @@
     Location: Kuala Lumpur, Malaysia
 
 /* SITE */
-    URL: https://bursanews.github.io/mybursanews/
+    URL: https://mybursanews.com/
     Language: Chinese (zh-MY), English (en-MY)
     Purpose: Bursa Malaysia investing education for beginners and retail investors
 

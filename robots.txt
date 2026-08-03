@@ -1,5 +1,5 @@
 # BursaNews 马股报报看
-# https://bursanews.github.io/mybursanews/
+# https://mybursanews.com/
 # Malaysia Bursa investing education — Cara beli saham, REIT, dividend, IPO, broker guide
 
 User-agent: *
