@@ -79,6 +79,9 @@ function openWA(m) {
   const text = m || (lang === 'zh'
     ? 'Hi，我想了解更多关于马股报报看的信息'
     : 'Hi, I would like to know more about BursaNews');
+  if (typeof window.gtag === 'function') {
+    gtag('event', 'whatsapp_click', { page_path: location.pathname, wa_message: text.slice(0, 100) });
+  }
   window.open('https://wa.me/601156482183?text=' + encodeURIComponent(text), '_blank');
 }
 
@@ -199,3 +202,32 @@ document.body.insertAdjacentHTML('beforeend', `
 
   setLang(lang);
 });
+
+/* GA4 click tracking: broker affiliate links, WhatsApp/Telegram joins, subscription/coaching page visits */
+(function () {
+  if (window.__bnClickTracking) return;
+  window.__bnClickTracking = true;
+  var BROKERS = [['moomoo', 'Moomoo'], ['webull', 'Webull'], ['rakutentrade', 'Rakuten Trade']];
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a || typeof window.gtag !== 'function') return;
+    var url;
+    try { url = new URL(a.href, location.href); } catch (err) { return; }
+    var host = url.hostname.toLowerCase();
+    var label = (a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 80);
+    var base = { page_path: location.pathname, link_url: url.href, link_text: label };
+    for (var i = 0; i < BROKERS.length; i++) {
+      if (host !== location.hostname && host.indexOf(BROKERS[i][0]) !== -1) {
+        gtag('event', 'affiliate_click', Object.assign({ broker: BROKERS[i][1] }, base));
+        return;
+      }
+    }
+    if (host === 'wa.me' || host.indexOf('whatsapp.com') !== -1) {
+      gtag('event', 'whatsapp_click', base); return;
+    }
+    if (host === 't.me') { gtag('event', 'telegram_click', base); return; }
+    if (host === location.hostname && /\/(subscription|coaching)\.html$/.test(url.pathname) && url.pathname !== location.pathname) {
+      gtag('event', 'service_page_click', Object.assign({ target_page: url.pathname }, base));
+    }
+  }, true);
+})();

@@ -27,7 +27,10 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon-192.png">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&amp;family=DM+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&amp;family=DM+Sans:wght@400;500;600;700;800;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&amp;family=DM+Sans:wght@400;500;600;700;800;900&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&amp;family=DM+Sans:wght@400;500;600;700;800;900&amp;display=swap"></noscript>
 
 <script type="application/ld+json">
 {
@@ -356,5 +359,35 @@ h2{font-family:var(--serif);font-size:clamp(21px,3vw,27px);color:var(--navy);mar
   <div class="sp-disc"><strong>Disclosure:</strong> BursaNews earns an affiliate commission when you sign up via our link or code, at no extra cost to you. Fees and reward amounts are subject to Rakuten Trade's current campaign and may change — verify at rakutentrade.my before signing up. BursaNews is not a licensed financial advisor. This page is for informational purposes only and does not constitute investment advice.</div>
 
 </main>
+<script>
+/* GA4 click tracking: broker affiliate links, WhatsApp/Telegram joins, subscription/coaching page visits */
+(function () {
+  if (window.__bnClickTracking) return;
+  window.__bnClickTracking = true;
+  var BROKERS = [['moomoo', 'Moomoo'], ['webull', 'Webull'], ['rakutentrade', 'Rakuten Trade']];
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a || typeof window.gtag !== 'function') return;
+    var url;
+    try { url = new URL(a.href, location.href); } catch (err) { return; }
+    var host = url.hostname.toLowerCase();
+    var label = (a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 80);
+    var base = { page_path: location.pathname, link_url: url.href, link_text: label };
+    for (var i = 0; i < BROKERS.length; i++) {
+      if (host !== location.hostname && host.indexOf(BROKERS[i][0]) !== -1) {
+        gtag('event', 'affiliate_click', Object.assign({ broker: BROKERS[i][1] }, base));
+        return;
+      }
+    }
+    if (host === 'wa.me' || host.indexOf('whatsapp.com') !== -1) {
+      gtag('event', 'whatsapp_click', base); return;
+    }
+    if (host === 't.me') { gtag('event', 'telegram_click', base); return; }
+    if (host === location.hostname && /\/(subscription|coaching)\.html$/.test(url.pathname) && url.pathname !== location.pathname) {
+      gtag('event', 'service_page_click', Object.assign({ target_page: url.pathname }, base));
+    }
+  }, true);
+})();
+</script>
 </body>
 </html>
