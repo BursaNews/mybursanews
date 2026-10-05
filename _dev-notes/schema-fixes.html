@@ -1,0 +1,74 @@
+<!-- ============================================================
+  FIX 1: Homepage Organization schema (index.html)
+  Find the existing "founder" and "sameAs" fields inside the
+  Organization block of the @graph JSON-LD and replace them with
+  the corrected values below. Everything else in that block
+  (name, url, logo, etc.) can stay as-is.
+============================================================= -->
+
+<!-- Replace the existing "founder" field with: -->
+"founder": [
+  {
+    "@type": "Person",
+    "name": "Chun Sian",
+    "jobTitle": "Co-Founder, Investment Banking & Capital Markets",
+    "worksFor": { "@type": "Organization", "name": "BursaNews 马股报报看" },
+    "alumniOf": "UK university (Master of Engineering, First Class Honours)",
+    "knowsAbout": ["Investment Banking", "IPO Malaysia", "M&A Malaysia", "Capital Markets", "SC Module 12", "SC Module 19"]
+  },
+  {
+    "@type": "Person",
+    "name": "Cyrus Chang",
+    "jobTitle": "Co-Founder, Audit, Valuation & Financial Due Diligence",
+    "worksFor": { "@type": "Organization", "name": "BursaNews 马股报报看" },
+    "knowsAbout": ["Financial Audit", "Business Valuation", "Financial Due Diligence", "Investment Banking"],
+    "hasCredential": "ICAEW Chartered Accountant"
+  }
+],
+
+<!-- Replace the existing "sameAs" field with: -->
+"sameAs": [
+  "https://www.instagram.com/bursa_news_/",
+  "https://www.facebook.com/profile.php?id=61581865126018",
+  "https://youtube.com/@bursa-news",
+  "https://www.tiktok.com/@bursa_news_",
+  "https://xhslink.com/m/8TsW6O4Y3u"
+],
+
+
+<!-- ============================================================
+  FIX 2: rakuten-sign-up-code.html — add missing HowTo schema
+  This page currently only has FAQPage. Moomoo and Webull sign-up
+  pages both have HowTo + FAQPage — add this block to match.
+  Paste as a SECOND <script type="application/ld+json"> tag,
+  alongside the existing FAQPage one (don't replace it).
+  NOTE: steps below are placeholders — replace with the actual
+  step titles/text already written on the live Rakuten page so
+  the schema matches visible content exactly (required for both
+  Google and AI crawlers to trust it).
+============================================================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Sign Up for Rakuten Trade Malaysia",
+  "description": "Step-by-step guide to opening a Rakuten Trade account in Malaysia and claiming the BursaNews sign-up reward.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "[Step 1 title — match live page]",
+      "text": "[Step 1 text — match live page]"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "[Step 2 title — match live page]",
+      "text": "[Step 2 text — match live page]"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "[Step 3 title — match live page]",
+      "text": "[Step 3 text — match live page]"
+    }
+  ]
+}
+</script>

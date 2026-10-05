@@ -157,14 +157,18 @@ document.body.insertAdjacentHTML('beforeend', `
       <a href="${ROOT}posts/moomoo-review-malaysia.html" data-en="Moomoo Malaysia Review" data-zh="Moomoo完整评测">Moomoo Malaysia Review</a>
       <a href="${ROOT}posts/webull-review-malaysia.html" data-en="Webull Malaysia Review" data-zh="Webull完整评测">Webull Malaysia Review</a>
       <a href="${ROOT}posts/how-to-start-investing-malaysia.html" data-en="How to Start Investing" data-zh="如何开始投资">How to Start Investing</a>
-      <a href="${ROOT}posts/what-is-cds-account.html" data-en="CDS Account Guide" data-zh="CDS账户指南">CDS Account Guide</a>
+      <a href="${ROOT}cds-account-malaysia.html" data-en="How to Open a CDS Account" data-zh="CDS账户开户指南">How to Open a CDS Account</a>
+      <a href="${ROOT}trading-account-malaysia.html" data-en="How to Open a Trading Account" data-zh="交易账户开户指南">How to Open a Trading Account</a>
+      <a href="${ROOT}ipo-pink-form-malaysia.html" data-en="IPO Pink Form Guide" data-zh="IPO粉红表格指南">IPO Pink Form Guide</a>
       <a href="${ROOT}posts/rights-issue-explained.html" data-en="Rights Issue Explained" data-zh="供股详解">Rights Issue Explained</a>
     </div>
     <div class="ft-col">
       <h4 data-en="Services" data-zh="服务">Services</h4>
       <a href="${ROOT}subscription.html" data-en="Daily Reports (订阅)" data-zh="每日报告（订阅）">Daily Reports (订阅)</a>
-      <a href="${ROOT}moomoo-sign-up-code.html" data-en="Moomoo Sign Up Rewards" data-zh="Moomoo开户奖励">Moomoo Sign Up Rewards</a>
-      <a href="${ROOT}webull-sign-up-code.html" data-en="Webull Sign Up Rewards" data-zh="Webull开户奖励">Webull Sign Up Rewards</a>
+      <a href="${ROOT}affiliates.html" data-en="Compare Stock Brokers" data-zh="券商比较">Compare Stock Brokers</a>
+      <a href="${ROOT}moomoo-sign-up-code.html" data-en="Moomoo Promo Code BURSA88" data-zh="Moomoo优惠码BURSA88">Moomoo Promo Code BURSA88</a>
+      <a href="${ROOT}webull-sign-up-code.html" data-en="Webull Sign-Up Guide" data-zh="Webull开户教学">Webull Sign-Up Guide</a>
+      <a href="${ROOT}rakuten-sign-up-code.html" data-en="Rakuten Trade Referral Code" data-zh="Rakuten Trade推荐码">Rakuten Trade Referral Code</a>
       <a href="${ROOT}coaching.html" data-en="1-on-1 Coaching" data-zh="一对一辅导">1-on-1 Coaching</a>
     </div>
     <div class="ft-col">
@@ -176,9 +180,9 @@ document.body.insertAdjacentHTML('beforeend', `
   </div>
   <div class="ft-bottom">
     <p data-en="© 2026 BursaNews | 马股报报看. All rights reserved." data-zh="© 2026 马股报报看 | BursaNews. 版权所有。">© 2026 BursaNews | 马股报报看. All rights reserved.</p>
-    <p>bursanews.my</p>
+    <p>mybursanews.com</p>
   </div>
-  <p class="ft-disc" data-en="BursaNews is not a licensed financial advisor. All content is for educational purposes only and does not constitute investment advice. Trading involves risk. This site contains affiliate links — we may earn a commission if you sign up via our links, at no extra cost to you." data-zh="马股报报看不是持牌财务顾问。所有内容仅供教育参考，不构成投资建议。投资涉及风险。本站含联盟推广链接，若您通过我们的链接注册，我们可能获得佣金，对您无额外费用。">BursaNews is not a licensed financial advisor. All content is for educational purposes only and does not constitute investment advice.</p>
+  <p class="ft-disc" data-en="BursaNews is not a licensed financial advisor. All content is for educational purposes only and does not constitute investment advice. Trading involves risk. This site contains affiliate and referral links (Moomoo, Webull, Rakuten Trade). We may earn a commission if you sign up via our links or codes, at no extra cost to you." data-zh="马股报报看不是持牌财务顾问。所有内容仅供教育参考，不构成投资建议。投资涉及风险。本站含联盟及推荐链接（Moomoo、Webull、Rakuten Trade），若您通过我们的链接或优惠码注册，我们可能获得佣金，对您无额外费用。">BursaNews is not a licensed financial advisor. All content is for educational purposes only and does not constitute investment advice.</p>
 </footer>
 <div class="wa-float">
   <div class="wa-tip" data-en="Chat on WhatsApp" data-zh="WhatsApp 联系">Chat on WhatsApp</div>

@@ -1,0 +1,166 @@
+<!-- ============================================================
+  BursaNews JSON-LD Schema Snippets
+  Paste the relevant block(s) into the <head> of each page.
+  Replace [PLACEHOLDER] values with real details before publishing.
+============================================================= -->
+
+<!-- ============================================================
+  1. ORGANIZATION SCHEMA
+  Paste this on the homepage (index.html) <head>.
+  This is the single most important block for AI/LLM trust signals.
+============================================================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "BursaNews 马股报报看",
+  "alternateName": "BursaNews",
+  "url": "https://mybursanews.com",
+  "logo": "https://mybursanews.com/assets/images/logo-cn.png",
+  "description": "BursaNews is a Mandarin-language Malaysian stock investing education and research service founded by former investment bankers, teaching Malaysian retail investors how to read and analyse Bursa Malaysia company announcements.",
+  "foundingDate": "[YYYY]",
+  "founders": [
+    {
+      "@type": "Person",
+      "name": "[Founder 1 full name]",
+      "jobTitle": "Co-Founder",
+      "description": "Former investment banker with Securities Commission Malaysia CMSRL qualifications (Module 12, Module 19)."
+    },
+    {
+      "@type": "Person",
+      "name": "[Founder 2 full name]",
+      "jobTitle": "Co-Founder",
+      "description": "ICAEW-qualified, with investment banking background."
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/bursa_news_/",
+    "https://www.facebook.com/[your-facebook-page-id-or-handle]",
+    "https://wa.me/601156482183"
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Malaysia"
+  },
+  "knowsLanguage": ["zh", "en"],
+  "slogan": "马来西亚股票投资，终于说人话了"
+}
+</script>
+
+<!-- ============================================================
+  2. WEBSITE SCHEMA (enables sitelinks search box eligibility)
+  Paste this on the homepage (index.html) <head>, alongside Organization.
+============================================================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "BursaNews 马股报报看",
+  "url": "https://mybursanews.com",
+  "inLanguage": ["zh-MY", "en-MY"],
+  "publisher": {
+    "@type": "Organization",
+    "name": "BursaNews 马股报报看"
+  }
+}
+</script>
+
+<!-- ============================================================
+  3. ARTICLE SCHEMA
+  Paste this on each /posts/ article page. Fill in per-article values.
+  Example shown for the "How to Start Investing" guide.
+============================================================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Start Investing in Malaysia (Complete 2026 Guide)",
+  "description": "[Meta description of this article]",
+  "url": "https://mybursanews.com/posts/how-to-start-investing-malaysia.html",
+  "datePublished": "2026-06-[DD]",
+  "dateModified": "2026-06-[DD]",
+  "inLanguage": "zh-MY",
+  "author": {
+    "@type": "Organization",
+    "name": "BursaNews 马股报报看",
+    "url": "https://mybursanews.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BursaNews 马股报报看",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mybursanews.com/assets/images/logo-cn.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mybursanews.com/posts/how-to-start-investing-malaysia.html"
+  }
+}
+</script>
+
+<!-- ============================================================
+  4. FAQPAGE SCHEMA
+  Use on any page with a Q&A structure (e.g. starter kit, subscription
+  page, or a dedicated FAQ section). This is one of the highest-value
+  formats for being directly quoted in AI answer engines.
+  Replace with your real, on-page questions and answers — schema must
+  match visible page content.
+============================================================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "BursaNews 会推荐买卖哪一只股票吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不会。BursaNews 从不提供个股买卖建议，我们只教你如何分析财报、公告与行业趋势，让你自己做出判断。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "[Second FAQ question, matching visible page copy]",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "[Answer text, matching visible page copy]"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+  5. BREADCRUMBLIST SCHEMA
+  Paste on inner pages (posts, insights, subscription) to reinforce
+  site structure. Adjust the item list per page depth.
+============================================================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mybursanews.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Market Insights",
+      "item": "https://mybursanews.com/insights.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Start Investing in Malaysia",
+      "item": "https://mybursanews.com/posts/how-to-start-investing-malaysia.html"
+    }
+  ]
+}
+</script>

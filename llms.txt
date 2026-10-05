@@ -15,9 +15,13 @@
 - [Free Starter Kit](https://mybursanews.com/starterkit.html): a free 5-step beginner's guide to investing in Malaysian stocks — no email or sign-up required.
 - [Market Insights / Daily Analysis](https://mybursanews.com/insights.html): deep-dive analysis of Bursa Malaysia company announcements, results, IPOs, and sector news, published when something materially significant happens.
 - [Subscription / Research Reports](https://mybursanews.com/subscription.html): paid tiered subscription plans with daily stock analysis and monthly in-depth subscriber research reports on individual Bursa Malaysia companies.
-- [Broker Comparison / Affiliates](https://mybursanews.com/affiliates.html): independent comparison of Malaysian stock brokers (Moomoo, Webull, Rakuten Trade and others), with affiliate links clearly disclosed. BursaNews states it never charges readers extra for using its referral links.
+- [Broker Comparison / Affiliates](https://mybursanews.com/affiliates.html): editorial comparison of Malaysian stock brokers (Moomoo, Webull, Rakuten Trade), with the comparison methodology and affiliate relationships disclosed. Rankings are BursaNews's editorial opinion, not an industry ranking. Promotions are checked against official broker terms and dated.
 
 ## Guides
+
+- [IPO Pink Form Malaysia: What You Need to Know](https://mybursanews.com/ipo-pink-form-malaysia.html): staff / employee IPO allocation (Pink Application Form), the own-name CDS account requirement, and a step-by-step checklist.
+- [How to Open a CDS Account in Malaysia](https://mybursanews.com/cds-account-malaysia.html): what a CDS account holds, who can open one, online opening, direct vs nominee, fees, IPO applications.
+- [How to Open a Trading Account in Malaysia](https://mybursanews.com/trading-account-malaysia.html): trading vs CDS account, trade settlement, brokerage fees, what to compare before choosing a broker.
 
 - [How to Start Investing in Malaysia (2026 Guide)](https://mybursanews.com/posts/how-to-start-investing-malaysia.html)
 - [Dividend Investing Malaysia: Building Passive Income from Bursa Stocks](https://mybursanews.com/posts/dividend-stocks-malaysia.html)
