@@ -1,0 +1,131 @@
+# BursaNews broker promotion source of truth
+# ------------------------------------------------------------------
+# Internal file. GitHub Pages (Jekyll) does not publish folders that
+# start with an underscore, so visitors never see this file.
+#
+# HOW TO USE
+# 1. Before changing any reward, fee or date on the site, update this
+#    file first with the official source and the date you checked it.
+# 2. Then search the repo for the old value and update every page
+#    (title, meta description, og tags, JSON-LD, FAQ, tables, cards).
+# 3. Status rules:
+#      active     = official broker page confirms it is running today
+#      expired    = stated end date has passed
+#      unverified = no current official evidence; DO NOT show as current
+# 4. Never extend an end date without official evidence.
+# ------------------------------------------------------------------
+
+last_full_audit: 2026-10-04
+
+moomoo:
+  entity: Moomoo Securities Malaysia Sdn. Bhd. (SC licence eCMSL/A0397/2024)
+  signup_link: https://start.moomoo.com/0Bpp3E
+  promotions:
+    - name: New Customer Promotion (standard Moomoo welcome rewards)
+      status: active
+      start: 2026-06-30 22:00 MYT
+      end: 2026-10-09 21:59 MYT   # extended by Moomoo from 23/9/2026
+      eligibility: Universal account opened within the campaign period; individual accounts only
+      deposit_window: All deposits within 30 days of first deposit
+      holding_period: 60 days net deposit maintained
+      tiers:
+        - deposit: RM1,000
+          reward: RM100 total (1 x RM50 cash coupon + 2 x RM25 stock cash coupons)
+        - deposit: RM3,000
+          reward: + Apple fractional share worth RM100
+        - deposit: RM10,000
+          reward: + Apple fractional share worth RM300
+        - deposit: RM40,000
+          reward: + Apple fractional share worth RM1,000
+      max_reward: RM1,500 (standard Moomoo campaign, not a BursaNews-exclusive amount)
+      claim: Return to the campaign page and tap Claim within the campaign period
+      official_source: https://www.moomoo.com/my/support/topic9_122
+      last_verified: 2026-10-04
+    - name: 180-day commission-free card (new users)
+      status: active
+      detail: 180 days commission-free, valid for US, MY, SG, HK and China A-shares, activated on each market account opening. Other fees (stamp duty, clearing, exchange/regulatory fees) still apply.
+      official_source: https://www.moomoo.com/my/pricing
+      last_verified: 2026-10-04
+    - name: Cash Plus 6% p.a. new-user subsidy
+      status: expired
+      end: 2026-08-31
+      official_source: https://www.moomoo.com/my/support/topic9_122
+      note: Removed from all BursaNews pages.
+  bursa88_benefit:
+    status: requires_manual_verification
+    claimed_on_site: Extra Apple shares worth RM50 (first deposit RM1,000) and RM100 (first deposit RM10,000), 60-day hold
+    evidence: BursaNews own PDF guide (assets/moomoo-guide-bursa88.pdf). Not found on any public Moomoo page.
+    action: Allen to reconfirm with Moomoo partner manager, including whether it continues after 9 Oct 2026.
+  ipo_cds:
+    detail: Moomoo help centre says a separate "CDS Account-IPO" is required for Malaysian IPO subscriptions (Accounts > More > CDS Account-IPO); usually processed in under 2 business days. Moomoo pricing lists RM0 IPO application fee.
+    official_source: https://www.moomoo.com/my/support/topic9_214
+    last_verified: 2026-10-04
+
+webull:
+  entity: Webull Securities (Malaysia) Sdn Bhd (CMSL)
+  signup_links:
+    - https://www.webull.com.my/k/bursanews   # used on affiliates.html
+    - https://www.webull.com.my/k/BURSA88     # used on webull-sign-up-code.html
+  signup_link_note: Two different referral links are in use. Allen to confirm which one is tracked and standardise.
+  promotions:
+    - name: New user welcome reward
+      status: active
+      start: 2026-03-31 16:00 MYT
+      end: 2026-10-31 15:59 MYT
+      reward: RM300 (shown as 3 x RM100 trading vouchers on BursaNews pages)
+      condition: Net cumulative deposit >= RM5,000, maintained 60 days
+      bursanews_specific: None verified. This is Webull's standard new-user offer; the BursaNews link is our referral tracking.
+      official_source: https://www.webull.com.my/activity
+      last_verified: 2026-10-04
+    - name: US stock commission promotion
+      status: active
+      detail: 0 commission on US trading for 365 days (new-user promotion, T&Cs apply)
+      conflict_resolved: Older pages said "0% until 31 December 2026". Official page says 365 days. All pages now use 365 days.
+      official_source: https://www.webull.com.my/activity
+      last_verified: 2026-10-04
+  standard_fees:
+    bursa: 0.05% x total trade amount, RM0 platform fee (official pricing page, MY market tab)
+    us: 0 commission, 0 platform fee (headline pricing page, asterisked)
+    conflict_resolved: webull-sign-up-code.html FAQ claimed "0% commission on Malaysian stocks for new users". Not supported. Removed.
+    official_source: https://www.webull.com.my/pricing
+    last_verified: 2026-10-04
+
+rakuten_trade:
+  entity: Rakuten Trade Sdn Bhd
+  signup_link: https://www.rakutentrade.my/device/accountopening?referralcode=BURSA88&mode=webT8C8
+  promotions:
+    - name: Welcome Campaign with NVIDIA (NVDA) shares up to RM150
+      status: expired
+      end: 2026-09-30
+      evidence: End date passed. Campaign no longer listed on rakutentrade.my/welcome-offers-just-for-you (checked 2026-10-04).
+      action_taken: Removed from all current-offer sections, titles, meta, schema and FAQ.
+    - name: Own AAPL From Your First Trade
+      status: expired
+      evidence: Official campaign URL returns "Page Not Found" (checked 2026-10-04). Webull review table still referenced "Apple shares" for Rakuten; removed.
+    - name: New trader offer (RM0 brokerage on first Bursa trade + brokerage rebates)
+      status: requires_manual_verification
+      evidence: Listed on rakutentrade.my/welcome-offers-just-for-you and /start-trading-with-rm0 on 2026-10-04. Official pages show different rebate caps (RM40 vs RM50). T&C PDF (RakuFriends Welcome Campaign, dated 28/09/2026) could not be read automatically.
+      site_wording: Described generically ("RM0 brokerage on your first Bursa trade, T&Cs apply") with no amounts or end date.
+  standard_fees:
+    bursa_brokerage:
+      - range: RM0 - RM100.00
+        fee: RM1.00
+      - range: RM100.01 - RM9,999.99
+        fee: RM2.88
+      - range: RM10,000.00 - RM99,999.99
+        fee: 0.1% of trading value
+      - range: Above RM100,000
+        fee: RM100.00
+    us_brokerage: 0.1% of trading value, min USD0.88, max USD25
+    cds_opening_fee: Free
+    stamp_duty: RM1 per RM1,000 contract value, max RM1,000 (shares); max RM200 for rights, warrants, REITs
+    clearing_fee: 0.03%, max RM1,000 per contract (Bursa)
+    official_source: https://www.rakutentrade.my/fees
+    last_verified: 2026-10-04
+
+bursanews_own_products:
+  coaching_early_bird:
+    status: expired
+    end: 2026-08-31
+    action_taken: Removed the expired "ends 31 August 2026" deadline text. Prices left unchanged.
+    action_needed: Allen to confirm whether early-bird prices still apply or standard prices should show.

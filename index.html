@@ -22,12 +22,12 @@
 <meta name="language" content="en-MY, zh-MY">
 <meta name="author" content="BursaNews 马股报报看">
 
-<title>BursaNews 马股报报看 | Bursa Malaysia Investing Guide</title>
-<meta name="description" content="MyBursaNews (mybursanews.com) — Mandarin Bursa Malaysia investing education from ex-investment bankers. Free guide, broker comparison, dividend basics.">
+<title>BursaNews 马股报报看 | Malaysian Stock Investing Guide: CDS, Brokers, IPOs</title>
+<meta name="description" content="Malaysian stock investing made simple by ex-investment bankers: Bursa Malaysia basics, CDS and trading accounts, broker comparison, IPO Pink Forms and a free Starter Kit. In English and 中文.">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mybursanews.com/">
-<meta property="og:title" content="BursaNews 马股报报看 | Bursa Malaysia Investing Guide">
+<meta property="og:title" content="BursaNews 马股报报看 | Malaysian Stock Investing Made Simple">
 <meta property="og:description" content="Investing in Malaysian stocks, finally explained in layman's terms. Free 5-step Starter Kit, broker comparisons, and daily Bursa announcement analysis.">
 <meta property="og:image" content="https://mybursanews.com/assets/images/logo-en.png">
 <meta property="og:site_name" content="BursaNews 马股报报看">
@@ -1109,6 +1109,23 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 .testi-author { font-size: 13.5px; font-weight: 700; color: var(--navy); margin-top: auto; }
 .testi-role { font-size: 12px; color: var(--gray); }
 
+
+/* Ready to start investing */
+.ready-section { background: #fff; padding: 4rem 2rem; border-bottom: 1px solid var(--border); }
+.ready-inner { max-width: 960px; margin: 0 auto; text-align: center; }
+.ready-sub { font-size: 1.05rem; color: var(--gray); line-height: 1.75; max-width: 680px; margin: 0 auto 1.75rem; }
+.ready-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: left; margin-bottom: 1.75rem; }
+.ready-step { display: flex; gap: .85rem; align-items: center; border: 1.5px solid var(--border); border-radius: 14px; padding: 1rem 1.1rem; text-decoration: none; color: inherit; background: var(--off); transition: border-color .15s, transform .15s; }
+.ready-step:hover { border-color: var(--gold); transform: translateY(-2px); }
+.ready-step strong { display: block; color: var(--navy); font-size: 1rem; }
+.ready-step small { display: block; color: var(--gray); font-size: 13px; }
+.ready-n { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--navy); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.ready-cta { display: flex; flex-direction: column; align-items: center; gap: .85rem; }
+.ready-alt { font-size: 14.5px; font-weight: 700; color: var(--gold); text-decoration: underline; }
+.faq-q { outline-offset: 3px; }
+.faq-a-inner a { color: var(--gold); font-weight: 700; text-decoration: underline; }
+@media(max-width:700px) { .ready-steps { grid-template-columns: 1fr; } .ready-section { padding: 3rem 1.25rem; } }
+
 /* FAQ section */
 .faq-section { padding: 5rem 2rem; background: #fff; }
 .faq-inner { max-width: 760px; margin: 0 auto; }
@@ -1225,61 +1242,7 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
       "publisher":{"@id":"https://mybursanews.com/#org"},
       "potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://mybursanews.com/resources.html?q={search_term_string}"},"query-input":"required name=search_term_string"}
     },
-    {
-      "@type":"FAQPage",
-      "mainEntity":[
-        {
-          "@type":"Question",
-          "name":"How to start investing in Malaysia for beginners? (cara nak labur duit Malaysia)",
-          "acceptedAnswer":{"@type":"Answer","text":"To start investing in Malaysia: 1) Learn the basics, use BursaNews free 5-step Starter Kit (completely free, no email needed). 2) Open a trading account with an SC-regulated broker: Moomoo Malaysia (use promo code BURSA88 for extra Apple stock + 180 days 0 commission), Webull Malaysia, or Rakuten Trade. 3) Your broker will open a CDS account (Central Depository System) for you automatically. 4) Fund your account via FPX online banking. 5) Start with RM500-RM1,000 in blue-chip stocks or ETFs. BursaNews has free guides for every step at mybursanews.com/"}
-        },
-        {
-          "@type":"Question",
-          "name":"What is the best stock broker in Malaysia 2026? Moomoo vs Webull vs Rakuten Trade",
-          "acceptedAnswer":{"@type":"Answer","text":"BursaNews recommends Moomoo Malaysia as the best broker for most Malaysian investors in 2026. Use promo code BURSA88 for exclusive rewards: up to RM1,500+ welcome bonus, extra Apple stock, and 180 days of 0% commission. Moomoo is SC-regulated, has excellent charting tools, and supports Malaysian + US stocks. Webull Malaysia is great for US stock investors (RM300 vouchers for new users). Rakuten Trade suits long-term buy-and-hold investors. Full comparison at BursaNews broker guide."}
-        },
-        {
-          "@type":"Question",
-          "name":"What is a CDS account Malaysia and how to open one?",
-          "acceptedAnswer":{"@type":"Answer","text":"A CDS (Central Depository System) account is mandatory to own shares of Malaysian listed companies. It's administered by the official depository system. You do NOT need to open it separately, when you register with Moomoo Malaysia, Webull Malaysia, or Rakuten Trade, they open the CDS account for you as part of the process. It's free and takes 15-20 minutes online. BursaNews has a free step-by-step guide with screenshots."}
-        },
-        {
-          "@type":"Question",
-          "name":"What is REIT Malaysia and is it a good investment?",
-          "acceptedAnswer":{"@type":"Answer","text":"REIT (Real Estate Investment Trust) Malaysia is a fund listed on the Malaysian stock market that owns income properties (shopping malls, offices, hospitals). By law, Malaysian REITs must distribute at least 90% of income as dividends, making them ideal for passive income investors. Major Malaysian REITs: Pavilion REIT, IGB REIT, Axis REIT, CapitaLand Malaysia Mall Trust. They typically yield 5-7% annually. Dividend income from REITs is tax-exempt for individual Malaysian investors. BursaNews has a complete REIT guide."}
-        },
-        {
-          "@type":"Question",
-          "name":"How do dividend stocks work in Malaysia? (saham dividen tinggi)",
-          "acceptedAnswer":{"@type":"Answer","text":"Malaysian dividend stocks pay out a portion of company profits to shareholders regularly (quarterly or annually). Key dates: Announcement Date, Ex-Dividend Date (must own shares BEFORE this date), and Payment Date. Good dividend yield in Malaysia is 4-7%. Top dividend-paying stocks include Maybank (KLSE:MAY), Public Bank (KLSE:PBBANK), CIMB (KLSE:CIMB), Tenaga Nasional (KLSE:TNB). Important: Malaysian dividend income is TAX-EXEMPT for individual investors. BursaNews explains dividend investing in simple Mandarin Chinese."}
-        },
-        {
-          "@type":"Question",
-          "name":"What is PE ratio and how to use it for Malaysia stock analysis?",
-          "acceptedAnswer":{"@type":"Answer","text":"PE ratio (Price-to-Earnings) = Share Price ÷ Earnings Per Share. It measures how much you pay for every RM1 of company profit. Malaysia FBM KLCI average PE is around 15-18x. Lower PE may mean undervalued, but always compare within same industry. Bank stocks: typically PE 10-14x. Tech stocks: PE 25-40x. Use PE alongside PB ratio, ROE, and dividend yield for complete analysis. BursaNews Resources section explains PE ratio and all valuation metrics in simple language with Malaysia examples."}
-        },
-        {
-          "@type":"Question",
-          "name":"How to invest RM1,000 in Malaysia stocks? (cara labur RM1000)",
-          "acceptedAnswer":{"@type":"Answer","text":"With RM1,000 in Malaysia: 1) Keep RM500 in FD/savings as emergency. 2) Open Moomoo Malaysia (BURSA88 promo) or Webull account, minimum deposit can be as low as RM100. 3) Consider a Malaysian stock market ETF (like MYETF MSCI Malaysia) to diversify your RM500-1000 across many stocks with one purchase. 4) Or buy 1-2 blue-chip stocks: Maybank, Public Bank, Tenaga. 5) Never invest money you cannot afford to lose. BursaNews free Starter Kit has a dedicated module on investing your first RM1,000."}
-        },
-        {
-          "@type":"Question",
-          "name":"What is a Rights Issue in Malaysia? Should I subscribe or sell?",
-          "acceptedAnswer":{"@type":"Answer","text":"A rights issue (供股权) is when a Malaysian listed company raises money by offering existing shareholders new shares at a discounted price. As a shareholder, you have 3 choices: 1) Subscribe, buy the new shares at the discounted price, 2) Sell the rights, sell your entitlement to another investor, 3) Do nothing, let the rights lapse (you lose the entitlement). Whether to subscribe depends on your view of the company and your available capital. BursaNews Market Insights has analysed multiple rights issues with honest breakdowns."}
-        },
-        {
-          "@type":"Question",
-          "name":"BursaNews vs other Malaysia investing platforms, what makes it different?",
-          "acceptedAnswer":{"@type":"Answer","text":"BursaNews (马股报报看) is different for 3 reasons: 1) REAL EXPERIENCE, Founded by former investment bankers with 10+ years of capital markets experience who advised 50+ Malaysian listed companies on IPOs and M&A. 2) ZERO STOCK TIPS, BursaNews will NEVER tell you to buy or sell a specific stock. It teaches you HOW to analyse so you make your own decisions. 3) PLAIN LANGUAGE, All content in Mandarin Chinese and English, written so Uncle and Aunty can understand. No jargon. No fluff. No misleading hype."}
-        },
-        {
-          "@type":"Question",
-          "name":"What is 马股早知道 and how does it work?",
-          "acceptedAnswer":{"@type":"Answer","text":"马股早知道 is BursaNews's daily Malaysian stock analysis service delivered to your WhatsApp before 8:30am every trading day. When important Malaysian stock announcements happen, company results, IPOs, placements, policy impacts, the team breaks it down into simple, actionable analysis. Written by a team with real capital markets experience. Price: RM60 per quarter (about RM20/month). Not a stock tip service, it's analysis that helps you understand what happened and why it matters. Subscribe at BursaNews subscription page."}
-        }
-      ]
-    },
+    {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I start investing in Malaysia as a beginner?", "acceptedAnswer": {"@type": "Answer", "text": "Learn the basics first (our free 5-step Starter Kit needs no email). Then open a CDS account and a trading account with an SC-licensed broker, which most brokers do in one online application. Fund the account from a bank account in your own name, start small with companies you understand, and learn how fees, dividends and announcements work before you add more."}}, {"@type": "Question", "name": "Which stock broker should I use in Malaysia?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on what you will trade. Our editorial pick for beginners is Moomoo for its all-in-one app and learning tools. Rakuten Trade suits Bursa-focused investors who want low flat fees, and Webull suits investors focused on US stocks. Compare fees, CDS arrangement, markets and current promotions on our broker comparison page before deciding."}}, {"@type": "Question", "name": "What is a CDS account and how do I open one?", "acceptedAnswer": {"@type": "Answer", "text": "A CDS (Central Depository System) account records the Bursa Malaysia securities you own. You open it through a stockbroker or Bursa Malaysia's Bursa Anywhere app. You must be 18 or older and will need your MyKad or passport. Some brokers open a CDS account in your own name, others hold shares through a nominee account, so ask if you plan to apply for IPOs."}}, {"@type": "Question", "name": "I received an IPO Pink Form from my company. What should I do?", "acceptedAnswer": {"@type": "Answer", "text": "A Pink Form lets eligible directors and employees apply for IPO shares reserved for them. You will usually need a CDS account in your own name. Check the closing date, open a CDS account early if you do not have one, and follow the instructions on your form and in the prospectus exactly."}}, {"@type": "Question", "name": "What is a rights issue in Malaysia? Should I subscribe or sell?", "acceptedAnswer": {"@type": "Answer", "text": "A rights issue is when a listed company raises money by offering existing shareholders new shares, usually at a discount. You can subscribe, sell your rights, or let them lapse. If you do nothing, your shareholding is diluted. The right choice depends on why the company is raising money and whether the price makes sense."}}, {"@type": "Question", "name": "What makes BursaNews different?", "acceptedAnswer": {"@type": "Answer", "text": "BursaNews is run by former investment banking and capital-markets professionals who have advised Malaysian listed companies on IPOs and corporate exercises. We never give buy or sell tips. We teach you how to read announcements and analyse companies yourself, in plain language, in Mandarin and English."}}, {"@type": "Question", "name": "What is 马股早知道 and how does it work?", "acceptedAnswer": {"@type": "Answer", "text": "马股早知道 is BursaNews's daily Bursa Malaysia analysis delivered to WhatsApp before the market opens on trading days. When important announcements happen, such as results, IPOs, placements or policy changes, the team explains what they mean in plain language."}}]},
     {
       "@type":"ItemList",
       "name":"BursaNews Services for Malaysian Investors",
@@ -1320,8 +1283,8 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 
     <!-- Sub -->
     <p style="color:rgba(255,255,255,.72);font-size:1.1rem;max-width:580px;margin:0 auto 2.5rem;line-height:1.8;"
-      data-en="Stop feeling lost when you see stock news. Learn exactly what matters, in 5 simple missions, completely free."
-      data-zh="看到股票新闻不再迷茫。学会真正重要的东西，5个简单任务，完全免费。">Stop feeling lost when you see stock news. Learn exactly what matters, in 5 simple missions, completely free.</p>
+      data-en="Learn Bursa Malaysia investing, CDS accounts, stock brokers, IPOs and financial analysis from an investment-banking perspective. Start with 5 simple missions, completely free."
+      data-zh="从投资银行的视角，学会马股投资、CDS账户、券商选择、IPO与财务分析。从5个简单任务开始，完全免费。">Learn Bursa Malaysia investing, CDS accounts, stock brokers, IPOs and financial analysis from an investment-banking perspective. Start with 5 simple missions, completely free.</p>
 
     <!-- CTA -->
     <div style="text-align:center;margin-bottom:.6rem;">
@@ -1369,6 +1332,27 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
 
 
 
+
+
+<!-- ══════════════════════════════════════
+     READY TO START INVESTING (conversion path: education → comparison)
+══════════════════════════════════════ -->
+<section class="ready-section" aria-labelledby="ready-h">
+  <div class="ready-inner">
+    <div class="section-label" data-en="READY TO START INVESTING?" data-zh="准备开始投资了吗？">READY TO START INVESTING?</div>
+    <h2 id="ready-h" class="section-h" data-en="Before Your First <em>Bursa Stock</em>" data-zh="买第一支<em>马股</em>之前">Before Your First <em>Bursa Stock</em></h2>
+    <p class="ready-sub" data-en="Before buying your first Bursa Malaysia stock, you generally need a trading account and a CDS account. BursaNews compares the main broker options available to Malaysian investors." data-zh="买第一支马股之前，你通常需要一个交易账户和一个CDS账户。BursaNews为你比较马来西亚投资者可选的主要券商。">Before buying your first Bursa Malaysia stock, you generally need a trading account and a CDS account. BursaNews compares the main broker options available to Malaysian investors.</p>
+    <div class="ready-steps">
+      <a href="cds-account-malaysia.html" class="ready-step"><span class="ready-n">1</span><span><strong data-en="Open a CDS account" data-zh="开立CDS账户">Open a CDS account</strong><small data-en="Where your shares are held" data-zh="托管你的股票">Where your shares are held</small></span></a>
+      <a href="trading-account-malaysia.html" class="ready-step"><span class="ready-n">2</span><span><strong data-en="Open a trading account" data-zh="开立交易账户">Open a trading account</strong><small data-en="How you buy and sell" data-zh="用来下单买卖">How you buy and sell</small></span></a>
+      <a href="affiliates.html" class="ready-step"><span class="ready-n">3</span><span><strong data-en="Compare brokers" data-zh="比较券商">Compare brokers</strong><small data-en="Fees, markets, CDS setup" data-zh="费用、市场、CDS安排">Fees, markets, CDS setup</small></span></a>
+    </div>
+    <div class="ready-cta">
+      <a href="affiliates.html" class="btn-primary" data-en="Compare Malaysian Stock Brokers" data-zh="比较马来西亚券商">Compare Malaysian Stock Brokers</a>
+      <a href="ipo-pink-form-malaysia.html" class="ready-alt" data-en="Received an IPO Pink Form? Start here →" data-zh="收到IPO粉红表格？从这里开始 →">Received an IPO Pink Form? Start here →</a>
+    </div>
+  </div>
+</section>
 
 <!-- ══════════════════════════════════════
      JOURNEY CHOOSER
@@ -1545,28 +1529,69 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
   <div class="broker-inner">
     <div class="section-label" data-en="OPEN AN ACCOUNT" data-zh="开立账户">OPEN AN ACCOUNT</div>
     <h2 class="section-h" data-en="Which <em>Broker</em> Should You Use?" data-zh="该用哪家<em>券商</em>？">Which <em>Broker</em> Should You Use?</h2>
-    <p class="section-sub" data-en="SC-regulated brokers only. Sign up via our links for exclusive BursaNews rewards, at no extra cost to you." data-zh="只推荐受SC监管的券商。透过我们的链接注册可获得BursaNews专属奖励，你不会因此多付费用。">SC-regulated brokers only. Sign up via our links for exclusive BursaNews rewards, at no extra cost to you.</p>
+    <p class="section-sub" data-en="SC-regulated brokers only. Start with the comparison: what each broker is best for, its fees and how it handles CDS accounts. Some links are affiliate links, at no extra cost to you." data-zh="只推荐受SC监管的券商。先看比较：每家券商适合谁、费用多少、CDS账户如何安排。部分为联盟链接，你不会因此多付费用。">SC-regulated brokers only. Start with the comparison: what each broker is best for, its fees and how it handles CDS accounts. Some links are affiliate links, at no extra cost to you.</p>
     <div class="broker-cards">
-      <a href="moomoo-sign-up-code.html" class="broker-card pick">
+      <a href="posts/moomoo-review-malaysia.html" class="broker-card pick">
         <span class="broker-pick-badge" data-en="BURSANEWS #1 PICK" data-zh="BURSANEWS 首选">BURSANEWS #1 PICK</span>
         <div class="broker-logo">Moomoo</div>
-        <div class="broker-reward" data-en="Up to RM1,500+ rewards" data-zh="最高RM1,500+奖励">Up to RM1,500+ rewards</div>
-        <p class="broker-desc" data-en="Code BURSA88 for extra Apple shares · 0% commission 180 days" data-zh="输入优惠码BURSA88获得额外Apple股票 · 180天0佣金">Code BURSA88 for extra Apple shares · 0% commission 180 days</p>
+        <div class="broker-reward" data-en="Best for beginners" data-zh="新手首选">Best for beginners</div>
+        <p class="broker-desc" data-en="All-in-one app · MY, US, HK, SG markets · welcome rewards up to RM1,500 until 9 Oct 2026" data-zh="一站式App · 马、美、港、新股 · 新用户奖励最高RM1,500（至2026年10月9日）">All-in-one app · MY, US, HK, SG markets · welcome rewards up to RM1,500 until 9 Oct 2026</p>
       </a>
-      <a href="webull-sign-up-code.html" class="broker-card">
+      <a href="posts/webull-review-malaysia.html" class="broker-card">
         <div class="broker-logo">Webull</div>
-        <div class="broker-reward" data-en="RM300 trading vouchers" data-zh="RM300交易券">RM300 trading vouchers</div>
-        <p class="broker-desc" data-en="No code needed · 0% US commission until Dec 2026" data-zh="无需优惠码 · 美股0佣金至2026年12月">No code needed · 0% US commission until Dec 2026</p>
+        <div class="broker-reward" data-en="Best for US stocks" data-zh="美股首选">Best for US stocks</div>
+        <p class="broker-desc" data-en="0% US commission for 365 days (new users) · RM300 reward until 31 Oct 2026" data-zh="新用户美股365天0佣金 · RM300奖励至2026年10月31日">0% US commission for 365 days (new users) · RM300 reward until 31 Oct 2026</p>
       </a>
       <a href="rakuten-sign-up-code.html" class="broker-card">
         <div class="broker-logo">Rakuten Trade</div>
-        <div class="broker-reward" data-en="Apple shares for new users" data-zh="新用户送Apple股票">Apple shares for new users</div>
-        <p class="broker-desc" data-en="Malaysia's lowest brokerage: RM1 flat for trades ≤RM100" data-zh="马来西亚最低佣金：交易额≤RM100收RM1平费">Malaysia's lowest brokerage: RM1 flat for trades ≤RM100</p>
+        <div class="broker-reward" data-en="Best for low Bursa fees" data-zh="马股低佣金之选">Best for low Bursa fees</div>
+        <p class="broker-desc" data-en="Flat Bursa brokerage from RM1 (trades up to RM100) · free CDS opening" data-zh="马股固定佣金RM1起（交易额≤RM100）· CDS免开户费">Flat Bursa brokerage from RM1 (trades up to RM100) · free CDS opening</p>
       </a>
     </div>
-    <a href="affiliates.html" class="view-all-link" data-en="Full Broker Comparison →" data-zh="查看完整券商比较 →">Full Broker Comparison →</a>
+    <a href="affiliates.html" class="view-all-link" data-en="Compare Malaysian Stock Brokers →" data-zh="比较马来西亚券商 →">Compare Malaysian Stock Brokers →</a>
   </div>
 </section>
+
+<!-- ══════════════════════════════════════
+     FAQ (visible copy of the FAQPage schema)
+══════════════════════════════════════ -->
+<section class="faq-section" aria-label="Frequently asked questions">
+  <div class="faq-inner">
+    <div class="section-label" data-en="FAQ" data-zh="常见问题">FAQ</div>
+    <h2 class="section-h">Questions New Investors Ask Us</h2>
+    <div class="faq-list-home">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">How do I start investing in Malaysia as a beginner?<span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Learn the basics first (our free <a href="starterkit.html">5-step Starter Kit</a> needs no email). Then open a <a href="cds-account-malaysia.html">CDS account</a> and a <a href="trading-account-malaysia.html">trading account</a> with an SC-licensed broker, which most brokers do in one online application. Fund the account from a bank account in your own name, start small with companies you understand, and learn how fees, dividends and announcements work before you add more.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Which stock broker should I use in Malaysia?<span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">It depends on what you will trade. Our editorial pick for beginners is Moomoo for its all-in-one app and learning tools. Rakuten Trade suits Bursa-focused investors who want low flat fees, and Webull suits investors focused on US stocks. Compare fees, CDS arrangement, markets and current promotions on our <a href="affiliates.html">broker comparison page</a> before deciding.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">What is a CDS account and how do I open one?<span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">A CDS (Central Depository System) account records the Bursa Malaysia securities you own. You open it through a stockbroker or Bursa Malaysia's Bursa Anywhere app. You must be 18 or older and will need your MyKad or passport. Some brokers open a CDS account in your own name, others hold shares through a nominee account, so ask if you plan to apply for IPOs. <a href="cds-account-malaysia.html">Full CDS account guide</a>.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">I received an IPO Pink Form from my company. What should I do?<span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">A Pink Form lets eligible directors and employees apply for IPO shares reserved for them. You will usually need a CDS account in your own name. Check the closing date, open a CDS account early if you do not have one, and follow the instructions on your form and in the prospectus exactly. <a href="ipo-pink-form-malaysia.html">Read our IPO Pink Form guide</a>.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">What is a rights issue in Malaysia? Should I subscribe or sell?<span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">A rights issue is when a listed company raises money by offering existing shareholders new shares, usually at a discount. You can subscribe, sell your rights, or let them lapse. If you do nothing, your shareholding is diluted. The right choice depends on why the company is raising money and whether the price makes sense. <a href="posts/rights-issue-explained.html">Rights issue explained</a>.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">What makes BursaNews different?<span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">BursaNews is run by former investment banking and capital-markets professionals who have advised Malaysian listed companies on IPOs and corporate exercises. We never give buy or sell tips. We teach you how to read announcements and analyse companies yourself, in plain language, in Mandarin and English. <a href="about.html">About us</a>.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">What is 马股早知道 and how does it work?<span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">马股早知道 is BursaNews's daily Bursa Malaysia analysis delivered to WhatsApp before the market opens on trading days. When important announcements happen, such as results, IPOs, placements or policy changes, the team explains what they mean in plain language. <a href="subscription.html">See subscription plans</a>.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ══════════════════════════════════════
      COACHING
@@ -1582,45 +1607,7 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     FOOTER
-══════════════════════════════════════ -->
-<footer class="site-footer" aria-label="Site footer">
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div style="font-family:var(--serif);font-size:1.15rem;font-weight:700;color:#fff;">MyBursaNews <span style="color:var(--orange);">马股报报看</span></div>
-        <p data-en="MyBursaNews (mybursanews.com) — Mandarin Bursa Malaysia investing education from ex-investment bankers. Daily stock alerts, broker sign-up rewards, and beginner coaching." data-zh="MyBursaNews（mybursanews.com）— 由前投资银行家打造的马股投资教育平台。每日马股速报、券商开户奖励、新手教练指导。">MyBursaNews (mybursanews.com) — Mandarin Bursa Malaysia investing education from ex-investment bankers. Daily stock alerts, broker sign-up rewards, and beginner coaching.</p>
-      </div>
-      <div class="footer-col">
-        <h4 data-en="SERVICES" data-zh="服务">SERVICES</h4>
-        <a href="subscription.html" data-en="马股早知道 Subscription" data-zh="马股早知道订阅">马股早知道 Subscription</a>
-        <a href="affiliates.html" data-en="Broker Comparison" data-zh="券商比较">Broker Comparison</a>
-        <a href="moomoo-sign-up-code.html" data-en="Moomoo Sign Up" data-zh="Moomoo开户">Moomoo Sign Up</a>
-        <a href="coaching.html" data-en="Investing Courses" data-zh="投资课程">Investing Courses</a>
-      </div>
-      <div class="footer-col">
-        <h4 data-en="LEARN" data-zh="学习">LEARN</h4>
-        <a href="starterkit.html" data-en="Free Starter Kit" data-zh="免费入门包">Free Starter Kit</a>
-        <a href="insights.html" data-en="Market Insights" data-zh="市场分析">Market Insights</a>
-        <a href="resources.html" data-en="Knowledge Base" data-zh="投资知识库">Knowledge Base</a>
-      </div>
-      <div class="footer-col">
-        <h4 data-en="CONTACT" data-zh="联系我们">CONTACT</h4>
-        <a href="https://wa.me/601156482183" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a>
-        <a href="https://www.facebook.com/bursanews" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.instagram.com/bursanews" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.youtube.com/@bursanews" target="_blank" rel="noopener">YouTube</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 MyBursaNews (mybursanews.com). All rights reserved.</p>
-      <p>mybursanews.com</p>
-    </div>
-    <p class="footer-disclaimer" data-en="BursaNews is not a licensed financial advisor. Content is for educational purposes only and does not constitute investment advice. Affiliate links may earn us a commission at no extra cost to you." data-zh="BursaNews并非持牌财务顾问。内容仅供教育用途，不构成投资建议。站内推荐链接可能为我们带来佣金，你不会因此多付费用。">BursaNews is not a licensed financial advisor. Content is for educational purposes only and does not constitute investment advice. Affiliate links may earn us a commission at no extra cost to you.</p>
-  </div>
-</footer>
+
 
 <script>
 (function(){
@@ -1671,7 +1658,8 @@ p, li, td, .kc-sub, .sim-line, .feat-li, .fl, .how-step .ht { font-size: 15.5px 
   var sb=document.getElementById('hero-stats');
   if('IntersectionObserver' in window&&sb){var o=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){run();o.disconnect();}});},{threshold:0.4});o.observe(sb);}else{run();}
 })();
-function toggleFaq(el){el.classList.toggle('open');var a=el.nextElementSibling;a.style.maxHeight=el.classList.contains('open')?a.scrollHeight+'px':'0';}
+function toggleFaq(el){el.classList.toggle('open');var o=el.classList.contains('open');el.setAttribute('aria-expanded',o?'true':'false');var a=el.nextElementSibling;a.style.maxHeight=o?a.scrollHeight+'px':'0';}
+document.addEventListener('keydown',function(e){var t=e.target;if(t&&t.classList&&t.classList.contains('faq-q')&&(e.key==='Enter'||e.key===' ')){e.preventDefault();toggleFaq(t);}});
 </script>
 </body>
 </html>
