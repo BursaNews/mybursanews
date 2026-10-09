@@ -16,13 +16,27 @@
 # ------------------------------------------------------------------
 
 last_full_audit: 2026-10-04
+last_moomoo_update: 2026-10-09
 
 moomoo:
   entity: Moomoo Securities Malaysia Sdn. Bhd. (SC licence eCMSL/A0397/2024)
   signup_link: https://start.moomoo.com/0Bpp3E
   promotions:
-    - name: New Customer Promotion (standard Moomoo welcome rewards)
+    - name: New Customer Promotion (standard Moomoo welcome rewards), Q4 2026
       status: active
+      start: 2026-10-09 10:00 MYT
+      end: 2026-12-31 21:59 MYT
+      eligibility: Universal account opened within the campaign period
+      deposit_window: All deposits within 30 days of first deposit, cumulative by 2026-12-31 21:59 MYT
+      holding_period: 60 days net deposit maintained
+      tiers: Same as previous campaign (RM1,000 RM100 coupons; RM3,000 +AAPL RM100; RM10,000 +AAPL RM300; RM40,000 +AAPL RM1,000)
+      max_reward: RM1,500
+      account_opening_perks: 180-day commission-free card; 6% p.a. Cash Plus return valid 30 days (offer ends 2026-12-31)
+      official_source: https://www.moomoo.com/my/support/topic9_122
+      last_verified: 2026-10-09
+      note: Help centre FAQ example still mentions a "September 23" deadline; treat as a leftover from the old page.
+    - name: New Customer Promotion (standard Moomoo welcome rewards)
+      status: expired
       start: 2026-06-30 22:00 MYT
       end: 2026-10-09 21:59 MYT   # extended by Moomoo from 23/9/2026
       eligibility: Universal account opened within the campaign period; individual accounts only
@@ -46,7 +60,7 @@ moomoo:
       detail: 180 days commission-free, valid for US, MY, SG, HK and China A-shares, activated on each market account opening. Other fees (stamp duty, clearing, exchange/regulatory fees) still apply.
       official_source: https://www.moomoo.com/my/pricing
       last_verified: 2026-10-04
-    - name: Cash Plus 6% p.a. new-user subsidy
+    - name: Cash Plus 6% p.a. new-user subsidy (earlier round)
       status: expired
       end: 2026-08-31
       official_source: https://www.moomoo.com/my/support/topic9_122
@@ -55,7 +69,7 @@ moomoo:
     status: requires_manual_verification
     claimed_on_site: Extra Apple shares worth RM50 (first deposit RM1,000) and RM100 (first deposit RM10,000), 60-day hold
     evidence: BursaNews own PDF guide (assets/moomoo-guide-bursa88.pdf). Not found on any public Moomoo page.
-    action: Allen to reconfirm with Moomoo partner manager, including whether it continues after 9 Oct 2026.
+    action: Allen to reconfirm with Moomoo partner manager, including whether it continues in the 9 Oct to 31 Dec 2026 campaign. Pages still show it.
   ipo_cds:
     detail: Moomoo help centre says a separate "CDS Account-IPO" is required for Malaysian IPO subscriptions (Accounts > More > CDS Account-IPO); usually processed in under 2 business days. Moomoo pricing lists RM0 IPO application fee.
     official_source: https://www.moomoo.com/my/support/topic9_214
