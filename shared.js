@@ -91,12 +91,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.body.insertAdjacentHTML('afterbegin', `
 <nav id="main-nav" role="navigation" aria-label="Main navigation">
-  <a href="${ROOT}index.html" class="nav-logo" aria-label="BursaNews Home">
+  <a href="/" class="nav-logo" aria-label="BursaNews Home">
     <img src="${ROOT}assets/images/logo-cn.png" class="logo-zh" alt="马股报报看 BursaNews Logo" height="44" loading="eager">
     <img src="${ROOT}assets/images/logo-en.png" class="logo-en" alt="BursaNews Malaysia Bursa Investing Logo" height="44" loading="eager" style="display:none;">
   </a>
   <div class="nav-links" role="menubar">
-    <a href="${ROOT}index.html" class="nav-link" data-en="Home" data-zh="首页" role="menuitem">首页</a>
+    <a href="/" class="nav-link" data-en="Home" data-zh="首页" role="menuitem">首页</a>
     <a href="${ROOT}starterkit.html" class="nav-link nav-highlight" data-en="🎁 Starter Kit" data-zh="🎁 免费入门包" role="menuitem">🎁 免费入门包</a>
     <a href="${ROOT}resources.html" class="nav-link" data-en="Investing Guide" data-zh="投资指南" role="menuitem">投资指南</a>
     <a href="${ROOT}affiliates.html" class="nav-link" data-en="Broker Bonuses" data-zh="券商推荐" role="menuitem">券商推荐</a>
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </nav>
 <div class="mob" id="mob-menu" role="dialog" aria-label="Mobile navigation">
-  <a href="${ROOT}index.html" data-en="Home" data-zh="首页">首页</a>
+  <a href="/" data-en="Home" data-zh="首页">首页</a>
   <a href="${ROOT}starterkit.html" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包" style="color:#16a34a!important;font-weight:700;background:#f0fdf4;">🎁 免费入门包</a>
   <a href="${ROOT}resources.html" data-en="Investing Guide" data-zh="投资指南">投资指南</a>
   <a href="${ROOT}affiliates.html" data-en="Broker Bonuses" data-zh="券商推荐">券商推荐</a>
