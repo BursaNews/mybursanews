@@ -160,7 +160,7 @@ document.body.insertAdjacentHTML('beforeend', `
       <a href="${ROOT}cds-account-malaysia.html" data-en="How to Open a CDS Account" data-zh="CDS账户开户指南">How to Open a CDS Account</a>
       <a href="${ROOT}trading-account-malaysia.html" data-en="How to Open a Trading Account" data-zh="交易账户开户指南">How to Open a Trading Account</a>
       <a href="${ROOT}ipo-pink-form-malaysia.html" data-en="IPO Pink Form Guide" data-zh="IPO粉红表格指南">IPO Pink Form Guide</a>
-      <a href="${ROOT}posts/rights-issue-explained.html" data-en="Rights Issue Explained" data-zh="供股详解">Rights Issue Explained</a>
+      <a href="${ROOT}posts/rights-issue-explained.html" data-en="Rights Issue Explained" data-zh="附加股详解">Rights Issue Explained</a>
     </div>
     <div class="ft-col">
       <h4 data-en="Services" data-zh="服务">Services</h4>
