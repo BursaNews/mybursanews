@@ -1,183 +1,263 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mybursanews.com/</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://mybursanews.com/index-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mybursanews.com/"/>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mybursanews.com/about.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://mybursanews.com/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mybursanews.com/"/>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mybursanews.com/subscription.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/resources.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://mybursanews.com/about-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/about-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/about-cn.html"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mybursanews.com/coaching.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://mybursanews.com/about-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/about-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/about-cn.html"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mybursanews.com/affiliates.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/ipo-pink-form-malaysia.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/cds-account-malaysia.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/trading-account-malaysia.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/social.html</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/community.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/starterkit.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/insights.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://mybursanews.com/affiliates-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/affiliates-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/affiliates-cn.html"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mybursanews.com/moomoo-sign-up-code.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/webull-sign-up-code.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/rakuten-sign-up-code.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/posts/moomoo-review-malaysia.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/posts/webull-review-malaysia.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/posts/moomoo-vs-webull-malaysia.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/posts/investment-banker-broker-tips.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/posts/how-to-start-investing-malaysia.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://mybursanews.com/affiliates-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/affiliates-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/affiliates-cn.html"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mybursanews.com/posts/dividend-stocks-malaysia.html</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://mybursanews.com/cds-account-malaysia-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mybursanews.com/posts/ipo-guide-malaysia.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://mybursanews.com/coaching-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/coaching-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/coaching-cn.html"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mybursanews.com/posts/reit-guide-malaysia.html</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/posts/rights-issue-explained.html</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/posts/what-is-cds-account.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/posts/what-is-bursa-announcement.html</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/posts/beginner-mistakes.html</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mybursanews.com/posts/why-bank-stocks-first.html</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://mybursanews.com/coaching-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/coaching-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/coaching-cn.html"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mybursanews.com/posts/before-buying-bank-stocks.html</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://mybursanews.com/community-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/community-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/community-cn.html"/>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/community-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/community-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/community-cn.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/insights-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/insights-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/insights-cn.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/insights-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/insights-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/insights-cn.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/ipo-pink-form-malaysia-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/moomoo-sign-up-code-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/rakuten-sign-up-code-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/resources-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/resources-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/resources-cn.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/resources-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/resources-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/resources-cn.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/social-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/social-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/social-cn.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/social-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/social-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/social-cn.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/starterkit-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/starterkit-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/starterkit-cn.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/starterkit-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/starterkit-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/starterkit-cn.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/subscription-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/subscription-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/subscription-cn.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/subscription-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/subscription-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/subscription-cn.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/trading-account-malaysia-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/webull-sign-up-code-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/before-buying-bank-stocks-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/beginner-mistakes-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/cds-account-malaysia-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/dividend-stocks-malaysia-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/how-to-start-investing-malaysia-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/investment-banker-broker-tips-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/ipo-guide-malaysia-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/moomoo-review-malaysia-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/posts/moomoo-review-malaysia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/posts/moomoo-review-malaysia-cn.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/moomoo-review-malaysia-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/posts/moomoo-review-malaysia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/posts/moomoo-review-malaysia-cn.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/moomoo-vs-webull-malaysia-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/reit-guide-malaysia-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/rights-issue-explained-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/webull-review-malaysia-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/posts/webull-review-malaysia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/posts/webull-review-malaysia-cn.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/webull-review-malaysia-en.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/posts/webull-review-malaysia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/posts/webull-review-malaysia-cn.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/what-is-bursa-announcement-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/posts/why-bank-stocks-first-cn.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>

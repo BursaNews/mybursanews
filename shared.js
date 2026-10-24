@@ -2,11 +2,23 @@ const T = {
   en: { nav_cta:"" },
   zh: { nav_cta:"" }
 };
-let lang = localStorage.getItem('bn_lang') || 'en';
+// Each page now has its own language URL (-en / -cn). The page's <html lang> decides the language.
+const PAGE_LANG = ((document.documentElement.getAttribute('lang') || 'en').toLowerCase().indexOf('zh') === 0) ? 'zh' : 'en';
+let lang = PAGE_LANG;
+try { localStorage.setItem('bn_lang', PAGE_LANG); } catch (e) {}
+
+// EN / 中文 toggle: go to the paired page in the other language (from the hreflang tags).
+function switchLang(l) {
+  if (l === PAGE_LANG) return;
+  try { localStorage.setItem('bn_lang', l); } catch (e) {}
+  var alt = document.querySelector('link[rel="alternate"][hreflang^="' + (l === 'zh' ? 'zh' : 'en') + '"]');
+  location.href = alt ? alt.href : (l === 'zh' ? '/' : '/index-en.html');
+}
 
 function setLang(l) {
+  // Kept for older inline scripts. Language is fixed by the page URL, so always apply PAGE_LANG.
+  l = PAGE_LANG;
   lang = l;
-  localStorage.setItem('bn_lang', l);
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
   document.querySelectorAll('[data-en],[data-zh]').forEach(el => {
     const txt = el.dataset[l];
@@ -88,32 +100,36 @@ function openWA(m) {
 document.addEventListener('DOMContentLoaded', function() {
   const ROOT = (document.querySelector('meta[name=root]') || {content:''}).content;
   const pg = location.pathname.split('/').pop() || 'index.html';
+  const SFX = PAGE_LANG === 'zh' ? '-cn' : '-en';
+  const P = function (slug) { return ROOT + slug + SFX + '.html'; };
+  const HOME = PAGE_LANG === 'zh' ? '/' : '/index-en.html';
+  const CDS = PAGE_LANG === 'zh' ? ROOT + 'posts/cds-account-malaysia-cn.html' : ROOT + 'cds-account-malaysia-en.html';
 
   document.body.insertAdjacentHTML('afterbegin', `
 <nav id="main-nav" role="navigation" aria-label="Main navigation">
-  <a href="/" class="nav-logo" aria-label="BursaNews Home">
+  <a href="${HOME}" class="nav-logo" aria-label="BursaNews Home">
     <img src="${ROOT}assets/images/logo-cn.png" class="logo-zh" alt="马股报报看 BursaNews Logo" height="44" loading="eager">
     <img src="${ROOT}assets/images/logo-en.png" class="logo-en" alt="BursaNews Malaysia Bursa Investing Logo" height="44" loading="eager" style="display:none;">
   </a>
   <div class="nav-links" role="menubar">
-    <a href="/" class="nav-link" data-en="Home" data-zh="首页" role="menuitem">首页</a>
-    <a href="${ROOT}starterkit.html" class="nav-link nav-highlight" data-en="🎁 Starter Kit" data-zh="🎁 免费入门包" role="menuitem">🎁 免费入门包</a>
-    <a href="${ROOT}resources.html" class="nav-link" data-en="Investing Guide" data-zh="投资指南" role="menuitem">投资指南</a>
-    <a href="${ROOT}affiliates.html" class="nav-link" data-en="Broker Bonuses" data-zh="券商推荐" role="menuitem">券商推荐</a>
+    <a href="${HOME}" class="nav-link" data-en="Home" data-zh="首页" role="menuitem">首页</a>
+    <a href="${P('starterkit')}" class="nav-link nav-highlight" data-en="🎁 Starter Kit" data-zh="🎁 免费入门包" role="menuitem">🎁 免费入门包</a>
+    <a href="${P('resources')}" class="nav-link" data-en="Investing Guide" data-zh="投资指南" role="menuitem">投资指南</a>
+    <a href="${P('affiliates')}" class="nav-link" data-en="Broker Bonuses" data-zh="券商推荐" role="menuitem">券商推荐</a>
     <details class="nav-dropdown" id="services-dropdown">
       <summary class="nav-dropdown-trigger" id="services-trigger" data-en="Our Services &#9662;" data-zh="我们的服务 &#9662;" role="menuitem">我们的服务 &#9662;</summary>
       <div class="nav-dropdown-menu" role="menu">
-        <a href="${ROOT}subscription.html" data-en="Subscription Plans" data-zh="订阅计划" role="menuitem">订阅计划</a>
-        <a href="${ROOT}coaching.html" data-en="Coaching" data-zh="课程辅导" role="menuitem">课程辅导</a>
+        <a href="${P('subscription')}" data-en="Subscription Plans" data-zh="订阅计划" role="menuitem">订阅计划</a>
+        <a href="${P('coaching')}" data-en="Coaching" data-zh="课程辅导" role="menuitem">课程辅导</a>
       </div>
     </details>
-    <a href="${ROOT}community.html" class="nav-link" data-en="Social Media" data-zh="社交媒体" role="menuitem">社交媒体</a>
-    <a href="${ROOT}about.html" class="nav-link" data-en="About" data-zh="关于我们" role="menuitem">关于我们</a>
+    <a href="${P('community')}" class="nav-link" data-en="Social Media" data-zh="社交媒体" role="menuitem">社交媒体</a>
+    <a href="${P('about')}" class="nav-link" data-en="About" data-zh="关于我们" role="menuitem">关于我们</a>
   </div>
   <div class="nav-actions" style="display:flex;flex-direction:row;align-items:center;gap:8px;flex-shrink:0;">
     <div class="lang-toggle" role="group" aria-label="Language selector" style="display:inline-flex;flex-direction:row;align-items:center;background:rgba(0,0,0,.06);border-radius:26px;padding:3px;gap:2px;white-space:nowrap;flex-shrink:0;">
-      <span class="lang-btn" data-lang="en" onclick="setLang('en')" role="button" tabindex="0" style="font-size:14px;font-weight:700;padding:6px 16px;border-radius:22px;cursor:pointer;line-height:1;display:inline-block;">EN</span>
-      <span class="lang-btn active" data-lang="zh" onclick="setLang('zh')" role="button" tabindex="0" style="font-size:14px;font-weight:700;padding:6px 16px;border-radius:22px;cursor:pointer;line-height:1;display:inline-block;">中文</span>
+      <span class="lang-btn" data-lang="en" onclick="switchLang('en')" role="button" tabindex="0" style="font-size:14px;font-weight:700;padding:6px 16px;border-radius:22px;cursor:pointer;line-height:1;display:inline-block;">EN</span>
+      <span class="lang-btn active" data-lang="zh" onclick="switchLang('zh')" role="button" tabindex="0" style="font-size:14px;font-weight:700;padding:6px 16px;border-radius:22px;cursor:pointer;line-height:1;display:inline-block;">中文</span>
     </div>
     <button class="nav-mob-toggle" onclick="toggleMob()" aria-label="Open menu" aria-expanded="false" style="width:42px;height:42px;border:1.5px solid var(--navy,#0a1628);border-radius:9px;background:#fff;cursor:pointer;display:none;align-items:center;justify-content:center;flex-shrink:0;padding:0;">
       <div style="display:flex;flex-direction:column;gap:4.5px;align-items:center;pointer-events:none;">
@@ -125,15 +141,15 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </nav>
 <div class="mob" id="mob-menu" role="dialog" aria-label="Mobile navigation">
-  <a href="/" data-en="Home" data-zh="首页">首页</a>
-  <a href="${ROOT}starterkit.html" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包" style="color:#16a34a!important;font-weight:700;background:#f0fdf4;">🎁 免费入门包</a>
-  <a href="${ROOT}resources.html" data-en="Investing Guide" data-zh="投资指南">投资指南</a>
-  <a href="${ROOT}affiliates.html" data-en="Broker Bonuses" data-zh="券商推荐">券商推荐</a>
+  <a href="${HOME}" data-en="Home" data-zh="首页">首页</a>
+  <a href="${P('starterkit')}" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包" style="color:#16a34a!important;font-weight:700;background:#f0fdf4;">🎁 免费入门包</a>
+  <a href="${P('resources')}" data-en="Investing Guide" data-zh="投资指南">投资指南</a>
+  <a href="${P('affiliates')}" data-en="Broker Bonuses" data-zh="券商推荐">券商推荐</a>
   <div class="mob-service-label" data-en="Our Services" data-zh="我们的服务">我们的服务</div>
-  <a href="${ROOT}subscription.html" class="mob-service-link" data-en="Subscription Plans" data-zh="订阅计划">订阅计划</a>
-  <a href="${ROOT}coaching.html" class="mob-service-link" data-en="Coaching" data-zh="课程辅导">课程辅导</a>
-  <a href="${ROOT}community.html" data-en="Social Media" data-zh="社交媒体">社交媒体</a>
-  <a href="${ROOT}about.html" data-en="About" data-zh="关于我们">关于我们</a>
+  <a href="${P('subscription')}" class="mob-service-link" data-en="Subscription Plans" data-zh="订阅计划">订阅计划</a>
+  <a href="${P('coaching')}" class="mob-service-link" data-en="Coaching" data-zh="课程辅导">课程辅导</a>
+  <a href="${P('community')}" data-en="Social Media" data-zh="社交媒体">社交媒体</a>
+  <a href="${P('about')}" data-en="About" data-zh="关于我们">关于我们</a>
 </div>
 `);
 
@@ -154,28 +170,28 @@ document.body.insertAdjacentHTML('beforeend', `
     </div>
     <div class="ft-col">
       <h4 data-en="Learn" data-zh="学习">Learn</h4>
-      <a href="${ROOT}posts/moomoo-review-malaysia.html" data-en="Moomoo Malaysia Review" data-zh="Moomoo完整评测">Moomoo Malaysia Review</a>
-      <a href="${ROOT}posts/webull-review-malaysia.html" data-en="Webull Malaysia Review" data-zh="Webull完整评测">Webull Malaysia Review</a>
-      <a href="${ROOT}posts/how-to-start-investing-malaysia.html" data-en="How to Start Investing" data-zh="如何开始投资">How to Start Investing</a>
-      <a href="${ROOT}cds-account-malaysia.html" data-en="How to Open a CDS Account" data-zh="CDS账户开户指南">How to Open a CDS Account</a>
-      <a href="${ROOT}trading-account-malaysia.html" data-en="How to Open a Trading Account" data-zh="交易账户开户指南">How to Open a Trading Account</a>
-      <a href="${ROOT}ipo-pink-form-malaysia.html" data-en="IPO Pink Form Guide" data-zh="IPO粉红表格指南">IPO Pink Form Guide</a>
-      <a href="${ROOT}posts/rights-issue-explained.html" data-en="Rights Issue Explained" data-zh="附加股详解">Rights Issue Explained</a>
+      <a href="${P('posts/moomoo-review-malaysia')}" data-en="Moomoo Malaysia Review" data-zh="Moomoo完整评测">Moomoo Malaysia Review</a>
+      <a href="${P('posts/webull-review-malaysia')}" data-en="Webull Malaysia Review" data-zh="Webull完整评测">Webull Malaysia Review</a>
+      <a href="${ROOT}posts/how-to-start-investing-malaysia-cn.html" data-en="How to Start Investing" data-zh="如何开始投资">How to Start Investing</a>
+      <a href="${CDS}" data-en="How to Open a CDS Account" data-zh="CDS账户开户指南">How to Open a CDS Account</a>
+      <a href="${ROOT}trading-account-malaysia-en.html" data-en="How to Open a Trading Account" data-zh="交易账户开户指南">How to Open a Trading Account</a>
+      <a href="${ROOT}ipo-pink-form-malaysia-en.html" data-en="IPO Pink Form Guide" data-zh="IPO粉红表格指南">IPO Pink Form Guide</a>
+      <a href="${ROOT}posts/rights-issue-explained-cn.html" data-en="Rights Issue Explained" data-zh="附加股详解">Rights Issue Explained</a>
     </div>
     <div class="ft-col">
       <h4 data-en="Services" data-zh="服务">Services</h4>
-      <a href="${ROOT}subscription.html" data-en="Daily Reports (订阅)" data-zh="每日报告（订阅）">Daily Reports (订阅)</a>
-      <a href="${ROOT}affiliates.html" data-en="Compare Stock Brokers" data-zh="券商比较">Compare Stock Brokers</a>
-      <a href="${ROOT}moomoo-sign-up-code.html" data-en="Moomoo Promo Code BURSA88" data-zh="Moomoo优惠码BURSA88">Moomoo Promo Code BURSA88</a>
-      <a href="${ROOT}webull-sign-up-code.html" data-en="Webull Sign-Up Guide" data-zh="Webull开户教学">Webull Sign-Up Guide</a>
-      <a href="${ROOT}rakuten-sign-up-code.html" data-en="Rakuten Trade Referral Code" data-zh="Rakuten Trade推荐码">Rakuten Trade Referral Code</a>
-      <a href="${ROOT}coaching.html" data-en="1-on-1 Coaching" data-zh="一对一辅导">1-on-1 Coaching</a>
+      <a href="${P('subscription')}" data-en="Daily Reports (订阅)" data-zh="每日报告（订阅）">Daily Reports (订阅)</a>
+      <a href="${P('affiliates')}" data-en="Compare Stock Brokers" data-zh="券商比较">Compare Stock Brokers</a>
+      <a href="${ROOT}moomoo-sign-up-code-en.html" data-en="Moomoo Promo Code BURSA88" data-zh="Moomoo优惠码BURSA88">Moomoo Promo Code BURSA88</a>
+      <a href="${ROOT}webull-sign-up-code-en.html" data-en="Webull Sign-Up Guide" data-zh="Webull开户教学">Webull Sign-Up Guide</a>
+      <a href="${ROOT}rakuten-sign-up-code-en.html" data-en="Rakuten Trade Referral Code" data-zh="Rakuten Trade推荐码">Rakuten Trade Referral Code</a>
+      <a href="${P('coaching')}" data-en="1-on-1 Coaching" data-zh="一对一辅导">1-on-1 Coaching</a>
     </div>
     <div class="ft-col">
       <h4 data-en="Company" data-zh="关于">Company</h4>
-      <a href="${ROOT}about.html" data-en="About Us" data-zh="关于我们">About Us</a>
-      <a href="${ROOT}social.html" data-en="Social Media" data-zh="社交媒体">Social Media</a>
-      <a href="${ROOT}about.html#disclaimer" data-en="Disclaimer" data-zh="免责声明">Disclaimer</a>
+      <a href="${P('about')}" data-en="About Us" data-zh="关于我们">About Us</a>
+      <a href="${P('social')}" data-en="Social Media" data-zh="社交媒体">Social Media</a>
+      <a href="${P('about')}#disclaimer" data-en="Disclaimer" data-zh="免责声明">Disclaimer</a>
     </div>
   </div>
   <div class="ft-bottom">
@@ -199,7 +215,7 @@ document.body.insertAdjacentHTML('beforeend', `
     if (a.getAttribute('href') && a.getAttribute('href').split('/').pop() === pg) a.classList.add('active');
   });
   // mark services dropdown trigger active when a child page is current
-  if (pg === 'subscription.html' || pg === 'coaching.html') {
+  if (pg.indexOf('subscription') === 0 || pg.indexOf('coaching') === 0) {
     var trig = document.getElementById('services-trigger');
     if (trig) trig.classList.add('active');
   }
@@ -230,7 +246,7 @@ document.body.insertAdjacentHTML('beforeend', `
       gtag('event', 'whatsapp_click', base); return;
     }
     if (host === 't.me') { gtag('event', 'telegram_click', base); return; }
-    if (host === location.hostname && /\/(subscription|coaching)\.html$/.test(url.pathname) && url.pathname !== location.pathname) {
+    if (host === location.hostname && /\/(subscription|coaching)(-en|-cn)?\.html$/.test(url.pathname) && url.pathname !== location.pathname) {
       gtag('event', 'service_page_click', Object.assign({ target_page: url.pathname }, base));
     }
   }, true);
