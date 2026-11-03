@@ -302,6 +302,16 @@ html[lang^="en"] .hi h1{font-size:clamp(2rem,4.8vw,3.3rem)!important;}
 .pb-bridge b{color:var(--o2);}
 .pk-sol{font-family:"Noto Serif SC",serif;font-weight:800;color:var(--nv)!important;font-size:15px!important;border-left:3px solid var(--o);padding-left:.7rem;}
 @media(max-width:860px){.pb-grid{grid-template-columns:1fr;}}
+.case .case-b .case-imgs{display:block!important;}
+.case-imgs>a img{max-height:460px;max-width:340px;margin:0 auto;object-fit:contain;object-position:top;}
+.case .case-b{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;}
+@media(max-width:860px){.case .case-b{grid-template-columns:1fr!important;}}
+.case-chart{margin-top:.6rem;border:1px solid var(--bd);border-radius:10px;background:#fff;}
+.case-chart summary{cursor:pointer;font-size:13.5px;font-weight:800;color:var(--nv);padding:.65rem .85rem;list-style:none;}
+.case-chart summary::-webkit-details-marker{display:none;}
+.case-chart summary::after{content:" +";color:var(--o);}
+.case-chart[open] summary::after{content:" -";}
+.case-chart a{display:block;padding:0 .6rem .6rem;}
 .hask{color:rgba(255,255,255,.55);font-size:14px;margin:-1rem 0 2rem;}
 .linkbtn{background:none;border:none;color:var(--o2);font-weight:800;font-size:14px;cursor:pointer;font-family:"DM Sans",sans-serif;padding:0;text-decoration:underline;text-underline-offset:3px;}
 .pb-learn{background:var(--cream);border-radius:10px;padding:.75rem .9rem;font-size:13.5px;color:#333;line-height:1.6;margin-bottom:.9rem;}
@@ -408,19 +418,16 @@ body{padding-bottom:64px;}
 <div class="pb-grid">
 <div class="pb"><div class="pb-n">1</div><div class="pb-ic">💰</div><h3>业绩好，股价就一定会涨？</h3><p>Top Glove 营业额YoY升31.9%，净利YoY升133.1%至RM81mil，标题很好看。但手套售价（ASP）上涨，是因为<b>原材料丁腈乳胶的成本上涨，不是需求变好</b>，而且售价在5月尾已经开始回落。</p>
 <div class="pb-learn"><b>该问的问题</b>这个盈利增长能持续吗？它来自需求、售价，还是成本？</div>
-<a class="pb-img" href="assets/images/samples/topglove-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/topglove-chart.jpg" alt="Top Glove 分析发出后的股价走势图" loading="lazy" width="508" height="438"><span>分析发出后的股价走势（黄色为分析日）</span></a>
 <a class="pb-link" href="#case-tg">看完整案例 →</a></div>
 <div class="pb"><div class="pb-n">2</div><div class="pb-ic">📝</div><h3>拿到大合约，就是大好消息？</h3><p>Kelington 拿下RM128mil新合约，听起来很大。但工程到<b>2028年4月才完工</b>，营业额会分成大约2年半慢慢确认；而且相对于约RM3.5bil的手上订单，它<b>只占不到4%</b>。合约金额，不等于当季营业额，更不等于净利。</p>
 <div class="pb-learn"><b>该问的问题</b>会分几年入账？占订单多少？对盈利的实际影响有多大？</div>
-<a class="pb-img" href="assets/images/samples/kelington-analysis.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/kelington-analysis.jpg" alt="当天早上发给订阅者的Kelington分析截图" loading="lazy" width="435" height="1405"><span>当天早上发给订阅者的原文</span></a>
 <a class="pb-link" href="#daily">看这篇分析的拆解 →</a></div>
 <div class="pb"><div class="pb-n">3</div><div class="pb-ic">📉</div><h3>业绩差，公司就要不行了？</h3><p>Critical Holdings 营业额YoY跌47.94%，净利跌到RM1.2mil。但下跌主要是<b>MEP工程部门的进度减少，属于项目周期问题</b>。公司刚拿下工期约7个月的RM153mil合约，而且是净现金公司。</p>
 <div class="pb-learn"><b>该问的问题</b>这是暂时的项目进度，还是业务真的变差？</div>
-<a class="pb-img" href="assets/images/samples/critical-holdings-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/critical-holdings-chart.jpg" alt="Critical Holdings 分析发出后的股价走势图" loading="lazy" width="563" height="380"><span>分析发出后的股价走势（黄色为分析日）</span></a>
 <a class="pb-link" href="#case-chb">看完整案例 →</a></div>
 </div>
 <div class="pb-bridge">这些答案通常<b>不在新闻标题里</b>，而是藏在公告细节、分析员会议和管理层的指引里。</div>
-<p class="pb-disc">股价走势受很多因素影响。图表只是让你看到当时的市场反应，我们的分析不预测股价。</p>
+<p class="pb-disc">股价走势受很多因素影响，我们的分析不预测股价。</p>
 </div></section>
 
 <section class="sec cr" id="package"><div class="wrap">
@@ -532,26 +539,26 @@ body{padding-bottom:64px;}
 <h2 class="stitle tc">3个真实案例，<br><em>3种你需要的分析能力</em></h2>
 <p class="lead tc">标题人人都看得到。真正的差别，是有没有能力看出标题没有说的东西。</p>
 <article class="case" id="case-chb"><div class="case-h"><div class="ct">能力 1 · 分辨暂时性的业绩疲弱</div><h3>Critical Holdings：业绩大跌，是公司出问题，还是工程进度的周期？</h3></div>
-<div class="case-b"><div class="case-imgs"><a href="assets/images/samples/critical-holdings-analysis.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/critical-holdings-analysis.jpg" alt="Critical Holdings 马股早知道分析原文截图" loading="lazy" width="427" height="640"></a><a href="assets/images/samples/critical-holdings-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/critical-holdings-chart.jpg" alt="Critical Holdings 股价走势" loading="lazy" width="563" height="380"></a></div><div class="case-take">
+<div class="case-b"><div class="case-imgs"><a href="assets/images/samples/critical-holdings-analysis.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/critical-holdings-analysis.jpg" alt="Critical Holdings 马股早知道分析原文截图" loading="lazy" width="427" height="640"></a><details class="case-chart"><summary>📈 看分析发出后的股价走势</summary><a href="assets/images/samples/critical-holdings-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/critical-holdings-chart.jpg" alt="Critical Holdings 股价走势" loading="lazy" width="563" height="380"></a></details></div><div class="case-take">
 <div class="cs-row hl"><div class="cs-l">标题怎么说</div><p>营业额YoY跌47.94%至RM50.8mil，净利跌至RM1.2mil。</p></div>
 <div class="cs-row saw"><div class="cs-l">我们在分析里指出</div><ul><li>业绩差是因为MEP工程部门的进度减少，属于<mark>项目周期性问题</mark></li><li>未完成订单约RM300mil</li><li>上星期刚获得RM153mil合约，工期只有约7个月，接下来2-3个季度的业绩应该会比较好</li><li>公司是净现金公司，基本面没有明显问题</li></ul></div>
 <div class="cs-row lrn"><div class="cs-l">你可以学到</div><p>一个季度的业绩，可能只是工程进度的时间差。要一起看订单、新合约和资产负债表，才知道基本面有没有改变。</p></div>
 </div></div>
-<p class="case-cap">左边为当天发给订阅者的原文截图，右边为之后的股价走势（黄色为分析发出日）。</p></article>
+<p class="case-cap">截图为当天发给订阅者的原文，日期显示在讯息上。</p></article>
 <article class="case" id="case-tg"><div class="case-h"><div class="ct">能力 2 · 判断盈利能不能持续</div><h3>Top Glove：净利升133%，为什么我们反而提醒要小心？</h3></div>
-<div class="case-b"><div class="case-imgs"><a href="assets/images/samples/topglove-analysis-1.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/topglove-analysis-1.jpg" alt="Top Glove 马股早知道分析原文截图（上）" loading="lazy" width="432" height="936"></a><a href="assets/images/samples/topglove-analysis-2.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/topglove-analysis-2.jpg" alt="Top Glove 马股早知道分析原文截图（下）" loading="lazy" width="540" height="568"></a><a href="assets/images/samples/topglove-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/topglove-chart.jpg" alt="Top Glove 股价走势" loading="lazy" width="508" height="438"></a></div><div class="case-take">
+<div class="case-b"><div class="case-imgs"><a href="assets/images/samples/topglove-analysis-1.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/topglove-analysis-1.jpg" alt="Top Glove 马股早知道分析原文截图" loading="lazy" width="432" height="936"></a><details class="case-chart"><summary>📈 看分析发出后的股价走势</summary><a href="assets/images/samples/topglove-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/topglove-chart.jpg" alt="Top Glove 股价走势" loading="lazy" width="508" height="438"></a></details></div><div class="case-take">
 <div class="cs-row hl"><div class="cs-l">标题怎么说</div><p>营业额YoY升31.9%至RM1.1bil；净利YoY升133.1%至RM81mil。</p></div>
 <div class="cs-row saw"><div class="cs-l">我们在分析里指出</div><ul><li>手套ASP上涨，是因为<mark>原材料丁腈乳胶的成本上涨</mark>，不是需求变高</li><li>Nitrile手套售价从3月前的$17/kpieces涨到4月的$28，5月尾已滑落到$26</li><li>分析员预计售价会继续慢慢下跌，已有2-3家投行下调目标价</li><li>公司过去3年的PE大概是24倍，目前的盈利难以持续</li></ul></div>
 <div class="cs-row lrn"><div class="cs-l">你可以学到</div><p>好业绩不等于好趋势。要看增长是来自需求、售价，还是一次性因素，以及它能不能持续下去。</p></div>
 </div></div>
-<p class="case-cap">左边为当天发给订阅者的原文截图，右边为之后的股价走势（黄色为分析发出日）。</p></article>
+<p class="case-cap">截图为当天发给订阅者的原文，日期显示在讯息上。</p></article>
 <article class="case" id="case-scgb"><div class="case-h"><div class="ct">能力 3 · 评估订单、毛利率和估值</div><h3>Southern Cable (SCGB)：业绩走下坡，但订单、成本转嫁和估值说了另一个故事</h3></div>
-<div class="case-b"><div class="case-imgs"><a href="assets/images/samples/southern-cable-analysis.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/southern-cable-analysis.jpg" alt="Southern Cable 马股早知道分析原文截图" loading="lazy" width="539" height="485"></a><a href="assets/images/samples/southern-cable-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/southern-cable-chart.jpg" alt="Southern Cable 股价走势" loading="lazy" width="605" height="389"></a></div><div class="case-take">
+<div class="case-b"><div class="case-imgs"><a href="assets/images/samples/southern-cable-analysis.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/southern-cable-analysis.jpg" alt="Southern Cable 马股早知道分析原文截图" loading="lazy" width="539" height="485"></a><details class="case-chart"><summary>📈 看分析发出后的股价走势</summary><a href="assets/images/samples/southern-cable-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/southern-cable-chart.jpg" alt="Southern Cable 股价走势" loading="lazy" width="605" height="389"></a></details></div><div class="case-take">
 <div class="cs-row hl"><div class="cs-l">标题怎么说</div><p>业绩走下坡。</p></div>
 <div class="cs-row saw"><div class="cs-l">我们在分析里指出</div><ul><li>手上订单有反弹：去年9月RM1.04bil，今年2月RM887mil，今年3月<mark>RM925mil</mark></li><li>合约有cost pass-through机制，可以把成本转嫁给顾客；但电缆外层的塑料成本不能转嫁</li><li>有分析员预计下半年塑料成本上涨，毛利率可能变低</li><li>forward PE约15倍，比过去3年平均的22倍低</li></ul></div>
 <div class="cs-row lrn"><div class="cs-l">你可以学到</div><p>同时看订单走势、毛利率风险和估值，才能判断股价是不是已经反映了坏消息。</p></div>
 </div></div>
-<p class="case-cap">左边为当天发给订阅者的原文截图，右边为之后的股价走势（黄色为分析发出日）。</p></article>
+<p class="case-cap">截图为当天发给订阅者的原文，日期显示在讯息上。</p></article>
 <p class="fnote">过去的案例不代表未来的表现。股价受很多因素影响，我们分享的是分析思路，不是买卖建议。</p>
 </div></section>
 
