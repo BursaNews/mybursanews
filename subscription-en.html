@@ -312,6 +312,8 @@ html[lang^="en"] .hi h1{font-size:clamp(2rem,4.8vw,3.3rem)!important;}
 .case-chart summary::after{content:" +";color:var(--o);}
 .case-chart[open] summary::after{content:" -";}
 .case-chart a{display:block;padding:0 .6rem .6rem;}
+section[id],article[id]{scroll-margin-top:125px;}
+@media(max-width:768px){section[id],article[id]{scroll-margin-top:115px;}}
 .hask{color:rgba(255,255,255,.55);font-size:14px;margin:-1rem 0 2rem;}
 .linkbtn{background:none;border:none;color:var(--o2);font-weight:800;font-size:14px;cursor:pointer;font-family:"DM Sans",sans-serif;padding:0;text-decoration:underline;text-underline-offset:3px;}
 .pb-learn{background:var(--cream);border-radius:10px;padding:.75rem .9rem;font-size:13.5px;color:#333;line-height:1.6;margin-bottom:.9rem;}
@@ -717,6 +719,17 @@ The news only covered the RM128mil contract. But in early September management h
     var a = e.target.closest('.js-ask'); if (a) { e.preventDefault(); askWA(a.dataset.place); return; }
     var d = e.target.closest('a[href$=".pdf"]'); if (d) ev('sample_download', {file_name: d.getAttribute('href').split('/').pop(), page_language:'en'});
   });
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#"]'); if (!a) return;
+    var id = a.getAttribute('href'); if (id.length < 2) return;
+    var el = document.getElementById(id.slice(1)); if (!el) return;
+    e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+  if (location.hash) {
+    var h = document.getElementById(location.hash.slice(1));
+    try { history.replaceState(null, '', location.pathname); } catch (err) {}
+    if (h) window.addEventListener('load', function(){ h.scrollIntoView(); });
+  }
   document.addEventListener('keydown', function(e){
     if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('faq-q')) { e.preventDefault(); e.target.click(); }
   });
