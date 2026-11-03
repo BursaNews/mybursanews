@@ -302,6 +302,16 @@ html[lang^="en"] .hi h1{font-size:clamp(2rem,4.8vw,3.3rem)!important;}
 .pb-bridge b{color:var(--o2);}
 .pk-sol{font-family:"Noto Serif SC",serif;font-weight:800;color:var(--nv)!important;font-size:15px!important;border-left:3px solid var(--o);padding-left:.7rem;}
 @media(max-width:860px){.pb-grid{grid-template-columns:1fr;}}
+.case .case-b .case-imgs{display:block!important;}
+.case-imgs>a img{max-height:460px;max-width:340px;margin:0 auto;object-fit:contain;object-position:top;}
+.case .case-b{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;}
+@media(max-width:860px){.case .case-b{grid-template-columns:1fr!important;}}
+.case-chart{margin-top:.6rem;border:1px solid var(--bd);border-radius:10px;background:#fff;}
+.case-chart summary{cursor:pointer;font-size:13.5px;font-weight:800;color:var(--nv);padding:.65rem .85rem;list-style:none;}
+.case-chart summary::-webkit-details-marker{display:none;}
+.case-chart summary::after{content:" +";color:var(--o);}
+.case-chart[open] summary::after{content:" -";}
+.case-chart a{display:block;padding:0 .6rem .6rem;}
 .hask{color:rgba(255,255,255,.55);font-size:14px;margin:-1rem 0 2rem;}
 .linkbtn{background:none;border:none;color:var(--o2);font-weight:800;font-size:14px;cursor:pointer;font-family:"DM Sans",sans-serif;padding:0;text-decoration:underline;text-underline-offset:3px;}
 .pb-learn{background:var(--cream);border-radius:10px;padding:.75rem .9rem;font-size:13.5px;color:#333;line-height:1.6;margin-bottom:.9rem;}
@@ -408,19 +418,16 @@ body{padding-bottom:64px;}
 <div class="pb-grid">
 <div class="pb"><div class="pb-n">1</div><div class="pb-ic">💰</div><h3>Strong earnings, so the share price should rise?</h3><p>Top Glove's revenue rose 31.9% and net profit jumped 133.1% to RM81mil year on year. Great headline. But glove prices went up because <b>nitrile latex costs rose, not because demand improved</b>, and prices had already started slipping by end May.</p>
 <div class="pb-learn"><b>The question to ask</b>Can this earnings growth last? Is it coming from demand, pricing or costs?</div>
-<a class="pb-img" href="assets/images/samples/topglove-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/topglove-chart.jpg" alt="Top Glove share price chart after the note" loading="lazy" width="508" height="438"><span>Share price after the note (yellow = note date)</span></a>
 <a class="pb-link" href="#case-tg">See the full case →</a></div>
 <div class="pb"><div class="pb-n">2</div><div class="pb-ic">📝</div><h3>A big contract win, so it's great news?</h3><p>Kelington won a RM128mil contract. Sounds big. But the job runs to <b>April 2028</b>, so the revenue is recognised over roughly two and a half years, and it is <b>under 4%</b> of an orderbook of about RM3.5bil. Contract value is not this quarter's revenue, and it is certainly not net profit.</p>
 <div class="pb-learn"><b>The question to ask</b>Over how many years is it recognised? What share of the orderbook is it? What is the real earnings impact?</div>
-<a class="pb-img" href="assets/images/samples/kelington-analysis.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/kelington-analysis.jpg" alt="Screenshot of the Kelington note sent to subscribers" loading="lazy" width="435" height="1405"><span>The original note sent that morning</span></a>
 <a class="pb-link" href="#daily">See this note broken down →</a></div>
 <div class="pb"><div class="pb-n">3</div><div class="pb-ic">📉</div><h3>Weak earnings, so the business is in trouble?</h3><p>Critical Holdings' revenue fell 47.94% year on year and net profit dropped to RM1.2mil. But the fall came mainly from <b>slower progress in its MEP engineering unit, a project timing issue</b>. It had just won a RM153mil contract with a roughly 7 month build period, and it is a net cash company.</p>
 <div class="pb-learn"><b>The question to ask</b>Is this temporary project timing, or a real decline in the business?</div>
-<a class="pb-img" href="assets/images/samples/critical-holdings-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/critical-holdings-chart.jpg" alt="Critical Holdings share price chart after the note" loading="lazy" width="563" height="380"><span>Share price after the note (yellow = note date)</span></a>
 <a class="pb-link" href="#case-chb">See the full case →</a></div>
 </div>
 <div class="pb-bridge">These answers are usually <b>not in the headline</b>. They sit in the announcement details, analyst briefings and management guidance.</div>
-<p class="pb-disc">Share prices move for many reasons. The charts show how the market moved at the time. Our analysis does not predict share prices.</p>
+<p class="pb-disc">Share prices move for many reasons. Our analysis does not predict share prices.</p>
 </div></section>
 
 <section class="sec cr" id="package"><div class="wrap">
@@ -532,26 +539,26 @@ The news only covered the RM128mil contract. But in early September management h
 <h2 class="stitle tc">3 real cases,<br><em>3 skills every investor needs</em></h2>
 <p class="lead tc">Everyone can read the headline. The difference is being able to see what it leaves out.</p>
 <article class="case" id="case-chb"><div class="case-h"><div class="ct">Skill 1 · Spotting temporary earnings weakness</div><h3>Critical Holdings: results collapse. A broken business, or project timing?</h3></div>
-<div class="case-b"><div class="case-imgs"><a href="assets/images/samples/critical-holdings-analysis.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/critical-holdings-analysis.jpg" alt="Critical Holdings 马股早知道 note screenshot" loading="lazy" width="427" height="640"></a><a href="assets/images/samples/critical-holdings-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/critical-holdings-chart.jpg" alt="Critical Holdings share price chart" loading="lazy" width="563" height="380"></a></div><div class="case-take">
+<div class="case-b"><div class="case-imgs"><a href="assets/images/samples/critical-holdings-analysis.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/critical-holdings-analysis.jpg" alt="Critical Holdings 马股早知道 note screenshot" loading="lazy" width="427" height="640"></a><details class="case-chart"><summary>📈 See the share price after the note</summary><a href="assets/images/samples/critical-holdings-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/critical-holdings-chart.jpg" alt="Critical Holdings share price chart" loading="lazy" width="563" height="380"></a></details></div><div class="case-take">
 <div class="cs-row hl"><div class="cs-l">What the headline said</div><p>Revenue down 47.94% year on year to RM50.8mil, net profit down to RM1.2mil.</p></div>
 <div class="cs-row saw"><div class="cs-l">What our note pointed out</div><ul><li>Weak results came from slower progress in the MEP unit, a <mark>project timing issue</mark></li><li>Unbilled orderbook of about RM300mil</li><li>A RM153mil contract won the week before, with only about 7 months of work, pointing to better results over the next 2 to 3 quarters</li><li>A net cash company, with no obvious problem in the fundamentals</li></ul></div>
 <div class="cs-row lrn"><div class="cs-l">What you learn</div><p>One quarter's results can simply reflect project timing. Read them together with the orderbook, new contracts and the balance sheet to see whether the fundamentals have changed.</p></div>
 </div></div>
-<p class="case-cap">Left: the original note sent to subscribers. Right: the share price afterwards (yellow marks the note date).</p></article>
+<p class="case-cap">The screenshot is the original note sent to subscribers, with its date shown in the message.</p></article>
 <article class="case" id="case-tg"><div class="case-h"><div class="ct">Skill 2 · Judging whether earnings can last</div><h3>Top Glove: profit up 133%. So why did we urge caution?</h3></div>
-<div class="case-b"><div class="case-imgs"><a href="assets/images/samples/topglove-analysis-1.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/topglove-analysis-1.jpg" alt="Top Glove 马股早知道 note screenshot, part 1" loading="lazy" width="432" height="936"></a><a href="assets/images/samples/topglove-analysis-2.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/topglove-analysis-2.jpg" alt="Top Glove 马股早知道 note screenshot, part 2" loading="lazy" width="540" height="568"></a><a href="assets/images/samples/topglove-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/topglove-chart.jpg" alt="Top Glove share price chart" loading="lazy" width="508" height="438"></a></div><div class="case-take">
+<div class="case-b"><div class="case-imgs"><a href="assets/images/samples/topglove-analysis-1.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/topglove-analysis-1.jpg" alt="Top Glove 马股早知道 note screenshot" loading="lazy" width="432" height="936"></a><details class="case-chart"><summary>📈 See the share price after the note</summary><a href="assets/images/samples/topglove-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/topglove-chart.jpg" alt="Top Glove share price chart" loading="lazy" width="508" height="438"></a></details></div><div class="case-take">
 <div class="cs-row hl"><div class="cs-l">What the headline said</div><p>Revenue up 31.9% year on year to RM1.1bil, net profit up 133.1% to RM81mil.</p></div>
 <div class="cs-row saw"><div class="cs-l">What our note pointed out</div><ul><li>Glove prices rose because <mark>nitrile latex costs went up</mark>, not because of higher demand</li><li>Nitrile glove prices went from $17 per thousand before March to $28 in April, then slipped to $26 by end May</li><li>Analysts expected prices to keep easing, and 2 to 3 banks had already cut their target prices</li><li>The stock's PE averaged about 24x over 3 years, and current earnings looked hard to sustain</li></ul></div>
 <div class="cs-row lrn"><div class="cs-l">What you learn</div><p>Good results are not the same as a good trend. Check whether growth comes from demand, pricing or one-offs, and whether it can last.</p></div>
 </div></div>
-<p class="case-cap">Left: the original note sent to subscribers. Right: the share price afterwards (yellow marks the note date).</p></article>
+<p class="case-cap">The screenshot is the original note sent to subscribers, with its date shown in the message.</p></article>
 <article class="case" id="case-scgb"><div class="case-h"><div class="ct">Skill 3 · Weighing orderbook, margins and valuation</div><h3>Southern Cable (SCGB): results slip, but the orderbook, cost pass-through and valuation tell another story</h3></div>
-<div class="case-b"><div class="case-imgs"><a href="assets/images/samples/southern-cable-analysis.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/southern-cable-analysis.jpg" alt="Southern Cable 马股早知道 note screenshot" loading="lazy" width="539" height="485"></a><a href="assets/images/samples/southern-cable-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/southern-cable-chart.jpg" alt="Southern Cable share price chart" loading="lazy" width="605" height="389"></a></div><div class="case-take">
+<div class="case-b"><div class="case-imgs"><a href="assets/images/samples/southern-cable-analysis.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/southern-cable-analysis.jpg" alt="Southern Cable 马股早知道 note screenshot" loading="lazy" width="539" height="485"></a><details class="case-chart"><summary>📈 See the share price after the note</summary><a href="assets/images/samples/southern-cable-chart.jpg" target="_blank" rel="noopener"><img src="assets/images/samples/southern-cable-chart.jpg" alt="Southern Cable share price chart" loading="lazy" width="605" height="389"></a></details></div><div class="case-take">
 <div class="cs-row hl"><div class="cs-l">What the headline said</div><p>Results were heading lower.</p></div>
 <div class="cs-row saw"><div class="cs-l">What our note pointed out</div><ul><li>The orderbook recovered: RM1.04bil last September, RM887mil in February, <mark>RM925mil</mark> in March</li><li>Contracts allow cost pass-through to customers, but the plastic cost of the cable outer layer cannot be passed on</li><li>Some analysts expected higher plastic costs to squeeze margins in the second half</li><li>Forward PE of about 15x, below the 3 year average of 22x</li></ul></div>
 <div class="cs-row lrn"><div class="cs-l">What you learn</div><p>Look at the orderbook trend, margin risk and valuation together to judge whether the price already reflects the bad news.</p></div>
 </div></div>
-<p class="case-cap">Left: the original note sent to subscribers. Right: the share price afterwards (yellow marks the note date).</p></article>
+<p class="case-cap">The screenshot is the original note sent to subscribers, with its date shown in the message.</p></article>
 <p class="fnote">Past cases do not predict future performance. Share prices move for many reasons. We share the reasoning, not buy or sell calls.</p>
 </div></section>
 
