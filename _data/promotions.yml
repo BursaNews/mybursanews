@@ -16,7 +16,7 @@
 # ------------------------------------------------------------------
 
 last_full_audit: 2026-10-04
-last_moomoo_update: 2026-10-09
+last_moomoo_update: 2026-11-09   # standard campaign re-checked, still 9 Oct to 31 Dec 2026
 
 moomoo:
   entity: Moomoo Securities Malaysia Sdn. Bhd. (SC licence eCMSL/A0397/2024)
@@ -77,13 +77,19 @@ moomoo:
 
 webull:
   entity: Webull Securities (Malaysia) Sdn Bhd (CMSL)
-  signup_links:
-    - https://www.webull.com.my/k/bursanews   # used on affiliates.html
-    - https://www.webull.com.my/k/BURSA88     # used on webull-sign-up-code.html
-  signup_link_note: Two different referral links are in use. Allen to confirm which one is tracked and standardise.
+  signup_link: https://www.webull.com.my/k/BURSA88
+  signup_link_note: Allen confirmed 2026-11-09 that /k/BURSA88 is the tracked link. /k/bursanews replaced site-wide.
   promotions:
-    - name: New user welcome reward
+    - name: New user welcome reward (RM300 in NVIDIA shares)
       status: active
+      start: 2026-10-31 16:00 MYT
+      end: 2026-12-31 23:59 MYT
+      reward: RM300 in NVIDIA shares
+      condition: Net cumulative deposit >= RM5,000, maintained 60 days
+      official_source: https://www.webull.com.my/activity
+      last_verified: 2026-11-09
+    - name: New user welcome reward (RM300 trading vouchers)
+      status: expired
       start: 2026-03-31 16:00 MYT
       end: 2026-10-31 15:59 MYT
       reward: RM300 (shown as 3 x RM100 trading vouchers on BursaNews pages)
