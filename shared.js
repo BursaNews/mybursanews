@@ -116,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="${P('starterkit')}" class="nav-link nav-highlight" data-en="🎁 Starter Kit" data-zh="🎁 免费入门包" role="menuitem">🎁 免费入门包</a>
     <a href="${P('resources')}" class="nav-link" data-en="Investing Guide" data-zh="投资指南" role="menuitem">投资指南</a>
     <a href="${P('affiliates')}" class="nav-link" data-en="Compare Brokers" data-zh="券商比较" role="menuitem">券商比较</a>
+    <a href="${P('broker-promo-codes-malaysia')}" class="nav-link" data-en="Promo Codes &amp; Rewards" data-zh="优惠码与奖励" role="menuitem">优惠码与奖励</a>
     <details class="nav-dropdown" id="services-dropdown">
       <summary class="nav-dropdown-trigger" id="services-trigger" data-en="Our Services &#9662;" data-zh="我们的服务 &#9662;" role="menuitem">我们的服务 &#9662;</summary>
       <div class="nav-dropdown-menu" role="menu">
@@ -145,6 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <a href="${P('starterkit')}" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包" style="color:#16a34a!important;font-weight:700;background:#f0fdf4;">🎁 免费入门包</a>
   <a href="${P('resources')}" data-en="Investing Guide" data-zh="投资指南">投资指南</a>
   <a href="${P('affiliates')}" data-en="Compare Brokers" data-zh="券商比较">券商比较</a>
+  <a href="${P('broker-promo-codes-malaysia')}" data-en="Promo Codes &amp; Rewards" data-zh="优惠码与奖励">优惠码与奖励</a>
   <div class="mob-service-label" data-en="Our Services" data-zh="我们的服务">我们的服务</div>
   <a href="${P('subscription')}" class="mob-service-link" data-en="Subscription Plans" data-zh="订阅计划">订阅计划</a>
   <a href="${P('coaching')}" class="mob-service-link" data-en="Coaching" data-zh="课程辅导">课程辅导</a>
