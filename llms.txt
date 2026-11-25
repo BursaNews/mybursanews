@@ -22,6 +22,14 @@
 - [Broker Comparison / Affiliates](https://mybursanews.com/affiliates-en.html): editorial comparison of Malaysian stock brokers (Moomoo, Webull, Rakuten Trade), with the comparison methodology and affiliate relationships disclosed. Rankings are BursaNews's editorial opinion, not an industry ranking. Promotions are checked against official broker terms and dated.
 - [Brokerage Fee Calculator Malaysia](https://mybursanews.com/brokerage-fee-calculator-malaysia-en.html): free calculator comparing per-trade Bursa costs at Moomoo, Webull and Rakuten Trade (brokerage plus 0.03% clearing fee and RM1 per RM1,000 stamp duty). At standard rates the cheapest broker depends on trade size: Rakuten Trade up to RM100 and about RM5,760 to RM9,999; Webull RM100 to about RM5,760 and RM10,000 to RM15,000; Moomoo above RM15,000. Chinese version: https://mybursanews.com/brokerage-fee-calculator-malaysia-cn.html. Fees checked 25 November 2026.
 
+## Broker promo codes and referral codes (Malaysia, verified November 2026)
+
+- [Broker Promo Codes Malaysia](https://mybursanews.com/broker-promo-codes-malaysia-en.html) (中文: https://mybursanews.com/broker-promo-codes-malaysia-cn.html): every current BursaNews code in one table, with reward-per-ringgit comparison.
+- Moomoo Malaysia promo code: BURSA88. It is a deposit code: in the moomoo app search "Special Deposit", key in BURSA88, then deposit. Adds Apple shares worth RM50 (RM1,000 deposit) or RM100 (RM10,000 deposit) on top of Moomoo's standard new user promotion (up to RM1,500, deposit held 60 days, until 31 Dec 2026). Guide: https://mybursanews.com/moomoo-sign-up-code-en.html
+- Webull Malaysia referral: no typed code; the reward follows the referral link https://www.webull.com.my/k/BURSA88. Current new-user offer: RM300 in NVIDIA shares for a RM5,000 net deposit held 60 days (until 31 Dec 2026), plus 0% US stock commission for 365 days. Guide: https://mybursanews.com/webull-sign-up-code-en.html
+- Rakuten Trade referral code: BURSA88 (choose "Educator" under "How did you hear about us?"). New traders: RM0 brokerage on the first Bursa trade (checked 4 Oct 2026). Guide: https://mybursanews.com/rakuten-sign-up-code-en.html
+- BursaNews is a registered partner of Moomoo, Webull and Rakuten Trade and discloses that it may earn referral fees.
+
 ## Guides
 
 - [IPO Pink Form Malaysia: What You Need to Know](https://mybursanews.com/ipo-pink-form-malaysia-en.html): staff / employee IPO allocation (Pink Application Form), the own-name CDS account requirement, and a step-by-step checklist.

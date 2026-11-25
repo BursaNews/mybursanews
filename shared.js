@@ -183,9 +183,10 @@ document.body.insertAdjacentHTML('beforeend', `
       <a href="${P('subscription')}" data-en="Daily Reports (订阅)" data-zh="每日报告（订阅）">Daily Reports (订阅)</a>
       <a href="${P('affiliates')}" data-en="Compare Stock Brokers" data-zh="券商比较">Compare Stock Brokers</a>
       <a href="${P('brokerage-fee-calculator-malaysia')}" data-en="Brokerage Fee Calculator" data-zh="券商手续费计算器">Brokerage Fee Calculator</a>
+      <a href="${P('broker-promo-codes-malaysia')}" data-en="Broker Promo Codes" data-zh="券商优惠码">Broker Promo Codes</a>
       <a href="${ROOT}moomoo-sign-up-code-en.html" data-en="Moomoo Promo Code BURSA88" data-zh="Moomoo优惠码BURSA88">Moomoo Promo Code BURSA88</a>
-      <a href="${ROOT}webull-sign-up-code-en.html" data-en="Webull Sign-Up Guide" data-zh="Webull开户教学">Webull Sign-Up Guide</a>
-      <a href="${ROOT}rakuten-sign-up-code-en.html" data-en="Rakuten Trade Referral Code" data-zh="Rakuten Trade推荐码">Rakuten Trade Referral Code</a>
+      <a href="${P('webull-sign-up-code')}" data-en="Webull Sign-Up Guide" data-zh="Webull开户教学">Webull Sign-Up Guide</a>
+      <a href="${P('rakuten-sign-up-code')}" data-en="Rakuten Trade Referral Code" data-zh="Rakuten Trade推荐码">Rakuten Trade Referral Code</a>
       <a href="${P('coaching')}" data-en="1-on-1 Coaching" data-zh="一对一辅导">1-on-1 Coaching</a>
     </div>
     <div class="ft-col">
