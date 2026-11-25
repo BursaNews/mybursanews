@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="${HOME}" class="nav-link" data-en="Home" data-zh="首页" role="menuitem">首页</a>
     <a href="${P('starterkit')}" class="nav-link nav-highlight" data-en="🎁 Starter Kit" data-zh="🎁 免费入门包" role="menuitem">🎁 免费入门包</a>
     <a href="${P('resources')}" class="nav-link" data-en="Investing Guide" data-zh="投资指南" role="menuitem">投资指南</a>
-    <a href="${P('affiliates')}" class="nav-link" data-en="Broker Bonuses" data-zh="券商推荐" role="menuitem">券商推荐</a>
+    <a href="${P('affiliates')}" class="nav-link" data-en="Compare Brokers" data-zh="券商比较" role="menuitem">券商比较</a>
     <details class="nav-dropdown" id="services-dropdown">
       <summary class="nav-dropdown-trigger" id="services-trigger" data-en="Our Services &#9662;" data-zh="我们的服务 &#9662;" role="menuitem">我们的服务 &#9662;</summary>
       <div class="nav-dropdown-menu" role="menu">
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <a href="${HOME}" data-en="Home" data-zh="首页">首页</a>
   <a href="${P('starterkit')}" data-en="🎁 Free Starter Kit" data-zh="🎁 免费入门包" style="color:#16a34a!important;font-weight:700;background:#f0fdf4;">🎁 免费入门包</a>
   <a href="${P('resources')}" data-en="Investing Guide" data-zh="投资指南">投资指南</a>
-  <a href="${P('affiliates')}" data-en="Broker Bonuses" data-zh="券商推荐">券商推荐</a>
+  <a href="${P('affiliates')}" data-en="Compare Brokers" data-zh="券商比较">券商比较</a>
   <div class="mob-service-label" data-en="Our Services" data-zh="我们的服务">我们的服务</div>
   <a href="${P('subscription')}" class="mob-service-link" data-en="Subscription Plans" data-zh="订阅计划">订阅计划</a>
   <a href="${P('coaching')}" class="mob-service-link" data-en="Coaching" data-zh="课程辅导">课程辅导</a>
@@ -182,6 +182,7 @@ document.body.insertAdjacentHTML('beforeend', `
       <h4 data-en="Services" data-zh="服务">Services</h4>
       <a href="${P('subscription')}" data-en="Daily Reports (订阅)" data-zh="每日报告（订阅）">Daily Reports (订阅)</a>
       <a href="${P('affiliates')}" data-en="Compare Stock Brokers" data-zh="券商比较">Compare Stock Brokers</a>
+      <a href="${P('brokerage-fee-calculator-malaysia')}" data-en="Brokerage Fee Calculator" data-zh="券商手续费计算器">Brokerage Fee Calculator</a>
       <a href="${ROOT}moomoo-sign-up-code-en.html" data-en="Moomoo Promo Code BURSA88" data-zh="Moomoo优惠码BURSA88">Moomoo Promo Code BURSA88</a>
       <a href="${ROOT}webull-sign-up-code-en.html" data-en="Webull Sign-Up Guide" data-zh="Webull开户教学">Webull Sign-Up Guide</a>
       <a href="${ROOT}rakuten-sign-up-code-en.html" data-en="Rakuten Trade Referral Code" data-zh="Rakuten Trade推荐码">Rakuten Trade Referral Code</a>

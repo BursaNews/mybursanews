@@ -32,14 +32,14 @@
   </url>
   <url>
     <loc>https://mybursanews.com/affiliates-cn.html</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/affiliates-en.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/affiliates-cn.html"/>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mybursanews.com/affiliates-en.html</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/affiliates-en.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/affiliates-cn.html"/>
     <priority>0.8</priority>
@@ -173,7 +173,7 @@
   </url>
   <url>
     <loc>https://mybursanews.com/trading-account-malaysia-en.html</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -218,21 +218,21 @@
   </url>
   <url>
     <loc>https://mybursanews.com/posts/moomoo-review-malaysia-cn.html</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/posts/moomoo-review-malaysia-en.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/posts/moomoo-review-malaysia-cn.html"/>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mybursanews.com/posts/moomoo-review-malaysia-en.html</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/posts/moomoo-review-malaysia-en.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/posts/moomoo-review-malaysia-cn.html"/>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mybursanews.com/posts/moomoo-vs-webull-malaysia-en.html</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -268,5 +268,19 @@
     <loc>https://mybursanews.com/posts/why-bank-stocks-first-cn.html</loc>
     <lastmod>2026-11-09</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/brokerage-fee-calculator-malaysia-en.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/brokerage-fee-calculator-malaysia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/brokerage-fee-calculator-malaysia-cn.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mybursanews.com/brokerage-fee-calculator-malaysia-cn.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://mybursanews.com/brokerage-fee-calculator-malaysia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans-MY" href="https://mybursanews.com/brokerage-fee-calculator-malaysia-cn.html"/>
+    <priority>0.8</priority>
   </url>
 </urlset>

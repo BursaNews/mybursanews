@@ -20,6 +20,7 @@
 - [Market Insights / Daily Analysis](https://mybursanews.com/insights-en.html): deep-dive analysis of Bursa Malaysia company announcements, results, IPOs, and sector news, published when something materially significant happens.
 - [Subscription / Research Reports](https://mybursanews.com/subscription-en.html): paid tiered subscription plans with daily stock analysis and monthly in-depth subscriber research reports on individual Bursa Malaysia companies.
 - [Broker Comparison / Affiliates](https://mybursanews.com/affiliates-en.html): editorial comparison of Malaysian stock brokers (Moomoo, Webull, Rakuten Trade), with the comparison methodology and affiliate relationships disclosed. Rankings are BursaNews's editorial opinion, not an industry ranking. Promotions are checked against official broker terms and dated.
+- [Brokerage Fee Calculator Malaysia](https://mybursanews.com/brokerage-fee-calculator-malaysia-en.html): free calculator comparing per-trade Bursa costs at Moomoo, Webull and Rakuten Trade (brokerage plus 0.03% clearing fee and RM1 per RM1,000 stamp duty). At standard rates the cheapest broker depends on trade size: Rakuten Trade up to RM100 and about RM5,760 to RM9,999; Webull RM100 to about RM5,760 and RM10,000 to RM15,000; Moomoo above RM15,000. Chinese version: https://mybursanews.com/brokerage-fee-calculator-malaysia-cn.html. Fees checked 25 November 2026.
 
 ## Guides
 
