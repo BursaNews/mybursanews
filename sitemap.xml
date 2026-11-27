@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mybursanews.com/index-en.html</loc>
     <lastmod>2026-11-09</lastmod>
@@ -314,17 +314,21 @@
   <url>
     <loc>https://mybursanews.com/posts/kk-mart-ipo-malaysia-cn.html</loc>
     <lastmod>2026-11-27</lastmod>
+    <image:image><image:loc>https://mybursanews.com/assets/images/kk-super-mart-store-kk-mart-ipo.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://mybursanews.com/posts/kk-mart-ipo-malaysia-en.html</loc>
     <lastmod>2026-11-27</lastmod>
+    <image:image><image:loc>https://mybursanews.com/assets/images/kk-super-mart-store-kk-mart-ipo.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://mybursanews.com/posts/kk-mart-ipo-pink-form-cn.html</loc>
     <lastmod>2026-11-27</lastmod>
+    <image:image><image:loc>https://mybursanews.com/assets/images/kk-super-mart-store-kk-mart-ipo.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://mybursanews.com/posts/kk-mart-ipo-pink-form-en.html</loc>
     <lastmod>2026-11-27</lastmod>
+    <image:image><image:loc>https://mybursanews.com/assets/images/kk-super-mart-store-kk-mart-ipo.jpg</image:loc></image:image>
   </url>
 </urlset>
